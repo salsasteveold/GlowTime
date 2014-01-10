@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+
+<!--
+      DMACapability needs to contain 1 or more Category tags. Category needs to contain 1 or more Location tags.
+      
+      Category Attributes
+      ===================
+  
+        name:       The name of the cataegory to display to the user in the DMA Wizard. (If only one category is entered
+                    it will not be displayed as a sub-category in the wizard. Instead it will just be used when the
+                    user selects its associated instance.)
+        
+        enabled:    [OPTIONAL] "true" or "false". If not provided it defaults to true. If false, 
+                    this category and its locations are not included in the DMA Wizard. Note: this value can be set 
+                    to an expression referencing parameters by using `=` (e.g. `="Your Expression here"`).
+        
+        bytes_in_burst: Integer between 1 and 127. The number of bytes that can be sent/recieved in a single burst.
+        
+        bytes_in_burst_is_strict: "true" or "false". Determines whether the bytes_in_burst is a maximum value (false)
+                                  or a specific value that must be used (true).
+                            
+        spoke_width:        Integer between 1 and 4. The spoke width in bytes. 
+        
+        inc_addr:           "true" or "false". Specifies whether or not the address is typically incremented.
+     
+        each_busrt_req_request: "true" or "false". Specifies whether or not a request is required for each burst.
+     
+      Location Attributes
+      ===================
+      
+        name:      The name of the location to display to the user in the DMA Wizard.
+       
+        enabled:  [OPTIONAL] "true" or "false". If not provided it defaults to true. If false, this 
+                  location is not included in the DMA Wizard. Note: this value can be set to an expression 
+                  referencing parameters by using `=Your Expression here`.
+       
+        direction: "source", "destination", or "both".
+  -->
+
+<DMACapability>
+
+  <Category name="`$INSTANCE_NAME`_Config1" 
+            enabled="true" 
+            bytes_in_burst="`=(($ADC_Resolution > 8 && $ADC_Resolution < 17) ? 2 : ($ADC_Resolution > 16) ? 3 : 1)`"
+            bytes_in_burst_is_strict="true" 
+            spoke_width="1" 
+            inc_addr="false" 
+            each_burst_req_request="true">
+            
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution == 8)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution > 8 && $ADC_Resolution < 17)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution > 16)`" 
+              direction="source"/>
+  </Category>
+  
+  <Category name="`$INSTANCE_NAME`_Config2" 
+            enabled="true" 
+            bytes_in_burst="`=(($ADC_Resolution_Config2 > 8 && $ADC_Resolution_Config2 < 17) ? 2 : ($ADC_Resolution_Config2 > 16) ? 3 : 1)`"
+            bytes_in_burst_is_strict="true" 
+            spoke_width="1" 
+            inc_addr="false" 
+            each_burst_req_request="true">
+            
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config2 == 8)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config2 > 8 && $ADC_Resolution_Config2 < 17)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config2 > 16)`" 
+              direction="source"/>
+  </Category>
+  
+  <Category name="`$INSTANCE_NAME`_Config3" 
+            enabled="true" 
+            bytes_in_burst="`=(($ADC_Resolution_Config3 > 8 && $ADC_Resolution_Config3 < 17) ? 2 : ($ADC_Resolution_Config3 > 16) ? 3 : 1)`"
+            bytes_in_burst_is_strict="true" 
+            spoke_width="1" 
+            inc_addr="false" 
+            each_burst_req_request="true">
+            
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config3 == 8)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config3 > 8 && $ADC_Resolution_Config3 < 17)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config3 > 16)`" 
+              direction="source"/>
+  </Category>
+  
+  <Category name="`$INSTANCE_NAME`_Config4" 
+            enabled="true" 
+            bytes_in_burst="`=(($ADC_Resolution_Config4 > 8 && $ADC_Resolution_Config4 < 17) ? 2 : ($ADC_Resolution_Config4 > 16) ? 3 : 1)`"
+            bytes_in_burst_is_strict="true" 
+            spoke_width="1" 
+            inc_addr="false" 
+            each_burst_req_request="true">
+            
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config4 == 8)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config4 > 8 && $ADC_Resolution_Config4 < 17)`" 
+              direction="source"/>
+              
+    <Location name="`$INSTANCE_NAME`_DEC_SAMP_PTR" 
+              enabled="`=($ADC_Resolution_Config4 > 16)`" 
+              direction="source"/>
+  </Category>
+  
+</DMACapability>

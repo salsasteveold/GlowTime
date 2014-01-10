@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="Datapath Registers" visible="true">
+
+    <register name="A0"
+		address="`$INSTANCE_NAME`_Integrator16_u0__A0_REG"
+		bitWidth="16" desc="A0 register, 16 bit">
+	</register>
+	
+	<register name="A1"
+		address="`$INSTANCE_NAME`_Integrator16_u0__A1_REG"
+		bitWidth="16" desc="A1 register, 16 bit">
+	</register>
+	
+	<register name="D0"
+		address="`$INSTANCE_NAME`_Integrator16_u0__D0_REG"
+		bitWidth="16" desc="D0 register, 16 bit">
+	</register>
+	
+	<register name="D1"
+		address="`$INSTANCE_NAME`_Integrator16_u0__D1_REG"
+		bitWidth="16" desc="D1 register, 16 bit">
+	</register>
+    
+  </block>
+</deviceData>

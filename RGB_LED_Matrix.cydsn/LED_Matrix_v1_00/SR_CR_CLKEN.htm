@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Courier New';
+	font-size: 10pt;
+	color: #000000;
+}
+.sc0 {
+}
+.sc1 {
+	color: #008000;
+}
+.sc4 {
+	color: #FF8000;
+}
+.sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.sc6 {
+	color: #808080;
+}
+.sc9 {
+	color: #804000;
+}
+.sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.sc11 {
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc1">/* ========================================
+ *
+ * The following firmware was developed by Cypress Semiconductor
+ * This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+ * 
+ * http://creativecommons.org/licenses/by/3.0/deed.en_US
+ * 
+ * You are free to:
+ * -To Share — to copy, distribute and transmit the work 
+ * -To Remix — to adapt the work 
+ * -To make commercial use of the work
+ *
+ * ========================================
+ */</span><span class="sc0">
+ 
+</span><span class="sc1">/* This is a reference Verilog file which contains all the possible variants of control and status 
+ * register instances 
+ * See the Component Author Guide section on 
+ * Adding an Implementation &gt; Implement with Verilog &gt; UDB Elements 
+ * for more information.
+ * 
+ * Note: TRUE and FALSE are defined in cy_psoc3.v
+ */</span><span class="sc0">
+ </span><span class="sc9">`include</span><span class="sc0"> </span><span class="sc6">"cypress.v"</span><span class="sc0">
+
+</span><span class="sc5">module</span><span class="sc0"> </span><span class="sc11">example</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+    </span><span class="sc5">output</span><span class="sc0"> </span><span class="sc11">something</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc5">input</span><span class="sc0">  </span><span class="sc11">clk</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc5">input</span><span class="sc0">  </span><span class="sc11">en</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc5">input</span><span class="sc0">  </span><span class="sc11">load</span><span class="sc10">,</span><span class="sc0">
+    </span><span class="sc5">input</span><span class="sc0">  </span><span class="sc11">rst</span><span class="sc0">
+
+</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc5">wire</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc4">7</span><span class="sc10">:</span><span class="sc4">0</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc11">control_1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">wire</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc4">6</span><span class="sc10">:</span><span class="sc4">0</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc11">count</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">wire</span><span class="sc0">  </span><span class="sc11">tc</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">wire</span><span class="sc0"> </span><span class="sc11">ClockOutFromEnBlock</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">wire</span><span class="sc0"> </span><span class="sc11">s_in</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">s_out</span><span class="sc10">;</span><span class="sc0">
+
+    </span><span class="sc5">reg</span><span class="sc0"> </span><span class="sc10">[</span><span class="sc4">7</span><span class="sc10">:</span><span class="sc4">0</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc11">status_1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">reg</span><span class="sc0"> </span><span class="sc11">enable</span><span class="sc10">;</span><span class="sc0">
+    
+    </span><span class="sc5">parameter</span><span class="sc0"> </span><span class="sc11">Period</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">127</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">parameter</span><span class="sc0"> </span><span class="sc11">RoutedEnable</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">parameter</span><span class="sc0"> </span><span class="sc11">RoutedLoad</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+   
+    </span><span class="sc1">/****************************** UDB Clock Enable Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: Allows level-sensitive clock enable to UDBs
+     * Two modes:
+     *  Synchronous Mode:   sync_mode = `TRUE
+     *                      Synchronizes clock_in with BUS_CLK
+     *  Asynchronous Mode:  sync_mode = `FALSE
+     *                      Allows UDB to be fed an asynchronous clock
+     *
+     */</span><span class="sc0">
+    </span><span class="sc11">cy_psoc3_udb_clock_enable_v1_0</span><span class="sc0"> </span><span class="sc10">#(.</span><span class="sc11">sync_mode</span><span class="sc10">(</span><span class="sc9">`TRUE</span><span class="sc10">))</span><span class="sc0">
+    </span><span class="sc11">clock_enable_block</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+                        </span><span class="sc1">/* output */</span><span class="sc10">.</span><span class="sc11">clock_out</span><span class="sc10">(</span><span class="sc11">ClockOutFromEnBlock</span><span class="sc10">),</span><span class="sc0">
+                        </span><span class="sc1">/* input */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">clock_in</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+                        </span><span class="sc1">/* input */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">enable</span><span class="sc10">(</span><span class="sc11">en</span><span class="sc10">)</span><span class="sc0">
+                        </span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc1">/*****************************************************************************************/</span><span class="sc0">
+ 
+    </span><span class="sc1">/****************************** Control Register Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: Allows CPU control of UDBs - i.e. a Control Reg. is writable by firmware
+     * Three modes configured on a bit-by-bit basis: 
+     *  CTL MD 00: Direct Mode - When the control register is written, with bus clock
+     *             resolution, the data is driven directly into the routing
+     *  CTL MD 01: Control bits are resampled (single synced) from bus clock to the
+     *             selected SC clock.
+     *  CTL MD 10: Reserved
+     *  CTL MD 11: Control bits are resampled from the bus clock to the selected SC   
+     *             clock and a single SC clock period pulse is generated. At the end   
+     *             of the pulse, the control bit is reset.
+     *  The configuration is controlled by the concatenation of the bits of the two 
+     *  8-bit registers: CTL_MD1[7:0] and CTL_MD0[7:0]. 
+     *  For example {CTL_MD1[0],CTL_MD0[0]} controls the mode for Control Reg bit 0, etc.
+     *
+     * Always set the cy_force_order parameter to `TRUE
+     * The cy_init_value parameter is used to initialize the Control Reg
+     * Setting the cy_ext_reset parameter to `TRUE enables an external reset
+     *
+     * The control register value can be set by using the register address: 
+     *  in general   : &lt;module name&gt;_&lt;instance name&gt;__CONTROL_REG
+     *  this example : example_ControlReg_1__CONTROL_REG
+     * (see file cyfitter.h)                            
+     */</span><span class="sc0">
+    </span><span class="sc11">cy_psoc3_control</span><span class="sc0"> </span><span class="sc10">#(.</span><span class="sc11">cy_force_order</span><span class="sc10">(</span><span class="sc9">`TRUE</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_ctrl_mode_1</span><span class="sc10">(</span><span class="sc4">8'b00000000</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_ctrl_mode_0</span><span class="sc10">(</span><span class="sc4">8'b11111111</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_init_value</span><span class="sc10">(),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_ext_reset</span><span class="sc10">())</span><span class="sc0">
+    </span><span class="sc11">ControlReg_1</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+                  </span><span class="sc1">/* input          */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">clock</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+                  </span><span class="sc1">/* input          */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">reset</span><span class="sc10">(</span><span class="sc11">rst</span><span class="sc10">),</span><span class="sc0">
+                  </span><span class="sc1">/* output [07:00] */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">control</span><span class="sc10">(</span><span class="sc11">control_1</span><span class="sc10">)</span><span class="sc0">
+                  </span><span class="sc10">);</span><span class="sc0">           
+    </span><span class="sc1">/*****************************************************************************************/</span><span class="sc0">
+    
+    </span><span class="sc1">/****************************** Count7 Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: Provides access to a 7-bit down counter referred to in 
+     * hardware documentation as a "count7".  It uses a Control Register and 
+     * portions of a Status Register (depends on settings for RoutedEnable and 
+     * RoutedLoad). Period auto-reloads on tc (0)
+     *
+     * The status register interrupt cannot be used in this mode because the mask
+     * register is used as the counter period register. Sync mode is available 
+     * only if the counter's LD/EN inputs are not used. 
+     *
+     * Check out Sensei Blog: http://www.cypress.com/?rID=47737&amp;cache=0 
+     *
+     * To use this mode of the control register, set bit[5] (CNT_START) of the auxiliary  
+     * control register in firmware. Its address:
+     *  in general   : &lt;module name&gt;_&lt;instance name&gt;__CONTROL_AUX_CTL_REG
+     *  this example : example_Count7_1__CONTROL_AUX_CTL_REG
+     * (see file cyfitter.h)
+     *
+     * The period register is retention (maintains state across sleep)and is 
+     * read/write accessible at the address: &lt;module name&gt;_&lt;instance name&gt;__PERIOD_REG
+     * and the count value at: &lt;module name&gt;_&lt;instance name&gt;__CONTROL_REG
+     * 
+    ********************************************************************************/</span><span class="sc0">
+    </span><span class="sc11">cy_psoc3_count7</span><span class="sc0"> </span><span class="sc10">#(.</span><span class="sc11">cy_period</span><span class="sc10">(</span><span class="sc11">Period</span><span class="sc10">),</span><span class="sc0"> 
+                      </span><span class="sc10">.</span><span class="sc11">cy_route_ld</span><span class="sc10">(</span><span class="sc11">RoutedLoad</span><span class="sc10">),</span><span class="sc0"> 
+                      </span><span class="sc10">.</span><span class="sc11">cy_route_en</span><span class="sc10">(</span><span class="sc11">RoutedEnable</span><span class="sc10">))</span><span class="sc0"> </span><span class="sc11">Count7_1</span><span class="sc0">
+    </span><span class="sc10">(</span><span class="sc0">
+        </span><span class="sc1">/*  input             */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">clock</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+        </span><span class="sc1">/*  input             */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">reset</span><span class="sc10">(</span><span class="sc11">rst</span><span class="sc10">),</span><span class="sc0">
+        </span><span class="sc1">/*  input             */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">load</span><span class="sc10">(</span><span class="sc11">load</span><span class="sc10">),</span><span class="sc0">
+        </span><span class="sc1">/*  input             */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">enable</span><span class="sc10">(</span><span class="sc11">en</span><span class="sc10">),</span><span class="sc0">
+        </span><span class="sc1">/*  output  [06:00]   */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">count</span><span class="sc10">(</span><span class="sc11">count</span><span class="sc10">),</span><span class="sc0">
+        </span><span class="sc1">/*  output            */</span><span class="sc0">  </span><span class="sc10">.</span><span class="sc11">tc</span><span class="sc10">(</span><span class="sc11">tc</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc1">/***************************************************************************************/</span><span class="sc0">
+    
+    </span><span class="sc1">/****************************** Status Register Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: Allows the CPU to monitor UDBs - i.e. a Status Reg. is readable by firmware
+     * Two available modes: 
+     *  MD 0: Transparent Read - A read returns the current value of the routed
+     *        signal
+     *  MD 1: Sticky, Clear on Read. A high on the internal net is sampled and
+     *        captured. It is cleared when the status register is read
+     *
+     * Always set the cy_force_order parameter to `TRUE
+     *
+     * Value can be read by using the register address: &lt;module name&gt;_&lt;instance name&gt;__STATUS_REG
+     *  (see file cyfitter.h)                           example_StatusReg_1__STATUS_REG
+     *****************************************************************************************/</span><span class="sc0">
+    </span><span class="sc11">cy_psoc3_status</span><span class="sc0"> </span><span class="sc10">#(.</span><span class="sc11">cy_force_order</span><span class="sc10">(</span><span class="sc9">`TRUE</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_md_select</span><span class="sc10">(</span><span class="sc4">8'b00000000</span><span class="sc10">))</span><span class="sc0">
+    </span><span class="sc11">StatusReg_1</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+                 </span><span class="sc1">/* input         */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">clock</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+                 </span><span class="sc1">/* input         */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">reset</span><span class="sc10">(</span><span class="sc11">rst</span><span class="sc10">),</span><span class="sc0">
+                 </span><span class="sc1">/* input [07:00] */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">status</span><span class="sc10">(</span><span class="sc11">status_1</span><span class="sc10">)</span><span class="sc0">
+                 </span><span class="sc10">);</span><span class="sc0">           
+    </span><span class="sc1">/*****************************************************************************************/</span><span class="sc0">
+
+    </span><span class="sc1">/****************************** Status Register with Interrupt Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: In many functions, interrupt generation is tied to the setting of status bits.  
+     *  This feature is built into the status register logic as the masking (Mask register) and OR  
+     *  reduction of status. i.e. interrupt = |(mask &amp; status)
+     *  The Mask register is retention (retains state across sleep intervals). 
+     *  Only the lower 7 bits of status input can be used with the built in interrupt generation circuitry.
+     *
+     * To use this mode of the status register, bit[4] of the auxiliary control register 
+     * must be set in firmware. Its address:
+     *  in general   : &lt;module name&gt;_&lt;instance name&gt;__STATUS_AUX_CTL_REG
+     *  this example : example_StatusRegI_1__STATUS_AUX_CTL_REG
+     * (see file cyfitter.h)
+     */</span><span class="sc0">
+    </span><span class="sc11">cy_psoc3_statusi</span><span class="sc0"> </span><span class="sc10">#(.</span><span class="sc11">cy_force_order</span><span class="sc10">(</span><span class="sc9">`TRUE</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_md_select</span><span class="sc10">(</span><span class="sc4">7'b0000000</span><span class="sc10">),</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">cy_int_mask</span><span class="sc10">(</span><span class="sc4">7'b0000000</span><span class="sc10">))</span><span class="sc0">
+    </span><span class="sc11">StatusRegI_1</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+                  </span><span class="sc1">/* input         */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">clock</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+                  </span><span class="sc1">/* input         */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">reset</span><span class="sc10">(</span><span class="sc11">rst</span><span class="sc10">),</span><span class="sc0">
+                  </span><span class="sc1">/* input [06:00] */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">status</span><span class="sc10">(</span><span class="sc11">status_1</span><span class="sc10">),</span><span class="sc0">
+                  </span><span class="sc1">/* output        */</span><span class="sc0"> </span><span class="sc10">.</span><span class="sc11">interrupt</span><span class="sc10">(</span><span class="sc11">interrupt</span><span class="sc10">)</span><span class="sc0">
+                  </span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc1">/*****************************************************************************************/</span><span class="sc0">
+                 
+    </span><span class="sc1">/****************************** Sync Block Instance ******************************/</span><span class="sc0">
+    </span><span class="sc1">/* Description: Double synchronizes sc_in to clock 
+     *
+     * When used in this mode, the status register can operate as a 4-bit double
+     * synchronizer - normal status register functionality is not available.
+     * The control register is not affected by this mode. The counter mode can be used
+     * if LD/EN signals are not used. 
+     */</span><span class="sc0"> 
+    </span><span class="sc11">cy_psoc3_sync</span><span class="sc0"> </span><span class="sc11">Sync_1</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc0">
+                          </span><span class="sc1">/* input  */</span><span class="sc10">.</span><span class="sc11">clock</span><span class="sc10">(</span><span class="sc11">clk</span><span class="sc10">),</span><span class="sc0">
+                          </span><span class="sc1">/* input  */</span><span class="sc10">.</span><span class="sc11">sc_in</span><span class="sc10">(</span><span class="sc11">s_in</span><span class="sc10">),</span><span class="sc0">
+                          </span><span class="sc1">/* output */</span><span class="sc10">.</span><span class="sc11">sc_out</span><span class="sc10">(</span><span class="sc11">s_out</span><span class="sc10">)</span><span class="sc0">
+                          </span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc1">/*****************************************************************************************/</span><span class="sc0">
+    
+</span><span class="sc5">endmodule</span><span class="sc0"> </span></div></body>
+</html>

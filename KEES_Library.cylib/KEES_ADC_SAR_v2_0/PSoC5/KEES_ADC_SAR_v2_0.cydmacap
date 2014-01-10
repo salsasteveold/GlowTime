@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+
+<!--
+      DMACapability needs to contain 1 or more Category tags. Category needs to contain 1 or more Location tags.
+      
+      Category Attributes
+      ===================
+  
+        name:       The name of the cataegory to display to the user in the DMA Wizard. (If only one category is entered
+                    it will not be displayed as a sub-category in the wizard. Instead it will just be used when the
+                    user selects its associated instance.)
+        
+        enabled:    [OPTIONAL] "true" or "false". If not provided it defaults to true. If false, 
+                    this category and its locations are not included in the DMA Wizard. Note: this value can be set 
+                    to an expression referencing parameters by using `=` (e.g. `="Your Expression here"`).
+        
+        bytes_in_burst: Integer between 1 and 127. The number of bytes that can be sent/recieved in a single burst.
+        
+        bytes_in_burst_is_strict: "true" or "false". Determines whether the bytes_in_burst is a maximum value (false)
+                                  or a specific value that must be used (true).
+                            
+        spoke_width:        Integer between 1 and 4. The spoke width in bytes. 
+        
+        inc_addr:           "true" or "false". Specifies whether or not the address is typically incremented.
+     
+        each_busrt_req_request: "true" or "false". Specifies whether or not a request is required for each burst.
+     
+      Location Attributes
+      ===================
+      
+        name:      The name of the location to display to the user in the DMA Wizard.
+       
+        enabled:  [OPTIONAL] "true" or "false". If not provided it defaults to true. If false, this 
+                  location is not included in the DMA Wizard. Note: this value can be set to an expression 
+                  referencing parameters by using `=Your Expression here`.
+       
+        direction: "source", "destination", or "both".
+  -->
+
+<DMACapability>
+
+  <Category name="SAR_ADC" 
+            enabled="true" 
+            bytes_in_burst="2"
+            bytes_in_burst_is_strict="true" 
+            spoke_width="2" 
+            inc_addr="false" 
+            each_burst_req_request="true">
+    <Location name="`$INSTANCE_NAME`_SAR_WRK0_PTR" enabled="true" direction="source"/>
+  </Category>
+  
+</DMACapability>

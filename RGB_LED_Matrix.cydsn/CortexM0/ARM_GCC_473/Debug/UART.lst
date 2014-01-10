@@ -1,0 +1,1283 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"UART.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.UART_Init,"ax",%progbits
+  18              		.align	2
+  19              		.global	UART_Init
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	UART_Init, %function
+  23              	UART_Init:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\UART.c"
+   1:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/UART.c **** * File Name: UART.c
+   3:.\Generated_Source\PSoC4/UART.c **** * Version 1.10
+   4:.\Generated_Source\PSoC4/UART.c **** *
+   5:.\Generated_Source\PSoC4/UART.c **** * Description:
+   6:.\Generated_Source\PSoC4/UART.c **** *  This file provides the source code to the API for the SCB Component.
+   7:.\Generated_Source\PSoC4/UART.c **** *
+   8:.\Generated_Source\PSoC4/UART.c **** * Note:
+   9:.\Generated_Source\PSoC4/UART.c **** *
+  10:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************
+  11:.\Generated_Source\PSoC4/UART.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/UART.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:.\Generated_Source\PSoC4/UART.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:.\Generated_Source\PSoC4/UART.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/UART.c **** 
+  17:.\Generated_Source\PSoC4/UART.c **** #include "UART_PVT.h"
+  18:.\Generated_Source\PSoC4/UART.c **** 
+  19:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_I2C_INC)
+  20:.\Generated_Source\PSoC4/UART.c ****     #include "UART_I2C_PVT.h"
+  21:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_I2C_INC) */
+  22:.\Generated_Source\PSoC4/UART.c **** 
+  23:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_EZI2C_INC)
+  24:.\Generated_Source\PSoC4/UART.c ****     #include "UART_EZI2C_PVT.h"
+  25:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_EZI2C_INC) */
+  26:.\Generated_Source\PSoC4/UART.c **** 
+  27:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_SPI_INC || UART_SCB_MODE_UART_INC)
+  28:.\Generated_Source\PSoC4/UART.c ****     #include "UART_SPI_UART_PVT.h"
+  29:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_SPI_INC || UART_SCB_MODE_UART_INC) */
+  30:.\Generated_Source\PSoC4/UART.c **** 
+  31:.\Generated_Source\PSoC4/UART.c **** 
+  32:.\Generated_Source\PSoC4/UART.c **** /**********************************
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/UART.c **** *    Run Time Configuration Vars
+  34:.\Generated_Source\PSoC4/UART.c **** **********************************/
+  35:.\Generated_Source\PSoC4/UART.c **** 
+  36:.\Generated_Source\PSoC4/UART.c **** /* Stores internal component configuration for unconfigured mode */
+  37:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_UNCONFIG_CONST_CFG)
+  38:.\Generated_Source\PSoC4/UART.c ****     /* Common config vars */
+  39:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_scbMode = UART_SCB_MODE_UNCONFIG;
+  40:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_scbEnableWake;
+  41:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_scbEnableIntr;
+  42:.\Generated_Source\PSoC4/UART.c **** 
+  43:.\Generated_Source\PSoC4/UART.c ****     /* I2C config vars */
+  44:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_mode;
+  45:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_acceptAddr;
+  46:.\Generated_Source\PSoC4/UART.c **** 
+  47:.\Generated_Source\PSoC4/UART.c ****     /* SPI/UART config vars */
+  48:.\Generated_Source\PSoC4/UART.c ****     volatile uint8 * UART_rxBuffer;
+  49:.\Generated_Source\PSoC4/UART.c ****     uint8  UART_rxDataBits;
+  50:.\Generated_Source\PSoC4/UART.c ****     uint32 UART_rxBufferSize;
+  51:.\Generated_Source\PSoC4/UART.c **** 
+  52:.\Generated_Source\PSoC4/UART.c ****     volatile uint8 * UART_txBuffer;
+  53:.\Generated_Source\PSoC4/UART.c ****     uint8  UART_txDataBits;
+  54:.\Generated_Source\PSoC4/UART.c ****     uint32 UART_txBufferSize;
+  55:.\Generated_Source\PSoC4/UART.c **** 
+  56:.\Generated_Source\PSoC4/UART.c ****     /* EZI2C config vars */
+  57:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_numberOfAddr;
+  58:.\Generated_Source\PSoC4/UART.c ****     uint8 UART_subAddrSize;
+  59:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_UNCONFIG_CONST_CFG) */
+  60:.\Generated_Source\PSoC4/UART.c **** 
+  61:.\Generated_Source\PSoC4/UART.c **** 
+  62:.\Generated_Source\PSoC4/UART.c **** /**********************************
+  63:.\Generated_Source\PSoC4/UART.c **** *     Common SCB Vars
+  64:.\Generated_Source\PSoC4/UART.c **** **********************************/
+  65:.\Generated_Source\PSoC4/UART.c **** 
+  66:.\Generated_Source\PSoC4/UART.c **** uint8 UART_initVar = 0u;
+  67:.\Generated_Source\PSoC4/UART.c **** cyisraddress UART_customIntrHandler = NULL;
+  68:.\Generated_Source\PSoC4/UART.c **** 
+  69:.\Generated_Source\PSoC4/UART.c **** 
+  70:.\Generated_Source\PSoC4/UART.c **** /***************************************
+  71:.\Generated_Source\PSoC4/UART.c **** *    Private Function Prototypes
+  72:.\Generated_Source\PSoC4/UART.c **** ***************************************/
+  73:.\Generated_Source\PSoC4/UART.c **** 
+  74:.\Generated_Source\PSoC4/UART.c **** static void UART_ScbEnableIntr(void);
+  75:.\Generated_Source\PSoC4/UART.c **** static void UART_ScbModeStop(void);
+  76:.\Generated_Source\PSoC4/UART.c **** 
+  77:.\Generated_Source\PSoC4/UART.c **** 
+  78:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+  79:.\Generated_Source\PSoC4/UART.c **** * Function Name: UART_Init
+  80:.\Generated_Source\PSoC4/UART.c **** ********************************************************************************
+  81:.\Generated_Source\PSoC4/UART.c **** *
+  82:.\Generated_Source\PSoC4/UART.c **** * Summary:
+  83:.\Generated_Source\PSoC4/UART.c **** *  Initializes SCB component to operate in one of selected configurations:
+  84:.\Generated_Source\PSoC4/UART.c **** *  I2C, SPI, UART, EZI2C or EZSPI.
+  85:.\Generated_Source\PSoC4/UART.c **** *  This function does not do any initialization when configuration is set to
+  86:.\Generated_Source\PSoC4/UART.c **** *  Unconfigured SCB.
+  87:.\Generated_Source\PSoC4/UART.c **** *
+  88:.\Generated_Source\PSoC4/UART.c **** * Parameters:
+  89:.\Generated_Source\PSoC4/UART.c **** *  None
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/UART.c **** *
+  91:.\Generated_Source\PSoC4/UART.c **** * Return:
+  92:.\Generated_Source\PSoC4/UART.c **** *  None
+  93:.\Generated_Source\PSoC4/UART.c **** *
+  94:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+  95:.\Generated_Source\PSoC4/UART.c **** void UART_Init(void)
+  96:.\Generated_Source\PSoC4/UART.c **** {
+  26              		.loc 1 96 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 3, -8
+  32              		.cfi_offset 14, -4
+  97:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_UNCONFIG_CONST_CFG)
+  98:.\Generated_Source\PSoC4/UART.c ****     if(UART_SCB_MODE_UNCONFIG_RUNTM_CFG)
+  99:.\Generated_Source\PSoC4/UART.c ****     {
+ 100:.\Generated_Source\PSoC4/UART.c ****         UART_initVar = 0u; /* Clear init var */
+ 101:.\Generated_Source\PSoC4/UART.c ****     }
+ 102:.\Generated_Source\PSoC4/UART.c ****     else
+ 103:.\Generated_Source\PSoC4/UART.c ****     {
+ 104:.\Generated_Source\PSoC4/UART.c ****         /* Initialization was done before call */
+ 105:.\Generated_Source\PSoC4/UART.c ****     }
+ 106:.\Generated_Source\PSoC4/UART.c **** 
+ 107:.\Generated_Source\PSoC4/UART.c **** #elif(UART_SCB_MODE_I2C_CONST_CFG)
+ 108:.\Generated_Source\PSoC4/UART.c ****     UART_I2CInit();
+ 109:.\Generated_Source\PSoC4/UART.c **** 
+ 110:.\Generated_Source\PSoC4/UART.c **** #elif(UART_SCB_MODE_SPI_CONST_CFG)
+ 111:.\Generated_Source\PSoC4/UART.c ****     UART_SpiInit();
+ 112:.\Generated_Source\PSoC4/UART.c **** 
+ 113:.\Generated_Source\PSoC4/UART.c **** #elif(UART_SCB_MODE_UART_CONST_CFG)
+ 114:.\Generated_Source\PSoC4/UART.c ****     UART_UartInit();
+  33              		.loc 1 114 0
+  34 0002 FFF7FEFF 		bl	UART_UartInit
+  35              	.LVL0:
+ 115:.\Generated_Source\PSoC4/UART.c **** 
+ 116:.\Generated_Source\PSoC4/UART.c **** #elif(UART_SCB_MODE_EZI2C_CONST_CFG)
+ 117:.\Generated_Source\PSoC4/UART.c ****     UART_EzI2CInit();
+ 118:.\Generated_Source\PSoC4/UART.c **** 
+ 119:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 120:.\Generated_Source\PSoC4/UART.c **** }
+  36              		.loc 1 120 0
+  37              		@ sp needed for prologue
+  38 0006 08BD     		pop	{r3, pc}
+  39              		.cfi_endproc
+  40              	.LFE0:
+  41              		.size	UART_Init, .-UART_Init
+  42              		.section	.text.UART_Enable,"ax",%progbits
+  43              		.align	2
+  44              		.global	UART_Enable
+  45              		.code	16
+  46              		.thumb_func
+  47              		.type	UART_Enable, %function
+  48              	UART_Enable:
+  49              	.LFB1:
+ 121:.\Generated_Source\PSoC4/UART.c **** 
+ 122:.\Generated_Source\PSoC4/UART.c **** 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 4
+
+
+ 123:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+ 124:.\Generated_Source\PSoC4/UART.c **** * Function Name: UART_Enable
+ 125:.\Generated_Source\PSoC4/UART.c **** ********************************************************************************
+ 126:.\Generated_Source\PSoC4/UART.c **** *
+ 127:.\Generated_Source\PSoC4/UART.c **** * Summary:
+ 128:.\Generated_Source\PSoC4/UART.c **** *  Enables SCB component operation.
+ 129:.\Generated_Source\PSoC4/UART.c **** *  The SCB configuration should be not changed when the component is enabled.
+ 130:.\Generated_Source\PSoC4/UART.c **** *  Any configuration changes should be made after disabling the component.
+ 131:.\Generated_Source\PSoC4/UART.c **** *
+ 132:.\Generated_Source\PSoC4/UART.c **** * Parameters:
+ 133:.\Generated_Source\PSoC4/UART.c **** *  None
+ 134:.\Generated_Source\PSoC4/UART.c **** *
+ 135:.\Generated_Source\PSoC4/UART.c **** * Return:
+ 136:.\Generated_Source\PSoC4/UART.c **** *  None
+ 137:.\Generated_Source\PSoC4/UART.c **** *
+ 138:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+ 139:.\Generated_Source\PSoC4/UART.c **** void UART_Enable(void)
+ 140:.\Generated_Source\PSoC4/UART.c **** {
+  50              		.loc 1 140 0
+  51              		.cfi_startproc
+ 141:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_MODE_UNCONFIG_CONST_CFG)
+ 142:.\Generated_Source\PSoC4/UART.c ****     if(!UART_SCB_MODE_UNCONFIG_RUNTM_CFG)
+ 143:.\Generated_Source\PSoC4/UART.c ****     {
+ 144:.\Generated_Source\PSoC4/UART.c ****         /* Enable SCB block, only if already configured */
+ 145:.\Generated_Source\PSoC4/UART.c ****         UART_CTRL_REG |= UART_CTRL_ENABLED;
+ 146:.\Generated_Source\PSoC4/UART.c ****         
+ 147:.\Generated_Source\PSoC4/UART.c ****         /* Enable interrupt */
+ 148:.\Generated_Source\PSoC4/UART.c ****         UART_ScbEnableIntr();
+ 149:.\Generated_Source\PSoC4/UART.c ****     }
+ 150:.\Generated_Source\PSoC4/UART.c **** #else
+ 151:.\Generated_Source\PSoC4/UART.c ****     UART_CTRL_REG |= UART_CTRL_ENABLED; /* Enable SCB block */
+  52              		.loc 1 151 0
+  53 0000 034B     		ldr	r3, .L3
+  54 0002 8022     		mov	r2, #128
+  55 0004 1968     		ldr	r1, [r3]
+  56 0006 1006     		lsl	r0, r2, #24
+  57 0008 0843     		orr	r0, r1
+  58 000a 1860     		str	r0, [r3]
+ 152:.\Generated_Source\PSoC4/UART.c ****     
+ 153:.\Generated_Source\PSoC4/UART.c ****     UART_ScbEnableIntr();
+ 154:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 155:.\Generated_Source\PSoC4/UART.c **** }
+  59              		.loc 1 155 0
+  60              		@ sp needed for prologue
+  61 000c 7047     		bx	lr
+  62              	.L4:
+  63 000e C046     		.align	2
+  64              	.L3:
+  65 0010 00000640 		.word	1074135040
+  66              		.cfi_endproc
+  67              	.LFE1:
+  68              		.size	UART_Enable, .-UART_Enable
+  69              		.section	.text.UART_Start,"ax",%progbits
+  70              		.align	2
+  71              		.global	UART_Start
+  72              		.code	16
+  73              		.thumb_func
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 5
+
+
+  74              		.type	UART_Start, %function
+  75              	UART_Start:
+  76              	.LFB2:
+ 156:.\Generated_Source\PSoC4/UART.c **** 
+ 157:.\Generated_Source\PSoC4/UART.c **** 
+ 158:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+ 159:.\Generated_Source\PSoC4/UART.c **** * Function Name: UART_Start
+ 160:.\Generated_Source\PSoC4/UART.c **** ********************************************************************************
+ 161:.\Generated_Source\PSoC4/UART.c **** *
+ 162:.\Generated_Source\PSoC4/UART.c **** * Summary:
+ 163:.\Generated_Source\PSoC4/UART.c **** *  Invokes SCB_Init() and SCB_Enable().
+ 164:.\Generated_Source\PSoC4/UART.c **** *  After this function call the component is enabled and ready for operation.
+ 165:.\Generated_Source\PSoC4/UART.c **** *
+ 166:.\Generated_Source\PSoC4/UART.c **** * Parameters:
+ 167:.\Generated_Source\PSoC4/UART.c **** *  None
+ 168:.\Generated_Source\PSoC4/UART.c **** *
+ 169:.\Generated_Source\PSoC4/UART.c **** * Return:
+ 170:.\Generated_Source\PSoC4/UART.c **** *  None
+ 171:.\Generated_Source\PSoC4/UART.c **** *
+ 172:.\Generated_Source\PSoC4/UART.c **** * Global variables:
+ 173:.\Generated_Source\PSoC4/UART.c **** *  UART_initVar - used to check initial configuration, modified
+ 174:.\Generated_Source\PSoC4/UART.c **** *  on first function call.
+ 175:.\Generated_Source\PSoC4/UART.c **** *
+ 176:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+ 177:.\Generated_Source\PSoC4/UART.c **** void UART_Start(void)
+ 178:.\Generated_Source\PSoC4/UART.c **** {
+  77              		.loc 1 178 0
+  78              		.cfi_startproc
+  79 0000 08B5     		push	{r3, lr}
+  80              	.LCFI1:
+  81              		.cfi_def_cfa_offset 8
+  82              		.cfi_offset 3, -8
+  83              		.cfi_offset 14, -4
+ 179:.\Generated_Source\PSoC4/UART.c ****     if(0u == UART_initVar)
+  84              		.loc 1 179 0
+  85 0002 074B     		ldr	r3, .L8
+  86 0004 1A78     		ldrb	r2, [r3]
+  87 0006 002A     		cmp	r2, #0
+  88 0008 03D1     		bne	.L6
+ 180:.\Generated_Source\PSoC4/UART.c ****     {
+ 181:.\Generated_Source\PSoC4/UART.c ****         UART_initVar = 1u; /* Component was initialized */
+  89              		.loc 1 181 0
+  90 000a 0120     		mov	r0, #1
+  91 000c 1870     		strb	r0, [r3]
+  92              	.LBB10:
+  93              	.LBB11:
+ 114:.\Generated_Source\PSoC4/UART.c ****     UART_UartInit();
+  94              		.loc 1 114 0
+  95 000e FFF7FEFF 		bl	UART_UartInit
+  96              	.LVL1:
+  97              	.L6:
+  98              	.LBE11:
+  99              	.LBE10:
+ 100              	.LBB12:
+ 101              	.LBB13:
+ 151:.\Generated_Source\PSoC4/UART.c ****     UART_CTRL_REG |= UART_CTRL_ENABLED; /* Enable SCB block */
+ 102              		.loc 1 151 0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 6
+
+
+ 103 0012 044B     		ldr	r3, .L8+4
+ 104 0014 8022     		mov	r2, #128
+ 105 0016 1968     		ldr	r1, [r3]
+ 106 0018 1006     		lsl	r0, r2, #24
+ 107 001a 0843     		orr	r0, r1
+ 108 001c 1860     		str	r0, [r3]
+ 109              	.LBE13:
+ 110              	.LBE12:
+ 182:.\Generated_Source\PSoC4/UART.c ****         UART_Init();       /* Initialize component      */
+ 183:.\Generated_Source\PSoC4/UART.c ****     }
+ 184:.\Generated_Source\PSoC4/UART.c **** 
+ 185:.\Generated_Source\PSoC4/UART.c ****     UART_Enable();
+ 186:.\Generated_Source\PSoC4/UART.c **** }
+ 111              		.loc 1 186 0
+ 112              		@ sp needed for prologue
+ 113 001e 08BD     		pop	{r3, pc}
+ 114              	.L9:
+ 115              		.align	2
+ 116              	.L8:
+ 117 0020 00000000 		.word	.LANCHOR0
+ 118 0024 00000640 		.word	1074135040
+ 119              		.cfi_endproc
+ 120              	.LFE2:
+ 121              		.size	UART_Start, .-UART_Start
+ 122              		.section	.text.UART_Stop,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	UART_Stop
+ 125              		.code	16
+ 126              		.thumb_func
+ 127              		.type	UART_Stop, %function
+ 128              	UART_Stop:
+ 129              	.LFB3:
+ 187:.\Generated_Source\PSoC4/UART.c **** 
+ 188:.\Generated_Source\PSoC4/UART.c **** 
+ 189:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+ 190:.\Generated_Source\PSoC4/UART.c **** * Function Name: UART_Stop
+ 191:.\Generated_Source\PSoC4/UART.c **** ********************************************************************************
+ 192:.\Generated_Source\PSoC4/UART.c **** *
+ 193:.\Generated_Source\PSoC4/UART.c **** * Summary:
+ 194:.\Generated_Source\PSoC4/UART.c **** *  Disables the SCB component.
+ 195:.\Generated_Source\PSoC4/UART.c **** *
+ 196:.\Generated_Source\PSoC4/UART.c **** * Parameters:
+ 197:.\Generated_Source\PSoC4/UART.c **** *  None
+ 198:.\Generated_Source\PSoC4/UART.c **** *
+ 199:.\Generated_Source\PSoC4/UART.c **** * Return:
+ 200:.\Generated_Source\PSoC4/UART.c **** *  None
+ 201:.\Generated_Source\PSoC4/UART.c **** *
+ 202:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+ 203:.\Generated_Source\PSoC4/UART.c **** void UART_Stop(void)
+ 204:.\Generated_Source\PSoC4/UART.c **** {
+ 130              		.loc 1 204 0
+ 131              		.cfi_startproc
+ 205:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_IRQ_INTERNAL)
+ 206:.\Generated_Source\PSoC4/UART.c ****     UART_SCB_IRQ_Disable();     /* Disable interrupt before block */
+ 207:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_IRQ_INTERNAL) */
+ 208:.\Generated_Source\PSoC4/UART.c **** 
+ 209:.\Generated_Source\PSoC4/UART.c ****     UART_CTRL_REG &= (uint32) ~UART_CTRL_ENABLED;  /* Disable SCB block */
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 7
+
+
+ 132              		.loc 1 209 0
+ 133 0000 024B     		ldr	r3, .L11
+ 210:.\Generated_Source\PSoC4/UART.c **** 
+ 211:.\Generated_Source\PSoC4/UART.c **** #if(UART_SCB_IRQ_INTERNAL)
+ 212:.\Generated_Source\PSoC4/UART.c ****     UART_SCB_IRQ_ClearPending(); /* Clear pending interrupt */
+ 213:.\Generated_Source\PSoC4/UART.c **** #endif /* (UART_SCB_IRQ_INTERNAL) */
+ 214:.\Generated_Source\PSoC4/UART.c ****     
+ 215:.\Generated_Source\PSoC4/UART.c ****     UART_ScbModeStop(); /* Calls scbMode specific Stop function */
+ 216:.\Generated_Source\PSoC4/UART.c **** }
+ 134              		.loc 1 216 0
+ 135              		@ sp needed for prologue
+ 209:.\Generated_Source\PSoC4/UART.c ****     UART_CTRL_REG &= (uint32) ~UART_CTRL_ENABLED;  /* Disable SCB block */
+ 136              		.loc 1 209 0
+ 137 0002 1A68     		ldr	r2, [r3]
+ 138 0004 5000     		lsl	r0, r2, #1
+ 139 0006 4108     		lsr	r1, r0, #1
+ 140 0008 1960     		str	r1, [r3]
+ 141              		.loc 1 216 0
+ 142 000a 7047     		bx	lr
+ 143              	.L12:
+ 144              		.align	2
+ 145              	.L11:
+ 146 000c 00000640 		.word	1074135040
+ 147              		.cfi_endproc
+ 148              	.LFE3:
+ 149              		.size	UART_Stop, .-UART_Stop
+ 150              		.section	.text.UART_SetCustomInterruptHandler,"ax",%progbits
+ 151              		.align	2
+ 152              		.global	UART_SetCustomInterruptHandler
+ 153              		.code	16
+ 154              		.thumb_func
+ 155              		.type	UART_SetCustomInterruptHandler, %function
+ 156              	UART_SetCustomInterruptHandler:
+ 157              	.LFB4:
+ 217:.\Generated_Source\PSoC4/UART.c **** 
+ 218:.\Generated_Source\PSoC4/UART.c **** 
+ 219:.\Generated_Source\PSoC4/UART.c **** /*******************************************************************************
+ 220:.\Generated_Source\PSoC4/UART.c **** * Function Name: UART_SetCustomInterruptHandler
+ 221:.\Generated_Source\PSoC4/UART.c **** ********************************************************************************
+ 222:.\Generated_Source\PSoC4/UART.c **** *
+ 223:.\Generated_Source\PSoC4/UART.c **** * Summary:
+ 224:.\Generated_Source\PSoC4/UART.c **** *  Registers a function to be called by the internal interrupt handler.
+ 225:.\Generated_Source\PSoC4/UART.c **** *  First the function that is registered is called, then the internal interrupt
+ 226:.\Generated_Source\PSoC4/UART.c **** *  handler performs any operations such as software buffer management functions
+ 227:.\Generated_Source\PSoC4/UART.c **** *  before the interrupt returns.  It is user's responsibility to not break the
+ 228:.\Generated_Source\PSoC4/UART.c **** *  software buffer operations. Only one custom handler is supported, which is
+ 229:.\Generated_Source\PSoC4/UART.c **** *  the function provided by the most recent call.
+ 230:.\Generated_Source\PSoC4/UART.c **** *  At initialization time no custom handler is registered.
+ 231:.\Generated_Source\PSoC4/UART.c **** *
+ 232:.\Generated_Source\PSoC4/UART.c **** * Parameters:
+ 233:.\Generated_Source\PSoC4/UART.c **** *  func: Pointer to the function to register.
+ 234:.\Generated_Source\PSoC4/UART.c **** *        The value NULL indicates to remove the current custom interrupt
+ 235:.\Generated_Source\PSoC4/UART.c **** *        handler.
+ 236:.\Generated_Source\PSoC4/UART.c **** *
+ 237:.\Generated_Source\PSoC4/UART.c **** * Return:
+ 238:.\Generated_Source\PSoC4/UART.c **** *  None
+ 239:.\Generated_Source\PSoC4/UART.c **** *
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 8
+
+
+ 240:.\Generated_Source\PSoC4/UART.c **** *******************************************************************************/
+ 241:.\Generated_Source\PSoC4/UART.c **** void UART_SetCustomInterruptHandler(cyisraddress func)
+ 242:.\Generated_Source\PSoC4/UART.c **** {
+ 158              		.loc 1 242 0
+ 159              		.cfi_startproc
+ 160              	.LVL2:
+ 243:.\Generated_Source\PSoC4/UART.c ****     UART_customIntrHandler = func; /* Register interrupt handler */
+ 161              		.loc 1 243 0
+ 162 0000 014B     		ldr	r3, .L14
+ 244:.\Generated_Source\PSoC4/UART.c **** }
+ 163              		.loc 1 244 0
+ 164              		@ sp needed for prologue
+ 243:.\Generated_Source\PSoC4/UART.c ****     UART_customIntrHandler = func; /* Register interrupt handler */
+ 165              		.loc 1 243 0
+ 166 0002 5860     		str	r0, [r3, #4]
+ 167              		.loc 1 244 0
+ 168 0004 7047     		bx	lr
+ 169              	.L15:
+ 170 0006 C046     		.align	2
+ 171              	.L14:
+ 172 0008 00000000 		.word	.LANCHOR0
+ 173              		.cfi_endproc
+ 174              	.LFE4:
+ 175              		.size	UART_SetCustomInterruptHandler, .-UART_SetCustomInterruptHandler
+ 176              		.global	UART_customIntrHandler
+ 177              		.global	UART_initVar
+ 178              		.bss
+ 179              		.align	2
+ 180              		.set	.LANCHOR0,. + 0
+ 181              		.type	UART_initVar, %object
+ 182              		.size	UART_initVar, 1
+ 183              	UART_initVar:
+ 184 0000 00       		.space	1
+ 185 0001 000000   		.space	3
+ 186              		.type	UART_customIntrHandler, %object
+ 187              		.size	UART_customIntrHandler, 4
+ 188              	UART_customIntrHandler:
+ 189 0004 00000000 		.space	4
+ 190              		.text
+ 191              	.Letext0:
+ 192              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 193              		.file 3 ".\\Generated_Source\\PSoC4\\UART_SPI_UART_PVT.h"
+ 194              		.section	.debug_info,"",%progbits
+ 195              	.Ldebug_info0:
+ 196 0000 CC010000 		.4byte	0x1cc
+ 197 0004 0200     		.2byte	0x2
+ 198 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 199 000a 04       		.byte	0x4
+ 200 000b 01       		.uleb128 0x1
+ 201 000c B5010000 		.4byte	.LASF26
+ 202 0010 01       		.byte	0x1
+ 203 0011 02010000 		.4byte	.LASF27
+ 204 0015 06000000 		.4byte	.LASF28
+ 205 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 206 001d 00000000 		.4byte	0
+ 207 0021 00000000 		.4byte	0
+ 208 0025 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 9
+
+
+ 209 0029 02       		.uleb128 0x2
+ 210 002a 01       		.byte	0x1
+ 211 002b 06       		.byte	0x6
+ 212 002c 07020000 		.4byte	.LASF0
+ 213 0030 02       		.uleb128 0x2
+ 214 0031 01       		.byte	0x1
+ 215 0032 08       		.byte	0x8
+ 216 0033 95000000 		.4byte	.LASF1
+ 217 0037 02       		.uleb128 0x2
+ 218 0038 02       		.byte	0x2
+ 219 0039 05       		.byte	0x5
+ 220 003a 98010000 		.4byte	.LASF2
+ 221 003e 02       		.uleb128 0x2
+ 222 003f 02       		.byte	0x2
+ 223 0040 07       		.byte	0x7
+ 224 0041 63000000 		.4byte	.LASF3
+ 225 0045 02       		.uleb128 0x2
+ 226 0046 04       		.byte	0x4
+ 227 0047 05       		.byte	0x5
+ 228 0048 FE010000 		.4byte	.LASF4
+ 229 004c 02       		.uleb128 0x2
+ 230 004d 04       		.byte	0x4
+ 231 004e 07       		.byte	0x7
+ 232 004f AD000000 		.4byte	.LASF5
+ 233 0053 02       		.uleb128 0x2
+ 234 0054 08       		.byte	0x8
+ 235 0055 05       		.byte	0x5
+ 236 0056 85010000 		.4byte	.LASF6
+ 237 005a 02       		.uleb128 0x2
+ 238 005b 08       		.byte	0x8
+ 239 005c 07       		.byte	0x7
+ 240 005d 4E010000 		.4byte	.LASF7
+ 241 0061 03       		.uleb128 0x3
+ 242 0062 04       		.byte	0x4
+ 243 0063 05       		.byte	0x5
+ 244 0064 696E7400 		.ascii	"int\000"
+ 245 0068 02       		.uleb128 0x2
+ 246 0069 04       		.byte	0x4
+ 247 006a 07       		.byte	0x7
+ 248 006b 33010000 		.4byte	.LASF8
+ 249 006f 04       		.uleb128 0x4
+ 250 0070 BF000000 		.4byte	.LASF9
+ 251 0074 02       		.byte	0x2
+ 252 0075 5B       		.byte	0x5b
+ 253 0076 30000000 		.4byte	0x30
+ 254 007a 04       		.uleb128 0x4
+ 255 007b FB000000 		.4byte	.LASF10
+ 256 007f 02       		.byte	0x2
+ 257 0080 5D       		.byte	0x5d
+ 258 0081 4C000000 		.4byte	0x4c
+ 259 0085 02       		.uleb128 0x2
+ 260 0086 04       		.byte	0x4
+ 261 0087 04       		.byte	0x4
+ 262 0088 83000000 		.4byte	.LASF11
+ 263 008c 02       		.uleb128 0x2
+ 264 008d 08       		.byte	0x8
+ 265 008e 04       		.byte	0x4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 10
+
+
+ 266 008f D0000000 		.4byte	.LASF12
+ 267 0093 02       		.uleb128 0x2
+ 268 0094 01       		.byte	0x1
+ 269 0095 08       		.byte	0x8
+ 270 0096 93010000 		.4byte	.LASF13
+ 271 009a 04       		.uleb128 0x4
+ 272 009b 00000000 		.4byte	.LASF14
+ 273 009f 02       		.byte	0x2
+ 274 00a0 F2       		.byte	0xf2
+ 275 00a1 A5000000 		.4byte	0xa5
+ 276 00a5 05       		.uleb128 0x5
+ 277 00a6 7A000000 		.4byte	0x7a
+ 278 00aa 06       		.uleb128 0x6
+ 279 00ab 65010000 		.4byte	.LASF15
+ 280 00af 02       		.byte	0x2
+ 281 00b0 0201     		.2byte	0x102
+ 282 00b2 B6000000 		.4byte	0xb6
+ 283 00b6 07       		.uleb128 0x7
+ 284 00b7 04       		.byte	0x4
+ 285 00b8 BC000000 		.4byte	0xbc
+ 286 00bc 08       		.uleb128 0x8
+ 287 00bd 01       		.byte	0x1
+ 288 00be 02       		.uleb128 0x2
+ 289 00bf 04       		.byte	0x4
+ 290 00c0 07       		.byte	0x7
+ 291 00c1 7C010000 		.4byte	.LASF16
+ 292 00c5 09       		.uleb128 0x9
+ 293 00c6 A2010000 		.4byte	.LASF19
+ 294 00ca 01       		.byte	0x1
+ 295 00cb 0501     		.2byte	0x105
+ 296 00cd 01       		.byte	0x1
+ 297 00ce 01       		.byte	0x1
+ 298 00cf 0A       		.uleb128 0xa
+ 299 00d0 01       		.byte	0x1
+ 300 00d1 A3000000 		.4byte	.LASF17
+ 301 00d5 01       		.byte	0x1
+ 302 00d6 5F       		.byte	0x5f
+ 303 00d7 01       		.byte	0x1
+ 304 00d8 01       		.byte	0x1
+ 305 00d9 0A       		.uleb128 0xa
+ 306 00da 01       		.byte	0x1
+ 307 00db 89000000 		.4byte	.LASF18
+ 308 00df 01       		.byte	0x1
+ 309 00e0 8B       		.byte	0x8b
+ 310 00e1 01       		.byte	0x1
+ 311 00e2 01       		.byte	0x1
+ 312 00e3 09       		.uleb128 0x9
+ 313 00e4 22010000 		.4byte	.LASF20
+ 314 00e8 01       		.byte	0x1
+ 315 00e9 2401     		.2byte	0x124
+ 316 00eb 01       		.byte	0x1
+ 317 00ec 01       		.byte	0x1
+ 318 00ed 0B       		.uleb128 0xb
+ 319 00ee CF000000 		.4byte	0xcf
+ 320 00f2 00000000 		.4byte	.LFB0
+ 321 00f6 08000000 		.4byte	.LFE0
+ 322 00fa 00000000 		.4byte	.LLST0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 11
+
+
+ 323 00fe 01       		.byte	0x1
+ 324 00ff 0D010000 		.4byte	0x10d
+ 325 0103 0C       		.uleb128 0xc
+ 326 0104 06000000 		.4byte	.LVL0
+ 327 0108 C5010000 		.4byte	0x1c5
+ 328 010c 00       		.byte	0
+ 329 010d 0D       		.uleb128 0xd
+ 330 010e D9000000 		.4byte	0xd9
+ 331 0112 00000000 		.4byte	.LFB1
+ 332 0116 14000000 		.4byte	.LFE1
+ 333 011a 02       		.byte	0x2
+ 334 011b 7D       		.byte	0x7d
+ 335 011c 00       		.sleb128 0
+ 336 011d 01       		.byte	0x1
+ 337 011e 0E       		.uleb128 0xe
+ 338 011f 01       		.byte	0x1
+ 339 0120 C5000000 		.4byte	.LASF21
+ 340 0124 01       		.byte	0x1
+ 341 0125 B1       		.byte	0xb1
+ 342 0126 01       		.byte	0x1
+ 343 0127 00000000 		.4byte	.LFB2
+ 344 012b 28000000 		.4byte	.LFE2
+ 345 012f 20000000 		.4byte	.LLST1
+ 346 0133 01       		.byte	0x1
+ 347 0134 65010000 		.4byte	0x165
+ 348 0138 0F       		.uleb128 0xf
+ 349 0139 CF000000 		.4byte	0xcf
+ 350 013d 0E000000 		.4byte	.LBB10
+ 351 0141 12000000 		.4byte	.LBE10
+ 352 0145 01       		.byte	0x1
+ 353 0146 B6       		.byte	0xb6
+ 354 0147 55010000 		.4byte	0x155
+ 355 014b 0C       		.uleb128 0xc
+ 356 014c 12000000 		.4byte	.LVL1
+ 357 0150 C5010000 		.4byte	0x1c5
+ 358 0154 00       		.byte	0
+ 359 0155 10       		.uleb128 0x10
+ 360 0156 D9000000 		.4byte	0xd9
+ 361 015a 12000000 		.4byte	.LBB12
+ 362 015e 1E000000 		.4byte	.LBE12
+ 363 0162 01       		.byte	0x1
+ 364 0163 B9       		.byte	0xb9
+ 365 0164 00       		.byte	0
+ 366 0165 11       		.uleb128 0x11
+ 367 0166 01       		.byte	0x1
+ 368 0167 72010000 		.4byte	.LASF29
+ 369 016b 01       		.byte	0x1
+ 370 016c CB       		.byte	0xcb
+ 371 016d 01       		.byte	0x1
+ 372 016e 00000000 		.4byte	.LFB3
+ 373 0172 10000000 		.4byte	.LFE3
+ 374 0176 02       		.byte	0x2
+ 375 0177 7D       		.byte	0x7d
+ 376 0178 00       		.sleb128 0
+ 377 0179 01       		.byte	0x1
+ 378 017a 12       		.uleb128 0x12
+ 379 017b 01       		.byte	0x1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 12
+
+
+ 380 017c DC000000 		.4byte	.LASF22
+ 381 0180 01       		.byte	0x1
+ 382 0181 F1       		.byte	0xf1
+ 383 0182 01       		.byte	0x1
+ 384 0183 00000000 		.4byte	.LFB4
+ 385 0187 0C000000 		.4byte	.LFE4
+ 386 018b 02       		.byte	0x2
+ 387 018c 7D       		.byte	0x7d
+ 388 018d 00       		.sleb128 0
+ 389 018e 01       		.byte	0x1
+ 390 018f A1010000 		.4byte	0x1a1
+ 391 0193 13       		.uleb128 0x13
+ 392 0194 D7000000 		.4byte	.LASF30
+ 393 0198 01       		.byte	0x1
+ 394 0199 F1       		.byte	0xf1
+ 395 019a AA000000 		.4byte	0xaa
+ 396 019e 01       		.byte	0x1
+ 397 019f 50       		.byte	0x50
+ 398 01a0 00       		.byte	0
+ 399 01a1 14       		.uleb128 0x14
+ 400 01a2 76000000 		.4byte	.LASF23
+ 401 01a6 01       		.byte	0x1
+ 402 01a7 42       		.byte	0x42
+ 403 01a8 6F000000 		.4byte	0x6f
+ 404 01ac 01       		.byte	0x1
+ 405 01ad 05       		.byte	0x5
+ 406 01ae 03       		.byte	0x3
+ 407 01af 00000000 		.4byte	UART_initVar
+ 408 01b3 14       		.uleb128 0x14
+ 409 01b4 4C000000 		.4byte	.LASF24
+ 410 01b8 01       		.byte	0x1
+ 411 01b9 43       		.byte	0x43
+ 412 01ba AA000000 		.4byte	0xaa
+ 413 01be 01       		.byte	0x1
+ 414 01bf 05       		.byte	0x5
+ 415 01c0 03       		.byte	0x3
+ 416 01c1 00000000 		.4byte	UART_customIntrHandler
+ 417 01c5 15       		.uleb128 0x15
+ 418 01c6 01       		.byte	0x1
+ 419 01c7 40010000 		.4byte	.LASF25
+ 420 01cb 03       		.byte	0x3
+ 421 01cc 3F       		.byte	0x3f
+ 422 01cd 01       		.byte	0x1
+ 423 01ce 01       		.byte	0x1
+ 424 01cf 00       		.byte	0
+ 425              		.section	.debug_abbrev,"",%progbits
+ 426              	.Ldebug_abbrev0:
+ 427 0000 01       		.uleb128 0x1
+ 428 0001 11       		.uleb128 0x11
+ 429 0002 01       		.byte	0x1
+ 430 0003 25       		.uleb128 0x25
+ 431 0004 0E       		.uleb128 0xe
+ 432 0005 13       		.uleb128 0x13
+ 433 0006 0B       		.uleb128 0xb
+ 434 0007 03       		.uleb128 0x3
+ 435 0008 0E       		.uleb128 0xe
+ 436 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 13
+
+
+ 437 000a 0E       		.uleb128 0xe
+ 438 000b 55       		.uleb128 0x55
+ 439 000c 06       		.uleb128 0x6
+ 440 000d 11       		.uleb128 0x11
+ 441 000e 01       		.uleb128 0x1
+ 442 000f 52       		.uleb128 0x52
+ 443 0010 01       		.uleb128 0x1
+ 444 0011 10       		.uleb128 0x10
+ 445 0012 06       		.uleb128 0x6
+ 446 0013 00       		.byte	0
+ 447 0014 00       		.byte	0
+ 448 0015 02       		.uleb128 0x2
+ 449 0016 24       		.uleb128 0x24
+ 450 0017 00       		.byte	0
+ 451 0018 0B       		.uleb128 0xb
+ 452 0019 0B       		.uleb128 0xb
+ 453 001a 3E       		.uleb128 0x3e
+ 454 001b 0B       		.uleb128 0xb
+ 455 001c 03       		.uleb128 0x3
+ 456 001d 0E       		.uleb128 0xe
+ 457 001e 00       		.byte	0
+ 458 001f 00       		.byte	0
+ 459 0020 03       		.uleb128 0x3
+ 460 0021 24       		.uleb128 0x24
+ 461 0022 00       		.byte	0
+ 462 0023 0B       		.uleb128 0xb
+ 463 0024 0B       		.uleb128 0xb
+ 464 0025 3E       		.uleb128 0x3e
+ 465 0026 0B       		.uleb128 0xb
+ 466 0027 03       		.uleb128 0x3
+ 467 0028 08       		.uleb128 0x8
+ 468 0029 00       		.byte	0
+ 469 002a 00       		.byte	0
+ 470 002b 04       		.uleb128 0x4
+ 471 002c 16       		.uleb128 0x16
+ 472 002d 00       		.byte	0
+ 473 002e 03       		.uleb128 0x3
+ 474 002f 0E       		.uleb128 0xe
+ 475 0030 3A       		.uleb128 0x3a
+ 476 0031 0B       		.uleb128 0xb
+ 477 0032 3B       		.uleb128 0x3b
+ 478 0033 0B       		.uleb128 0xb
+ 479 0034 49       		.uleb128 0x49
+ 480 0035 13       		.uleb128 0x13
+ 481 0036 00       		.byte	0
+ 482 0037 00       		.byte	0
+ 483 0038 05       		.uleb128 0x5
+ 484 0039 35       		.uleb128 0x35
+ 485 003a 00       		.byte	0
+ 486 003b 49       		.uleb128 0x49
+ 487 003c 13       		.uleb128 0x13
+ 488 003d 00       		.byte	0
+ 489 003e 00       		.byte	0
+ 490 003f 06       		.uleb128 0x6
+ 491 0040 16       		.uleb128 0x16
+ 492 0041 00       		.byte	0
+ 493 0042 03       		.uleb128 0x3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 14
+
+
+ 494 0043 0E       		.uleb128 0xe
+ 495 0044 3A       		.uleb128 0x3a
+ 496 0045 0B       		.uleb128 0xb
+ 497 0046 3B       		.uleb128 0x3b
+ 498 0047 05       		.uleb128 0x5
+ 499 0048 49       		.uleb128 0x49
+ 500 0049 13       		.uleb128 0x13
+ 501 004a 00       		.byte	0
+ 502 004b 00       		.byte	0
+ 503 004c 07       		.uleb128 0x7
+ 504 004d 0F       		.uleb128 0xf
+ 505 004e 00       		.byte	0
+ 506 004f 0B       		.uleb128 0xb
+ 507 0050 0B       		.uleb128 0xb
+ 508 0051 49       		.uleb128 0x49
+ 509 0052 13       		.uleb128 0x13
+ 510 0053 00       		.byte	0
+ 511 0054 00       		.byte	0
+ 512 0055 08       		.uleb128 0x8
+ 513 0056 15       		.uleb128 0x15
+ 514 0057 00       		.byte	0
+ 515 0058 27       		.uleb128 0x27
+ 516 0059 0C       		.uleb128 0xc
+ 517 005a 00       		.byte	0
+ 518 005b 00       		.byte	0
+ 519 005c 09       		.uleb128 0x9
+ 520 005d 2E       		.uleb128 0x2e
+ 521 005e 00       		.byte	0
+ 522 005f 03       		.uleb128 0x3
+ 523 0060 0E       		.uleb128 0xe
+ 524 0061 3A       		.uleb128 0x3a
+ 525 0062 0B       		.uleb128 0xb
+ 526 0063 3B       		.uleb128 0x3b
+ 527 0064 05       		.uleb128 0x5
+ 528 0065 27       		.uleb128 0x27
+ 529 0066 0C       		.uleb128 0xc
+ 530 0067 20       		.uleb128 0x20
+ 531 0068 0B       		.uleb128 0xb
+ 532 0069 00       		.byte	0
+ 533 006a 00       		.byte	0
+ 534 006b 0A       		.uleb128 0xa
+ 535 006c 2E       		.uleb128 0x2e
+ 536 006d 00       		.byte	0
+ 537 006e 3F       		.uleb128 0x3f
+ 538 006f 0C       		.uleb128 0xc
+ 539 0070 03       		.uleb128 0x3
+ 540 0071 0E       		.uleb128 0xe
+ 541 0072 3A       		.uleb128 0x3a
+ 542 0073 0B       		.uleb128 0xb
+ 543 0074 3B       		.uleb128 0x3b
+ 544 0075 0B       		.uleb128 0xb
+ 545 0076 27       		.uleb128 0x27
+ 546 0077 0C       		.uleb128 0xc
+ 547 0078 20       		.uleb128 0x20
+ 548 0079 0B       		.uleb128 0xb
+ 549 007a 00       		.byte	0
+ 550 007b 00       		.byte	0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 15
+
+
+ 551 007c 0B       		.uleb128 0xb
+ 552 007d 2E       		.uleb128 0x2e
+ 553 007e 01       		.byte	0x1
+ 554 007f 31       		.uleb128 0x31
+ 555 0080 13       		.uleb128 0x13
+ 556 0081 11       		.uleb128 0x11
+ 557 0082 01       		.uleb128 0x1
+ 558 0083 12       		.uleb128 0x12
+ 559 0084 01       		.uleb128 0x1
+ 560 0085 40       		.uleb128 0x40
+ 561 0086 06       		.uleb128 0x6
+ 562 0087 9742     		.uleb128 0x2117
+ 563 0089 0C       		.uleb128 0xc
+ 564 008a 01       		.uleb128 0x1
+ 565 008b 13       		.uleb128 0x13
+ 566 008c 00       		.byte	0
+ 567 008d 00       		.byte	0
+ 568 008e 0C       		.uleb128 0xc
+ 569 008f 898201   		.uleb128 0x4109
+ 570 0092 00       		.byte	0
+ 571 0093 11       		.uleb128 0x11
+ 572 0094 01       		.uleb128 0x1
+ 573 0095 31       		.uleb128 0x31
+ 574 0096 13       		.uleb128 0x13
+ 575 0097 00       		.byte	0
+ 576 0098 00       		.byte	0
+ 577 0099 0D       		.uleb128 0xd
+ 578 009a 2E       		.uleb128 0x2e
+ 579 009b 00       		.byte	0
+ 580 009c 31       		.uleb128 0x31
+ 581 009d 13       		.uleb128 0x13
+ 582 009e 11       		.uleb128 0x11
+ 583 009f 01       		.uleb128 0x1
+ 584 00a0 12       		.uleb128 0x12
+ 585 00a1 01       		.uleb128 0x1
+ 586 00a2 40       		.uleb128 0x40
+ 587 00a3 0A       		.uleb128 0xa
+ 588 00a4 9742     		.uleb128 0x2117
+ 589 00a6 0C       		.uleb128 0xc
+ 590 00a7 00       		.byte	0
+ 591 00a8 00       		.byte	0
+ 592 00a9 0E       		.uleb128 0xe
+ 593 00aa 2E       		.uleb128 0x2e
+ 594 00ab 01       		.byte	0x1
+ 595 00ac 3F       		.uleb128 0x3f
+ 596 00ad 0C       		.uleb128 0xc
+ 597 00ae 03       		.uleb128 0x3
+ 598 00af 0E       		.uleb128 0xe
+ 599 00b0 3A       		.uleb128 0x3a
+ 600 00b1 0B       		.uleb128 0xb
+ 601 00b2 3B       		.uleb128 0x3b
+ 602 00b3 0B       		.uleb128 0xb
+ 603 00b4 27       		.uleb128 0x27
+ 604 00b5 0C       		.uleb128 0xc
+ 605 00b6 11       		.uleb128 0x11
+ 606 00b7 01       		.uleb128 0x1
+ 607 00b8 12       		.uleb128 0x12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 16
+
+
+ 608 00b9 01       		.uleb128 0x1
+ 609 00ba 40       		.uleb128 0x40
+ 610 00bb 06       		.uleb128 0x6
+ 611 00bc 9742     		.uleb128 0x2117
+ 612 00be 0C       		.uleb128 0xc
+ 613 00bf 01       		.uleb128 0x1
+ 614 00c0 13       		.uleb128 0x13
+ 615 00c1 00       		.byte	0
+ 616 00c2 00       		.byte	0
+ 617 00c3 0F       		.uleb128 0xf
+ 618 00c4 1D       		.uleb128 0x1d
+ 619 00c5 01       		.byte	0x1
+ 620 00c6 31       		.uleb128 0x31
+ 621 00c7 13       		.uleb128 0x13
+ 622 00c8 11       		.uleb128 0x11
+ 623 00c9 01       		.uleb128 0x1
+ 624 00ca 12       		.uleb128 0x12
+ 625 00cb 01       		.uleb128 0x1
+ 626 00cc 58       		.uleb128 0x58
+ 627 00cd 0B       		.uleb128 0xb
+ 628 00ce 59       		.uleb128 0x59
+ 629 00cf 0B       		.uleb128 0xb
+ 630 00d0 01       		.uleb128 0x1
+ 631 00d1 13       		.uleb128 0x13
+ 632 00d2 00       		.byte	0
+ 633 00d3 00       		.byte	0
+ 634 00d4 10       		.uleb128 0x10
+ 635 00d5 1D       		.uleb128 0x1d
+ 636 00d6 00       		.byte	0
+ 637 00d7 31       		.uleb128 0x31
+ 638 00d8 13       		.uleb128 0x13
+ 639 00d9 11       		.uleb128 0x11
+ 640 00da 01       		.uleb128 0x1
+ 641 00db 12       		.uleb128 0x12
+ 642 00dc 01       		.uleb128 0x1
+ 643 00dd 58       		.uleb128 0x58
+ 644 00de 0B       		.uleb128 0xb
+ 645 00df 59       		.uleb128 0x59
+ 646 00e0 0B       		.uleb128 0xb
+ 647 00e1 00       		.byte	0
+ 648 00e2 00       		.byte	0
+ 649 00e3 11       		.uleb128 0x11
+ 650 00e4 2E       		.uleb128 0x2e
+ 651 00e5 00       		.byte	0
+ 652 00e6 3F       		.uleb128 0x3f
+ 653 00e7 0C       		.uleb128 0xc
+ 654 00e8 03       		.uleb128 0x3
+ 655 00e9 0E       		.uleb128 0xe
+ 656 00ea 3A       		.uleb128 0x3a
+ 657 00eb 0B       		.uleb128 0xb
+ 658 00ec 3B       		.uleb128 0x3b
+ 659 00ed 0B       		.uleb128 0xb
+ 660 00ee 27       		.uleb128 0x27
+ 661 00ef 0C       		.uleb128 0xc
+ 662 00f0 11       		.uleb128 0x11
+ 663 00f1 01       		.uleb128 0x1
+ 664 00f2 12       		.uleb128 0x12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 17
+
+
+ 665 00f3 01       		.uleb128 0x1
+ 666 00f4 40       		.uleb128 0x40
+ 667 00f5 0A       		.uleb128 0xa
+ 668 00f6 9742     		.uleb128 0x2117
+ 669 00f8 0C       		.uleb128 0xc
+ 670 00f9 00       		.byte	0
+ 671 00fa 00       		.byte	0
+ 672 00fb 12       		.uleb128 0x12
+ 673 00fc 2E       		.uleb128 0x2e
+ 674 00fd 01       		.byte	0x1
+ 675 00fe 3F       		.uleb128 0x3f
+ 676 00ff 0C       		.uleb128 0xc
+ 677 0100 03       		.uleb128 0x3
+ 678 0101 0E       		.uleb128 0xe
+ 679 0102 3A       		.uleb128 0x3a
+ 680 0103 0B       		.uleb128 0xb
+ 681 0104 3B       		.uleb128 0x3b
+ 682 0105 0B       		.uleb128 0xb
+ 683 0106 27       		.uleb128 0x27
+ 684 0107 0C       		.uleb128 0xc
+ 685 0108 11       		.uleb128 0x11
+ 686 0109 01       		.uleb128 0x1
+ 687 010a 12       		.uleb128 0x12
+ 688 010b 01       		.uleb128 0x1
+ 689 010c 40       		.uleb128 0x40
+ 690 010d 0A       		.uleb128 0xa
+ 691 010e 9742     		.uleb128 0x2117
+ 692 0110 0C       		.uleb128 0xc
+ 693 0111 01       		.uleb128 0x1
+ 694 0112 13       		.uleb128 0x13
+ 695 0113 00       		.byte	0
+ 696 0114 00       		.byte	0
+ 697 0115 13       		.uleb128 0x13
+ 698 0116 05       		.uleb128 0x5
+ 699 0117 00       		.byte	0
+ 700 0118 03       		.uleb128 0x3
+ 701 0119 0E       		.uleb128 0xe
+ 702 011a 3A       		.uleb128 0x3a
+ 703 011b 0B       		.uleb128 0xb
+ 704 011c 3B       		.uleb128 0x3b
+ 705 011d 0B       		.uleb128 0xb
+ 706 011e 49       		.uleb128 0x49
+ 707 011f 13       		.uleb128 0x13
+ 708 0120 02       		.uleb128 0x2
+ 709 0121 0A       		.uleb128 0xa
+ 710 0122 00       		.byte	0
+ 711 0123 00       		.byte	0
+ 712 0124 14       		.uleb128 0x14
+ 713 0125 34       		.uleb128 0x34
+ 714 0126 00       		.byte	0
+ 715 0127 03       		.uleb128 0x3
+ 716 0128 0E       		.uleb128 0xe
+ 717 0129 3A       		.uleb128 0x3a
+ 718 012a 0B       		.uleb128 0xb
+ 719 012b 3B       		.uleb128 0x3b
+ 720 012c 0B       		.uleb128 0xb
+ 721 012d 49       		.uleb128 0x49
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 18
+
+
+ 722 012e 13       		.uleb128 0x13
+ 723 012f 3F       		.uleb128 0x3f
+ 724 0130 0C       		.uleb128 0xc
+ 725 0131 02       		.uleb128 0x2
+ 726 0132 0A       		.uleb128 0xa
+ 727 0133 00       		.byte	0
+ 728 0134 00       		.byte	0
+ 729 0135 15       		.uleb128 0x15
+ 730 0136 2E       		.uleb128 0x2e
+ 731 0137 00       		.byte	0
+ 732 0138 3F       		.uleb128 0x3f
+ 733 0139 0C       		.uleb128 0xc
+ 734 013a 03       		.uleb128 0x3
+ 735 013b 0E       		.uleb128 0xe
+ 736 013c 3A       		.uleb128 0x3a
+ 737 013d 0B       		.uleb128 0xb
+ 738 013e 3B       		.uleb128 0x3b
+ 739 013f 0B       		.uleb128 0xb
+ 740 0140 27       		.uleb128 0x27
+ 741 0141 0C       		.uleb128 0xc
+ 742 0142 3C       		.uleb128 0x3c
+ 743 0143 0C       		.uleb128 0xc
+ 744 0144 00       		.byte	0
+ 745 0145 00       		.byte	0
+ 746 0146 00       		.byte	0
+ 747              		.section	.debug_loc,"",%progbits
+ 748              	.Ldebug_loc0:
+ 749              	.LLST0:
+ 750 0000 00000000 		.4byte	.LFB0
+ 751 0004 02000000 		.4byte	.LCFI0
+ 752 0008 0200     		.2byte	0x2
+ 753 000a 7D       		.byte	0x7d
+ 754 000b 00       		.sleb128 0
+ 755 000c 02000000 		.4byte	.LCFI0
+ 756 0010 08000000 		.4byte	.LFE0
+ 757 0014 0200     		.2byte	0x2
+ 758 0016 7D       		.byte	0x7d
+ 759 0017 08       		.sleb128 8
+ 760 0018 00000000 		.4byte	0
+ 761 001c 00000000 		.4byte	0
+ 762              	.LLST1:
+ 763 0020 00000000 		.4byte	.LFB2
+ 764 0024 02000000 		.4byte	.LCFI1
+ 765 0028 0200     		.2byte	0x2
+ 766 002a 7D       		.byte	0x7d
+ 767 002b 00       		.sleb128 0
+ 768 002c 02000000 		.4byte	.LCFI1
+ 769 0030 28000000 		.4byte	.LFE2
+ 770 0034 0200     		.2byte	0x2
+ 771 0036 7D       		.byte	0x7d
+ 772 0037 08       		.sleb128 8
+ 773 0038 00000000 		.4byte	0
+ 774 003c 00000000 		.4byte	0
+ 775              		.section	.debug_aranges,"",%progbits
+ 776 0000 3C000000 		.4byte	0x3c
+ 777 0004 0200     		.2byte	0x2
+ 778 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 19
+
+
+ 779 000a 04       		.byte	0x4
+ 780 000b 00       		.byte	0
+ 781 000c 0000     		.2byte	0
+ 782 000e 0000     		.2byte	0
+ 783 0010 00000000 		.4byte	.LFB0
+ 784 0014 08000000 		.4byte	.LFE0-.LFB0
+ 785 0018 00000000 		.4byte	.LFB1
+ 786 001c 14000000 		.4byte	.LFE1-.LFB1
+ 787 0020 00000000 		.4byte	.LFB2
+ 788 0024 28000000 		.4byte	.LFE2-.LFB2
+ 789 0028 00000000 		.4byte	.LFB3
+ 790 002c 10000000 		.4byte	.LFE3-.LFB3
+ 791 0030 00000000 		.4byte	.LFB4
+ 792 0034 0C000000 		.4byte	.LFE4-.LFB4
+ 793 0038 00000000 		.4byte	0
+ 794 003c 00000000 		.4byte	0
+ 795              		.section	.debug_ranges,"",%progbits
+ 796              	.Ldebug_ranges0:
+ 797 0000 00000000 		.4byte	.LFB0
+ 798 0004 08000000 		.4byte	.LFE0
+ 799 0008 00000000 		.4byte	.LFB1
+ 800 000c 14000000 		.4byte	.LFE1
+ 801 0010 00000000 		.4byte	.LFB2
+ 802 0014 28000000 		.4byte	.LFE2
+ 803 0018 00000000 		.4byte	.LFB3
+ 804 001c 10000000 		.4byte	.LFE3
+ 805 0020 00000000 		.4byte	.LFB4
+ 806 0024 0C000000 		.4byte	.LFE4
+ 807 0028 00000000 		.4byte	0
+ 808 002c 00000000 		.4byte	0
+ 809              		.section	.debug_line,"",%progbits
+ 810              	.Ldebug_line0:
+ 811 0000 CE000000 		.section	.debug_str,"MS",%progbits,1
+ 811      02005A00 
+ 811      00000201 
+ 811      FB0E0D00 
+ 811      01010101 
+ 812              	.LASF14:
+ 813 0000 72656733 		.ascii	"reg32\000"
+ 813      3200
+ 814              	.LASF28:
+ 815 0006 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
+ 815      73657273 
+ 815      5C537465 
+ 815      76655C44 
+ 815      65736B74 
+ 816 0035 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
+ 816      425F4C45 
+ 816      445F4D61 
+ 816      74726978 
+ 816      2E637964 
+ 817              	.LASF24:
+ 818 004c 55415254 		.ascii	"UART_customIntrHandler\000"
+ 818      5F637573 
+ 818      746F6D49 
+ 818      6E747248 
+ 818      616E646C 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 20
+
+
+ 819              	.LASF3:
+ 820 0063 73686F72 		.ascii	"short unsigned int\000"
+ 820      7420756E 
+ 820      7369676E 
+ 820      65642069 
+ 820      6E7400
+ 821              	.LASF23:
+ 822 0076 55415254 		.ascii	"UART_initVar\000"
+ 822      5F696E69 
+ 822      74566172 
+ 822      00
+ 823              	.LASF11:
+ 824 0083 666C6F61 		.ascii	"float\000"
+ 824      7400
+ 825              	.LASF18:
+ 826 0089 55415254 		.ascii	"UART_Enable\000"
+ 826      5F456E61 
+ 826      626C6500 
+ 827              	.LASF1:
+ 828 0095 756E7369 		.ascii	"unsigned char\000"
+ 828      676E6564 
+ 828      20636861 
+ 828      7200
+ 829              	.LASF17:
+ 830 00a3 55415254 		.ascii	"UART_Init\000"
+ 830      5F496E69 
+ 830      7400
+ 831              	.LASF5:
+ 832 00ad 6C6F6E67 		.ascii	"long unsigned int\000"
+ 832      20756E73 
+ 832      69676E65 
+ 832      6420696E 
+ 832      7400
+ 833              	.LASF9:
+ 834 00bf 75696E74 		.ascii	"uint8\000"
+ 834      3800
+ 835              	.LASF21:
+ 836 00c5 55415254 		.ascii	"UART_Start\000"
+ 836      5F537461 
+ 836      727400
+ 837              	.LASF12:
+ 838 00d0 646F7562 		.ascii	"double\000"
+ 838      6C6500
+ 839              	.LASF30:
+ 840 00d7 66756E63 		.ascii	"func\000"
+ 840      00
+ 841              	.LASF22:
+ 842 00dc 55415254 		.ascii	"UART_SetCustomInterruptHandler\000"
+ 842      5F536574 
+ 842      43757374 
+ 842      6F6D496E 
+ 842      74657272 
+ 843              	.LASF10:
+ 844 00fb 75696E74 		.ascii	"uint32\000"
+ 844      333200
+ 845              	.LASF27:
+ 846 0102 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART.c\000"
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 21
+
+
+ 846      6E657261 
+ 846      7465645F 
+ 846      536F7572 
+ 846      63655C50 
+ 847              	.LASF20:
+ 848 0122 55415254 		.ascii	"UART_ScbModeStop\000"
+ 848      5F536362 
+ 848      4D6F6465 
+ 848      53746F70 
+ 848      00
+ 849              	.LASF8:
+ 850 0133 756E7369 		.ascii	"unsigned int\000"
+ 850      676E6564 
+ 850      20696E74 
+ 850      00
+ 851              	.LASF25:
+ 852 0140 55415254 		.ascii	"UART_UartInit\000"
+ 852      5F556172 
+ 852      74496E69 
+ 852      7400
+ 853              	.LASF7:
+ 854 014e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 854      206C6F6E 
+ 854      6720756E 
+ 854      7369676E 
+ 854      65642069 
+ 855              	.LASF15:
+ 856 0165 63796973 		.ascii	"cyisraddress\000"
+ 856      72616464 
+ 856      72657373 
+ 856      00
+ 857              	.LASF29:
+ 858 0172 55415254 		.ascii	"UART_Stop\000"
+ 858      5F53746F 
+ 858      7000
+ 859              	.LASF16:
+ 860 017c 73697A65 		.ascii	"sizetype\000"
+ 860      74797065 
+ 860      00
+ 861              	.LASF6:
+ 862 0185 6C6F6E67 		.ascii	"long long int\000"
+ 862      206C6F6E 
+ 862      6720696E 
+ 862      7400
+ 863              	.LASF13:
+ 864 0193 63686172 		.ascii	"char\000"
+ 864      00
+ 865              	.LASF2:
+ 866 0198 73686F72 		.ascii	"short int\000"
+ 866      7420696E 
+ 866      7400
+ 867              	.LASF19:
+ 868 01a2 55415254 		.ascii	"UART_ScbEnableIntr\000"
+ 868      5F536362 
+ 868      456E6162 
+ 868      6C65496E 
+ 868      747200
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpHobzX.s 			page 22
+
+
+ 869              	.LASF26:
+ 870 01b5 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 870      4320342E 
+ 870      372E3320 
+ 870      32303133 
+ 870      30333132 
+ 871 01e8 616E6368 		.ascii	"anch revision 196615]\000"
+ 871      20726576 
+ 871      6973696F 
+ 871      6E203139 
+ 871      36363135 
+ 872              	.LASF4:
+ 873 01fe 6C6F6E67 		.ascii	"long int\000"
+ 873      20696E74 
+ 873      00
+ 874              	.LASF0:
+ 875 0207 7369676E 		.ascii	"signed char\000"
+ 875      65642063 
+ 875      68617200 
+ 876              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

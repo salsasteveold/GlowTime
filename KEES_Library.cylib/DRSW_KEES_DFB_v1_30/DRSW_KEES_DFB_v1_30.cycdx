@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="" visible="true">
+
+    <register name="DFB_SR" address="`$INSTANCE_NAME`_DFB__SR" bitWidth="8" 
+        desc="This register contains 5 bits indicating the status of block generated interrupts and 3 bits of status
+        from the Datapath unit. Of the 5 sources of interrupts, only those configured in INT_CTRL are activated. 
+        If not activated in INT_CTRL they will never assert in this register. If an interrupt source bit (7:3) is set 
+        this indicates it is at least one of the sources of the currently driven interrupt on dfb_intr. More than one
+        of the 5 could be asserted. Note that if the system SW wishes to poll for an event and not have an interrupt
+        generated, the interrupt must be enabled in the INT_CTRL register so that it can be polled here and then
+        disable the interrupt in the Interrupt Controller or not connect the dfb_intr signal to the Interrupt 
+        Controller at all by not configuring the DSI path. Bits 2:0 are read-only - writes to these bits have 
+        no effect. Writes to bits 7:3 of '1' clear the bit, writes of 0 have no effect.">
+        <field name="RAM_SEL" from="0" to="0" access="R" 
+               desc="This bit indicates which Control Store memory is in use, RAM A or RAM B.">            
+        </field>
+        <field name="SAT_MODE" from="1" to="1" access="R" 
+               desc="Indicates that the DP unit is in Saturation mode - meaning that any mathematic operation
+               executed that produces a number outside the range of a 24-bit 2's compliment number is clamped 
+               to the mode positive or negative number allowed. Saturation mode is set/unset under Assembly
+               control in the DFB Controller.">            
+        </field>
+        <field name="RND_MODE" from="2" to="2" access="R" 
+               desc="Indicates that the DP is in Round mode - meaning that any result passing out of the DP unit
+               is being rounded to a 16-bit value.">            
+        </field>
+        <field name="INTR_HOLDA" from="3" to="3" access="R" 
+               desc="f this bit is high, Holding register A is a source of the current interrupt. Write a '1' to 
+               this bit to clear it. Reading the Holding register A also clears this bit.">            
+        </field>
+        <field name="INTR_HOLDB" from="4" to="4" access="R" 
+               desc="If this bit is high, Holding register B is a source of the current interrupt. Write a '1' to 
+               this bit to clear it. Reading the Holding register B also clears this bit.">            
+        </field>
+        <field name="INTR_SEM0" from="5" to="5" access="R"
+               desc="If this bit is high, semaphore register bit 0 is a source of the current interrupt. 
+               Write a '1' to this bit to clear it.">            
+        </field>
+        <field name="INTR_SEM1" from="6" to="6" access="R"
+               desc="If this bit is high, semaphore register bit 1 is a source of the current interrupt.
+               Write a '1' to this bit to clear it.">            
+        </field>
+        <field name="INTR_SEM2" from="7" to="7" access="R" 
+               desc="If this bit is high, semaphore register bit 2 is a source of the current interrupt. 
+               Write a '1' to this bit to clear it.">            
+        </field>        
+    </register>
+    <register name="DFB_SEMA" address="`$INSTANCE_NAME`_DFB__SEMA" bitWidth="8" 
+        desc="This register controls the DFB Semaphore register. These bits are used to pass semaphores between 
+        the DFB Controller and the System SW. Their use and purpose is user defined. A read to this register returns 
+        what was last written by either System SW or the DFB Controller.">
+        <field name="SEMA" from="2" to="0" access="RW" 
+               desc="These bits are used to pass semaphores between the DFB Controller and the System SW. 
+               Their definition is user defined. There is no HW implementing an arbitration methodology should both 
+               the System and Control access the same SEM bit at the same time. Coherency of the SEM bits is the 
+               responsibility of the SW running on the Controller and the System CPU. If the same SEM bit is written
+               by the Controller and the System in the exact same cycle (a collision), the System write takes
+               precedence over the Controller. In this manner, each of the 3 bits are treated individually.">            
+        </field>
+        <field name="SEMA_MASK" from="6" to="4" access="W" 
+               desc="These bits are used to mask writes to bits 2-0. They are write-only. If bit 4 is a 1 then the
+               value on bit 0 will be written to SEM0, otherwise SEM0 will not be altered. Likewise for MASK1 and SEM1,
+               and MASK2 and SEM2.">            
+        </field>        
+    </register>
+    <register name="DFB_STAGEA" address="`$INSTANCE_NAME`_DFB__STAGEA" bitWidth="8" 
+        desc="This is the low byte of the Streaming input Staging Register - Port A. If the Staging A Data Alignment
+        bit is set in the DALIGN register then data written to this address will be written into bits 15:8 instead.
+        Although the Staging A/B registers are shown here as 3 byte-wide registers, it is primarily intended that they
+        be treated as 24-bit registers at a 32-bit offset. Due to the architecture of the DFB, any value written to 
+        the Staging A or B registers that is less than 24 bits in size must be msb aligned. For example, a 16-bit value
+        written to the Staging A register must be written to STAGExM and STAGExH with STAGEx set to 0. The Staging
+        registers support byte and half-word accesses as well. However, if byte and half-word accesses are used then
+        the Key Coherency Byte feature must be used. Also see the COHER register description below. In some use models
+        it is desirous to write 16-bit values on bus bits 15:0 and have them actually writing to bits 23:8 of the 
+        register. A System SW convenience feature to accomplish this is provided. If the Data Alignment bit for 
+        these registers is set in the DALIGN register the byte written is shifted up (left) to the next byte position.
+        This is only true of the two lower bytes. READ: AHB: What was last written. The DFB Controller reads this 
+        register (and the other 2 bytes) by asserting busrd and setting the low-order ACU RAM address bit low.
+        WRITE: Writes the low byte of the input Staging Register for Port A or the middle byte if the Data Alignment
+        bit is set in the DALIGN register.">
+        <field name="STGA_LOW" from="7" to="0" access="RW" 
+               desc="A write to this register sets the low byte of the input Staging Register for Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_STAGEAM" address="`$INSTANCE_NAME`_DFB__STAGEAM" bitWidth="8" 
+        desc="This is the middle byte of the Streaming input Staging Register - Port A. If the Staging A Data Alignment
+        bit is set in the DALIGN register then data written to this address will be written into bits 23:16 instead.
+        See usage notes in STAGEA register description.">
+        <field name="STGA_MID" from="7" to="0" access="RW" 
+               desc="A write to this register sets the middle byte of the input Staging Register for Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_STAGEAH" address="`$INSTANCE_NAME`_DFB__STAGEAH" bitWidth="8" 
+        desc="This is the high byte of the Streaming input Staging Register - Port A. See usage notes in STAGEA 
+        register description.">
+        <field name="STGA_HIGH" from="7" to="0" access="RW" 
+               desc="A write to this register sets the high byte of the input Staging Register for Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_STAGEB" address="`$INSTANCE_NAME`_DFB__STAGEB" bitWidth="8" 
+        desc="This is the low byte of the Streaming input Staging Register - Port B. If the Staging B Data Alignment 
+        bit is set in the DALIGN register then data written to this address will be written into bits 15:8 instead. 
+        See usage notes in STAGEA register description.">
+        <field name="STGB_LOW" from="7" to="0" access="RW" 
+               desc="A write to this register sets the low byte of the input Staging Register for Port B.">            
+        </field>              
+    </register>
+    <register name="DFB_STAGEBM" address="`$INSTANCE_NAME`_DFB__STAGEBM" bitWidth="8" 
+        desc="This is the middle byte of the Streaming input Staging Register - Port B. If the Staging B Data Alignment
+        bit is set in the DALIGN register then data written to this address will be written into bits 23:16 instead.
+        See usage notes in STAGEA register description.">
+        <field name="STGB_MID" from="7" to="0" access="RW" 
+               desc="A write to this register sets the middle byte of the input Staging Register for Port B.">            
+        </field>              
+    </register>
+    <register name="DFB_STAGEBH" address="`$INSTANCE_NAME`_DFB__STAGEBH" bitWidth="8" 
+        desc="This is the high byte of the Streaming input Staging Register - Port B. See usage notes in STAGEA 
+        register description.">
+        <field name="STGA_HIGH" from="7" to="0" access="RW" 
+               desc="A write to this register sets the high byte of the input Staging Register for Port B.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDA" address="`$INSTANCE_NAME`_DFB__HOLDA" bitWidth="8" 
+        desc="This is the low byte of the output Holding Register - Port A. If the Holding A Data Alignment bit is set
+        in the DALIGN register then data read from this address will be bits 15:8 instead. Although the Holding A/B
+        registers are shown here as 3 byte-wide registers, it is primarily intended that they be treated as 24-bit
+        registers at a 32-bit offset. Due to the architecture of the DFB, any value read from the Holding A or B 
+        registers will be msb aligned unless shifted otherwise by the Datapath shifter. For example, if the resultant 
+        output samples are 16-bit values, a read of a Holding register will produce that data on bits 23:8, or HOLDxH 
+        and HOLDxM. The Holding registers support byte and half-word accesses as well. However, if byte and half-word
+        accesses are used then the Key Coherency Byte feature must be used. Also see the COHER register description 
+        below. In some use models it is desirous to read 16-bit values on bus bits 15:0 and have them actually source
+        from bits 23:8 of the register. A System SW convenience feature to accomplish this is provided. If the Data 
+        Alignment bit for these registers is set in the DALIGN register the byte read is shifted down (right) to the 
+        next byte position. This is only true of the two upper bytes. Also as a System SW convenience, reads of the
+        Holding registers are sign extended up to bit 31 of the bus even though the top byte is not documented or 
+        implemented as a real register. If the DFB is configured (see INT_CTRL) to generate an interrupt based on 
+        valid data in the Holding register, the interrupt status bit in the SR register will be cleared when any
+        portion (byte, 16-bit or full 32-bit read) of the Holding register is read, by the CPU or the DMA Controller. 
+        READ: What was last written by the DFB Controller. WRITE: Read-only by AHB, DFB Controller writes to this 
+        register (including the other 2 bytes) with a buswr command and the low-order ACU RAM address bit set low.">
+        <field name="HOLDA_LOW" from="7" to="0" access="R" 
+               desc="Low byte of the output Holding Register, Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDAM" address="`$INSTANCE_NAME`_DFB__HOLDAM" bitWidth="8" 
+        desc="This is the middle byte of the output Holding Register - Port A. If the Holding A Data Alignment bit is
+        set in the DALIGN register then data read from this address will be bits 23:16 instead. See usage notes in 
+        HOLDA register description.">
+        <field name="HOLDA_MID" from="7" to="0" access="R" 
+               desc="Middle byte of the output Holding Register, Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDAH" address="`$INSTANCE_NAME`_DFB__HOLDAH" bitWidth="8" 
+        desc="This is the high byte of the output Holding Register - Port A. See usage notes in HOLDA register 
+        description.">
+        <field name="HOLDA_HIGH" from="7" to="0" access="R" 
+               desc="High byte of the output Holding Register, Port A.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDB" address="`$INSTANCE_NAME`_DFB__HOLDB" bitWidth="8" 
+        desc="This is the middle byte of the output Holding Register - Port B. If the Holding B Data Alignment bit is 
+        set in the DALIGN register then data read from this address will be bits 23:16 instead. See usage notes in 
+        HOLDA register description.">
+        <field name="HOLDB_LOW" from="7" to="0" access="R" 
+               desc="Low byte of the output Holding Register, Port B.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDBM" address="`$INSTANCE_NAME`_DFB__HOLDBM" bitWidth="8" 
+        desc="This is the middle byte of the output Holding Register - Port B. If the Holding A Data Alignment bit is
+        set in the DALIGN register then data read from this address will be bits 23:16 instead. See usage notes in 
+        HOLDA register description.">
+        <field name="HOLDB_MID" from="7" to="0" access="R" 
+               desc="Middle byte of the output Holding Register, Port B.">            
+        </field>              
+    </register>
+    <register name="DFB_HOLDBH" address="`$INSTANCE_NAME`_DFB__HOLDBH" bitWidth="8" 
+        desc="This is the high byte of the output Holding Register - Port B. See usage notes in HOLDA register 
+        description.">
+        <field name="HOLDB_HIGH" from="7" to="0" access="R" 
+               desc="High byte of the output Holding Register, Port B.">            
+        </field>              
+    </register>
+    
+  </block>
+</deviceData>

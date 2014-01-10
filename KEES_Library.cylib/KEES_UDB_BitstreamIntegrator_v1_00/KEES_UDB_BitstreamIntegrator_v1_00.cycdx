@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="Datapath Registers" visible="true">
+
+    <register name="A0"
+		address="`$INSTANCE_NAME`_Integrator_u0__A0_REG"
+		bitWidth="8" desc="A0 register, 8 bit">
+	</register>
+	
+	<register name="A1"
+		address="`$INSTANCE_NAME`_Integrator_u0__A1_REG"
+		bitWidth="8" desc="A1 register, 8 bit">
+	</register>
+	
+	<register name="D0"
+		address="`$INSTANCE_NAME`_Integrator_u0__D0_REG"
+		bitWidth="8" desc="D0 register, 8 bit">
+	</register>
+	
+	<register name="D1"
+		address="`$INSTANCE_NAME`_Integrator_u0__D1_REG"
+		bitWidth="8" desc="D1 register, 8 bit">
+	</register>
+	
+	<register name="Count7"
+		address="`$INSTANCE_NAME`_Counter7__COUNT_REG"
+		bitWidth="8" desc="Count7, down count">
+	</register>
+	
+	<register name="Counter7_Period"
+		address="`$INSTANCE_NAME`_Counter7__PERIOD_REG"
+		bitWidth="8" desc="Count7 period value">
+	</register> 
+	
+	<register name="Count7_Config_Register"
+		address="`$INSTANCE_NAME`_Counter7__CONTROL_AUX_CTL_REG"
+		bitWidth="8" desc="Count7 configuration">
+		<field name="Count7 Enable" from="5" to="5" access="RW" desc="When set, enables the Count7 functionality">
+			<value name="Count7 enabled" value="1" desc="Count7 functionality is enabled"/>
+			<value name="Count7 disabled" value="0" desc="Count7 functionality is disabled"/>
+		</field>
+	</register>
+    
+  </block>
+</deviceData>

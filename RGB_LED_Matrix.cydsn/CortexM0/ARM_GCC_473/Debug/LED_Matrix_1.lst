@@ -1,0 +1,510 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"LED_Matrix_1.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.LED_Matrix_1_Start,"ax",%progbits
+  18              		.align	2
+  19              		.global	LED_Matrix_1_Start
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	LED_Matrix_1_Start, %function
+  23              	LED_Matrix_1_Start:
+  24              	.LFB33:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\LED_Matrix_1.c"
+   1:.\Generated_Source\PSoC4/LED_Matrix_1.c **** /* ========================================
+   2:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  *
+   3:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * All Rights Reserved
+   5:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  *
+   7:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  *
+  10:.\Generated_Source\PSoC4/LED_Matrix_1.c ****  * ========================================
+  11:.\Generated_Source\PSoC4/LED_Matrix_1.c **** */
+  12:.\Generated_Source\PSoC4/LED_Matrix_1.c **** #include "LED_Matrix_1.h"
+  13:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 
+  14:.\Generated_Source\PSoC4/LED_Matrix_1.c **** void LED_Matrix_1_Start()
+  15:.\Generated_Source\PSoC4/LED_Matrix_1.c **** {
+  26              		.loc 1 15 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 3, -8
+  32              		.cfi_offset 14, -4
+  16:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	uint8 interruptState;
+  17:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 
+  18:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	/* Enter critical section - AUX_CTL is shared by multiple hardware Components */
+  19:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	interruptState = CyEnterCriticalSection();
+  20:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //
+  21:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
+  22:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F0_LEVEL_MODE_1 << LED_Matrix_1_F0_LEVEL_SHIFT);
+  23:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
+  24:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	
+  25:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 2
+
+
+  26:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F1_LEVEL_MODE_1 << LED_Matrix_1_F1_LEVEL_SHIFT);
+  27:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
+  28:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	
+  29:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
+  30:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F0_SINGLE_BUFFER_ENABLE << LED_Matrix_1_F0_SINGLE_B
+  31:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
+  32:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	
+  33:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
+  34:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F1_SINGLE_BUFFER_ENABLE << LED_Matrix_1_F1_SINGLE_B
+  35:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
+  36:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	
+  37:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	/* Exit critical section */
+  38:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	CyExitCriticalSection(interruptState);
+  33              		.loc 1 38 0
+  34 0002 0020     		mov	r0, #0
+  35 0004 FFF7FEFF 		bl	CyExitCriticalSection
+  36              	.LVL0:
+  39:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	
+  40:.\Generated_Source\PSoC4/LED_Matrix_1.c **** 	return;
+  41:.\Generated_Source\PSoC4/LED_Matrix_1.c **** }
+  37              		.loc 1 41 0
+  38              		@ sp needed for prologue
+  39 0008 08BD     		pop	{r3, pc}
+  40              		.cfi_endproc
+  41              	.LFE33:
+  42              		.size	LED_Matrix_1_Start, .-LED_Matrix_1_Start
+  43 000a C046     		.text
+  44              	.Letext0:
+  45              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+  46              		.file 3 "./Generated_Source/PSoC4/CyLib.h"
+  47              		.section	.debug_info,"",%progbits
+  48              	.Ldebug_info0:
+  49 0000 D7000000 		.4byte	0xd7
+  50 0004 0200     		.2byte	0x2
+  51 0006 00000000 		.4byte	.Ldebug_abbrev0
+  52 000a 04       		.byte	0x4
+  53 000b 01       		.uleb128 0x1
+  54 000c 43000000 		.4byte	.LASF13
+  55 0010 01       		.byte	0x1
+  56 0011 1B000000 		.4byte	.LASF14
+  57 0015 CE000000 		.4byte	.LASF15
+  58 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  59 001d 00000000 		.4byte	0
+  60 0021 00000000 		.4byte	0
+  61 0025 00000000 		.4byte	.Ldebug_line0
+  62 0029 02       		.uleb128 0x2
+  63 002a 01       		.byte	0x1
+  64 002b 06       		.byte	0x6
+  65 002c 4A010000 		.4byte	.LASF0
+  66 0030 02       		.uleb128 0x2
+  67 0031 01       		.byte	0x1
+  68 0032 08       		.byte	0x8
+  69 0033 14010000 		.4byte	.LASF1
+  70 0037 02       		.uleb128 0x2
+  71 0038 02       		.byte	0x2
+  72 0039 05       		.byte	0x5
+  73 003a 72010000 		.4byte	.LASF2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 3
+
+
+  74 003e 02       		.uleb128 0x2
+  75 003f 02       		.byte	0x2
+  76 0040 07       		.byte	0x7
+  77 0041 37010000 		.4byte	.LASF3
+  78 0045 02       		.uleb128 0x2
+  79 0046 04       		.byte	0x4
+  80 0047 05       		.byte	0x5
+  81 0048 27010000 		.4byte	.LASF4
+  82 004c 02       		.uleb128 0x2
+  83 004d 04       		.byte	0x4
+  84 004e 07       		.byte	0x7
+  85 004f 92000000 		.4byte	.LASF5
+  86 0053 02       		.uleb128 0x2
+  87 0054 08       		.byte	0x8
+  88 0055 05       		.byte	0x5
+  89 0056 00000000 		.4byte	.LASF6
+  90 005a 02       		.uleb128 0x2
+  91 005b 08       		.byte	0x8
+  92 005c 07       		.byte	0x7
+  93 005d A4000000 		.4byte	.LASF7
+  94 0061 03       		.uleb128 0x3
+  95 0062 04       		.byte	0x4
+  96 0063 05       		.byte	0x5
+  97 0064 696E7400 		.ascii	"int\000"
+  98 0068 02       		.uleb128 0x2
+  99 0069 04       		.byte	0x4
+ 100 006a 07       		.byte	0x7
+ 101 006b 0E000000 		.4byte	.LASF8
+ 102 006f 04       		.uleb128 0x4
+ 103 0070 8C000000 		.4byte	.LASF16
+ 104 0074 02       		.byte	0x2
+ 105 0075 5B       		.byte	0x5b
+ 106 0076 30000000 		.4byte	0x30
+ 107 007a 02       		.uleb128 0x2
+ 108 007b 04       		.byte	0x4
+ 109 007c 04       		.byte	0x4
+ 110 007d 6C010000 		.4byte	.LASF9
+ 111 0081 02       		.uleb128 0x2
+ 112 0082 08       		.byte	0x8
+ 113 0083 04       		.byte	0x4
+ 114 0084 30010000 		.4byte	.LASF10
+ 115 0088 02       		.uleb128 0x2
+ 116 0089 01       		.byte	0x1
+ 117 008a 08       		.byte	0x8
+ 118 008b 22010000 		.4byte	.LASF11
+ 119 008f 02       		.uleb128 0x2
+ 120 0090 04       		.byte	0x4
+ 121 0091 07       		.byte	0x7
+ 122 0092 7C010000 		.4byte	.LASF12
+ 123 0096 05       		.uleb128 0x5
+ 124 0097 01       		.byte	0x1
+ 125 0098 BB000000 		.4byte	.LASF17
+ 126 009c 01       		.byte	0x1
+ 127 009d 0E       		.byte	0xe
+ 128 009e 00000000 		.4byte	.LFB33
+ 129 00a2 0A000000 		.4byte	.LFE33
+ 130 00a6 00000000 		.4byte	.LLST0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 4
+
+
+ 131 00aa 01       		.byte	0x1
+ 132 00ab CA000000 		.4byte	0xca
+ 133 00af 06       		.uleb128 0x6
+ 134 00b0 85010000 		.4byte	.LASF18
+ 135 00b4 01       		.byte	0x1
+ 136 00b5 10       		.byte	0x10
+ 137 00b6 6F000000 		.4byte	0x6f
+ 138 00ba 07       		.uleb128 0x7
+ 139 00bb 08000000 		.4byte	.LVL0
+ 140 00bf CA000000 		.4byte	0xca
+ 141 00c3 08       		.uleb128 0x8
+ 142 00c4 01       		.byte	0x1
+ 143 00c5 50       		.byte	0x50
+ 144 00c6 01       		.byte	0x1
+ 145 00c7 30       		.byte	0x30
+ 146 00c8 00       		.byte	0
+ 147 00c9 00       		.byte	0
+ 148 00ca 09       		.uleb128 0x9
+ 149 00cb 01       		.byte	0x1
+ 150 00cc 56010000 		.4byte	.LASF19
+ 151 00d0 03       		.byte	0x3
+ 152 00d1 71       		.byte	0x71
+ 153 00d2 01       		.byte	0x1
+ 154 00d3 01       		.byte	0x1
+ 155 00d4 0A       		.uleb128 0xa
+ 156 00d5 6F000000 		.4byte	0x6f
+ 157 00d9 00       		.byte	0
+ 158 00da 00       		.byte	0
+ 159              		.section	.debug_abbrev,"",%progbits
+ 160              	.Ldebug_abbrev0:
+ 161 0000 01       		.uleb128 0x1
+ 162 0001 11       		.uleb128 0x11
+ 163 0002 01       		.byte	0x1
+ 164 0003 25       		.uleb128 0x25
+ 165 0004 0E       		.uleb128 0xe
+ 166 0005 13       		.uleb128 0x13
+ 167 0006 0B       		.uleb128 0xb
+ 168 0007 03       		.uleb128 0x3
+ 169 0008 0E       		.uleb128 0xe
+ 170 0009 1B       		.uleb128 0x1b
+ 171 000a 0E       		.uleb128 0xe
+ 172 000b 55       		.uleb128 0x55
+ 173 000c 06       		.uleb128 0x6
+ 174 000d 11       		.uleb128 0x11
+ 175 000e 01       		.uleb128 0x1
+ 176 000f 52       		.uleb128 0x52
+ 177 0010 01       		.uleb128 0x1
+ 178 0011 10       		.uleb128 0x10
+ 179 0012 06       		.uleb128 0x6
+ 180 0013 00       		.byte	0
+ 181 0014 00       		.byte	0
+ 182 0015 02       		.uleb128 0x2
+ 183 0016 24       		.uleb128 0x24
+ 184 0017 00       		.byte	0
+ 185 0018 0B       		.uleb128 0xb
+ 186 0019 0B       		.uleb128 0xb
+ 187 001a 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 5
+
+
+ 188 001b 0B       		.uleb128 0xb
+ 189 001c 03       		.uleb128 0x3
+ 190 001d 0E       		.uleb128 0xe
+ 191 001e 00       		.byte	0
+ 192 001f 00       		.byte	0
+ 193 0020 03       		.uleb128 0x3
+ 194 0021 24       		.uleb128 0x24
+ 195 0022 00       		.byte	0
+ 196 0023 0B       		.uleb128 0xb
+ 197 0024 0B       		.uleb128 0xb
+ 198 0025 3E       		.uleb128 0x3e
+ 199 0026 0B       		.uleb128 0xb
+ 200 0027 03       		.uleb128 0x3
+ 201 0028 08       		.uleb128 0x8
+ 202 0029 00       		.byte	0
+ 203 002a 00       		.byte	0
+ 204 002b 04       		.uleb128 0x4
+ 205 002c 16       		.uleb128 0x16
+ 206 002d 00       		.byte	0
+ 207 002e 03       		.uleb128 0x3
+ 208 002f 0E       		.uleb128 0xe
+ 209 0030 3A       		.uleb128 0x3a
+ 210 0031 0B       		.uleb128 0xb
+ 211 0032 3B       		.uleb128 0x3b
+ 212 0033 0B       		.uleb128 0xb
+ 213 0034 49       		.uleb128 0x49
+ 214 0035 13       		.uleb128 0x13
+ 215 0036 00       		.byte	0
+ 216 0037 00       		.byte	0
+ 217 0038 05       		.uleb128 0x5
+ 218 0039 2E       		.uleb128 0x2e
+ 219 003a 01       		.byte	0x1
+ 220 003b 3F       		.uleb128 0x3f
+ 221 003c 0C       		.uleb128 0xc
+ 222 003d 03       		.uleb128 0x3
+ 223 003e 0E       		.uleb128 0xe
+ 224 003f 3A       		.uleb128 0x3a
+ 225 0040 0B       		.uleb128 0xb
+ 226 0041 3B       		.uleb128 0x3b
+ 227 0042 0B       		.uleb128 0xb
+ 228 0043 11       		.uleb128 0x11
+ 229 0044 01       		.uleb128 0x1
+ 230 0045 12       		.uleb128 0x12
+ 231 0046 01       		.uleb128 0x1
+ 232 0047 40       		.uleb128 0x40
+ 233 0048 06       		.uleb128 0x6
+ 234 0049 9742     		.uleb128 0x2117
+ 235 004b 0C       		.uleb128 0xc
+ 236 004c 01       		.uleb128 0x1
+ 237 004d 13       		.uleb128 0x13
+ 238 004e 00       		.byte	0
+ 239 004f 00       		.byte	0
+ 240 0050 06       		.uleb128 0x6
+ 241 0051 34       		.uleb128 0x34
+ 242 0052 00       		.byte	0
+ 243 0053 03       		.uleb128 0x3
+ 244 0054 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 6
+
+
+ 245 0055 3A       		.uleb128 0x3a
+ 246 0056 0B       		.uleb128 0xb
+ 247 0057 3B       		.uleb128 0x3b
+ 248 0058 0B       		.uleb128 0xb
+ 249 0059 49       		.uleb128 0x49
+ 250 005a 13       		.uleb128 0x13
+ 251 005b 00       		.byte	0
+ 252 005c 00       		.byte	0
+ 253 005d 07       		.uleb128 0x7
+ 254 005e 898201   		.uleb128 0x4109
+ 255 0061 01       		.byte	0x1
+ 256 0062 11       		.uleb128 0x11
+ 257 0063 01       		.uleb128 0x1
+ 258 0064 31       		.uleb128 0x31
+ 259 0065 13       		.uleb128 0x13
+ 260 0066 00       		.byte	0
+ 261 0067 00       		.byte	0
+ 262 0068 08       		.uleb128 0x8
+ 263 0069 8A8201   		.uleb128 0x410a
+ 264 006c 00       		.byte	0
+ 265 006d 02       		.uleb128 0x2
+ 266 006e 0A       		.uleb128 0xa
+ 267 006f 9142     		.uleb128 0x2111
+ 268 0071 0A       		.uleb128 0xa
+ 269 0072 00       		.byte	0
+ 270 0073 00       		.byte	0
+ 271 0074 09       		.uleb128 0x9
+ 272 0075 2E       		.uleb128 0x2e
+ 273 0076 01       		.byte	0x1
+ 274 0077 3F       		.uleb128 0x3f
+ 275 0078 0C       		.uleb128 0xc
+ 276 0079 03       		.uleb128 0x3
+ 277 007a 0E       		.uleb128 0xe
+ 278 007b 3A       		.uleb128 0x3a
+ 279 007c 0B       		.uleb128 0xb
+ 280 007d 3B       		.uleb128 0x3b
+ 281 007e 0B       		.uleb128 0xb
+ 282 007f 27       		.uleb128 0x27
+ 283 0080 0C       		.uleb128 0xc
+ 284 0081 3C       		.uleb128 0x3c
+ 285 0082 0C       		.uleb128 0xc
+ 286 0083 00       		.byte	0
+ 287 0084 00       		.byte	0
+ 288 0085 0A       		.uleb128 0xa
+ 289 0086 05       		.uleb128 0x5
+ 290 0087 00       		.byte	0
+ 291 0088 49       		.uleb128 0x49
+ 292 0089 13       		.uleb128 0x13
+ 293 008a 00       		.byte	0
+ 294 008b 00       		.byte	0
+ 295 008c 00       		.byte	0
+ 296              		.section	.debug_loc,"",%progbits
+ 297              	.Ldebug_loc0:
+ 298              	.LLST0:
+ 299 0000 00000000 		.4byte	.LFB33
+ 300 0004 02000000 		.4byte	.LCFI0
+ 301 0008 0200     		.2byte	0x2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 7
+
+
+ 302 000a 7D       		.byte	0x7d
+ 303 000b 00       		.sleb128 0
+ 304 000c 02000000 		.4byte	.LCFI0
+ 305 0010 0A000000 		.4byte	.LFE33
+ 306 0014 0200     		.2byte	0x2
+ 307 0016 7D       		.byte	0x7d
+ 308 0017 08       		.sleb128 8
+ 309 0018 00000000 		.4byte	0
+ 310 001c 00000000 		.4byte	0
+ 311              		.section	.debug_aranges,"",%progbits
+ 312 0000 1C000000 		.4byte	0x1c
+ 313 0004 0200     		.2byte	0x2
+ 314 0006 00000000 		.4byte	.Ldebug_info0
+ 315 000a 04       		.byte	0x4
+ 316 000b 00       		.byte	0
+ 317 000c 0000     		.2byte	0
+ 318 000e 0000     		.2byte	0
+ 319 0010 00000000 		.4byte	.LFB33
+ 320 0014 0A000000 		.4byte	.LFE33-.LFB33
+ 321 0018 00000000 		.4byte	0
+ 322 001c 00000000 		.4byte	0
+ 323              		.section	.debug_ranges,"",%progbits
+ 324              	.Ldebug_ranges0:
+ 325 0000 00000000 		.4byte	.LFB33
+ 326 0004 0A000000 		.4byte	.LFE33
+ 327 0008 00000000 		.4byte	0
+ 328 000c 00000000 		.4byte	0
+ 329              		.section	.debug_line,"",%progbits
+ 330              	.Ldebug_line0:
+ 331 0000 6F000000 		.section	.debug_str,"MS",%progbits,1
+ 331      02005600 
+ 331      00000201 
+ 331      FB0E0D00 
+ 331      01010101 
+ 332              	.LASF6:
+ 333 0000 6C6F6E67 		.ascii	"long long int\000"
+ 333      206C6F6E 
+ 333      6720696E 
+ 333      7400
+ 334              	.LASF8:
+ 335 000e 756E7369 		.ascii	"unsigned int\000"
+ 335      676E6564 
+ 335      20696E74 
+ 335      00
+ 336              	.LASF14:
+ 337 001b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\LED_Matrix_1.c\000"
+ 337      6E657261 
+ 337      7465645F 
+ 337      536F7572 
+ 337      63655C50 
+ 338              	.LASF13:
+ 339 0043 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 339      4320342E 
+ 339      372E3320 
+ 339      32303133 
+ 339      30333132 
+ 340 0076 616E6368 		.ascii	"anch revision 196615]\000"
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 8
+
+
+ 340      20726576 
+ 340      6973696F 
+ 340      6E203139 
+ 340      36363135 
+ 341              	.LASF16:
+ 342 008c 75696E74 		.ascii	"uint8\000"
+ 342      3800
+ 343              	.LASF5:
+ 344 0092 6C6F6E67 		.ascii	"long unsigned int\000"
+ 344      20756E73 
+ 344      69676E65 
+ 344      6420696E 
+ 344      7400
+ 345              	.LASF7:
+ 346 00a4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 346      206C6F6E 
+ 346      6720756E 
+ 346      7369676E 
+ 346      65642069 
+ 347              	.LASF17:
+ 348 00bb 4C45445F 		.ascii	"LED_Matrix_1_Start\000"
+ 348      4D617472 
+ 348      69785F31 
+ 348      5F537461 
+ 348      727400
+ 349              	.LASF15:
+ 350 00ce 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
+ 350      73657273 
+ 350      5C537465 
+ 350      76655C44 
+ 350      65736B74 
+ 351 00fd 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
+ 351      425F4C45 
+ 351      445F4D61 
+ 351      74726978 
+ 351      2E637964 
+ 352              	.LASF1:
+ 353 0114 756E7369 		.ascii	"unsigned char\000"
+ 353      676E6564 
+ 353      20636861 
+ 353      7200
+ 354              	.LASF11:
+ 355 0122 63686172 		.ascii	"char\000"
+ 355      00
+ 356              	.LASF4:
+ 357 0127 6C6F6E67 		.ascii	"long int\000"
+ 357      20696E74 
+ 357      00
+ 358              	.LASF10:
+ 359 0130 646F7562 		.ascii	"double\000"
+ 359      6C6500
+ 360              	.LASF3:
+ 361 0137 73686F72 		.ascii	"short unsigned int\000"
+ 361      7420756E 
+ 361      7369676E 
+ 361      65642069 
+ 361      6E7400
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccohXsm0.s 			page 9
+
+
+ 362              	.LASF0:
+ 363 014a 7369676E 		.ascii	"signed char\000"
+ 363      65642063 
+ 363      68617200 
+ 364              	.LASF19:
+ 365 0156 43794578 		.ascii	"CyExitCriticalSection\000"
+ 365      69744372 
+ 365      69746963 
+ 365      616C5365 
+ 365      6374696F 
+ 366              	.LASF9:
+ 367 016c 666C6F61 		.ascii	"float\000"
+ 367      7400
+ 368              	.LASF2:
+ 369 0172 73686F72 		.ascii	"short int\000"
+ 369      7420696E 
+ 369      7400
+ 370              	.LASF12:
+ 371 017c 73697A65 		.ascii	"sizetype\000"
+ 371      74797065 
+ 371      00
+ 372              	.LASF18:
+ 373 0185 696E7465 		.ascii	"interruptState\000"
+ 373      72727570 
+ 373      74537461 
+ 373      746500
+ 374              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="Registers associated with the SCCTBlock" visible="true">
+    
+   <block name="`$INSTANCE_NAME`" desc="Registers associated with the SCCTBlock" visible="true">
+
+	    <register name="CR0"
+			address="`$INSTANCE_NAME`_ScBlock__CR0"
+			bitWidth="8" desc="SCCTBlock Configuration register 0">
+			<field name="dft" from="5" to="4" access="RW" desc="DFT mode configuration register">
+				<value name="Normal Operation" value="00" desc=""/>
+				<value name="Vboost DFT" value="01" desc=""/>
+				<value name="Mode Change: PGA mode -> Voltage Integrator, TIA mode -> Charge Integrator, Opamp mode -> Comparator" value="10" desc=""/>
+				<value name="DFT Reset" value="11" desc=""/>
+			</field>
+			<field name="mode" from="3" to="1" access="RW" desc="SCCTBlock mode selectoin register">
+				<value name="Opamp mode" value="000" desc=""/>
+				<value name="TIA mode" value="001" desc=""/>
+				<value name="Continuous time mixer mode" value="010" desc=""/>
+				<value name="Discrete time mixer mode - NRZ S/H mode" value="011" desc=""/>
+				<value name="Unity gain buffer mode" value="100" desc=""/>
+				<value name="First order delta sigma modulator mode" value="101" desc=""/>
+				<value name="Programmable gain amplifier mode" value="110" desc=""/>
+				<value name="Track and hold mode" value="111" desc=""/>
+			</field>
+		</register>
+		
+
+		
+		<register name="CR1"
+			address="`$INSTANCE_NAME`_ScBlock__CR1"
+			bitWidth="8" desc="SCCTBlock Configuration register 1">
+			<field name="gain" from="5" to="5" access="RW" desc="Controls the ratio of the feedback cap for certain modes">
+				<value name="0 dB gain" value="0" desc=""/>
+				<value name="6 dB gain" value="1" desc=""/>
+			</field>
+			<field name="div2" from="4" to="4" access="RW" desc="Divide the input clock by 2">
+				<value name="normal clock operation" value="0" desc=""/>
+				<value name="input clock is divded by 2" value="1" desc=""/>
+			</field>
+			<field name="comp" from="3" to="2" access="RW" desc="Compensation capacitor selection">
+				<value name="3.0 pf" value="00" desc=""/>
+				<value name="3.6 pf" value="01" desc=""/>
+				<value name="4.35 pf" value="10" desc=""/>
+				<value name="5.1 pf" value="11" desc=""/>
+			</field>
+			<field name="drive" from="1" to="0" access="RW" desc="load settings for the output buffer">
+				<value name="175 uA" value="00" desc=""/>
+				<value name="260 uA" value="01" desc=""/>
+				<value name="330 uA" value="10" desc=""/>
+				<value name="400 uA" value="11" desc=""/>
+			</field>
+		</register>
+		
+		<register name="CR2"
+			address="`$INSTANCE_NAME`_ScBlock__CR2"
+			bitWidth="8" desc="SCCTBlock Configuration register 2">
+			<field name="pga_gndvref" from="8" to="8" access="RW" desc="Ground the Vref connection">
+				<value name="Vref connection not grounded" value="0" desc=""/>
+				<value name="Vref connection grounded" value="1" desc=""/>
+			</field>
+			<field name="rval" from="6" to="4" access="RW" desc="Feedback resistance">
+				<value name="20 K" value="000" desc=""/>
+				<value name="30 K" value="001" desc=""/>
+				<value name="40 K" value="000" desc=""/>
+				<value name="80 K" value="001" desc=""/>
+				<value name="120 K" value="000" desc=""/>
+				<value name="250 K" value="001" desc=""/>
+				<value name="500 K" value="000" desc=""/>
+				<value name="1 M" value="001" desc=""/>
+			</field>
+			<field name="redc" from="3" to="2" access="RW" desc="Feedback capacitence">
+				<value name="0 pf" value="00" desc=""/>
+				<value name="1.3 pf" value="01" desc=""/>
+				<value name="0.85 pf (3.3 pf in TIA and charge integrator modes)" value="10" desc=""/>
+				<value name="2.15 pf (4.6 pf in TIA and charge integrator modes)" value="11" desc=""/>
+			</field>
+			<field name="r20_40b" from="1" to="1" access="RW" desc="selects between 20 and 40 K input impedance">
+				<value name="40 K" value="0" desc=""/>
+				<value name="20 K" value="1" desc=""/>
+			</field>
+			<field name="bias_ctrl" from="0" to="0" access="RW" desc="selects between increased stability and increased bandwidth by adjusting the bias current in the amplifier">
+				<value name="lower bandwidth, more stable" value="0" desc=""/>
+				<value name="higher bandwidth, less stable" value="1" desc=""/>
+			</field>
+		</register>
+		
+		<register name="PUMP_CR1"
+			address="CYDEV_ANAIF_CFG_PUMP_CR1"
+			bitWidth="8" desc="SCCTBlock internal boost clock selection register">
+			<field name="npump_sc_selclk" from="7" to="7" access="RW" desc="">
+				<value name="External (DSI) pump clock selected" value="0" desc=""/>
+				<value name="Internal pump clock selected" value="1" desc=""/>
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW0"
+			address="`$INSTANCE_NAME`_ScBlock__SW0"
+			bitWidth="8" desc="SCCTBlock routing registers for Vin.  Connects Vin to the associated analog global on the same side of the device as the SCCTBlock">
+			<field name="Vin_ag7" from="7" to="7" access="RW" desc="">
+			</field>
+			<field name="Vin_ag6" from="6" to="6" access="RW" desc="">
+			</field>
+			<field name="Vin_ag5" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="Vin_ag4" from="4" to="4" access="RW" desc="">
+			</field>
+			<field name="Vin_ag3" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Vin_ag2" from="2" to="2" access="RW" desc="">
+			</field>
+			<field name="Vin_ag1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vin_ag0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW2"
+			address="`$INSTANCE_NAME`_ScBlock__SW2"
+			bitWidth="8" desc="SCCTBlock routing registers for Vin.  Connects Vin to the associated analog local bus on the same side of the device as the SCCTBlock.  Note, not all bits are valid for all SCCTBlock locations">
+			<field name="Vin_abus3" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Vin_abus2" from="2" to="2" access="RW" desc="">
+			</field>
+			<field name="Vin_abus1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vin_abus0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW3"
+			address="`$INSTANCE_NAME`_ScBlock__SW3"
+			bitWidth="8" desc="SCCTBlock routing registers for Vin/Vref.  Connects Vin/Vref to the associated bandgap reference or Vin to the Amux bus on the same side of the device as the SCCTBlock.  ">
+			<field name="Vref_bgvref" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="Vin_bgvref" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vin_amux" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW4"
+			address="`$INSTANCE_NAME`_ScBlock__SW4"
+			bitWidth="8" desc="SCCTBlock routing registers for Vref.  Connects Vref to the associated analog global on the same side of the device as the SCCTBlock.  Note, not all bits are valid for all SCCTBlock locations">
+			<field name="Vref_ag7" from="7" to="7" access="RW" desc="">
+			</field>
+			<field name="Vref_ag6" from="6" to="6" access="RW" desc="">
+			</field>
+			<field name="Vref_ag5" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="Vref_ag4" from="4" to="4" access="RW" desc="">
+			</field>
+			<field name="Vref_ag3" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Vref_ag2" from="2" to="2" access="RW" desc="">
+			</field>
+			<field name="Vref_ag1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vref_ag0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW6"
+			address="`$INSTANCE_NAME`_ScBlock__SW6"
+			bitWidth="8" desc="SCCTBlock routing registers for Vref.  Connects Vref to the associated analog local bus on the same side of the device as the SCCTBlock.  Note, not all bits are valid for all SCCTBlock locations">
+			<field name="Vref_abus1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vref_abus0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW7"
+			address="`$INSTANCE_NAME`_ScBlock__SW7"
+			bitWidth="8" desc="SCCTBlock routing registers for connecting Vin to Vout of the SCCTblock on the opposite side.">
+			<field name="vin_vo" from="2" to="2" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW8"
+			address="`$INSTANCE_NAME`_ScBlock__SW8"
+			bitWidth="8" desc="SCCTBlock routing registers for Vout.  Connects Vo to the associated analog global on the same side of the device as the SCCTBlock.  Note, not all bits are valid for all SCCTBlock locations">
+			<field name="Vo_ag7" from="7" to="7" access="RW" desc="">
+			</field>
+			<field name="Vo_ag6" from="6" to="6" access="RW" desc="">
+			</field>
+			<field name="Vo_ag5" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="Vo_ag4" from="4" to="4" access="RW" desc="">
+			</field>
+			<field name="Vo_ag3" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Vo_ag2" from="2" to="2" access="RW" desc="">
+			</field>
+			<field name="Vo_ag1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vo_ag0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_SW10"
+			address="`$INSTANCE_NAME`_ScBlock__SW10"
+			bitWidth="8" desc="SCCTBlock routing registers for Vout.  Connects Vo to the associated analog local bus on the same side of the device as the SCCTBlock.  Note, not all bits are valid for all SCCTBlock locations">
+			<field name="Vo_abus3" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Vo_abus2" from="2" to="2" access="RW" desc="">
+			</field>
+			<field name="Vo_abus1" from="1" to="1" access="RW" desc="">
+			</field>
+			<field name="Vo_abus0" from="0" to="0" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="ROUTE_CLK"
+			address="`$INSTANCE_NAME`_ScBlock__CLK"
+			bitWidth="8" desc="Configures the SCCTBlock clock options as well as enabling the dynamic control of the block">
+			<field name="dyn_cntl_en" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="bypass_sync" from="4" to="4" access="RW" desc="">
+			</field>
+			<field name="clk_en" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="mx_clk" from="2" to="0" access="RW" desc="">
+				<value name="analog clock 0" value="000" desc=""/>
+				<value name="analog clock 1" value="001" desc=""/>
+				<value name="analog clock 2" value="010" desc=""/>
+				<value name="analog clock 3" value="011" desc=""/>
+				<value name="DSI routed clock" value="100" desc=""/>
+				<value name="rsvd1" value="101" desc=""/>
+				<value name="rsdv2" value="110" desc=""/>
+				<value name="rsdv3" value="111" desc=""/>
+			</field>
+		</register>
+		
+		<register name="ROUTE_BST_CLK"
+			address="`$INSTANCE_NAME`_ScBlock__BST"
+			bitWidth="8" desc="Configures the SCCTBlock boost clock options">
+			<field name="clk_en" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="mx_bst_clk" from="2" to="0" access="RW" desc="">
+				<value name="analog clock 0" value="000" desc=""/>
+				<value name="analog clock 1" value="001" desc=""/>
+				<value name="analog clock 2" value="010" desc=""/>
+				<value name="analog clock 3" value="011" desc=""/>
+				<value name="DSI routed clock" value="100" desc=""/>
+				<value name="rsvd1" value="101" desc=""/>
+				<value name="rsdv2" value="110" desc=""/>
+				<value name="rsdv3" value="111" desc=""/>
+			</field>
+		</register>
+		
+		<register name="MISC"
+			address="CYDEV_ANAIF_RT_SC_MISC"
+			bitWidth="8" desc="MIsc configuration for the SCCTBlock.  Boost force/auto and differential PGA mode">
+			<field name="sc_pump_force" from="5" to="5" access="RW" desc="">
+			</field>
+			<field name="sc_pump_auto" from="4" to="4" access="RW" desc="">
+			</field>
+			<field name="diff_pga_1_3_en" from="1" to="1" access="RW" desc="Connects SCCTBlocks 1 and 3 in a differential pair configuration">
+			</field>
+			<field name="diff_pga_0_2_en" from="0" to="0" access="RW" desc="Connects SCCTBlocks 0 and 2 in a differential pair configuration">
+			</field>
+		</register>
+		
+		<register name="SR"
+			address="`$INSTANCE_NAME`_ScBlock__SR"
+			bitWidth="8" desc="Modulator output status register">
+			<field name="Sc3_modout" from="3" to="3" access="R" desc="">
+			</field>
+			<field name="Sc2_modout" from="3" to="3" access="R" desc="">
+			</field>
+			<field name="Sc1_modout" from="3" to="3" access="R" desc="">
+			</field>
+			<field name="Sc0_modout" from="3" to="3" access="R" desc="">
+			</field>
+		</register>
+		
+		<register name="MSK"
+			address="`$INSTANCE_NAME`_ScBlock__MSK"
+			bitWidth="8" desc="IRQ enable mask register">
+			<field name="Sc3_msk" from="3" to="3" access="RW" desc="">
+				<value name="SC IRQ disabled" value="0" desc=""/>
+				<value name="SC IRQ enabled" value="1" desc=""/>
+			</field>
+			<field name="Sc2_msk" from="3" to="3" access="RW" desc="">
+				<value name="SC IRQ disabled" value="0" desc=""/>
+				<value name="SC IRQ enabled" value="1" desc=""/>
+			</field>
+			<field name="Sc1_msk" from="3" to="3" access="RW" desc="">
+				<value name="SC IRQ disabled" value="0" desc=""/>
+				<value name="SC IRQ enabled" value="1" desc=""/>
+			</field>
+			<field name="Sc0_msk" from="3" to="3" access="RW" desc="">
+				<value name="SC IRQ disabled" value="0" desc=""/>
+				<value name="SC IRQ enabled" value="1" desc=""/>
+			</field>
+		</register>
+		
+		<register name="CMPINV"
+			address="`$INSTANCE_NAME`_ScBlock__CMPINV"
+			bitWidth="8" desc="SC modulator comparator output inversion control">
+			<field name="Sc3_cmpinv" from="3" to="3" access="RW" desc="">
+				<value name="comparator output normal" value="0" desc=""/>
+				<value name="comparator output inverted" value="1" desc=""/>
+			</field>
+			<field name="Sc2_cmpinv" from="3" to="3" access="RW" desc="">
+				<value name="comparator output normal" value="0" desc=""/>
+				<value name="comparator output inverted" value="1" desc=""/>
+			</field>
+			<field name="Sc1_cmpinv" from="3" to="3" access="RW" desc="">
+				<value name="comparator output normal" value="0" desc=""/>
+				<value name="comparator output inverted" value="1" desc=""/>
+			</field>
+			<field name="Sc0_cmpinv" from="3" to="3" access="RW" desc="">
+				<value name="comparator output normal" value="0" desc=""/>
+				<value name="comparator output inverted" value="1" desc=""/>
+			</field>
+		</register>
+		
+		<register name="CPTR"
+			address="`$INSTANCE_NAME`_ScBlock__CPTR"
+			bitWidth="8" desc="SC status capture mode">
+			<field name="Sc3_capture_mode" from="3" to="3" access="RW" desc="">
+				<value name="Edge capture mode" value="0" desc=""/>
+				<value name="level capture mode" value="1" desc=""/>
+			</field>
+			<field name="Sc2_capture_mode" from="3" to="3" access="RW" desc="">
+				<value name="Edge capture mode" value="0" desc=""/>
+				<value name="level capture mode" value="1" desc=""/>
+			</field>
+			<field name="Sc1_capture_mode" from="3" to="3" access="RW" desc="">
+				<value name="Edge capture mode" value="0" desc=""/>
+				<value name="level capture mode" value="1" desc=""/>
+			</field>
+			<field name="Sc0_capture_mode" from="3" to="3" access="RW" desc="">
+				<value name="Edge capture mode" value="0" desc=""/>
+				<value name="level capture mode" value="1" desc=""/>
+			</field>
+		</register>
+		
+		<register name="ACT_CFG"
+			address="`$INSTANCE_NAME`_ScBlock__PM_ACT_CFG"
+			bitWidth="8" desc="SCCTBlock active mode configuration / enable">
+			<field name="Sc3_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc2_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc1_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc0_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+		</register>
+		
+		<register name="STBY_CFG"
+			address="`$INSTANCE_NAME`_ScBlock__PM_STBY_CFG"
+			bitWidth="8" desc="SCCTBlock alternative active mode configuration / enable">
+			<field name="Sc3_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc2_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc1_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+			<field name="Sc0_enabled" from="3" to="3" access="RW" desc="">
+			</field>
+		</register>
+		
+	  </block>
+	</block>
+  
+</deviceData>

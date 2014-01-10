@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="Registers associated with the Datapath" visible="true">
+    
+   <block name="`$INSTANCE_NAME`" desc="Registers associated with the Datapath" visible="true">
+
+	    <register name="A0"
+			address="`$INSTANCE_NAME`_datapath_u0__A0_REG"
+			bitWidth="8" desc="A0 register, 8 bit">
+		</register>
+		
+		<register name="A1"
+			address="`$INSTANCE_NAME`_datapath_u0__A1_REG"
+			bitWidth="8" desc="A1 register, 8 bit">
+		</register>
+		
+		<register name="D0"
+			address="`$INSTANCE_NAME`_datapath_u0__D0_REG"
+			bitWidth="8" desc="D0 register, 8 bit">
+		</register>
+		
+		<register name="D1"
+			address="`$INSTANCE_NAME`_datapath_u0__D1_REG"
+			bitWidth="8" desc="D1 register, 8 bit">
+		</register>
+		
+		<block name="F0" desc="Registers associated with the Datapath" visible="`$FIFO_0_SingleBufferMode`">
+		
+			<register name="reg"
+				address="`$INSTANCE_NAME`_datapath_u0__F0_REG"
+				bitWidth="8" desc="F0 register, 8 bit">
+			</register>
+			
+		</block>
+		
+		<block name="F1" desc="Registers associated with the Datapath" visible="`$FIFO_1_SingleBufferMode`">
+		
+			<register name="reg"
+				address="`$INSTANCE_NAME`_datapath_u0__F1_REG"
+				bitWidth="8" desc="F1 register, 8 bit">
+			</register>
+		
+		</block>
+		
+		<register name="Datapath_FIFO_config_byte_a"
+			address="`$INSTANCE_NAME`_datapath_u0__DP_AUX_CTL_REG"
+			bitWidth="8" desc="Datapath FIFO configuration">
+			<field name="FIFO_1_LVL" from="3" to="3" access="RW" desc="FIFO 1 level reporting mode. controls the meaning of the fifo bus status output">
+				<value name="Bus = empty/full" value="0" desc="FIFO1 Input mode: bus status = FIFO not full.  Ouput mode: bus status = FIFO not empty"/>
+				<value name="Bus = lte 1/2 empty, gte 1/2 full" value="1" desc="FIFO1 Input mode: bus status = FIFO at least half empty.  Ouput mode: bus status = FIFO at least half full"/>
+			</field>
+			<field name="FIFO_0_LVL" from="2" to="2" access="RW" desc="FIFO 0 level reporting mode. controls the meaning of the fifo bus status output">
+				<value name="Bus = empty/full" value="0" desc="FIFO Input mode: bus status = FIFO not full.  Ouput mode: bus status = FIFO not empty"/>
+				<value name="Bus = lte 1/2 empty, gte 1/2 full" value="1" desc="FIFO Input mode: bus status = FIFO at least half empty.  Ouput mode: bus status = FIFO at least half full"/>
+			</field>
+			<field name="FIFO_1_Clear" from="1" to="1" access="RW" desc="When set, resets the FIFO 1 pointers a.k.a. Single Buffer Mode">
+				<value name="FIFO 1 reset" value="1" desc="FIFO in single buffer mode"/>
+				<value name="FIFO 1 normal" value="0" desc="FIFO operation normal"/>
+			</field>
+			<field name="FIFO_0_Clear" from="0" to="0" access="RW" desc="When set, resets the FIFO 0 pointers a.k.a. Single Buffer Mode">
+				<value name="FIFO 0 reset" value="1" desc="FIFO in single buffer mode"/>
+				<value name="FIFO 0 normal" value="0" desc="FIFO operation normal"/>
+			</field>
+		</register>
+	    
+	  </block>
+	  
+	</block>
+  
+</deviceData>

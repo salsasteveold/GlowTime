@@ -1,0 +1,64 @@
+/* Copy-Paste into Processing, save.
+ * In the folder you save the processing file in, ensure there exists an image by the name 'color.jpg'
+ * Run the program, ensuring that PSoC 4 is connected to the right COM port
+ * If not, try changing COM port number in code from Serial.list()[1] to whichever (0, 2, 3, 4..) serial device the PSoC is
+ * It is likely going to be 0 or 1
+ */
+ 
+/* Draw a 32x16 image on the RGB Matrix */
+
+import processing.serial.*;
+Serial port;
+
+int r = 0, g = 0, b = 0;
+PImage img1, img2;
+
+void setup() {
+
+  size(100, 50);
+  
+  println("Available serial ports:");
+  println(Serial.list());
+
+  img1 = loadImage("color.jpg");
+
+
+  // Uses the second port in this list (number 1).  Change this to
+  // select the port corresponding to your Pioneer board.  The last
+  // parameter (e.g. 115200) is the speed of the communication.  It
+  // has to correspond to the value in the UART Component 
+  port = new Serial(this, Serial.list()[1], 115200);  
+
+  // If you know the name of the port used by the Pioneer board, you
+  // can specify it directly like this.
+  // port = new Serial(this, "COM1", 115200);
+}
+
+void draw() {
+  r = 0; 
+  g = 0; 
+  b = 0;
+  int i = 0, j = 0;
+
+  img1.resize(32, 16);
+
+  image(img1, 0, 0, 100, 50);
+
+  img1.loadPixels();
+
+  if (mousePressed)
+  {
+    for (int dim = 0; dim < img1.height*img1.width; dim++)
+    {
+      i = (int)dim%32;
+      j = (int)dim/32;
+      port.write(i);
+      port.write(j);
+
+      port.write((int)((31*red(img1.pixels[dim]))/255));
+      port.write((int)((31*green(img1.pixels[dim]))/255));
+      port.write((int)((31*blue(img1.pixels[dim]))/255));
+      port.write('D');
+    }
+  }
+}

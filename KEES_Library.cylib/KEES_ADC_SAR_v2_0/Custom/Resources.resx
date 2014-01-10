@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuiltInTabCaption" xml:space="preserve">
+    <value>Built-in</value>
+  </data>
+  <data name="ClockFrequencyErrorMsg" xml:space="preserve">
+    <value>Clock frequency value must be between {0} MHz and {1} MHz.</value>
+  </data>
+  <data name="ConfigureTabCaption" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="ConversionRateErrorMsg" xml:space="preserve">
+    <value>Conversion Rate value must be between {0} Sps and {1} Sps.</value>
+  </data>
+  <data name="DRCConversionRate" xml:space="preserve">
+    <value>Internal clock frequency must be between {0} MHz and {1} MHz. Please change ADC Resolution or Conversion Rate.</value>
+  </data>
+  <data name="DRCInternalClockFreqMsg" xml:space="preserve">
+    <value>Internal clock frequency value must be between {0} MHz + {1}% ({2} MHz) and {3} MHz - {4}% ({5} MHz).</value>
+  </data>
+  <data name="DRCMinimumPulseWidthMsg" xml:space="preserve">
+    <value>The internal clock minimum pulse width must be greater than {0} ns.</value>
+  </data>
+  <data name="InvalidExternalClock" xml:space="preserve">
+    <value>External clock is undefined or was changed. For proper component operation, launch the SAR ADC configuration dialog and select the appropriate value for Conversion Rate or Clock Source.</value>
+  </data>
+  <data name="InvalidReferenceErrorMsg" xml:space="preserve">
+    <value>Conversion rate for "Internal Vref" Reference must be less than 100ksps. Please use "Internal Vref, bypassed" for higher rate.</value>
+  </data>
+  <data name="NextOutErrorMsg" xml:space="preserve">
+    <value>EOS output is not available for PSoC 5 device.</value>
+  </data>
+  <data name="VDACExternalRefErrorMsg" xml:space="preserve">
+    <value>SAR ADC Reference must be internal when Input Range is "{0}"</value>
+  </data>
+  <data name="VddaDRCMsg" xml:space="preserve">
+    <value>The voltage reference of SAR ADC should be less than system VDDA voltage.</value>
+  </data>
+  <data name="VddaInternalBypassErrorMsg" xml:space="preserve">
+    <value>SAR ADC Reference cannot be set as "Internal Vref, bypassed" when Input Range is "{0}".</value>
+  </data>
+  <data name="VoltageReferenceErrorMsg" xml:space="preserve">
+    <value>Voltage Reference value must be between {0} V and Vdda ({1} V).</value>
+  </data>
+  <data name="VoltageReferenceErrorMsgVddaDiv2" xml:space="preserve">
+    <value>Voltage Reference value must be between {0} V and Vdda/2 ({1} V).</value>
+  </data>
+</root>

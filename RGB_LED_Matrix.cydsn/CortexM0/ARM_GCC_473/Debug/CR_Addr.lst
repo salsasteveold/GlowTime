@@ -1,0 +1,534 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"CR_Addr.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.CR_Addr_Write,"ax",%progbits
+  18              		.align	2
+  19              		.global	CR_Addr_Write
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	CR_Addr_Write, %function
+  23              	CR_Addr_Write:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\CR_Addr.c"
+   1:.\Generated_Source\PSoC4/CR_Addr.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/CR_Addr.c **** * File Name: CR_Addr.c  
+   3:.\Generated_Source\PSoC4/CR_Addr.c **** * Version 1.70
+   4:.\Generated_Source\PSoC4/CR_Addr.c **** *
+   5:.\Generated_Source\PSoC4/CR_Addr.c **** * Description:
+   6:.\Generated_Source\PSoC4/CR_Addr.c **** *  This file contains API to enable firmware control of a Control Register.
+   7:.\Generated_Source\PSoC4/CR_Addr.c **** *
+   8:.\Generated_Source\PSoC4/CR_Addr.c **** * Note:
+   9:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  10:.\Generated_Source\PSoC4/CR_Addr.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC4/CR_Addr.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/CR_Addr.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC4/CR_Addr.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC4/CR_Addr.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/CR_Addr.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/CR_Addr.c **** 
+  17:.\Generated_Source\PSoC4/CR_Addr.c **** #include "CR_Addr.h"
+  18:.\Generated_Source\PSoC4/CR_Addr.c **** 
+  19:.\Generated_Source\PSoC4/CR_Addr.c **** #if !defined(CR_Addr_Sync_ctrl_reg__REMOVED) /* Check for removal by optimization */
+  20:.\Generated_Source\PSoC4/CR_Addr.c **** 
+  21:.\Generated_Source\PSoC4/CR_Addr.c **** /*******************************************************************************
+  22:.\Generated_Source\PSoC4/CR_Addr.c **** * Function Name: CR_Addr_Write
+  23:.\Generated_Source\PSoC4/CR_Addr.c **** ********************************************************************************
+  24:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  25:.\Generated_Source\PSoC4/CR_Addr.c **** * Summary:
+  26:.\Generated_Source\PSoC4/CR_Addr.c **** *  Write a byte to the Control Register.
+  27:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  28:.\Generated_Source\PSoC4/CR_Addr.c **** * Parameters:
+  29:.\Generated_Source\PSoC4/CR_Addr.c **** *  control:  The value to be assigned to the Control Register.
+  30:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  31:.\Generated_Source\PSoC4/CR_Addr.c **** * Return:
+  32:.\Generated_Source\PSoC4/CR_Addr.c **** *  None.
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  34:.\Generated_Source\PSoC4/CR_Addr.c **** *******************************************************************************/
+  35:.\Generated_Source\PSoC4/CR_Addr.c **** void CR_Addr_Write(uint8 control) 
+  36:.\Generated_Source\PSoC4/CR_Addr.c **** {
+  26              		.loc 1 36 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  37:.\Generated_Source\PSoC4/CR_Addr.c ****     CR_Addr_Control = control;
+  29              		.loc 1 37 0
+  30 0000 014B     		ldr	r3, .L2
+  38:.\Generated_Source\PSoC4/CR_Addr.c **** }
+  31              		.loc 1 38 0
+  32              		@ sp needed for prologue
+  37:.\Generated_Source\PSoC4/CR_Addr.c ****     CR_Addr_Control = control;
+  33              		.loc 1 37 0
+  34 0002 1870     		strb	r0, [r3]
+  35              		.loc 1 38 0
+  36 0004 7047     		bx	lr
+  37              	.L3:
+  38 0006 C046     		.align	2
+  39              	.L2:
+  40 0008 70000F40 		.word	1074724976
+  41              		.cfi_endproc
+  42              	.LFE0:
+  43              		.size	CR_Addr_Write, .-CR_Addr_Write
+  44              		.section	.text.CR_Addr_Read,"ax",%progbits
+  45              		.align	2
+  46              		.global	CR_Addr_Read
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	CR_Addr_Read, %function
+  50              	CR_Addr_Read:
+  51              	.LFB1:
+  39:.\Generated_Source\PSoC4/CR_Addr.c **** 
+  40:.\Generated_Source\PSoC4/CR_Addr.c **** 
+  41:.\Generated_Source\PSoC4/CR_Addr.c **** /*******************************************************************************
+  42:.\Generated_Source\PSoC4/CR_Addr.c **** * Function Name: CR_Addr_Read
+  43:.\Generated_Source\PSoC4/CR_Addr.c **** ********************************************************************************
+  44:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  45:.\Generated_Source\PSoC4/CR_Addr.c **** * Summary:
+  46:.\Generated_Source\PSoC4/CR_Addr.c **** *  Reads the current value assigned to the Control Register.
+  47:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  48:.\Generated_Source\PSoC4/CR_Addr.c **** * Parameters:
+  49:.\Generated_Source\PSoC4/CR_Addr.c **** *  None.
+  50:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  51:.\Generated_Source\PSoC4/CR_Addr.c **** * Return:
+  52:.\Generated_Source\PSoC4/CR_Addr.c **** *  Returns the current value in the Control Register.
+  53:.\Generated_Source\PSoC4/CR_Addr.c **** *
+  54:.\Generated_Source\PSoC4/CR_Addr.c **** *******************************************************************************/
+  55:.\Generated_Source\PSoC4/CR_Addr.c **** uint8 CR_Addr_Read(void) 
+  56:.\Generated_Source\PSoC4/CR_Addr.c **** {
+  52              		.loc 1 56 0
+  53              		.cfi_startproc
+  57:.\Generated_Source\PSoC4/CR_Addr.c ****     return CR_Addr_Control;
+  54              		.loc 1 57 0
+  55 0000 014B     		ldr	r3, .L5
+  58:.\Generated_Source\PSoC4/CR_Addr.c **** }
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 3
+
+
+  56              		.loc 1 58 0
+  57              		@ sp needed for prologue
+  57:.\Generated_Source\PSoC4/CR_Addr.c ****     return CR_Addr_Control;
+  58              		.loc 1 57 0
+  59 0002 1878     		ldrb	r0, [r3]
+  60              		.loc 1 58 0
+  61 0004 7047     		bx	lr
+  62              	.L6:
+  63 0006 C046     		.align	2
+  64              	.L5:
+  65 0008 70000F40 		.word	1074724976
+  66              		.cfi_endproc
+  67              	.LFE1:
+  68              		.size	CR_Addr_Read, .-CR_Addr_Read
+  69              		.text
+  70              	.Letext0:
+  71              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+  72              		.section	.debug_info,"",%progbits
+  73              	.Ldebug_info0:
+  74 0000 DC000000 		.4byte	0xdc
+  75 0004 0200     		.2byte	0x2
+  76 0006 00000000 		.4byte	.Ldebug_abbrev0
+  77 000a 04       		.byte	0x4
+  78 000b 01       		.uleb128 0x1
+  79 000c 18010000 		.4byte	.LASF14
+  80 0010 01       		.byte	0x1
+  81 0011 53000000 		.4byte	.LASF15
+  82 0015 00000000 		.4byte	.LASF16
+  83 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  84 001d 00000000 		.4byte	0
+  85 0021 00000000 		.4byte	0
+  86 0025 00000000 		.4byte	.Ldebug_line0
+  87 0029 02       		.uleb128 0x2
+  88 002a 01       		.byte	0x1
+  89 002b 06       		.byte	0x6
+  90 002c 6A010000 		.4byte	.LASF0
+  91 0030 02       		.uleb128 0x2
+  92 0031 01       		.byte	0x1
+  93 0032 08       		.byte	0x8
+  94 0033 7C000000 		.4byte	.LASF1
+  95 0037 02       		.uleb128 0x2
+  96 0038 02       		.byte	0x2
+  97 0039 05       		.byte	0x5
+  98 003a 08010000 		.4byte	.LASF2
+  99 003e 02       		.uleb128 0x2
+ 100 003f 02       		.byte	0x2
+ 101 0040 07       		.byte	0x7
+ 102 0041 A1000000 		.4byte	.LASF3
+ 103 0045 02       		.uleb128 0x2
+ 104 0046 04       		.byte	0x4
+ 105 0047 05       		.byte	0x5
+ 106 0048 61010000 		.4byte	.LASF4
+ 107 004c 02       		.uleb128 0x2
+ 108 004d 04       		.byte	0x4
+ 109 004e 07       		.byte	0x7
+ 110 004f 8F000000 		.4byte	.LASF5
+ 111 0053 02       		.uleb128 0x2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 4
+
+
+ 112 0054 08       		.byte	0x8
+ 113 0055 05       		.byte	0x5
+ 114 0056 F5000000 		.4byte	.LASF6
+ 115 005a 02       		.uleb128 0x2
+ 116 005b 08       		.byte	0x8
+ 117 005c 07       		.byte	0x7
+ 118 005d D0000000 		.4byte	.LASF7
+ 119 0061 03       		.uleb128 0x3
+ 120 0062 04       		.byte	0x4
+ 121 0063 05       		.byte	0x5
+ 122 0064 696E7400 		.ascii	"int\000"
+ 123 0068 02       		.uleb128 0x2
+ 124 0069 04       		.byte	0x4
+ 125 006a 07       		.byte	0x7
+ 126 006b C3000000 		.4byte	.LASF8
+ 127 006f 04       		.uleb128 0x4
+ 128 0070 12010000 		.4byte	.LASF12
+ 129 0074 02       		.byte	0x2
+ 130 0075 5B       		.byte	0x5b
+ 131 0076 30000000 		.4byte	0x30
+ 132 007a 02       		.uleb128 0x2
+ 133 007b 04       		.byte	0x4
+ 134 007c 04       		.byte	0x4
+ 135 007d 76000000 		.4byte	.LASF9
+ 136 0081 02       		.uleb128 0x2
+ 137 0082 08       		.byte	0x8
+ 138 0083 04       		.byte	0x4
+ 139 0084 BC000000 		.4byte	.LASF10
+ 140 0088 02       		.uleb128 0x2
+ 141 0089 01       		.byte	0x1
+ 142 008a 08       		.byte	0x8
+ 143 008b 03010000 		.4byte	.LASF11
+ 144 008f 04       		.uleb128 0x4
+ 145 0090 8A000000 		.4byte	.LASF13
+ 146 0094 02       		.byte	0x2
+ 147 0095 F0       		.byte	0xf0
+ 148 0096 9A000000 		.4byte	0x9a
+ 149 009a 05       		.uleb128 0x5
+ 150 009b 6F000000 		.4byte	0x6f
+ 151 009f 06       		.uleb128 0x6
+ 152 00a0 01       		.byte	0x1
+ 153 00a1 E7000000 		.4byte	.LASF17
+ 154 00a5 01       		.byte	0x1
+ 155 00a6 23       		.byte	0x23
+ 156 00a7 01       		.byte	0x1
+ 157 00a8 00000000 		.4byte	.LFB0
+ 158 00ac 0C000000 		.4byte	.LFE0
+ 159 00b0 02       		.byte	0x2
+ 160 00b1 7D       		.byte	0x7d
+ 161 00b2 00       		.sleb128 0
+ 162 00b3 01       		.byte	0x1
+ 163 00b4 C6000000 		.4byte	0xc6
+ 164 00b8 07       		.uleb128 0x7
+ 165 00b9 B4000000 		.4byte	.LASF18
+ 166 00bd 01       		.byte	0x1
+ 167 00be 23       		.byte	0x23
+ 168 00bf 6F000000 		.4byte	0x6f
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 5
+
+
+ 169 00c3 01       		.byte	0x1
+ 170 00c4 50       		.byte	0x50
+ 171 00c5 00       		.byte	0
+ 172 00c6 08       		.uleb128 0x8
+ 173 00c7 01       		.byte	0x1
+ 174 00c8 46000000 		.4byte	.LASF19
+ 175 00cc 01       		.byte	0x1
+ 176 00cd 37       		.byte	0x37
+ 177 00ce 01       		.byte	0x1
+ 178 00cf 6F000000 		.4byte	0x6f
+ 179 00d3 00000000 		.4byte	.LFB1
+ 180 00d7 0C000000 		.4byte	.LFE1
+ 181 00db 02       		.byte	0x2
+ 182 00dc 7D       		.byte	0x7d
+ 183 00dd 00       		.sleb128 0
+ 184 00de 01       		.byte	0x1
+ 185 00df 00       		.byte	0
+ 186              		.section	.debug_abbrev,"",%progbits
+ 187              	.Ldebug_abbrev0:
+ 188 0000 01       		.uleb128 0x1
+ 189 0001 11       		.uleb128 0x11
+ 190 0002 01       		.byte	0x1
+ 191 0003 25       		.uleb128 0x25
+ 192 0004 0E       		.uleb128 0xe
+ 193 0005 13       		.uleb128 0x13
+ 194 0006 0B       		.uleb128 0xb
+ 195 0007 03       		.uleb128 0x3
+ 196 0008 0E       		.uleb128 0xe
+ 197 0009 1B       		.uleb128 0x1b
+ 198 000a 0E       		.uleb128 0xe
+ 199 000b 55       		.uleb128 0x55
+ 200 000c 06       		.uleb128 0x6
+ 201 000d 11       		.uleb128 0x11
+ 202 000e 01       		.uleb128 0x1
+ 203 000f 52       		.uleb128 0x52
+ 204 0010 01       		.uleb128 0x1
+ 205 0011 10       		.uleb128 0x10
+ 206 0012 06       		.uleb128 0x6
+ 207 0013 00       		.byte	0
+ 208 0014 00       		.byte	0
+ 209 0015 02       		.uleb128 0x2
+ 210 0016 24       		.uleb128 0x24
+ 211 0017 00       		.byte	0
+ 212 0018 0B       		.uleb128 0xb
+ 213 0019 0B       		.uleb128 0xb
+ 214 001a 3E       		.uleb128 0x3e
+ 215 001b 0B       		.uleb128 0xb
+ 216 001c 03       		.uleb128 0x3
+ 217 001d 0E       		.uleb128 0xe
+ 218 001e 00       		.byte	0
+ 219 001f 00       		.byte	0
+ 220 0020 03       		.uleb128 0x3
+ 221 0021 24       		.uleb128 0x24
+ 222 0022 00       		.byte	0
+ 223 0023 0B       		.uleb128 0xb
+ 224 0024 0B       		.uleb128 0xb
+ 225 0025 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 6
+
+
+ 226 0026 0B       		.uleb128 0xb
+ 227 0027 03       		.uleb128 0x3
+ 228 0028 08       		.uleb128 0x8
+ 229 0029 00       		.byte	0
+ 230 002a 00       		.byte	0
+ 231 002b 04       		.uleb128 0x4
+ 232 002c 16       		.uleb128 0x16
+ 233 002d 00       		.byte	0
+ 234 002e 03       		.uleb128 0x3
+ 235 002f 0E       		.uleb128 0xe
+ 236 0030 3A       		.uleb128 0x3a
+ 237 0031 0B       		.uleb128 0xb
+ 238 0032 3B       		.uleb128 0x3b
+ 239 0033 0B       		.uleb128 0xb
+ 240 0034 49       		.uleb128 0x49
+ 241 0035 13       		.uleb128 0x13
+ 242 0036 00       		.byte	0
+ 243 0037 00       		.byte	0
+ 244 0038 05       		.uleb128 0x5
+ 245 0039 35       		.uleb128 0x35
+ 246 003a 00       		.byte	0
+ 247 003b 49       		.uleb128 0x49
+ 248 003c 13       		.uleb128 0x13
+ 249 003d 00       		.byte	0
+ 250 003e 00       		.byte	0
+ 251 003f 06       		.uleb128 0x6
+ 252 0040 2E       		.uleb128 0x2e
+ 253 0041 01       		.byte	0x1
+ 254 0042 3F       		.uleb128 0x3f
+ 255 0043 0C       		.uleb128 0xc
+ 256 0044 03       		.uleb128 0x3
+ 257 0045 0E       		.uleb128 0xe
+ 258 0046 3A       		.uleb128 0x3a
+ 259 0047 0B       		.uleb128 0xb
+ 260 0048 3B       		.uleb128 0x3b
+ 261 0049 0B       		.uleb128 0xb
+ 262 004a 27       		.uleb128 0x27
+ 263 004b 0C       		.uleb128 0xc
+ 264 004c 11       		.uleb128 0x11
+ 265 004d 01       		.uleb128 0x1
+ 266 004e 12       		.uleb128 0x12
+ 267 004f 01       		.uleb128 0x1
+ 268 0050 40       		.uleb128 0x40
+ 269 0051 0A       		.uleb128 0xa
+ 270 0052 9742     		.uleb128 0x2117
+ 271 0054 0C       		.uleb128 0xc
+ 272 0055 01       		.uleb128 0x1
+ 273 0056 13       		.uleb128 0x13
+ 274 0057 00       		.byte	0
+ 275 0058 00       		.byte	0
+ 276 0059 07       		.uleb128 0x7
+ 277 005a 05       		.uleb128 0x5
+ 278 005b 00       		.byte	0
+ 279 005c 03       		.uleb128 0x3
+ 280 005d 0E       		.uleb128 0xe
+ 281 005e 3A       		.uleb128 0x3a
+ 282 005f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 7
+
+
+ 283 0060 3B       		.uleb128 0x3b
+ 284 0061 0B       		.uleb128 0xb
+ 285 0062 49       		.uleb128 0x49
+ 286 0063 13       		.uleb128 0x13
+ 287 0064 02       		.uleb128 0x2
+ 288 0065 0A       		.uleb128 0xa
+ 289 0066 00       		.byte	0
+ 290 0067 00       		.byte	0
+ 291 0068 08       		.uleb128 0x8
+ 292 0069 2E       		.uleb128 0x2e
+ 293 006a 00       		.byte	0
+ 294 006b 3F       		.uleb128 0x3f
+ 295 006c 0C       		.uleb128 0xc
+ 296 006d 03       		.uleb128 0x3
+ 297 006e 0E       		.uleb128 0xe
+ 298 006f 3A       		.uleb128 0x3a
+ 299 0070 0B       		.uleb128 0xb
+ 300 0071 3B       		.uleb128 0x3b
+ 301 0072 0B       		.uleb128 0xb
+ 302 0073 27       		.uleb128 0x27
+ 303 0074 0C       		.uleb128 0xc
+ 304 0075 49       		.uleb128 0x49
+ 305 0076 13       		.uleb128 0x13
+ 306 0077 11       		.uleb128 0x11
+ 307 0078 01       		.uleb128 0x1
+ 308 0079 12       		.uleb128 0x12
+ 309 007a 01       		.uleb128 0x1
+ 310 007b 40       		.uleb128 0x40
+ 311 007c 0A       		.uleb128 0xa
+ 312 007d 9742     		.uleb128 0x2117
+ 313 007f 0C       		.uleb128 0xc
+ 314 0080 00       		.byte	0
+ 315 0081 00       		.byte	0
+ 316 0082 00       		.byte	0
+ 317              		.section	.debug_aranges,"",%progbits
+ 318 0000 24000000 		.4byte	0x24
+ 319 0004 0200     		.2byte	0x2
+ 320 0006 00000000 		.4byte	.Ldebug_info0
+ 321 000a 04       		.byte	0x4
+ 322 000b 00       		.byte	0
+ 323 000c 0000     		.2byte	0
+ 324 000e 0000     		.2byte	0
+ 325 0010 00000000 		.4byte	.LFB0
+ 326 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 327 0018 00000000 		.4byte	.LFB1
+ 328 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 329 0020 00000000 		.4byte	0
+ 330 0024 00000000 		.4byte	0
+ 331              		.section	.debug_ranges,"",%progbits
+ 332              	.Ldebug_ranges0:
+ 333 0000 00000000 		.4byte	.LFB0
+ 334 0004 0C000000 		.4byte	.LFE0
+ 335 0008 00000000 		.4byte	.LFB1
+ 336 000c 0C000000 		.4byte	.LFE1
+ 337 0010 00000000 		.4byte	0
+ 338 0014 00000000 		.4byte	0
+ 339              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 8
+
+
+ 340              	.Ldebug_line0:
+ 341 0000 72000000 		.section	.debug_str,"MS",%progbits,1
+ 341      02004600 
+ 341      00000201 
+ 341      FB0E0D00 
+ 341      01010101 
+ 342              	.LASF16:
+ 343 0000 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
+ 343      73657273 
+ 343      5C537465 
+ 343      76655C44 
+ 343      65736B74 
+ 344 002f 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
+ 344      425F4C45 
+ 344      445F4D61 
+ 344      74726978 
+ 344      2E637964 
+ 345              	.LASF19:
+ 346 0046 43525F41 		.ascii	"CR_Addr_Read\000"
+ 346      6464725F 
+ 346      52656164 
+ 346      00
+ 347              	.LASF15:
+ 348 0053 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CR_Addr.c\000"
+ 348      6E657261 
+ 348      7465645F 
+ 348      536F7572 
+ 348      63655C50 
+ 349              	.LASF9:
+ 350 0076 666C6F61 		.ascii	"float\000"
+ 350      7400
+ 351              	.LASF1:
+ 352 007c 756E7369 		.ascii	"unsigned char\000"
+ 352      676E6564 
+ 352      20636861 
+ 352      7200
+ 353              	.LASF13:
+ 354 008a 72656738 		.ascii	"reg8\000"
+ 354      00
+ 355              	.LASF5:
+ 356 008f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 356      20756E73 
+ 356      69676E65 
+ 356      6420696E 
+ 356      7400
+ 357              	.LASF3:
+ 358 00a1 73686F72 		.ascii	"short unsigned int\000"
+ 358      7420756E 
+ 358      7369676E 
+ 358      65642069 
+ 358      6E7400
+ 359              	.LASF18:
+ 360 00b4 636F6E74 		.ascii	"control\000"
+ 360      726F6C00 
+ 361              	.LASF10:
+ 362 00bc 646F7562 		.ascii	"double\000"
+ 362      6C6500
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaV6xBg.s 			page 9
+
+
+ 363              	.LASF8:
+ 364 00c3 756E7369 		.ascii	"unsigned int\000"
+ 364      676E6564 
+ 364      20696E74 
+ 364      00
+ 365              	.LASF7:
+ 366 00d0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 366      206C6F6E 
+ 366      6720756E 
+ 366      7369676E 
+ 366      65642069 
+ 367              	.LASF17:
+ 368 00e7 43525F41 		.ascii	"CR_Addr_Write\000"
+ 368      6464725F 
+ 368      57726974 
+ 368      6500
+ 369              	.LASF6:
+ 370 00f5 6C6F6E67 		.ascii	"long long int\000"
+ 370      206C6F6E 
+ 370      6720696E 
+ 370      7400
+ 371              	.LASF11:
+ 372 0103 63686172 		.ascii	"char\000"
+ 372      00
+ 373              	.LASF2:
+ 374 0108 73686F72 		.ascii	"short int\000"
+ 374      7420696E 
+ 374      7400
+ 375              	.LASF12:
+ 376 0112 75696E74 		.ascii	"uint8\000"
+ 376      3800
+ 377              	.LASF14:
+ 378 0118 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 378      4320342E 
+ 378      372E3320 
+ 378      32303133 
+ 378      30333132 
+ 379 014b 616E6368 		.ascii	"anch revision 196615]\000"
+ 379      20726576 
+ 379      6973696F 
+ 379      6E203139 
+ 379      36363135 
+ 380              	.LASF4:
+ 381 0161 6C6F6E67 		.ascii	"long int\000"
+ 381      20696E74 
+ 381      00
+ 382              	.LASF0:
+ 383 016a 7369676E 		.ascii	"signed char\000"
+ 383      65642063 
+ 383      68617200 
+ 384              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
