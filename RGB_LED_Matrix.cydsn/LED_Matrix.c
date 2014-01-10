@@ -132,4 +132,36 @@ void ClearScreen(color *matrix)
 	}
 }
 
+void drawCircle(uint8 x0, uint8 y0, uint8 r,RGB c, color *matrix) {
+  uint8 f = 1 - r;
+  uint8 ddF_x = 1;
+  uint8 ddF_y = -2 * r;
+  uint8 x = 0;
+  uint8 y = r;
+
+  DrawPixel(x0 , y0+r, c,matrix);
+  DrawPixel(x0 , y0-r, c,matrix);
+  DrawPixel(x0+r, y0 , c,matrix);
+  DrawPixel(x0-r, y0 , c,matrix);
+
+  while (x<y) {
+    if (f >= 0) {
+      y--;
+      ddF_y += 2;
+      f += ddF_y;
+    }
+    x++;
+    ddF_x += 2;
+    f += ddF_x;
+  
+    DrawPixel(x0 + x, y0 + y, c,matrix);
+    DrawPixel(x0 - x, y0 + y, c,matrix);
+    DrawPixel(x0 + x, y0 - y, c,matrix);
+    DrawPixel(x0 - x, y0 - y, c,matrix);
+    DrawPixel(x0 + y, y0 + x, c,matrix);
+    DrawPixel(x0 - y, y0 + x, c,matrix);
+    DrawPixel(x0 + y, y0 - x, c,matrix);
+    DrawPixel(x0 - y, y0 - x, c,matrix);
+  }
+}
 /* [] END OF FILE */

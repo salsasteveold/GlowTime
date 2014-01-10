@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2014-01-10T16:26:08Z")
+ (DATE "2014-01-10T16:41:24Z")
  (DESIGN "RGB_LED_Matrix")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "cydsfit")

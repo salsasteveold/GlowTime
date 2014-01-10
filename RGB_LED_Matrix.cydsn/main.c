@@ -190,8 +190,9 @@ void main()
 	RGB c;
 	
 	/* Buffer for UART data */
-	uint16 array[6] = {0, 0, 0, 0, 0, 0};
-	uint8 i = 0; /* index */
+	//uint16 array[6] = {0, 0, 0, 0, 0, 0};
+	uint8 x = 0; /* index */
+	uint8 y = 0;
 
 	/* Initializations */
 	c.r = 0x00;
@@ -210,43 +211,27 @@ void main()
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
-
+	c.r = 0;
+		c.g = 31;
+		c.b = 0;
 	for(;;)
-    { 		  
-		/* I have defined a custom UART packet protocol
-		 * A general packet may look like: 
-		 * array[0]		x-coordinate [0, 31]
-		 * array[1]		y-coordinate [0, 15]
-		 * array[2]		R (5-bit)
-		 * array[3]		G (5-bit)
-		 * array[4] 	B (5-bit)
-		 * array[5]		'D' (delimiter)
-		 * However, if at any point, 'P' is received, we must clear the screen
-		 */
-		while(array[i-1] != 'D')
+    { 	
+
+		
+
+		//DrawPixel(0, 15, c, matrix);
+		//DrawPixel(31, 0, c, matrix);
+		for(x=2;x<16;x++)
 		{
-			/* If there is UART traffic */
-			if(UART_SpiUartGetRxBufferSize())
-		    {
-				array[i] = UART_UartGetByte();
-				i++;
-				/* 'P' from the PC means claer screen */
-				if(array[i - 1] == 'P')
-				{
-					ClearScreen(matrix);
-				}
+			for(y=0;y<32;y++)
+			{
+				drawCircle(y, x,2,c, matrix);
+				CyDelayUs(20000);
+				ClearScreen(matrix);
 			}
 		}
-
-		c.r = array[2];
-		c.g = array[3];
-		c.b = array[4];
-
-		if(i > 4)
-		{
-			DrawPixel(array[0]%32, array[1]%16, c, matrix);
-		}
-		i = 0;
+		
+		
 	}
 
 }

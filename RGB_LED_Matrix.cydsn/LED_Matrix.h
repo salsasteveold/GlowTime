@@ -56,6 +56,7 @@ extern color matrix[64];
 void DrawPixel(uint8 x, uint8 y, RGB c, color *matrix);
 void ClearPixel(uint8 x, uint8 y, color *matrix);
 void ClearScreen(color *matrix);
+void drawCircle(uint8 x0, uint8 y0, uint8 r,RGB c, color *matrix);
 
 
 //[] END OF FILE
