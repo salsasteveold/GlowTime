@@ -66,6 +66,9 @@ void drawCircleHelper( int8 x0, int8 y0,int8 r, int8 cornername, RGB c, color *m
 void drawLine(int8 x0, int8 y0, int8 x1, int8 y1, RGB c, color *matrix);
 void drawFastVLine(int8 x, int8 y, int8 h, RGB c, color *matrix);
 void drawFastHLine(int8 x, int8 y, int8 h, RGB c, color *matrix);
+void fillRect(int8 x, int8 y, int8 w, int8 h, RGB c, color *matrix);
+void fillScreen(RGB c, color *matrix);
+void drawTriangle(int8 x0, int8 y0,int8 x1, int8 y1,int8 x2, int8 y2, RGB c, color *matrix);
 
 
 //[] END OF FILE

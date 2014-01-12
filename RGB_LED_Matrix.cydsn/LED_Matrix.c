@@ -244,6 +244,13 @@ void drawLine(int8 x0, int8 y0, int8 x1, int8 y1, RGB c, color *matrix)
   }
 }
 
+void drawRect(int16_t x, int16_t y,int16_t w, int16_t h,RGB c, color *matrix) {
+  drawFastHLine(x, y, w, c, matrix);
+  drawFastHLine(x, y+h-1, w, c, matrix);
+  drawFastVLine(x, y, h, c, matrix);
+  drawFastVLine(x+w-1, y, h, c, matrix);
+}
+
 void drawFastVLine(int8 x, int8 y, int8 h, RGB c, color *matrix) 
 {
   // Update in subclasses if desired!
@@ -254,5 +261,27 @@ void drawFastHLine(int8 x, int8 y, int8 w, RGB c, color *matrix)
 {
   // Update in subclasses if desired!
   drawLine(x, y, x+w-1, y, c, matrix);
+}
+
+void fillRect(int8 x, int8 y, int8 w, int8 h, RGB c, color *matrix) 
+{
+  // Update in subclasses if desired!
+	int8 i = 0;
+  for(i=x; i<x+w; i++) {
+    drawFastVLine(i, y, h, c, matrix);
+  }
+}
+
+void fillScreen(RGB c, color *matrix)
+{
+  fillRect(0, 0, 32, 16, c, matrix);
+}
+
+void drawTriangle(int8 x0, int8 y0,int8 x1, int8 y1,
+						int8 x2, int8 y2, RGB c, color *matrix) 
+{
+  drawLine(x0, y0, x1, y1, c, matrix);
+  drawLine(x1, y1, x2, y2, c, matrix);
+  drawLine(x2, y2, x0, y0, c, matrix);
 }
 /* [] END OF FILE */

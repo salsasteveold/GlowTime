@@ -193,6 +193,7 @@ void main()
 	//uint16 array[6] = {0, 0, 0, 0, 0, 0};
 	uint8 x = 0; /* index */
 	uint8 y = 0;
+	uint8 z = 0;
 
 	/* Initializations */
 	c.r = 0x00;
@@ -212,8 +213,8 @@ void main()
 	/* Enable interrupts */
 	CyGlobalIntEnable;
 	c.r = 30;
-		c.g = 0;
-		c.b = 15;
+	c.g = 0;
+	c.b = 15;
 	for(;;)
     { 	
 
@@ -221,14 +222,14 @@ void main()
 
 		//DrawPixel(0, 15, c, matrix);
 		//DrawPixel(31, 0, c, matrix);
-		
+		/*
 		for(x=6;x<16;x++)
 		{
 			for(y=0;y<32;y++)
 			{
 				drawCircle(y, x,4,c, matrix);
 				//drawCircleHelper(y,x,6,0x4,c,matrix);
-				/*drawLine(0, 0, 0,14 , c, matrix);
+				drawLine(0, 0, 0,14 , c, matrix);
 				drawLine(5, 0, 5,14 , c, matrix);
 				drawLine(10, 0, 10,14 , c, matrix);
 				drawLine(15, 0, 15,14 , c, matrix);
@@ -238,13 +239,28 @@ void main()
 				drawLine(0, 0, 31,0 , c, matrix);
 				drawLine(0, 5, 31,5 , c, matrix);
 				drawLine(0, 10, 31,10 , c, matrix);
-				drawLine(0, 15, 31,15 , c, matrix);*/
+				drawLine(0, 15, 31,15 , c, matrix);
 				
 				CyDelayUs(20000);
 				clearScreen(matrix);
 			}
+		}*/
+		for(x=0;x<32;x++)
+		{
+			for(y=0;y<32;y++)
+			{
+				for(z=0;z<32;z++)
+				{
+					c.r = z;
+					c.g = x;
+					c.b = y;
+					drawTriangle(16, 10,20, 6,20, 10, c, matrix);
+					CyDelayUs(30000);
+					//clearScreen(matrix);
+					
+				}
+			}
 		}
-		
 		
 	}
 
