@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
   30:.\Generated_Source\PSoC4/CR_Addr.c **** *
   31:.\Generated_Source\PSoC4/CR_Addr.c **** * Return:
   32:.\Generated_Source\PSoC4/CR_Addr.c **** *  None.
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CR_Addr.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
   54              		.loc 1 57 0
   55 0000 014B     		ldr	r3, .L5
   58:.\Generated_Source\PSoC4/CR_Addr.c **** }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 3
 
 
   56              		.loc 1 58 0
@@ -145,10 +145,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
   76 0006 00000000 		.4byte	.Ldebug_abbrev0
   77 000a 04       		.byte	0x4
   78 000b 01       		.uleb128 0x1
-  79 000c 18010000 		.4byte	.LASF14
+  79 000c D2000000 		.4byte	.LASF14
   80 0010 01       		.byte	0x1
-  81 0011 53000000 		.4byte	.LASF15
-  82 0015 00000000 		.4byte	.LASF16
+  81 0011 0D000000 		.4byte	.LASF15
+  82 0015 1B010000 		.4byte	.LASF16
   83 0019 00000000 		.4byte	.Ldebug_ranges0+0
   84 001d 00000000 		.4byte	0
   85 0021 00000000 		.4byte	0
@@ -156,38 +156,38 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
   87 0029 02       		.uleb128 0x2
   88 002a 01       		.byte	0x1
   89 002b 06       		.byte	0x6
-  90 002c 6A010000 		.4byte	.LASF0
+  90 002c 5F010000 		.4byte	.LASF0
   91 0030 02       		.uleb128 0x2
   92 0031 01       		.byte	0x1
   93 0032 08       		.byte	0x8
-  94 0033 7C000000 		.4byte	.LASF1
+  94 0033 36000000 		.4byte	.LASF1
   95 0037 02       		.uleb128 0x2
   96 0038 02       		.byte	0x2
   97 0039 05       		.byte	0x5
-  98 003a 08010000 		.4byte	.LASF2
+  98 003a C2000000 		.4byte	.LASF2
   99 003e 02       		.uleb128 0x2
  100 003f 02       		.byte	0x2
  101 0040 07       		.byte	0x7
- 102 0041 A1000000 		.4byte	.LASF3
+ 102 0041 5B000000 		.4byte	.LASF3
  103 0045 02       		.uleb128 0x2
  104 0046 04       		.byte	0x4
  105 0047 05       		.byte	0x5
- 106 0048 61010000 		.4byte	.LASF4
+ 106 0048 56010000 		.4byte	.LASF4
  107 004c 02       		.uleb128 0x2
  108 004d 04       		.byte	0x4
  109 004e 07       		.byte	0x7
- 110 004f 8F000000 		.4byte	.LASF5
+ 110 004f 49000000 		.4byte	.LASF5
  111 0053 02       		.uleb128 0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 4
 
 
  112 0054 08       		.byte	0x8
  113 0055 05       		.byte	0x5
- 114 0056 F5000000 		.4byte	.LASF6
+ 114 0056 AF000000 		.4byte	.LASF6
  115 005a 02       		.uleb128 0x2
  116 005b 08       		.byte	0x8
  117 005c 07       		.byte	0x7
- 118 005d D0000000 		.4byte	.LASF7
+ 118 005d 8A000000 		.4byte	.LASF7
  119 0061 03       		.uleb128 0x3
  120 0062 04       		.byte	0x4
  121 0063 05       		.byte	0x5
@@ -195,26 +195,26 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  123 0068 02       		.uleb128 0x2
  124 0069 04       		.byte	0x4
  125 006a 07       		.byte	0x7
- 126 006b C3000000 		.4byte	.LASF8
+ 126 006b 7D000000 		.4byte	.LASF8
  127 006f 04       		.uleb128 0x4
- 128 0070 12010000 		.4byte	.LASF12
+ 128 0070 CC000000 		.4byte	.LASF12
  129 0074 02       		.byte	0x2
  130 0075 5B       		.byte	0x5b
  131 0076 30000000 		.4byte	0x30
  132 007a 02       		.uleb128 0x2
  133 007b 04       		.byte	0x4
  134 007c 04       		.byte	0x4
- 135 007d 76000000 		.4byte	.LASF9
+ 135 007d 30000000 		.4byte	.LASF9
  136 0081 02       		.uleb128 0x2
  137 0082 08       		.byte	0x8
  138 0083 04       		.byte	0x4
- 139 0084 BC000000 		.4byte	.LASF10
+ 139 0084 76000000 		.4byte	.LASF10
  140 0088 02       		.uleb128 0x2
  141 0089 01       		.byte	0x1
  142 008a 08       		.byte	0x8
- 143 008b 03010000 		.4byte	.LASF11
+ 143 008b BD000000 		.4byte	.LASF11
  144 008f 04       		.uleb128 0x4
- 145 0090 8A000000 		.4byte	.LASF13
+ 145 0090 44000000 		.4byte	.LASF13
  146 0094 02       		.byte	0x2
  147 0095 F0       		.byte	0xf0
  148 0096 9A000000 		.4byte	0x9a
@@ -222,7 +222,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  150 009b 6F000000 		.4byte	0x6f
  151 009f 06       		.uleb128 0x6
  152 00a0 01       		.byte	0x1
- 153 00a1 E7000000 		.4byte	.LASF17
+ 153 00a1 A1000000 		.4byte	.LASF17
  154 00a5 01       		.byte	0x1
  155 00a6 23       		.byte	0x23
  156 00a7 01       		.byte	0x1
@@ -234,11 +234,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  162 00b3 01       		.byte	0x1
  163 00b4 C6000000 		.4byte	0xc6
  164 00b8 07       		.uleb128 0x7
- 165 00b9 B4000000 		.4byte	.LASF18
+ 165 00b9 6E000000 		.4byte	.LASF18
  166 00bd 01       		.byte	0x1
  167 00be 23       		.byte	0x23
  168 00bf 6F000000 		.4byte	0x6f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 5
 
 
  169 00c3 01       		.byte	0x1
@@ -246,7 +246,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  171 00c5 00       		.byte	0
  172 00c6 08       		.uleb128 0x8
  173 00c7 01       		.byte	0x1
- 174 00c8 46000000 		.4byte	.LASF19
+ 174 00c8 00000000 		.4byte	.LASF19
  175 00cc 01       		.byte	0x1
  176 00cd 37       		.byte	0x37
  177 00ce 01       		.byte	0x1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  223 0023 0B       		.uleb128 0xb
  224 0024 0B       		.uleb128 0xb
  225 0025 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 6
 
 
  226 0026 0B       		.uleb128 0xb
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  280 005d 0E       		.uleb128 0xe
  281 005e 3A       		.uleb128 0x3a
  282 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 7
 
 
  283 0060 3B       		.uleb128 0x3b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  337 0010 00000000 		.4byte	0
  338 0014 00000000 		.4byte	0
  339              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 8
 
 
  340              	.Ldebug_line0:
@@ -427,108 +427,107 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 1
  341      00000201 
  341      FB0E0D00 
  341      01010101 
- 342              	.LASF16:
- 343 0000 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
- 343      73657273 
- 343      5C537465 
- 343      76655C44 
- 343      65736B74 
- 344 002f 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
- 344      425F4C45 
- 344      445F4D61 
- 344      74726978 
- 344      2E637964 
- 345              	.LASF19:
- 346 0046 43525F41 		.ascii	"CR_Addr_Read\000"
- 346      6464725F 
- 346      52656164 
- 346      00
- 347              	.LASF15:
- 348 0053 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CR_Addr.c\000"
- 348      6E657261 
- 348      7465645F 
- 348      536F7572 
- 348      63655C50 
- 349              	.LASF9:
- 350 0076 666C6F61 		.ascii	"float\000"
- 350      7400
- 351              	.LASF1:
- 352 007c 756E7369 		.ascii	"unsigned char\000"
- 352      676E6564 
- 352      20636861 
- 352      7200
- 353              	.LASF13:
- 354 008a 72656738 		.ascii	"reg8\000"
- 354      00
- 355              	.LASF5:
- 356 008f 6C6F6E67 		.ascii	"long unsigned int\000"
- 356      20756E73 
- 356      69676E65 
- 356      6420696E 
- 356      7400
- 357              	.LASF3:
- 358 00a1 73686F72 		.ascii	"short unsigned int\000"
- 358      7420756E 
- 358      7369676E 
- 358      65642069 
- 358      6E7400
- 359              	.LASF18:
- 360 00b4 636F6E74 		.ascii	"control\000"
- 360      726F6C00 
- 361              	.LASF10:
- 362 00bc 646F7562 		.ascii	"double\000"
- 362      6C6500
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccR7ytf1.s 			page 9
+ 342              	.LASF19:
+ 343 0000 43525F41 		.ascii	"CR_Addr_Read\000"
+ 343      6464725F 
+ 343      52656164 
+ 343      00
+ 344              	.LASF15:
+ 345 000d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CR_Addr.c\000"
+ 345      6E657261 
+ 345      7465645F 
+ 345      536F7572 
+ 345      63655C50 
+ 346              	.LASF9:
+ 347 0030 666C6F61 		.ascii	"float\000"
+ 347      7400
+ 348              	.LASF1:
+ 349 0036 756E7369 		.ascii	"unsigned char\000"
+ 349      676E6564 
+ 349      20636861 
+ 349      7200
+ 350              	.LASF13:
+ 351 0044 72656738 		.ascii	"reg8\000"
+ 351      00
+ 352              	.LASF5:
+ 353 0049 6C6F6E67 		.ascii	"long unsigned int\000"
+ 353      20756E73 
+ 353      69676E65 
+ 353      6420696E 
+ 353      7400
+ 354              	.LASF3:
+ 355 005b 73686F72 		.ascii	"short unsigned int\000"
+ 355      7420756E 
+ 355      7369676E 
+ 355      65642069 
+ 355      6E7400
+ 356              	.LASF18:
+ 357 006e 636F6E74 		.ascii	"control\000"
+ 357      726F6C00 
+ 358              	.LASF10:
+ 359 0076 646F7562 		.ascii	"double\000"
+ 359      6C6500
+ 360              	.LASF8:
+ 361 007d 756E7369 		.ascii	"unsigned int\000"
+ 361      676E6564 
+ 361      20696E74 
+ 361      00
+ 362              	.LASF7:
+ 363 008a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 363      206C6F6E 
+ 363      6720756E 
+ 363      7369676E 
+ 363      65642069 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccfvjmDE.s 			page 9
 
 
- 363              	.LASF8:
- 364 00c3 756E7369 		.ascii	"unsigned int\000"
- 364      676E6564 
- 364      20696E74 
- 364      00
- 365              	.LASF7:
- 366 00d0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 366      206C6F6E 
- 366      6720756E 
- 366      7369676E 
- 366      65642069 
- 367              	.LASF17:
- 368 00e7 43525F41 		.ascii	"CR_Addr_Write\000"
- 368      6464725F 
- 368      57726974 
- 368      6500
- 369              	.LASF6:
- 370 00f5 6C6F6E67 		.ascii	"long long int\000"
- 370      206C6F6E 
- 370      6720696E 
- 370      7400
- 371              	.LASF11:
- 372 0103 63686172 		.ascii	"char\000"
- 372      00
- 373              	.LASF2:
- 374 0108 73686F72 		.ascii	"short int\000"
- 374      7420696E 
- 374      7400
- 375              	.LASF12:
- 376 0112 75696E74 		.ascii	"uint8\000"
- 376      3800
- 377              	.LASF14:
- 378 0118 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 378      4320342E 
- 378      372E3320 
- 378      32303133 
- 378      30333132 
- 379 014b 616E6368 		.ascii	"anch revision 196615]\000"
- 379      20726576 
- 379      6973696F 
- 379      6E203139 
- 379      36363135 
+ 364              	.LASF17:
+ 365 00a1 43525F41 		.ascii	"CR_Addr_Write\000"
+ 365      6464725F 
+ 365      57726974 
+ 365      6500
+ 366              	.LASF6:
+ 367 00af 6C6F6E67 		.ascii	"long long int\000"
+ 367      206C6F6E 
+ 367      6720696E 
+ 367      7400
+ 368              	.LASF11:
+ 369 00bd 63686172 		.ascii	"char\000"
+ 369      00
+ 370              	.LASF2:
+ 371 00c2 73686F72 		.ascii	"short int\000"
+ 371      7420696E 
+ 371      7400
+ 372              	.LASF12:
+ 373 00cc 75696E74 		.ascii	"uint8\000"
+ 373      3800
+ 374              	.LASF14:
+ 375 00d2 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 375      4320342E 
+ 375      372E3320 
+ 375      32303133 
+ 375      30333132 
+ 376 0105 616E6368 		.ascii	"anch revision 196615]\000"
+ 376      20726576 
+ 376      6973696F 
+ 376      6E203139 
+ 376      36363135 
+ 377              	.LASF16:
+ 378 011b 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 378      73657273 
+ 378      5C537465 
+ 378      76655C44 
+ 378      6F63756D 
+ 379 0148 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 379      7269782E 
+ 379      63796473 
+ 379      6E00
  380              	.LASF4:
- 381 0161 6C6F6E67 		.ascii	"long int\000"
+ 381 0156 6C6F6E67 		.ascii	"long int\000"
  381      20696E74 
  381      00
  382              	.LASF0:
- 383 016a 7369676E 		.ascii	"signed char\000"
+ 383 015f 7369676E 		.ascii	"signed char\000"
  383      65642063 
  383      68617200 
  384              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

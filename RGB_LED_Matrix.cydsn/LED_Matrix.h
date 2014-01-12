@@ -24,6 +24,11 @@
 
 #define Set_LAT					CR_Addr_Control=(CR_Addr_Control|0x08)
 #define Clear_LAT				CR_Addr_Control=(CR_Addr_Control&0xF7)			/* LAT is Addr_CR 3 */
+#define swap(a, b) 				{uint8 t = a; a = b; b = t;}
+
+
+
+
 
 
 /*******************************************************************************
@@ -53,10 +58,14 @@ extern color matrix[64];
 /*******************************************************************************
 * Function Prototypes
 ********************************************************************************/
-void DrawPixel(uint8 x, uint8 y, RGB c, color *matrix);
-void ClearPixel(uint8 x, uint8 y, color *matrix);
-void ClearScreen(color *matrix);
-void drawCircle(uint8 x0, uint8 y0, uint8 r,RGB c, color *matrix);
+void drawPixel(uint8 x, uint8 y, RGB c, color *matrix);
+void clearPixel(uint8 x, uint8 y, color *matrix);
+void clearScreen(color *matrix);
+void drawCircle(int8 x0, int8 y0, int8 r,RGB c, color *matrix);
+void drawCircleHelper( int8 x0, int8 y0,int8 r, int8 cornername, RGB c, color *matrix);
+void drawLine(int8 x0, int8 y0, int8 x1, int8 y1, RGB c, color *matrix);
+void drawFastVLine(int8 x, int8 y, int8 h, RGB c, color *matrix);
+void drawFastHLine(int8 x, int8 y, int8 h, RGB c, color *matrix);
 
 
 //[] END OF FILE

@@ -1,54 +1,46 @@
---------------- Rebuild Started: 01/10/2014 11:23:58 Project: RGB_LED_Matrix, Configuration: ARM GCC 4.7.3 Debug ---------------
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\main.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyfitter_cfg.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\cymetadata.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_0_A.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_6_CLK.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P3_6_OE.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_SPI_UART.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_SPI_UART_INT.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_UART.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_BOOT.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_UART_BOOT.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\CR_Addr.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_1_B.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_2_C.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_7_B2.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_3_LAT.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P0_7_R1.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P3_7_G1.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P1_0_G2.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P0_0_B1.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P3_5_R2.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\P2_4_done.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\isr_2.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\LED_Matrix_1.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\Pin4_0.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\Pin4_1.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\Pin1_7.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_rx.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_SCBCLK.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_tx.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\Cm0Start.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyBootAsmGnu.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyFlash.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyLib.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyPm.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyutils.o"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.hex"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.elf"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.map"
-Deleting file ".\RGB_LED_Matrix.cycdx"
-Deleting file ".\RGB_LED_Matrix.rpt"
-Deleting file ".\RGB_LED_Matrix_timing.html"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\C_FILE.P"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\ARM_C_FILE.P"
-Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\GNU_ARM_ASM_FILE.P"
-cydsfit.exe "-.appdatapath" "C:\Users\Steve\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\Users\Steve\Desktop\RGB_LED_Matrix.COMMENTED4\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj" "-d" "CY8C4245AXI-483" "-s" "C:\Users\Steve\Desktop\RGB_LED_Matrix.COMMENTED4\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+--------------- Rebuild Started: 01/11/2014 23:07:04 Project: RGB_LED_Matrix, Configuration: ARM GCC 4.7.3 Debug ---------------
+cydsfit.exe "-.appdatapath" "C:\Users\Steve\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj" "-d" "CY8C4245AXI-483" "-s" "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
 Elaborating Design...
-ADD: sdb.M0059: error: Error in component: cy_boot. The cy_boot_v3_40 component (cy_boot) is an Obsolete component. It is no longer recommended for use and should be replaced with a production version of the component (or an alternative implementation).
-Error: cdf.M0005: CyDsFit aborted due to errors, please address all errors and rerun CyDsFit. (App=cydsfit)
---------------- Rebuild Failed: 01/10/2014 11:24:10 ---------------
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P0_0_B1(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P0_7_R1(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P1_0_G2(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_0_A(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_1_B(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_2_C(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_3_LAT(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_4_done(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_6_CLK(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P2_7_B2(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P3_5_R2(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P3_6_OE(0)". (App=cydsfit)
+Info: mpr.M0053: Information from the design wide resources Pin Editor has overridden the control file entry for "P3_7_G1(0)". (App=cydsfit)
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Warning: cdf.M0029: LED_Matrix_v1_00.cycdx: There was an error while parsing the debug data for component instance 'LED_Matrix_1': error at line 12: Error processing element 'register'. error at line 12: invalid address 'LED_Matrix_1_datapath_u0__A0_REG' (File=C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.cycdx)
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -I. -I./Generated_Source/PSoC4 -Wno-main -mcpu=cortex-m0 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\CortexM0\ARM_GCC_473\Debug\main.lst -O2 -ffunction-sections -c .\main.c -o .\CortexM0\ARM_GCC_473\Debug\main.o
+arm-none-eabi-gcc.exe -I. -I./Generated_Source/PSoC4 -Wno-main -mcpu=cortex-m0 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\CortexM0\ARM_GCC_473\Debug\LED_Matrix.lst -O2 -ffunction-sections -c .\LED_Matrix.c -o .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+.\LED_Matrix.c: In function 'drawLine':
+.\LED_Matrix.c:210:3: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+.\LED_Matrix.c:236:7: error: incompatible type for argument 3 of 'drawPixel'
+.\LED_Matrix.c:41:6: note: expected 'RGB' but argument is of type 'uint8'
+.\LED_Matrix.c:236:7: error: too few arguments to function 'drawPixel'
+.\LED_Matrix.c:41:6: note: declared here
+.\LED_Matrix.c:238:7: error: incompatible type for argument 3 of 'drawPixel'
+.\LED_Matrix.c:41:6: note: expected 'RGB' but argument is of type 'uint8'
+.\LED_Matrix.c:238:7: error: too few arguments to function 'drawPixel'
+.\LED_Matrix.c:41:6: note: declared here
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 01/11/2014 23:08:33 ---------------

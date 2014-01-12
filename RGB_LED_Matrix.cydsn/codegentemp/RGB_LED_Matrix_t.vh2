@@ -1,5 +1,5 @@
--- Project:   C:\Users\Steve\Desktop\RGB_LED_Matrix.COMMENTED4\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj
--- Generated: 01/10/2014 11:41:24
+-- Project:   C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj
+-- Generated: 01/11/2014 23:12:49
 -- 
 
 ENTITY RGB_LED_Matrix IS

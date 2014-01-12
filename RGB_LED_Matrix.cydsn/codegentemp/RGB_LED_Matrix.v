@@ -1,6 +1,6 @@
 // ======================================================================
 // RGB_LED_Matrix.v generated from TopDesign.cysch
-// 01/10/2014 at 11:41
+// 01/11/2014 at 23:12
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -587,8 +587,8 @@ endmodule
 `define CY_BLK_DIR "..\LED_Matrix_v1_00"
 `include "..\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
 `else
-`define CY_BLK_DIR "C:\Users\Steve\Desktop\RGB_LED_Matrix.COMMENTED4\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
-`include "C:\Users\Steve\Desktop\RGB_LED_Matrix.COMMENTED4\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
+`define CY_BLK_DIR "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
+`include "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
 `endif
 
 // top

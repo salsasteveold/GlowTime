@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
   23:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
   24:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	
   25:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 2
 
 
   26:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F1_LEVEL_MODE_1 << LED_Matrix_1_F1_LEVEL_SHIFT);
@@ -101,7 +101,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
   54 000c 43000000 		.4byte	.LASF13
   55 0010 01       		.byte	0x1
   56 0011 1B000000 		.4byte	.LASF14
-  57 0015 CE000000 		.4byte	.LASF15
+  57 0015 BB000000 		.4byte	.LASF15
   58 0019 00000000 		.4byte	.Ldebug_ranges0+0
   59 001d 00000000 		.4byte	0
   60 0021 00000000 		.4byte	0
@@ -109,26 +109,26 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
   62 0029 02       		.uleb128 0x2
   63 002a 01       		.byte	0x1
   64 002b 06       		.byte	0x6
-  65 002c 4A010000 		.4byte	.LASF0
+  65 002c 3F010000 		.4byte	.LASF0
   66 0030 02       		.uleb128 0x2
   67 0031 01       		.byte	0x1
   68 0032 08       		.byte	0x8
-  69 0033 14010000 		.4byte	.LASF1
+  69 0033 09010000 		.4byte	.LASF1
   70 0037 02       		.uleb128 0x2
   71 0038 02       		.byte	0x2
   72 0039 05       		.byte	0x5
-  73 003a 72010000 		.4byte	.LASF2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 3
+  73 003a 67010000 		.4byte	.LASF2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 3
 
 
   74 003e 02       		.uleb128 0x2
   75 003f 02       		.byte	0x2
   76 0040 07       		.byte	0x7
-  77 0041 37010000 		.4byte	.LASF3
+  77 0041 2C010000 		.4byte	.LASF3
   78 0045 02       		.uleb128 0x2
   79 0046 04       		.byte	0x4
   80 0047 05       		.byte	0x5
-  81 0048 27010000 		.4byte	.LASF4
+  81 0048 1C010000 		.4byte	.LASF4
   82 004c 02       		.uleb128 0x2
   83 004d 04       		.byte	0x4
   84 004e 07       		.byte	0x7
@@ -157,34 +157,34 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  107 007a 02       		.uleb128 0x2
  108 007b 04       		.byte	0x4
  109 007c 04       		.byte	0x4
- 110 007d 6C010000 		.4byte	.LASF9
+ 110 007d 61010000 		.4byte	.LASF9
  111 0081 02       		.uleb128 0x2
  112 0082 08       		.byte	0x8
  113 0083 04       		.byte	0x4
- 114 0084 30010000 		.4byte	.LASF10
+ 114 0084 25010000 		.4byte	.LASF10
  115 0088 02       		.uleb128 0x2
  116 0089 01       		.byte	0x1
  117 008a 08       		.byte	0x8
- 118 008b 22010000 		.4byte	.LASF11
+ 118 008b 17010000 		.4byte	.LASF11
  119 008f 02       		.uleb128 0x2
  120 0090 04       		.byte	0x4
  121 0091 07       		.byte	0x7
- 122 0092 7C010000 		.4byte	.LASF12
+ 122 0092 71010000 		.4byte	.LASF12
  123 0096 05       		.uleb128 0x5
  124 0097 01       		.byte	0x1
- 125 0098 BB000000 		.4byte	.LASF17
+ 125 0098 F6000000 		.4byte	.LASF17
  126 009c 01       		.byte	0x1
  127 009d 0E       		.byte	0xe
  128 009e 00000000 		.4byte	.LFB33
  129 00a2 0A000000 		.4byte	.LFE33
  130 00a6 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 4
 
 
  131 00aa 01       		.byte	0x1
  132 00ab CA000000 		.4byte	0xca
  133 00af 06       		.uleb128 0x6
- 134 00b0 85010000 		.4byte	.LASF18
+ 134 00b0 7A010000 		.4byte	.LASF18
  135 00b4 01       		.byte	0x1
  136 00b5 10       		.byte	0x10
  137 00b6 6F000000 		.4byte	0x6f
@@ -200,7 +200,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  147 00c9 00       		.byte	0
  148 00ca 09       		.uleb128 0x9
  149 00cb 01       		.byte	0x1
- 150 00cc 56010000 		.4byte	.LASF19
+ 150 00cc 4B010000 		.4byte	.LASF19
  151 00d0 03       		.byte	0x3
  152 00d1 71       		.byte	0x71
  153 00d2 01       		.byte	0x1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  185 0018 0B       		.uleb128 0xb
  186 0019 0B       		.uleb128 0xb
  187 001a 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 5
 
 
  188 001b 0B       		.uleb128 0xb
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  242 0052 00       		.byte	0
  243 0053 03       		.uleb128 0x3
  244 0054 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 6
 
 
  245 0055 3A       		.uleb128 0x3a
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  299 0000 00000000 		.4byte	.LFB33
  300 0004 02000000 		.4byte	.LCFI0
  301 0008 0200     		.2byte	0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 7
 
 
  302 000a 7D       		.byte	0x7d
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  339      32303133 
  339      30333132 
  340 0076 616E6368 		.ascii	"anch revision 196615]\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 8
 
 
  340      20726576 
@@ -440,70 +440,69 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 1
  346      6720756E 
  346      7369676E 
  346      65642069 
- 347              	.LASF17:
- 348 00bb 4C45445F 		.ascii	"LED_Matrix_1_Start\000"
- 348      4D617472 
- 348      69785F31 
- 348      5F537461 
- 348      727400
- 349              	.LASF15:
- 350 00ce 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
- 350      73657273 
- 350      5C537465 
- 350      76655C44 
- 350      65736B74 
- 351 00fd 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
- 351      425F4C45 
- 351      445F4D61 
- 351      74726978 
- 351      2E637964 
+ 347              	.LASF15:
+ 348 00bb 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 348      73657273 
+ 348      5C537465 
+ 348      76655C44 
+ 348      6F63756D 
+ 349 00e8 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 349      7269782E 
+ 349      63796473 
+ 349      6E00
+ 350              	.LASF17:
+ 351 00f6 4C45445F 		.ascii	"LED_Matrix_1_Start\000"
+ 351      4D617472 
+ 351      69785F31 
+ 351      5F537461 
+ 351      727400
  352              	.LASF1:
- 353 0114 756E7369 		.ascii	"unsigned char\000"
+ 353 0109 756E7369 		.ascii	"unsigned char\000"
  353      676E6564 
  353      20636861 
  353      7200
  354              	.LASF11:
- 355 0122 63686172 		.ascii	"char\000"
+ 355 0117 63686172 		.ascii	"char\000"
  355      00
  356              	.LASF4:
- 357 0127 6C6F6E67 		.ascii	"long int\000"
+ 357 011c 6C6F6E67 		.ascii	"long int\000"
  357      20696E74 
  357      00
  358              	.LASF10:
- 359 0130 646F7562 		.ascii	"double\000"
+ 359 0125 646F7562 		.ascii	"double\000"
  359      6C6500
  360              	.LASF3:
- 361 0137 73686F72 		.ascii	"short unsigned int\000"
+ 361 012c 73686F72 		.ascii	"short unsigned int\000"
  361      7420756E 
  361      7369676E 
  361      65642069 
  361      6E7400
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccDFheEC.s 			page 9
-
-
  362              	.LASF0:
- 363 014a 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc7X0n9N.s 			page 9
+
+
+ 363 013f 7369676E 		.ascii	"signed char\000"
  363      65642063 
  363      68617200 
  364              	.LASF19:
- 365 0156 43794578 		.ascii	"CyExitCriticalSection\000"
+ 365 014b 43794578 		.ascii	"CyExitCriticalSection\000"
  365      69744372 
  365      69746963 
  365      616C5365 
  365      6374696F 
  366              	.LASF9:
- 367 016c 666C6F61 		.ascii	"float\000"
+ 367 0161 666C6F61 		.ascii	"float\000"
  367      7400
  368              	.LASF2:
- 369 0172 73686F72 		.ascii	"short int\000"
+ 369 0167 73686F72 		.ascii	"short int\000"
  369      7420696E 
  369      7400
  370              	.LASF12:
- 371 017c 73697A65 		.ascii	"sizetype\000"
+ 371 0171 73697A65 		.ascii	"sizetype\000"
  371      74797065 
  371      00
  372              	.LASF18:
- 373 0185 696E7465 		.ascii	"interruptState\000"
+ 373 017a 696E7465 		.ascii	"interruptState\000"
  373      72727570 
  373      74537461 
  373      746500

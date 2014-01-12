@@ -19,6 +19,7 @@
  
 #include <device.h>
 #include <LED_Matrix.h>
+#include <stdlib.h>
 
 /*******************************************************************************
 * Function Name: DrawPixel
@@ -37,7 +38,7 @@
 *   None
 *
 *******************************************************************************/
-void DrawPixel(uint8 x, uint8 y, RGB c, color *matrix)
+void drawPixel(uint8 x, uint8 y, RGB c, color *matrix)
 {
 	/* pre-calculate some values to index the matrix 
 	 * Note that the translation has been done here to
@@ -60,7 +61,7 @@ void DrawPixel(uint8 x, uint8 y, RGB c, color *matrix)
 	
 	index = scratch1 + scratch2;
 	
-	ClearPixel(x, y, matrix);
+	clearPixel(x, y, matrix);
 	
 	for(i = 0; i < 5 ; i++)
 	{
@@ -86,7 +87,7 @@ void DrawPixel(uint8 x, uint8 y, RGB c, color *matrix)
 *   None
 *
 *******************************************************************************/
-void ClearPixel(uint8 x, uint8 y, color *matrix)
+void clearPixel(uint8 x, uint8 y, color *matrix)
 {
 	uint8 i, index;
 	uint8 scratch1 = y*4;
@@ -117,7 +118,7 @@ void ClearPixel(uint8 x, uint8 y, color *matrix)
 *   None
 *
 *******************************************************************************/
-void ClearScreen(color *matrix)
+void clearScreen(color *matrix)
 {
 	uint8 x, index;
 	
@@ -132,17 +133,48 @@ void ClearScreen(color *matrix)
 	}
 }
 
-void drawCircle(uint8 x0, uint8 y0, uint8 r,RGB c, color *matrix) {
-  uint8 f = 1 - r;
-  uint8 ddF_x = 1;
-  uint8 ddF_y = -2 * r;
-  uint8 x = 0;
-  uint8 y = r;
+void drawCircle(int8 x0, int8 y0, int8 r,RGB c, color *matrix) {
+  int8 f = 1 - r;
+  int8 ddF_x = 1;
+  int8 ddF_y = -2 * r;
+  int8 x = 0;
+  int8 y = r;
 
-  DrawPixel(x0 , y0+r, c,matrix);
-  DrawPixel(x0 , y0-r, c,matrix);
-  DrawPixel(x0+r, y0 , c,matrix);
-  DrawPixel(x0-r, y0 , c,matrix);
+  drawPixel(x0 , y0+r, c,matrix);
+  drawPixel(x0 , y0-r, c,matrix);
+  drawPixel(x0+r, y0 , c,matrix);
+  drawPixel(x0-r, y0 , c,matrix);
+
+  while (x < y) 
+  {
+    if (f >= 0) 
+	{
+      y--;
+      ddF_y += 2;
+      f += ddF_y;
+    }
+    x++;
+    ddF_x += 2;
+    f += ddF_x;
+  
+    drawPixel(x0 + x, y0 + y, c,matrix);
+    drawPixel(x0 - x, y0 + y, c,matrix);
+    drawPixel(x0 + x, y0 - y, c,matrix);
+    drawPixel(x0 - x, y0 - y, c,matrix);
+    drawPixel(x0 + y, y0 + x, c,matrix);
+    drawPixel(x0 - y, y0 + x, c,matrix);
+    drawPixel(x0 + y, y0 - x, c,matrix);
+    drawPixel(x0 - y, y0 - x, c,matrix);
+  }
+
+}
+
+void drawCircleHelper( int8 x0, int8 y0,int8 r, int8 cornername, RGB c, color *matrix) {
+  int8 f = 1 - r;
+  int8 ddF_x = 1;
+  int8 ddF_y = -2 * r;
+  int8 x = 0;
+  int8 y = r;
 
   while (x<y) {
     if (f >= 0) {
@@ -153,15 +185,74 @@ void drawCircle(uint8 x0, uint8 y0, uint8 r,RGB c, color *matrix) {
     x++;
     ddF_x += 2;
     f += ddF_x;
-  
-    DrawPixel(x0 + x, y0 + y, c,matrix);
-    DrawPixel(x0 - x, y0 + y, c,matrix);
-    DrawPixel(x0 + x, y0 - y, c,matrix);
-    DrawPixel(x0 - x, y0 - y, c,matrix);
-    DrawPixel(x0 + y, y0 + x, c,matrix);
-    DrawPixel(x0 - y, y0 + x, c,matrix);
-    DrawPixel(x0 + y, y0 - x, c,matrix);
-    DrawPixel(x0 - y, y0 - x, c,matrix);
+    if (cornername & 0x4) {
+      drawPixel(x0 + x, y0 + y, c, matrix);
+      drawPixel(x0 + y, y0 + x, c, matrix);
+    }
+    if (cornername & 0x2) {
+      drawPixel(x0 + x, y0 - y, c, matrix);
+      drawPixel(x0 + y, y0 - x, c, matrix);
+    }
+    if (cornername & 0x8) {
+      drawPixel(x0 - y, y0 + x, c, matrix);
+      drawPixel(x0 - x, y0 + y, c, matrix);
+    }
+    if (cornername & 0x1) {
+      drawPixel(x0 - y, y0 - x, c, matrix);
+      drawPixel(x0 - x, y0 - y, c, matrix);
+    }
   }
+}
+
+void drawLine(int8 x0, int8 y0, int8 x1, int8 y1, RGB c, color *matrix)
+{
+  int8 steep = abs(y1 - y0) > abs(x1 - x0);
+  if (steep) {
+    swap(x0, y0);
+    swap(x1, y1);
+  }
+
+  if (x0 > x1) {
+    swap(x0, x1);
+    swap(y0, y1);
+  }
+
+  int8 dx, dy;
+  dx = x1 - x0;
+  dy = abs(y1 - y0);
+
+  int8 err = dx / 2;
+  int8 ystep;
+
+  if (y0 < y1) {
+    ystep = 1;
+  } else {
+    ystep = -1;
+  }
+
+  for (; x0<=x1; x0++) {
+    if (steep) {
+      drawPixel(y0, x0, c, matrix);
+    } else {
+      drawPixel(x0, y0, c, matrix);
+    }
+    err -= dy;
+    if (err < 0) {
+      y0 += ystep;
+      err += dx;
+    }
+  }
+}
+
+void drawFastVLine(int8 x, int8 y, int8 h, RGB c, color *matrix) 
+{
+  // Update in subclasses if desired!
+  drawLine(x, y, x, y+h-1, c, matrix);
+}
+
+void drawFastHLine(int8 x, int8 y, int8 w, RGB c, color *matrix) 
+{
+  // Update in subclasses if desired!
+  drawLine(x, y, x+w-1, y, c, matrix);
 }
 /* [] END OF FILE */

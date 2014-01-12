@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
   30:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** *  None
   31:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** *
   32:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** * Return:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
   71:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** 
   72:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****                 /* Adjust local head index */
   73:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****                 if(UART_RX_BUFFER_SIZE == locHead)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 3
 
 
   74:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****                 {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  128:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****                     break;
  129:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****                 }
  130:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c ****             }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 4
 
 
  131:.\Generated_Source\PSoC4/UART_SPI_UART_INT.c **** 
@@ -219,26 +219,26 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
   71 0029 02       		.uleb128 0x2
   72 002a 01       		.byte	0x1
   73 002b 06       		.byte	0x6
-  74 002c 5A010000 		.4byte	.LASF0
+  74 002c 4F010000 		.4byte	.LASF0
   75 0030 02       		.uleb128 0x2
   76 0031 01       		.byte	0x1
   77 0032 08       		.byte	0x8
-  78 0033 00010000 		.4byte	.LASF1
+  78 0033 F5000000 		.4byte	.LASF1
   79 0037 02       		.uleb128 0x2
   80 0038 02       		.byte	0x2
   81 0039 05       		.byte	0x5
-  82 003a 7E010000 		.4byte	.LASF2
+  82 003a 73010000 		.4byte	.LASF2
   83 003e 02       		.uleb128 0x2
   84 003f 02       		.byte	0x2
   85 0040 07       		.byte	0x7
-  86 0041 47010000 		.4byte	.LASF3
+  86 0041 3C010000 		.4byte	.LASF3
   87 0045 02       		.uleb128 0x2
   88 0046 04       		.byte	0x4
   89 0047 05       		.byte	0x5
-  90 0048 2A010000 		.4byte	.LASF4
+  90 0048 1F010000 		.4byte	.LASF4
   91 004c 02       		.uleb128 0x2
   92 004d 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 5
 
 
   93 004e 07       		.byte	0x7
@@ -262,17 +262,17 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  111 006f 02       		.uleb128 0x2
  112 0070 04       		.byte	0x4
  113 0071 04       		.byte	0x4
- 114 0072 66010000 		.4byte	.LASF9
+ 114 0072 5B010000 		.4byte	.LASF9
  115 0076 02       		.uleb128 0x2
  116 0077 08       		.byte	0x8
  117 0078 04       		.byte	0x4
- 118 0079 40010000 		.4byte	.LASF10
+ 118 0079 35010000 		.4byte	.LASF10
  119 007d 02       		.uleb128 0x2
  120 007e 01       		.byte	0x1
  121 007f 08       		.byte	0x8
- 122 0080 25010000 		.4byte	.LASF11
+ 122 0080 1A010000 		.4byte	.LASF11
  123 0084 04       		.uleb128 0x4
- 124 0085 33010000 		.4byte	.LASF16
+ 124 0085 28010000 		.4byte	.LASF16
  125 0089 02       		.byte	0x2
  126 008a 0201     		.2byte	0x102
  127 008c 90000000 		.4byte	0x90
@@ -284,10 +284,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  133 0098 02       		.uleb128 0x2
  134 0099 04       		.byte	0x4
  135 009a 07       		.byte	0x7
- 136 009b 88010000 		.4byte	.LASF12
+ 136 009b 7D010000 		.4byte	.LASF12
  137 009f 07       		.uleb128 0x7
  138 00a0 01       		.byte	0x1
- 139 00a1 6C010000 		.4byte	.LASF17
+ 139 00a1 61010000 		.4byte	.LASF17
  140 00a5 01       		.byte	0x1
  141 00a6 24       		.byte	0x24
  142 00a7 01       		.byte	0x1
@@ -296,9 +296,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  145 00b0 00000000 		.4byte	.LLST0
  146 00b4 01       		.byte	0x1
  147 00b5 08       		.uleb128 0x8
- 148 00b6 0E010000 		.4byte	.LASF18
+ 148 00b6 03010000 		.4byte	.LASF18
  149 00ba 03       		.byte	0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 6
 
 
  150 00bb 37       		.byte	0x37
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  204 002f 0E       		.uleb128 0xe
  205 0030 3A       		.uleb128 0x3a
  206 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 7
 
 
  207 0032 3B       		.uleb128 0x3b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  261 0069 49       		.uleb128 0x49
  262 006a 13       		.uleb128 0x13
  263 006b 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 8
 
 
  264 006c 0C       		.uleb128 0xc
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  309      20696E74 
  309      00
  310              	.LASF14:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 9
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 9
 
 
  311 001b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_SPI_UART_INT.c\000"
@@ -510,70 +510,69 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 1
  318      7369676E 
  318      65642069 
  319              	.LASF15:
- 320 00ba 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
+ 320 00ba 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
  320      73657273 
  320      5C537465 
  320      76655C44 
- 320      65736B74 
- 321 00e9 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
- 321      425F4C45 
- 321      445F4D61 
- 321      74726978 
- 321      2E637964 
+ 320      6F63756D 
+ 321 00e7 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 321      7269782E 
+ 321      63796473 
+ 321      6E00
  322              	.LASF1:
- 323 0100 756E7369 		.ascii	"unsigned char\000"
+ 323 00f5 756E7369 		.ascii	"unsigned char\000"
  323      676E6564 
  323      20636861 
  323      7200
  324              	.LASF18:
- 325 010e 55415254 		.ascii	"UART_customIntrHandler\000"
+ 325 0103 55415254 		.ascii	"UART_customIntrHandler\000"
  325      5F637573 
  325      746F6D49 
  325      6E747248 
  325      616E646C 
  326              	.LASF11:
- 327 0125 63686172 		.ascii	"char\000"
+ 327 011a 63686172 		.ascii	"char\000"
  327      00
  328              	.LASF4:
- 329 012a 6C6F6E67 		.ascii	"long int\000"
+ 329 011f 6C6F6E67 		.ascii	"long int\000"
  329      20696E74 
  329      00
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccj6evbb.s 			page 10
-
-
  330              	.LASF16:
- 331 0133 63796973 		.ascii	"cyisraddress\000"
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccCbHacP.s 			page 10
+
+
+ 331 0128 63796973 		.ascii	"cyisraddress\000"
  331      72616464 
  331      72657373 
  331      00
  332              	.LASF10:
- 333 0140 646F7562 		.ascii	"double\000"
+ 333 0135 646F7562 		.ascii	"double\000"
  333      6C6500
  334              	.LASF3:
- 335 0147 73686F72 		.ascii	"short unsigned int\000"
+ 335 013c 73686F72 		.ascii	"short unsigned int\000"
  335      7420756E 
  335      7369676E 
  335      65642069 
  335      6E7400
  336              	.LASF0:
- 337 015a 7369676E 		.ascii	"signed char\000"
+ 337 014f 7369676E 		.ascii	"signed char\000"
  337      65642063 
  337      68617200 
  338              	.LASF9:
- 339 0166 666C6F61 		.ascii	"float\000"
+ 339 015b 666C6F61 		.ascii	"float\000"
  339      7400
  340              	.LASF17:
- 341 016c 55415254 		.ascii	"UART_SPI_UART_ISR\000"
+ 341 0161 55415254 		.ascii	"UART_SPI_UART_ISR\000"
  341      5F535049 
  341      5F554152 
  341      545F4953 
  341      5200
  342              	.LASF2:
- 343 017e 73686F72 		.ascii	"short int\000"
+ 343 0173 73686F72 		.ascii	"short int\000"
  343      7420696E 
  343      7400
  344              	.LASF12:
- 345 0188 73697A65 		.ascii	"sizetype\000"
+ 345 017d 73697A65 		.ascii	"sizetype\000"
  345      74797065 
  345      00
  346              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
   30:.\Generated_Source\PSoC4/P3_7_G1.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/P3_7_G1.c **** *
   32:.\Generated_Source\PSoC4/P3_7_G1.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/P3_7_G1.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
   62              	.LFB1:
   48:.\Generated_Source\PSoC4/P3_7_G1.c **** 
   49:.\Generated_Source\PSoC4/P3_7_G1.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 3
 
 
   50:.\Generated_Source\PSoC4/P3_7_G1.c **** /*******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
   98              		.thumb_func
   99              		.type	P3_7_G1_Read, %function
  100              	P3_7_G1_Read:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 4
 
 
  101              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
   93:.\Generated_Source\PSoC4/P3_7_G1.c **** 
   94:.\Generated_Source\PSoC4/P3_7_G1.c **** /*******************************************************************************
   95:.\Generated_Source\PSoC4/P3_7_G1.c **** * Function Name: P3_7_G1_ReadDataReg
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 5
 
 
   96:.\Generated_Source\PSoC4/P3_7_G1.c **** ********************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  122:.\Generated_Source\PSoC4/P3_7_G1.c ****     *  Clears any active interrupts attached to port and returns the value of the 
  123:.\Generated_Source\PSoC4/P3_7_G1.c ****     *  interrupt status register.
  124:.\Generated_Source\PSoC4/P3_7_G1.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 6
 
 
  125:.\Generated_Source\PSoC4/P3_7_G1.c ****     * Parameters:  
@@ -355,13 +355,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  190 0006 00000000 		.4byte	.Ldebug_abbrev0
  191 000a 04       		.byte	0x4
  192 000b 01       		.uleb128 0x1
- 193 000c 3F010000 		.4byte	.LASF24
+ 193 000c F9000000 		.4byte	.LASF24
  194 0010 01       		.byte	0x1
- 195 0011 9D010000 		.4byte	.LASF25
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 7
+ 195 0011 92010000 		.4byte	.LASF25
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 7
 
 
- 196 0015 06000000 		.4byte	.LASF26
+ 196 0015 42010000 		.4byte	.LASF26
  197 0019 00000000 		.4byte	.Ldebug_ranges0+0
  198 001d 00000000 		.4byte	0
  199 0021 00000000 		.4byte	0
@@ -369,35 +369,35 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  201 0029 02       		.uleb128 0x2
  202 002a 01       		.byte	0x1
  203 002b 06       		.byte	0x6
- 204 002c 91010000 		.4byte	.LASF0
+ 204 002c 86010000 		.4byte	.LASF0
  205 0030 02       		.uleb128 0x2
  206 0031 01       		.byte	0x1
  207 0032 08       		.byte	0x8
- 208 0033 66000000 		.4byte	.LASF1
+ 208 0033 20000000 		.4byte	.LASF1
  209 0037 02       		.uleb128 0x2
  210 0038 02       		.byte	0x2
  211 0039 05       		.byte	0x5
- 212 003a 2F010000 		.4byte	.LASF2
+ 212 003a E9000000 		.4byte	.LASF2
  213 003e 02       		.uleb128 0x2
  214 003f 02       		.byte	0x2
  215 0040 07       		.byte	0x7
- 216 0041 8C000000 		.4byte	.LASF3
+ 216 0041 46000000 		.4byte	.LASF3
  217 0045 02       		.uleb128 0x2
  218 0046 04       		.byte	0x4
  219 0047 05       		.byte	0x5
- 220 0048 88010000 		.4byte	.LASF4
+ 220 0048 7D010000 		.4byte	.LASF4
  221 004c 02       		.uleb128 0x2
  222 004d 04       		.byte	0x4
  223 004e 07       		.byte	0x7
- 224 004f 7A000000 		.4byte	.LASF5
+ 224 004f 34000000 		.4byte	.LASF5
  225 0053 02       		.uleb128 0x2
  226 0054 08       		.byte	0x8
  227 0055 05       		.byte	0x5
- 228 0056 0F010000 		.4byte	.LASF6
+ 228 0056 C9000000 		.4byte	.LASF6
  229 005a 02       		.uleb128 0x2
  230 005b 08       		.byte	0x8
  231 005c 07       		.byte	0x7
- 232 005d DE000000 		.4byte	.LASF7
+ 232 005d 98000000 		.4byte	.LASF7
  233 0061 03       		.uleb128 0x3
  234 0062 04       		.byte	0x4
  235 0063 05       		.byte	0x5
@@ -405,32 +405,32 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  237 0068 02       		.uleb128 0x2
  238 0069 04       		.byte	0x4
  239 006a 07       		.byte	0x7
- 240 006b D1000000 		.4byte	.LASF8
+ 240 006b 8B000000 		.4byte	.LASF8
  241 006f 04       		.uleb128 0x4
- 242 0070 39010000 		.4byte	.LASF9
+ 242 0070 F3000000 		.4byte	.LASF9
  243 0074 02       		.byte	0x2
  244 0075 5B       		.byte	0x5b
  245 0076 30000000 		.4byte	0x30
  246 007a 04       		.uleb128 0x4
- 247 007b CA000000 		.4byte	.LASF10
+ 247 007b 84000000 		.4byte	.LASF10
  248 007f 02       		.byte	0x2
  249 0080 5D       		.byte	0x5d
  250 0081 4C000000 		.4byte	0x4c
  251 0085 02       		.uleb128 0x2
  252 0086 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 8
 
 
  253 0087 04       		.byte	0x4
- 254 0088 60000000 		.4byte	.LASF11
+ 254 0088 1A000000 		.4byte	.LASF11
  255 008c 02       		.uleb128 0x2
  256 008d 08       		.byte	0x8
  257 008e 04       		.byte	0x4
- 258 008f 9F000000 		.4byte	.LASF12
+ 258 008f 59000000 		.4byte	.LASF12
  259 0093 02       		.uleb128 0x2
  260 0094 01       		.byte	0x1
  261 0095 08       		.byte	0x8
- 262 0096 2A010000 		.4byte	.LASF13
+ 262 0096 E4000000 		.4byte	.LASF13
  263 009a 04       		.uleb128 0x4
  264 009b 00000000 		.4byte	.LASF14
  265 009f 02       		.byte	0x2
@@ -440,7 +440,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  269 00a6 7A000000 		.4byte	0x7a
  270 00aa 06       		.uleb128 0x6
  271 00ab 01       		.byte	0x1
- 272 00ac 4C000000 		.4byte	.LASF15
+ 272 00ac 06000000 		.4byte	.LASF15
  273 00b0 01       		.byte	0x1
  274 00b1 2A       		.byte	0x2a
  275 00b2 01       		.byte	0x1
@@ -452,13 +452,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  281 00be 01       		.byte	0x1
  282 00bf E2000000 		.4byte	0xe2
  283 00c3 07       		.uleb128 0x7
- 284 00c4 5A000000 		.4byte	.LASF17
+ 284 00c4 14000000 		.4byte	.LASF17
  285 00c8 01       		.byte	0x1
  286 00c9 2A       		.byte	0x2a
  287 00ca 6F000000 		.4byte	0x6f
  288 00ce 00000000 		.4byte	.LLST0
  289 00d2 08       		.uleb128 0x8
- 290 00d3 74000000 		.4byte	.LASF22
+ 290 00d3 2E000000 		.4byte	.LASF22
  291 00d7 01       		.byte	0x1
  292 00d8 2C       		.byte	0x2c
  293 00d9 6F000000 		.4byte	0x6f
@@ -466,7 +466,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  295 00e1 00       		.byte	0
  296 00e2 09       		.uleb128 0x9
  297 00e3 01       		.byte	0x1
- 298 00e4 FA000000 		.4byte	.LASF16
+ 298 00e4 B4000000 		.4byte	.LASF16
  299 00e8 01       		.byte	0x1
  300 00e9 40       		.byte	0x40
  301 00ea 01       		.byte	0x1
@@ -476,9 +476,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  305 00f7 01       		.byte	0x1
  306 00f8 0C010000 		.4byte	0x10c
  307 00fc 07       		.uleb128 0x7
- 308 00fd F5000000 		.4byte	.LASF18
+ 308 00fd AF000000 		.4byte	.LASF18
  309 0101 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 9
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 9
 
 
  310 0102 40       		.byte	0x40
@@ -487,7 +487,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  313 010b 00       		.byte	0
  314 010c 0A       		.uleb128 0xa
  315 010d 01       		.byte	0x1
- 316 010e A6000000 		.4byte	.LASF19
+ 316 010e 60000000 		.4byte	.LASF19
  317 0112 01       		.byte	0x1
  318 0113 58       		.byte	0x58
  319 0114 01       		.byte	0x1
@@ -500,7 +500,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  326 0124 01       		.byte	0x1
  327 0125 0A       		.uleb128 0xa
  328 0126 01       		.byte	0x1
- 329 0127 C0010000 		.4byte	.LASF20
+ 329 0127 B5010000 		.4byte	.LASF20
  330 012b 01       		.byte	0x1
  331 012c 6C       		.byte	0x6c
  332 012d 01       		.byte	0x1
@@ -513,7 +513,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  339 013d 01       		.byte	0x1
  340 013e 0B       		.uleb128 0xb
  341 013f 01       		.byte	0x1
- 342 0140 B3000000 		.4byte	.LASF21
+ 342 0140 6D000000 		.4byte	.LASF21
  343 0144 01       		.byte	0x1
  344 0145 84       		.byte	0x84
  345 0146 01       		.byte	0x1
@@ -525,7 +525,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  351 0155 00       		.sleb128 0
  352 0156 01       		.byte	0x1
  353 0157 08       		.uleb128 0x8
- 354 0158 1D010000 		.4byte	.LASF23
+ 354 0158 D7000000 		.4byte	.LASF23
  355 015c 01       		.byte	0x1
  356 015d 86       		.byte	0x86
  357 015e 6F000000 		.4byte	0x6f
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  364 0001 11       		.uleb128 0x11
  365 0002 01       		.byte	0x1
  366 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 10
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 10
 
 
  367 0004 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  421 003a 00       		.byte	0
  422 003b 49       		.uleb128 0x49
  423 003c 13       		.uleb128 0x13
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 11
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 11
 
 
  424 003d 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  478 0074 06       		.uleb128 0x6
  479 0075 00       		.byte	0
  480 0076 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 12
 
 
  481 0077 09       		.uleb128 0x9
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  535 00af 0C       		.uleb128 0xc
  536 00b0 03       		.uleb128 0x3
  537 00b1 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 13
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 13
 
 
  538 00b2 3A       		.uleb128 0x3a
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  592 0046 00       		.sleb128 0
  593 0047 04000000 		.4byte	.LCFI0
  594 004b 1C000000 		.4byte	.LFE1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 14
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 14
 
 
  595 004f 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  649              	.Ldebug_ranges0:
  650 0000 00000000 		.4byte	.LFB0
  651 0004 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 15
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 15
 
 
  652 0008 00000000 		.4byte	.LFB1
@@ -861,138 +861,137 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 1
  665              	.LASF14:
  666 0000 72656733 		.ascii	"reg32\000"
  666      3200
- 667              	.LASF26:
- 668 0006 433A5C55 		.ascii	"C:\\Users\\Steve\\Desktop\\RGB_LED_Matrix.COMMENTED"
- 668      73657273 
- 668      5C537465 
- 668      76655C44 
- 668      65736B74 
- 669 0035 345C5247 		.ascii	"4\\RGB_LED_Matrix.cydsn\000"
- 669      425F4C45 
- 669      445F4D61 
- 669      74726978 
- 669      2E637964 
- 670              	.LASF15:
- 671 004c 50335F37 		.ascii	"P3_7_G1_Write\000"
- 671      5F47315F 
- 671      57726974 
- 671      6500
- 672              	.LASF17:
- 673 005a 76616C75 		.ascii	"value\000"
- 673      6500
- 674              	.LASF11:
- 675 0060 666C6F61 		.ascii	"float\000"
- 675      7400
- 676              	.LASF1:
- 677 0066 756E7369 		.ascii	"unsigned char\000"
- 677      676E6564 
- 677      20636861 
- 677      7200
- 678              	.LASF22:
- 679 0074 64725661 		.ascii	"drVal\000"
- 679      6C00
- 680              	.LASF5:
- 681 007a 6C6F6E67 		.ascii	"long unsigned int\000"
- 681      20756E73 
- 681      69676E65 
- 681      6420696E 
- 681      7400
- 682              	.LASF3:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 16
+ 667              	.LASF15:
+ 668 0006 50335F37 		.ascii	"P3_7_G1_Write\000"
+ 668      5F47315F 
+ 668      57726974 
+ 668      6500
+ 669              	.LASF17:
+ 670 0014 76616C75 		.ascii	"value\000"
+ 670      6500
+ 671              	.LASF11:
+ 672 001a 666C6F61 		.ascii	"float\000"
+ 672      7400
+ 673              	.LASF1:
+ 674 0020 756E7369 		.ascii	"unsigned char\000"
+ 674      676E6564 
+ 674      20636861 
+ 674      7200
+ 675              	.LASF22:
+ 676 002e 64725661 		.ascii	"drVal\000"
+ 676      6C00
+ 677              	.LASF5:
+ 678 0034 6C6F6E67 		.ascii	"long unsigned int\000"
+ 678      20756E73 
+ 678      69676E65 
+ 678      6420696E 
+ 678      7400
+ 679              	.LASF3:
+ 680 0046 73686F72 		.ascii	"short unsigned int\000"
+ 680      7420756E 
+ 680      7369676E 
+ 680      65642069 
+ 680      6E7400
+ 681              	.LASF12:
+ 682 0059 646F7562 		.ascii	"double\000"
+ 682      6C6500
+ 683              	.LASF19:
+ 684 0060 50335F37 		.ascii	"P3_7_G1_Read\000"
+ 684      5F47315F 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 16
 
 
- 683 008c 73686F72 		.ascii	"short unsigned int\000"
- 683      7420756E 
- 683      7369676E 
- 683      65642069 
- 683      6E7400
- 684              	.LASF12:
- 685 009f 646F7562 		.ascii	"double\000"
- 685      6C6500
- 686              	.LASF19:
- 687 00a6 50335F37 		.ascii	"P3_7_G1_Read\000"
- 687      5F47315F 
- 687      52656164 
- 687      00
- 688              	.LASF21:
- 689 00b3 50335F37 		.ascii	"P3_7_G1_ClearInterrupt\000"
- 689      5F47315F 
- 689      436C6561 
- 689      72496E74 
- 689      65727275 
- 690              	.LASF10:
- 691 00ca 75696E74 		.ascii	"uint32\000"
- 691      333200
- 692              	.LASF8:
- 693 00d1 756E7369 		.ascii	"unsigned int\000"
- 693      676E6564 
- 693      20696E74 
- 693      00
- 694              	.LASF7:
- 695 00de 6C6F6E67 		.ascii	"long long unsigned int\000"
- 695      206C6F6E 
- 695      6720756E 
- 695      7369676E 
- 695      65642069 
- 696              	.LASF18:
- 697 00f5 6D6F6465 		.ascii	"mode\000"
- 697      00
- 698              	.LASF16:
- 699 00fa 50335F37 		.ascii	"P3_7_G1_SetDriveMode\000"
- 699      5F47315F 
- 699      53657444 
- 699      72697665 
- 699      4D6F6465 
- 700              	.LASF6:
- 701 010f 6C6F6E67 		.ascii	"long long int\000"
- 701      206C6F6E 
- 701      6720696E 
- 701      7400
- 702              	.LASF23:
- 703 011d 6D61736B 		.ascii	"maskedStatus\000"
- 703      65645374 
- 703      61747573 
- 703      00
- 704              	.LASF13:
- 705 012a 63686172 		.ascii	"char\000"
- 705      00
- 706              	.LASF2:
- 707 012f 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccaneSYG.s 			page 17
+ 684      52656164 
+ 684      00
+ 685              	.LASF21:
+ 686 006d 50335F37 		.ascii	"P3_7_G1_ClearInterrupt\000"
+ 686      5F47315F 
+ 686      436C6561 
+ 686      72496E74 
+ 686      65727275 
+ 687              	.LASF10:
+ 688 0084 75696E74 		.ascii	"uint32\000"
+ 688      333200
+ 689              	.LASF8:
+ 690 008b 756E7369 		.ascii	"unsigned int\000"
+ 690      676E6564 
+ 690      20696E74 
+ 690      00
+ 691              	.LASF7:
+ 692 0098 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 692      206C6F6E 
+ 692      6720756E 
+ 692      7369676E 
+ 692      65642069 
+ 693              	.LASF18:
+ 694 00af 6D6F6465 		.ascii	"mode\000"
+ 694      00
+ 695              	.LASF16:
+ 696 00b4 50335F37 		.ascii	"P3_7_G1_SetDriveMode\000"
+ 696      5F47315F 
+ 696      53657444 
+ 696      72697665 
+ 696      4D6F6465 
+ 697              	.LASF6:
+ 698 00c9 6C6F6E67 		.ascii	"long long int\000"
+ 698      206C6F6E 
+ 698      6720696E 
+ 698      7400
+ 699              	.LASF23:
+ 700 00d7 6D61736B 		.ascii	"maskedStatus\000"
+ 700      65645374 
+ 700      61747573 
+ 700      00
+ 701              	.LASF13:
+ 702 00e4 63686172 		.ascii	"char\000"
+ 702      00
+ 703              	.LASF2:
+ 704 00e9 73686F72 		.ascii	"short int\000"
+ 704      7420696E 
+ 704      7400
+ 705              	.LASF9:
+ 706 00f3 75696E74 		.ascii	"uint8\000"
+ 706      3800
+ 707              	.LASF24:
+ 708 00f9 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 708      4320342E 
+ 708      372E3320 
+ 708      32303133 
+ 708      30333132 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cciaS9BA.s 			page 17
 
 
- 707      7420696E 
- 707      7400
- 708              	.LASF9:
- 709 0139 75696E74 		.ascii	"uint8\000"
- 709      3800
- 710              	.LASF24:
- 711 013f 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 711      4320342E 
- 711      372E3320 
- 711      32303133 
- 711      30333132 
- 712 0172 616E6368 		.ascii	"anch revision 196615]\000"
- 712      20726576 
- 712      6973696F 
- 712      6E203139 
- 712      36363135 
+ 709 012c 616E6368 		.ascii	"anch revision 196615]\000"
+ 709      20726576 
+ 709      6973696F 
+ 709      6E203139 
+ 709      36363135 
+ 710              	.LASF26:
+ 711 0142 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 711      73657273 
+ 711      5C537465 
+ 711      76655C44 
+ 711      6F63756D 
+ 712 016f 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 712      7269782E 
+ 712      63796473 
+ 712      6E00
  713              	.LASF4:
- 714 0188 6C6F6E67 		.ascii	"long int\000"
+ 714 017d 6C6F6E67 		.ascii	"long int\000"
  714      20696E74 
  714      00
  715              	.LASF0:
- 716 0191 7369676E 		.ascii	"signed char\000"
+ 716 0186 7369676E 		.ascii	"signed char\000"
  716      65642063 
  716      68617200 
  717              	.LASF25:
- 718 019d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P3_7_G1.c\000"
+ 718 0192 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P3_7_G1.c\000"
  718      6E657261 
  718      7465645F 
  718      536F7572 
  718      63655C50 
  719              	.LASF20:
- 720 01c0 50335F37 		.ascii	"P3_7_G1_ReadDataReg\000"
+ 720 01b5 50335F37 		.ascii	"P3_7_G1_ReadDataReg\000"
  720      5F47315F 
  720      52656164 
  720      44617461 

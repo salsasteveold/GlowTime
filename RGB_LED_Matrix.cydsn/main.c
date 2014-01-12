@@ -198,7 +198,7 @@ void main()
 	c.r = 0x00;
 	c.g = 0x00;
 	c.b = 0x00;
-	ClearScreen(matrix);
+	clearScreen(matrix);
 	
 	LED_Matrix_1_Start();
     UART_Start();
@@ -211,9 +211,9 @@ void main()
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
-	c.r = 0;
-		c.g = 31;
-		c.b = 0;
+	c.r = 30;
+		c.g = 0;
+		c.b = 15;
 	for(;;)
     { 	
 
@@ -221,13 +221,27 @@ void main()
 
 		//DrawPixel(0, 15, c, matrix);
 		//DrawPixel(31, 0, c, matrix);
-		for(x=2;x<16;x++)
+		
+		for(x=6;x<16;x++)
 		{
 			for(y=0;y<32;y++)
 			{
-				drawCircle(y, x,2,c, matrix);
+				drawCircle(y, x,4,c, matrix);
+				//drawCircleHelper(y,x,6,0x4,c,matrix);
+				/*drawLine(0, 0, 0,14 , c, matrix);
+				drawLine(5, 0, 5,14 , c, matrix);
+				drawLine(10, 0, 10,14 , c, matrix);
+				drawLine(15, 0, 15,14 , c, matrix);
+				drawLine(20, 0, 20,14 , c, matrix);
+				drawLine(25, 0, 25,14 , c, matrix);
+				drawLine(30, 0, 30,14 , c, matrix);
+				drawLine(0, 0, 31,0 , c, matrix);
+				drawLine(0, 5, 31,5 , c, matrix);
+				drawLine(0, 10, 31,10 , c, matrix);
+				drawLine(0, 15, 31,15 , c, matrix);*/
+				
 				CyDelayUs(20000);
-				ClearScreen(matrix);
+				clearScreen(matrix);
 			}
 		}
 		
