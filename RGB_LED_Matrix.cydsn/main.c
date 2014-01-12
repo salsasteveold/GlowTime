@@ -254,7 +254,8 @@ void main()
 					c.r = z;
 					c.g = x;
 					c.b = y;
-					drawTriangle(16, 10,20, 6,20, 10, c, matrix);
+					//drawTriangle(16, 10,20, 6,20, 10, c, matrix);
+					fillScreen(c,matrix);
 					CyDelayUs(30000);
 					//clearScreen(matrix);
 					
