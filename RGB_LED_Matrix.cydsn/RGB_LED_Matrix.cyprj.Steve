@@ -12,120 +12,6 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM0\ARM_GCC_473\Debug\main.o">
-<dep name=".\Generated_Source\PSoC4\CR_Addr.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\LED_Matrix_1.h" />
-<dep name=".\Generated_Source\PSoC4\P0_0_B1.h" />
-<dep name=".\Generated_Source\PSoC4\P0_0_B1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P0_7_R1.h" />
-<dep name=".\Generated_Source\PSoC4\P0_7_R1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P1_0_G2.h" />
-<dep name=".\Generated_Source\PSoC4\P1_0_G2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_0_A.h" />
-<dep name=".\Generated_Source\PSoC4\P2_0_A_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_1_B.h" />
-<dep name=".\Generated_Source\PSoC4\P2_1_B_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_2_C.h" />
-<dep name=".\Generated_Source\PSoC4\P2_2_C_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_3_LAT.h" />
-<dep name=".\Generated_Source\PSoC4\P2_3_LAT_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_4_done.h" />
-<dep name=".\Generated_Source\PSoC4\P2_4_done_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_6_CLK.h" />
-<dep name=".\Generated_Source\PSoC4\P2_6_CLK_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P2_7_B2.h" />
-<dep name=".\Generated_Source\PSoC4\P2_7_B2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P3_5_R2.h" />
-<dep name=".\Generated_Source\PSoC4\P3_5_R2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P3_6_OE.h" />
-<dep name=".\Generated_Source\PSoC4\P3_6_OE_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\P3_7_G1.h" />
-<dep name=".\Generated_Source\PSoC4\P3_7_G1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
-<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\core_cmFunc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cmInstr.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\isr_2.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-<dep name=".\LED_Matrix.h" />
-<dep name=".\device.h" />
-<dep name=".\main.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\CR_Addr.h" />
-<file name=".\Generated_Source\PSoC4\CyFlash.h" />
-<file name=".\Generated_Source\PSoC4\CyLib.h" />
-<file name=".\Generated_Source\PSoC4\LED_Matrix_1.h" />
-<file name=".\Generated_Source\PSoC4\P0_0_B1.h" />
-<file name=".\Generated_Source\PSoC4\P0_0_B1_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P0_7_R1.h" />
-<file name=".\Generated_Source\PSoC4\P0_7_R1_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P1_0_G2.h" />
-<file name=".\Generated_Source\PSoC4\P1_0_G2_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_0_A.h" />
-<file name=".\Generated_Source\PSoC4\P2_0_A_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_1_B.h" />
-<file name=".\Generated_Source\PSoC4\P2_1_B_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_2_C.h" />
-<file name=".\Generated_Source\PSoC4\P2_2_C_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_3_LAT.h" />
-<file name=".\Generated_Source\PSoC4\P2_3_LAT_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_4_done.h" />
-<file name=".\Generated_Source\PSoC4\P2_4_done_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_6_CLK.h" />
-<file name=".\Generated_Source\PSoC4\P2_6_CLK_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P2_7_B2.h" />
-<file name=".\Generated_Source\PSoC4\P2_7_B2_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P3_5_R2.h" />
-<file name=".\Generated_Source\PSoC4\P3_5_R2_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P3_6_OE.h" />
-<file name=".\Generated_Source\PSoC4\P3_6_OE_aliases.h" />
-<file name=".\Generated_Source\PSoC4\P3_7_G1.h" />
-<file name=".\Generated_Source\PSoC4\P3_7_G1_aliases.h" />
-<file name=".\Generated_Source\PSoC4\UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
-<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
-<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx.h" />
-<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx.h" />
-<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<file name=".\Generated_Source\PSoC4\core_cmFunc.h" />
-<file name=".\Generated_Source\PSoC4\core_cmInstr.h" />
-<file name=".\Generated_Source\PSoC4\cyPm.h" />
-<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<file name=".\Generated_Source\PSoC4\cypins.h" />
-<file name=".\Generated_Source\PSoC4\cytypes.h" />
-<file name=".\Generated_Source\PSoC4\isr_2.h" />
-<file name=".\Generated_Source\PSoC4\project.h" />
-<file name=".\LED_Matrix.h" />
-<file name=".\device.h" />
-<file name=".\main.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o">
 <dep name=".\Generated_Source\PSoC4\CR_Addr.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -184,7 +70,121 @@
 <dep name=".\LED_Matrix.h" />
 <dep name=".\device.h" />
 </file>
+<file name=".\Generated_Source\PSoC4\CR_Addr.h" />
+<file name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\Generated_Source\PSoC4\CyLib.h" />
+<file name=".\Generated_Source\PSoC4\LED_Matrix_1.h" />
+<file name=".\Generated_Source\PSoC4\P0_0_B1.h" />
+<file name=".\Generated_Source\PSoC4\P0_0_B1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P0_7_R1.h" />
+<file name=".\Generated_Source\PSoC4\P0_7_R1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P1_0_G2.h" />
+<file name=".\Generated_Source\PSoC4\P1_0_G2_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_0_A.h" />
+<file name=".\Generated_Source\PSoC4\P2_0_A_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_1_B.h" />
+<file name=".\Generated_Source\PSoC4\P2_1_B_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_2_C.h" />
+<file name=".\Generated_Source\PSoC4\P2_2_C_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_3_LAT.h" />
+<file name=".\Generated_Source\PSoC4\P2_3_LAT_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_4_done.h" />
+<file name=".\Generated_Source\PSoC4\P2_4_done_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_6_CLK.h" />
+<file name=".\Generated_Source\PSoC4\P2_6_CLK_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P2_7_B2.h" />
+<file name=".\Generated_Source\PSoC4\P2_7_B2_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P3_5_R2.h" />
+<file name=".\Generated_Source\PSoC4\P3_5_R2_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P3_6_OE.h" />
+<file name=".\Generated_Source\PSoC4\P3_6_OE_aliases.h" />
+<file name=".\Generated_Source\PSoC4\P3_7_G1.h" />
+<file name=".\Generated_Source\PSoC4\P3_7_G1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<file name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<file name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx.h" />
+<file name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx.h" />
+<file name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<file name=".\Generated_Source\PSoC4\core_cmFunc.h" />
+<file name=".\Generated_Source\PSoC4\core_cmInstr.h" />
+<file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\cytypes.h" />
+<file name=".\Generated_Source\PSoC4\isr_2.h" />
+<file name=".\Generated_Source\PSoC4\project.h" />
 <file name=".\LED_Matrix.c" />
+<file name=".\LED_Matrix.h" />
+<file name=".\device.h" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\main.o">
+<dep name=".\Generated_Source\PSoC4\CR_Addr.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\LED_Matrix_1.h" />
+<dep name=".\Generated_Source\PSoC4\P0_0_B1.h" />
+<dep name=".\Generated_Source\PSoC4\P0_0_B1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P0_7_R1.h" />
+<dep name=".\Generated_Source\PSoC4\P0_7_R1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P1_0_G2.h" />
+<dep name=".\Generated_Source\PSoC4\P1_0_G2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_0_A.h" />
+<dep name=".\Generated_Source\PSoC4\P2_0_A_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_1_B.h" />
+<dep name=".\Generated_Source\PSoC4\P2_1_B_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_2_C.h" />
+<dep name=".\Generated_Source\PSoC4\P2_2_C_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_3_LAT.h" />
+<dep name=".\Generated_Source\PSoC4\P2_3_LAT_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_4_done.h" />
+<dep name=".\Generated_Source\PSoC4\P2_4_done_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_6_CLK.h" />
+<dep name=".\Generated_Source\PSoC4\P2_6_CLK_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P2_7_B2.h" />
+<dep name=".\Generated_Source\PSoC4\P2_7_B2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P3_5_R2.h" />
+<dep name=".\Generated_Source\PSoC4\P3_5_R2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P3_6_OE.h" />
+<dep name=".\Generated_Source\PSoC4\P3_6_OE_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\P3_7_G1.h" />
+<dep name=".\Generated_Source\PSoC4\P3_7_G1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\core_cmFunc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cmInstr.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_2.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\LED_Matrix.h" />
+<dep name=".\device.h" />
+<dep name=".\main.c" />
+</file>
+<file name=".\main.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\CR_Addr.o">
 <dep name=".\Generated_Source\PSoC4\CR_Addr.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
@@ -726,33 +726,50 @@
 <v>PSoC Sensei</v>
 </tree_states_tab_names>
 <tree_states>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Community Component Catalog\Digital\Filters">
 <ExpandedNodeIds>
 <v>Community Component Catalog</v>
+<v>Community Component Catalog\Analog</v>
+<v>Community Component Catalog\Digital</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Community Component Catalog</v>
 <v>Community Component Catalog\Analog</v>
+<v>Community Component Catalog\Analog\LPF [v1.0]</v>
+<v>Community Component Catalog\Analog\Modulators</v>
+<v>Community Component Catalog\Analog\SCCT</v>
 <v>Community Component Catalog\Digital</v>
+<v>Community Component Catalog\Digital\CJCU</v>
+<v>Community Component Catalog\Digital\Datapath</v>
+<v>Community Component Catalog\Digital\Filter</v>
+<v>Community Component Catalog\Digital\Filters</v>
+<v>Community Component Catalog\Digital\KEES_UDB_BitstreamIntegrator [v1.10]</v>
+<v>Community Component Catalog\Digital\KEES_UDBSumCompare [v1.0]</v>
+<v>Community Component Catalog\Digital\Mixing</v>
+<v>Community Component Catalog\Digital\MultAcc [v1.0]</v>
+<v>Community Component Catalog\Digital\Quadrature</v>
 <v>Community Component Catalog\Display</v>
 <v>Community Component Catalog\Industrial</v>
 <v>Community Component Catalog\Mechatronics</v>
 <v>Community Component Catalog\Off-Chip</v>
 <v>Community Component Catalog\PioneerKit</v>
 <v>Community Component Catalog\Software</v>
-<v>Community Component Catalog\System</v>
-<v>Community Component Catalog\USB</v>
-<v>Community Component Catalog\Useful</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Display">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Analog\Comparators">
 <ExpandedNodeIds>
 <v>Cypress Component Catalog</v>
+<v>Cypress Component Catalog\Analog</v>
 <v>Cypress Component Catalog\Digital</v>
+<v>Cypress Component Catalog\Ports and Pins</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Cypress Component Catalog</v>
-<v>Cypress Component Catalog\Analog</v>
+<v>Cypress Component Catalog\Analog\ADC</v>
+<v>Cypress Component Catalog\Analog\Amplifiers</v>
+<v>Cypress Component Catalog\Analog\Analog MUX</v>
+<v>Cypress Component Catalog\Analog\Comparators</v>
+<v>Cypress Component Catalog\Analog\DAC</v>
+<v>Cypress Component Catalog\Analog\Manual Routing</v>
 <v>Cypress Component Catalog\CapSense</v>
 <v>Cypress Component Catalog\Communications</v>
 <v>Cypress Component Catalog\Digital</v>
@@ -762,11 +779,15 @@
 <v>Cypress Component Catalog\Digital\Utility</v>
 <v>Cypress Component Catalog\Display</v>
 <v>Cypress Component Catalog\Ports and Pins</v>
+<v>Cypress Component Catalog\Ports and Pins\Analog Pin [v1.90]</v>
+<v>Cypress Component Catalog\Ports and Pins\Digital Bidirectional Pin [v1.90]</v>
+<v>Cypress Component Catalog\Ports and Pins\Digital Input Pin [v1.90]</v>
+<v>Cypress Component Catalog\Ports and Pins\Digital Output Pin [v1.90]</v>
 <v>Cypress Component Catalog\System</v>
 <v>Cypress Component Catalog\Thermal Management</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Off-Chip Component Catalog\Diodes">
 <ExpandedNodeIds>
 <v>Off-Chip Component Catalog</v>
 </ExpandedNodeIds>
@@ -781,13 +802,19 @@
 <v>Off-Chip Component Catalog\Transistors</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Sensei Component Catalog">
 <ExpandedNodeIds>
 <v>PSoC Sensei Component Catalog</v>
+<v>PSoC Sensei Component Catalog\Digital</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSoC Sensei Component Catalog</v>
 <v>PSoC Sensei Component Catalog\Digital</v>
+<v>PSoC Sensei Component Catalog\Digital\8-bit Delay by 1 Clock [v1.0]</v>
+<v>PSoC Sensei Component Catalog\Digital\8-bit Delay by 2 Clocks [v1.0]</v>
+<v>PSoC Sensei Component Catalog\Digital\Count7 [v1.0]</v>
+<v>PSoC Sensei Component Catalog\Digital\Parallel FIFO Input [v1.0]</v>
+<v>PSoC Sensei Component Catalog\Digital\Tx Only UART [v1.10]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </tree_states>
@@ -1674,15 +1701,20 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130339806226299124" />
+<deps_time v="130342971493083825" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130340335019359671" />
+<deps_time v="130343098899601061" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
+</dataGuid>
+<dataGuid v="237c8ed1-e161-4c9d-af97-582eda6d6952">
+<CyGuid_d442b0b8-dd66-4eee-b5be-1cb213792b31 type_name="CyDesigner.PSoC.P3Fit.Common.DesignWideResources.DeviceEditor.CyCustomAnalogDevData" version="1" ZoomToPage="True" ZoomScale="0.894250751" ScrollX="836" ScrollY="223">
+<ComponentStates />
+</CyGuid_d442b0b8-dd66-4eee-b5be-1cb213792b31>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>

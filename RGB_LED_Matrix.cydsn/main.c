@@ -188,6 +188,7 @@ void main()
 {	
 	/* struct that can accomodate 8-bit RGB color */
 	RGB c;
+	RGB num;
 	
 	/* Buffer for UART data */
 	//uint16 array[6] = {0, 0, 0, 0, 0, 0};
@@ -215,54 +216,17 @@ void main()
 	c.r = 30;
 	c.g = 0;
 	c.b = 15;
+	num.r = 0;
+	num.g = 0;
+	num.b = 31;
+	
 	for(;;)
     { 	
-
-		
-
-		//DrawPixel(0, 15, c, matrix);
-		//DrawPixel(31, 0, c, matrix);
-		/*
-		for(x=6;x<16;x++)
-		{
-			for(y=0;y<32;y++)
-			{
-				drawCircle(y, x,4,c, matrix);
-				//drawCircleHelper(y,x,6,0x4,c,matrix);
-				drawLine(0, 0, 0,14 , c, matrix);
-				drawLine(5, 0, 5,14 , c, matrix);
-				drawLine(10, 0, 10,14 , c, matrix);
-				drawLine(15, 0, 15,14 , c, matrix);
-				drawLine(20, 0, 20,14 , c, matrix);
-				drawLine(25, 0, 25,14 , c, matrix);
-				drawLine(30, 0, 30,14 , c, matrix);
-				drawLine(0, 0, 31,0 , c, matrix);
-				drawLine(0, 5, 31,5 , c, matrix);
-				drawLine(0, 10, 31,10 , c, matrix);
-				drawLine(0, 15, 31,15 , c, matrix);
-				
-				CyDelayUs(20000);
-				clearScreen(matrix);
-			}
-		}*/
-		for(x=0;x<32;x++)
-		{
-			for(y=0;y<32;y++)
-			{
-				for(z=0;z<32;z++)
-				{
-					c.r = z;
-					c.g = x;
-					c.b = y;
-					//drawTriangle(16, 10,20, 6,20, 10, c, matrix);
-					fillScreen(c,matrix);
-					CyDelayUs(30000);
-					//clearScreen(matrix);
-					
-				}
-			}
-		}
-		
+		drawEight(3,2,num,matrix);
+		drawZero(9,2,num, matrix);
+		drawColon(15,2,num,matrix);
+		drawSix(17,2,c,matrix);
+		drawNine(23,2,c,matrix);
 	}
 
 }

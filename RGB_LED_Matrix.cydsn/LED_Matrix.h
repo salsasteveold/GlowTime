@@ -69,6 +69,17 @@ void drawFastHLine(int8 x, int8 y, int8 h, RGB c, color *matrix);
 void fillRect(int8 x, int8 y, int8 w, int8 h, RGB c, color *matrix);
 void fillScreen(RGB c, color *matrix);
 void drawTriangle(int8 x0, int8 y0,int8 x1, int8 y1,int8 x2, int8 y2, RGB c, color *matrix);
+void drawOne(int8 x0, int8 y0,RGB c, color *matrix);
+void drawTwo(int8 x0, int8 y0,RGB c, color *matrix);
+void drawColon(int8 x0, int8 y0,RGB c, color *matrix);
+void drawThree(int8 x0, int8 y0,RGB c, color *matrix);
+void drawFour(int8 x0, int8 y0,RGB c, color *matrix);
+void drawFive(int8 x0, int8 y0,RGB c, color *matrix);
+void drawSix(int8 x0, int8 y0,RGB c, color *matrix);
+void drawSeven(int8 x0, int8 y0,RGB c, color *matrix);
+void drawEight(int8 x0, int8 y0,RGB c, color *matrix);
+void drawNine(int8 x0, int8 y0,RGB c, color *matrix);
+void drawZero(int8 x0, int8 y0,RGB c, color *matrix);
 
 
 //[] END OF FILE
