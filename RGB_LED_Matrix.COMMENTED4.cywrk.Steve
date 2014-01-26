@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix.cydwr">
 <ExpandedNodeIds>
 <v>PSoC_4_Sandbox</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
@@ -25,6 +25,18 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\LED_Matrix.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\main.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC_INT.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC_PM.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_intClock</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_IRQ</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\CR_Addr\CR_Addr.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\CR_Addr\CR_Addr.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
@@ -51,65 +63,62 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\isr_2\isr_2.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\LED_Matrix_1\LED_Matrix_1.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\LED_Matrix_1\LED_Matrix_1.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_B1\P0_0_B1.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_B1\P0_0_B1.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_B1\P0_0_B1_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_R1\P0_7_R1.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_R1\P0_7_R1.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_R1\P0_7_R1_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_0_G2\P1_0_G2.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_0_G2\P1_0_G2.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_0_G2\P1_0_G2_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_A\P2_0_A.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_A\P2_0_A.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_A\P2_0_A_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_1_B\P2_1_B.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_1_B\P2_1_B.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_1_B\P2_1_B_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_2_C\P2_2_C.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_2_C\P2_2_C.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_2_C\P2_2_C_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_3_LAT\P2_3_LAT.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_3_LAT\P2_3_LAT.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_3_LAT\P2_3_LAT_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_4_done\P2_4_done.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_4_done\P2_4_done.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_4_done\P2_4_done_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_6_CLK\P2_6_CLK.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_6_CLK\P2_6_CLK.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_6_CLK\P2_6_CLK_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_7_B2\P2_7_B2.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_7_B2\P2_7_B2.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_7_B2\P2_7_B2_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_5_R2\P3_5_R2.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_5_R2\P3_5_R2.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_5_R2\P3_5_R2_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_6_OE\P3_6_OE.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_6_OE\P3_6_OE.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_6_OE\P3_6_OE_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_G1\P3_7_G1.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_G1\P3_7_G1.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_G1\P3_7_G1_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_BOOT.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_PINS.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_PM.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_PVT.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_SPI_UART.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_SPI_UART.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_SPI_UART_INT.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_SPI_UART_PVT.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_UART.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART\UART_UART_BOOT.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_rx\UART_rx.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_rx\UART_rx.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_rx\UART_rx_aliases.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_SCBCLK\UART_SCBCLK.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_SCBCLK\UART_SCBCLK.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_tx\UART_tx.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_tx\UART_tx.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\UART_tx\UART_tx_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_G2</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_G2\P0_0_G2.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_G2\P0_0_G2.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_0_G2\P0_0_G2_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_4_R1</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_4_R1\P0_4_R1.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_4_R1\P0_4_R1.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_4_R1\P0_4_R1_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_5_G1</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_5_G1\P0_5_G1.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_5_G1\P0_5_G1.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_5_G1\P0_5_G1_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_6_OE</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_6_OE\P0_6_OE.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_6_OE\P0_6_OE.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_6_OE\P0_6_OE_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_B1</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_B1\P0_7_B1.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_B1\P0_7_B1.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P0_7_B1\P0_7_B1_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_1_B</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_1_B\P1_1_B.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_1_B\P1_1_B.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_1_B\P1_1_B_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_2_A</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_2_A\P1_2_A.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_2_A\P1_2_A.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_2_A\P1_2_A_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_3_done</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_3_done\P1_3_done.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_3_done\P1_3_done.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_3_done\P1_3_done_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_4_LAT</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_4_LAT\P1_4_LAT.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_4_LAT\P1_4_LAT.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_4_LAT\P1_4_LAT_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_5_C</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_5_C\P1_5_C.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_5_C\P1_5_C.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P1_5_C\P1_5_C_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_ADC0</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_ADC0\P2_0_ADC0.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_ADC0\P2_0_ADC0.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P2_0_ADC0\P2_0_ADC0_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_0_B2</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_0_B2\P3_0_B2.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_0_B2\P3_0_B2.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_0_B2\P3_0_B2_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_1_CLK</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_1_CLK\P3_1_CLK.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_1_CLK\P3_1_CLK.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_1_CLK\P3_1_CLK_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_R2</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_R2\P3_7_R2.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_R2\P3_7_R2.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\P3_7_R2\P3_7_R2_aliases.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -127,21 +136,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCode32x16.txt</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCodePad.txt</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSoC_4_Sandbox</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign.cysch</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix.cydwr</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Header Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\LED_Matrix.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\main.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCode16x16.txt</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCode32x16.txt</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCodePad.txt</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix">
 <ExpandedNodeIds>
@@ -159,13 +154,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSoC_4_Sandbox</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\LED_Matrix_v1_00</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix.rpt">
 <ExpandedNodeIds>
@@ -175,6 +164,11 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_INT.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_intClock.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_PM.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CR_Addr.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -188,69 +182,27 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix_1.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_0_B1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_7_R1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_0_G2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_0_A.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_1_B.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_2_C.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_3_LAT.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_4_done.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_6_CLK.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_7_B2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_5_R2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_6_OE.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_7_G1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_BOOT.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_PM.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_rx.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_SCBCLK.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_SPI_UART.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_tx.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_UART.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_0_G2.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_4_R1.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_5_G1.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_6_OE.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_7_B1.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_1_B.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_2_A.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_3_done.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_4_LAT.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_5_C.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_0_ADC0.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_0_B2.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_1_CLK.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_7_R2.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.elf</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.hex</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.map</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix.rpt</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSoC_4_Sandbox</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CR_Addr.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\isr_2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix_1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_0_B1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P0_7_R1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P1_0_G2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_0_A.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_1_B.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_2_C.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_3_LAT.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_4_done.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_6_CLK.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P2_7_B2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_5_R2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_6_OE.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\P3_7_G1.lst</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -264,30 +216,14 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\PSoC 4 Architecture TRM</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CY8C42 Family Datasheet</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\System Reference Guide v4_0</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\ADC_SAR_SEQ_P4_v1_10</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_clock_v2_10</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_isr_v1_70</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_pins_v1_90</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CyControlReg_v1_70</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\KEES_PinHelper_v1_1</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\LED_Matrix_v1_00</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\SCB_P4_v1_10</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSoC_4_Sandbox</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\PSoC 4 Architecture TRM</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CY8C42 Family Datasheet</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\System Reference Guide v4_0</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\ADC_SAR_SEQ_P4_v1_10</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_clock_v2_10</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_isr_v1_70</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_pins_v1_90</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CyControlReg_v1_70</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\KEES_PinHelper_v1_1</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\LED_Matrix_v1_00</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\SCB_P4_v1_10</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>

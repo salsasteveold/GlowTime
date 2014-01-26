@@ -376,4 +376,44 @@ void drawZero(int8 x0, int8 y0,RGB c, color *matrix)
 	drawFastVLine(x0,y0+1,10,c,matrix);
 	drawFastVLine(x0+4,y0+1,10,c,matrix);
 }
+
+void drawA(int8 x0, int8 y0,RGB c, color *matrix)
+{
+	drawLine(x0+2, y0, x0+4, y0+2, c, matrix);
+	drawLine(x0, y0+2, x0+1, y0+1, c, matrix);
+	drawFastHLine(x0+1,y0+7,3,c,matrix);
+	drawFastVLine(x0+4,y0+2,10,c,matrix);
+	drawFastVLine(x0,y0+2,10,c,matrix);
+	
+}
+
+void drawB(int8 x0, int8 y0,RGB c, color *matrix)
+{
+	
+}
+/*
+void drawC(int8 x0, int8 y0,RGB c, color *matrix)
+{
+	
+}
+
+void drawD(int8 x0, int8 y0,RGB c, color *matrix)
+{
+
+}
+
+void drawE(int8 x0, int8 y0,RGB c, color *matrix)
+{
+
+}
+
+void drawF(int8 x0, int8 y0,RGB c, color *matrix)
+{
+
+}
+void printHex(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
+{
+	NULL;
+}*/
+
 /* [] END OF FILE */
