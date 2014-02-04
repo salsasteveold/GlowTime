@@ -1,6 +1,6 @@
 // ======================================================================
 // RGB_LED_Matrix.v generated from TopDesign.cysch
-// 01/18/2014 at 13:20
+// 02/04/2014 at 09:36
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -47,6 +47,254 @@
 `define CYDEV_CHIP_FAMILY_USED 2
 `define CYDEV_CHIP_MEMBER_USED 2
 `define CYDEV_CHIP_REVISION_USED 17
+// Component: CyControlReg_v1_70
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "$CYPRESS_DIR\..\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70"
+`include "$CYPRESS_DIR\..\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v"
+`endif
+
+// KEES_PinHelper_v1_1(CY_COMPONENT_NAME=KEES_PinHelper_v1_1, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=KEES_PinHelper_1, CY_INSTANCE_SHORT_NAME=KEES_PinHelper_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=1, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=KEES_PinHelper_1, )
+module KEES_PinHelper_v1_1_0 ;
+
+
+
+
+
+endmodule
+
+// PSoC_4_Pioneer_Kit(ShowPins=true, CY_COMPONENT_NAME=PSoC_4_Pioneer_Kit, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PSoC_4_Pioneer_Kit_1, CY_INSTANCE_SHORT_NAME=PSoC_4_Pioneer_Kit_1, CY_MAJOR_VERSION=0, CY_MINOR_VERSION=0, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PSoC_4_Pioneer_Kit_1, )
+module PSoC_4_Pioneer_Kit_1 (
+    Terminal_1,
+    Terminal_2,
+    Terminal_3,
+    Terminal_4,
+    Terminal_5,
+    Terminal_6,
+    Terminal_7,
+    Terminal_8,
+    Terminal_9,
+    Terminal_10,
+    Terminal_11,
+    Terminal_12,
+    Terminal_13,
+    Terminal_14,
+    Terminal_15,
+    Terminal_16,
+    Terminal_17,
+    Terminal_18,
+    Terminal_19,
+    Terminal_20,
+    Terminal_21,
+    Terminal_22,
+    Terminal_23,
+    Terminal_24,
+    Terminal_25,
+    Terminal_26,
+    Terminal_27,
+    Terminal_28,
+    Terminal_29,
+    Terminal_30,
+    Terminal_31,
+    Terminal_32,
+    Terminal_33,
+    Terminal_34,
+    Terminal_35,
+    Terminal_36,
+    Terminal_37,
+    Terminal_38,
+    Terminal_39,
+    Terminal_40,
+    Terminal_41,
+    Terminal_42,
+    Terminal_43,
+    Terminal_44,
+    Terminal_45,
+    Terminal_46,
+    Terminal_47,
+    Terminal_48,
+    Terminal_49,
+    Terminal_50,
+    Terminal_51,
+    Terminal_52,
+    Terminal_53,
+    Terminal_54,
+    Terminal_55,
+    Terminal_56,
+    Terminal_57,
+    Terminal_58,
+    Terminal_59,
+    Terminal_60,
+    Terminal_61,
+    Terminal_62,
+    Terminal_63,
+    Terminal_64,
+    Terminal_65,
+    Terminal_66,
+    Terminal_67,
+    Terminal_68);
+    inout       Terminal_1;
+    electrical  Terminal_1;
+    inout       Terminal_2;
+    electrical  Terminal_2;
+    inout       Terminal_3;
+    electrical  Terminal_3;
+    inout       Terminal_4;
+    electrical  Terminal_4;
+    inout       Terminal_5;
+    electrical  Terminal_5;
+    inout       Terminal_6;
+    electrical  Terminal_6;
+    inout       Terminal_7;
+    electrical  Terminal_7;
+    inout       Terminal_8;
+    electrical  Terminal_8;
+    inout       Terminal_9;
+    electrical  Terminal_9;
+    inout       Terminal_10;
+    electrical  Terminal_10;
+    inout       Terminal_11;
+    electrical  Terminal_11;
+    inout       Terminal_12;
+    electrical  Terminal_12;
+    inout       Terminal_13;
+    electrical  Terminal_13;
+    inout       Terminal_14;
+    electrical  Terminal_14;
+    inout       Terminal_15;
+    electrical  Terminal_15;
+    inout       Terminal_16;
+    electrical  Terminal_16;
+    inout       Terminal_17;
+    electrical  Terminal_17;
+    inout       Terminal_18;
+    electrical  Terminal_18;
+    inout       Terminal_19;
+    electrical  Terminal_19;
+    inout       Terminal_20;
+    electrical  Terminal_20;
+    inout       Terminal_21;
+    electrical  Terminal_21;
+    inout       Terminal_22;
+    electrical  Terminal_22;
+    inout       Terminal_23;
+    electrical  Terminal_23;
+    inout       Terminal_24;
+    electrical  Terminal_24;
+    inout       Terminal_25;
+    electrical  Terminal_25;
+    inout       Terminal_26;
+    electrical  Terminal_26;
+    inout       Terminal_27;
+    electrical  Terminal_27;
+    inout       Terminal_28;
+    electrical  Terminal_28;
+    inout       Terminal_29;
+    electrical  Terminal_29;
+    inout       Terminal_30;
+    electrical  Terminal_30;
+    inout       Terminal_31;
+    electrical  Terminal_31;
+    inout       Terminal_32;
+    electrical  Terminal_32;
+    inout       Terminal_33;
+    electrical  Terminal_33;
+    inout       Terminal_34;
+    electrical  Terminal_34;
+    inout       Terminal_35;
+    electrical  Terminal_35;
+    inout       Terminal_36;
+    electrical  Terminal_36;
+    inout       Terminal_37;
+    electrical  Terminal_37;
+    inout       Terminal_38;
+    electrical  Terminal_38;
+    inout       Terminal_39;
+    electrical  Terminal_39;
+    inout       Terminal_40;
+    electrical  Terminal_40;
+    inout       Terminal_41;
+    electrical  Terminal_41;
+    inout       Terminal_42;
+    electrical  Terminal_42;
+    inout       Terminal_43;
+    electrical  Terminal_43;
+    inout       Terminal_44;
+    electrical  Terminal_44;
+    inout       Terminal_45;
+    electrical  Terminal_45;
+    inout       Terminal_46;
+    electrical  Terminal_46;
+    inout       Terminal_47;
+    electrical  Terminal_47;
+    inout       Terminal_48;
+    electrical  Terminal_48;
+    inout       Terminal_49;
+    electrical  Terminal_49;
+    inout       Terminal_50;
+    electrical  Terminal_50;
+    inout       Terminal_51;
+    electrical  Terminal_51;
+    inout       Terminal_52;
+    electrical  Terminal_52;
+    inout       Terminal_53;
+    electrical  Terminal_53;
+    inout       Terminal_54;
+    electrical  Terminal_54;
+    inout       Terminal_55;
+    electrical  Terminal_55;
+    inout       Terminal_56;
+    electrical  Terminal_56;
+    inout       Terminal_57;
+    electrical  Terminal_57;
+    inout       Terminal_58;
+    electrical  Terminal_58;
+    inout       Terminal_59;
+    electrical  Terminal_59;
+    inout       Terminal_60;
+    electrical  Terminal_60;
+    inout       Terminal_61;
+    electrical  Terminal_61;
+    inout       Terminal_62;
+    electrical  Terminal_62;
+    inout       Terminal_63;
+    electrical  Terminal_63;
+    inout       Terminal_64;
+    electrical  Terminal_64;
+    inout       Terminal_65;
+    electrical  Terminal_65;
+    inout       Terminal_66;
+    electrical  Terminal_66;
+    inout       Terminal_67;
+    electrical  Terminal_67;
+    inout       Terminal_68;
+    electrical  Terminal_68;
+
+
+
+
+
+endmodule
+
+// Component: LED_Matrix_v1_00
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "..\LED_Matrix_v1_00"
+`include "..\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
+`else
+`define CY_BLK_DIR "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
+`include "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
+`endif
+
 // Component: cy_virtualmux_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -112,8 +360,8 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v"
 `endif
 
-// ADC_SAR_SEQ_P4_v1_10(AdcAClock=4, AdcAdjust=0, AdcAlternateResolution=1, AdcAvgMode=0, AdcAvgSamplesNum=0, AdcBClock=4, AdcCClock=4, AdcChannelsEnConf=1, AdcChannelsModeConf=0, AdcClock=1, AdcClockFrequency=2999988, AdcCompareMode=0, AdcDataFormatJustification=0, AdcDClock=4, AdcDifferentialResultFormat=0, AdcHighLimit=2047, AdcInjChannelEnabled=false, AdcInputBufGain=0, AdcLowLimit=0, AdcMaxResolution=12, AdcSampleMode=0, AdcSarMuxChannelConfig=0, AdcSequencedChannels=1, AdcSingleEndedNegativeInput=1, AdcSingleResultFormat=1, AdcSymbolHasSingleEndedInputChannel=false, AdcTotalChannels=1, AdcVrefSelect=0, AdcVrefVoltage_mV=5000, rm_int=false, SeqChannelsConfigTable=<?xml version="1.0" encoding="utf-16"?><CyChannelsConfigTable xmlns:Version="1_10"><m_channelsConfigTable><CyChannelsConfigTableRow><m_enabled>false</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Single</m_mode><m_averaged>false</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow><CyChannelsConfigTableRow><m_enabled>true</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Single</m_mode><m_averaged>false</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow></m_channelsConfigTable></CyChannelsConfigTable>, CY_COMPONENT_NAME=ADC_SAR_SEQ_P4_v1_10, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=ADC, CY_INSTANCE_SHORT_NAME=ADC, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=ADC, )
-module ADC_SAR_SEQ_P4_v1_10_0 (
+// ADC_SAR_SEQ_P4_v1_10(AdcAClock=4, AdcAdjust=0, AdcAlternateResolution=0, AdcAvgMode=1, AdcAvgSamplesNum=0, AdcBClock=4, AdcCClock=4, AdcChannelsEnConf=1, AdcChannelsModeConf=0, AdcClock=1, AdcClockFrequency=5999976, AdcCompareMode=0, AdcDataFormatJustification=0, AdcDClock=4, AdcDifferentialResultFormat=0, AdcHighLimit=4095, AdcInjChannelEnabled=false, AdcInputBufGain=0, AdcLowLimit=0, AdcMaxResolution=12, AdcSampleMode=0, AdcSarMuxChannelConfig=0, AdcSequencedChannels=1, AdcSingleEndedNegativeInput=0, AdcSingleResultFormat=1, AdcSymbolHasSingleEndedInputChannel=false, AdcTotalChannels=1, AdcVrefSelect=1, AdcVrefVoltage_mV=1024, rm_int=false, SeqChannelsConfigTable=<?xml version="1.0" encoding="utf-16"?><CyChannelsConfigTable xmlns:Version="1_10"><m_channelsConfigTable><CyChannelsConfigTableRow><m_enabled>false</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Diff</m_mode><m_averaged>false</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow><CyChannelsConfigTableRow><m_enabled>true</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Single</m_mode><m_averaged>true</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow></m_channelsConfigTable></CyChannelsConfigTable>, CY_COMPONENT_NAME=ADC_SAR_SEQ_P4_v1_10, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=ADC, CY_INSTANCE_SHORT_NAME=ADC, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=ADC, )
+module ADC_SAR_SEQ_P4_v1_10_2 (
     soc,
     aclk,
     Vref,
@@ -261,10 +509,10 @@ module ADC_SAR_SEQ_P4_v1_10_0 (
 
 
 	cy_clock_v1_0
-		#(.id("a480b917-228c-47cc-88e9-ebb59c6ee1ad/a12a1691-924f-48e5-a017-176d592c3b32"),
+		#(.id("c0438d7d-b618-4458-bf19-9d8f78e88f79/a12a1691-924f-48e5-a017-176d592c3b32"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("333334666.672"),
+		  .period("166667333.336"),
 		  .is_direct(0),
 		  .is_digital(0))
 		intClock
@@ -589,257 +837,15 @@ module ADC_SAR_SEQ_P4_v1_10_0 (
 
 endmodule
 
-// Component: CyControlReg_v1_70
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "$CYPRESS_DIR\..\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70"
-`include "$CYPRESS_DIR\..\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v"
-`endif
-
-// KEES_PinHelper_v1_1(CY_COMPONENT_NAME=KEES_PinHelper_v1_1, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=KEES_PinHelper_1, CY_INSTANCE_SHORT_NAME=KEES_PinHelper_1, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=1, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=KEES_PinHelper_1, )
-module KEES_PinHelper_v1_1_1 ;
-
-
-
-
-
-endmodule
-
-// PSoC_4_Pioneer_Kit(ShowPins=true, CY_COMPONENT_NAME=PSoC_4_Pioneer_Kit, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=PSoC_4_Pioneer_Kit_1, CY_INSTANCE_SHORT_NAME=PSoC_4_Pioneer_Kit_1, CY_MAJOR_VERSION=0, CY_MINOR_VERSION=0, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=PSoC_4_Pioneer_Kit_1, )
-module PSoC_4_Pioneer_Kit_2 (
-    Terminal_1,
-    Terminal_2,
-    Terminal_3,
-    Terminal_4,
-    Terminal_5,
-    Terminal_6,
-    Terminal_7,
-    Terminal_8,
-    Terminal_9,
-    Terminal_10,
-    Terminal_11,
-    Terminal_12,
-    Terminal_13,
-    Terminal_14,
-    Terminal_15,
-    Terminal_16,
-    Terminal_17,
-    Terminal_18,
-    Terminal_19,
-    Terminal_20,
-    Terminal_21,
-    Terminal_22,
-    Terminal_23,
-    Terminal_24,
-    Terminal_25,
-    Terminal_26,
-    Terminal_27,
-    Terminal_28,
-    Terminal_29,
-    Terminal_30,
-    Terminal_31,
-    Terminal_32,
-    Terminal_33,
-    Terminal_34,
-    Terminal_35,
-    Terminal_36,
-    Terminal_37,
-    Terminal_38,
-    Terminal_39,
-    Terminal_40,
-    Terminal_41,
-    Terminal_42,
-    Terminal_43,
-    Terminal_44,
-    Terminal_45,
-    Terminal_46,
-    Terminal_47,
-    Terminal_48,
-    Terminal_49,
-    Terminal_50,
-    Terminal_51,
-    Terminal_52,
-    Terminal_53,
-    Terminal_54,
-    Terminal_55,
-    Terminal_56,
-    Terminal_57,
-    Terminal_58,
-    Terminal_59,
-    Terminal_60,
-    Terminal_61,
-    Terminal_62,
-    Terminal_63,
-    Terminal_64,
-    Terminal_65,
-    Terminal_66,
-    Terminal_67,
-    Terminal_68);
-    inout       Terminal_1;
-    electrical  Terminal_1;
-    inout       Terminal_2;
-    electrical  Terminal_2;
-    inout       Terminal_3;
-    electrical  Terminal_3;
-    inout       Terminal_4;
-    electrical  Terminal_4;
-    inout       Terminal_5;
-    electrical  Terminal_5;
-    inout       Terminal_6;
-    electrical  Terminal_6;
-    inout       Terminal_7;
-    electrical  Terminal_7;
-    inout       Terminal_8;
-    electrical  Terminal_8;
-    inout       Terminal_9;
-    electrical  Terminal_9;
-    inout       Terminal_10;
-    electrical  Terminal_10;
-    inout       Terminal_11;
-    electrical  Terminal_11;
-    inout       Terminal_12;
-    electrical  Terminal_12;
-    inout       Terminal_13;
-    electrical  Terminal_13;
-    inout       Terminal_14;
-    electrical  Terminal_14;
-    inout       Terminal_15;
-    electrical  Terminal_15;
-    inout       Terminal_16;
-    electrical  Terminal_16;
-    inout       Terminal_17;
-    electrical  Terminal_17;
-    inout       Terminal_18;
-    electrical  Terminal_18;
-    inout       Terminal_19;
-    electrical  Terminal_19;
-    inout       Terminal_20;
-    electrical  Terminal_20;
-    inout       Terminal_21;
-    electrical  Terminal_21;
-    inout       Terminal_22;
-    electrical  Terminal_22;
-    inout       Terminal_23;
-    electrical  Terminal_23;
-    inout       Terminal_24;
-    electrical  Terminal_24;
-    inout       Terminal_25;
-    electrical  Terminal_25;
-    inout       Terminal_26;
-    electrical  Terminal_26;
-    inout       Terminal_27;
-    electrical  Terminal_27;
-    inout       Terminal_28;
-    electrical  Terminal_28;
-    inout       Terminal_29;
-    electrical  Terminal_29;
-    inout       Terminal_30;
-    electrical  Terminal_30;
-    inout       Terminal_31;
-    electrical  Terminal_31;
-    inout       Terminal_32;
-    electrical  Terminal_32;
-    inout       Terminal_33;
-    electrical  Terminal_33;
-    inout       Terminal_34;
-    electrical  Terminal_34;
-    inout       Terminal_35;
-    electrical  Terminal_35;
-    inout       Terminal_36;
-    electrical  Terminal_36;
-    inout       Terminal_37;
-    electrical  Terminal_37;
-    inout       Terminal_38;
-    electrical  Terminal_38;
-    inout       Terminal_39;
-    electrical  Terminal_39;
-    inout       Terminal_40;
-    electrical  Terminal_40;
-    inout       Terminal_41;
-    electrical  Terminal_41;
-    inout       Terminal_42;
-    electrical  Terminal_42;
-    inout       Terminal_43;
-    electrical  Terminal_43;
-    inout       Terminal_44;
-    electrical  Terminal_44;
-    inout       Terminal_45;
-    electrical  Terminal_45;
-    inout       Terminal_46;
-    electrical  Terminal_46;
-    inout       Terminal_47;
-    electrical  Terminal_47;
-    inout       Terminal_48;
-    electrical  Terminal_48;
-    inout       Terminal_49;
-    electrical  Terminal_49;
-    inout       Terminal_50;
-    electrical  Terminal_50;
-    inout       Terminal_51;
-    electrical  Terminal_51;
-    inout       Terminal_52;
-    electrical  Terminal_52;
-    inout       Terminal_53;
-    electrical  Terminal_53;
-    inout       Terminal_54;
-    electrical  Terminal_54;
-    inout       Terminal_55;
-    electrical  Terminal_55;
-    inout       Terminal_56;
-    electrical  Terminal_56;
-    inout       Terminal_57;
-    electrical  Terminal_57;
-    inout       Terminal_58;
-    electrical  Terminal_58;
-    inout       Terminal_59;
-    electrical  Terminal_59;
-    inout       Terminal_60;
-    electrical  Terminal_60;
-    inout       Terminal_61;
-    electrical  Terminal_61;
-    inout       Terminal_62;
-    electrical  Terminal_62;
-    inout       Terminal_63;
-    electrical  Terminal_63;
-    inout       Terminal_64;
-    electrical  Terminal_64;
-    inout       Terminal_65;
-    electrical  Terminal_65;
-    inout       Terminal_66;
-    electrical  Terminal_66;
-    inout       Terminal_67;
-    electrical  Terminal_67;
-    inout       Terminal_68;
-    electrical  Terminal_68;
-
-
-
-
-
-endmodule
-
-// Component: LED_Matrix_v1_00
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "..\LED_Matrix_v1_00"
-`include "..\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
-`else
-`define CY_BLK_DIR "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
-`include "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
-`endif
-
 // top
 module top ;
 
+    electrical  Net_8015;
+          wire  Net_8030;
+          wire  Net_8029;
+          wire  Net_8028;
+          wire  Net_8027;
+    electrical  Net_8026;
           wire  Net_7615;
           wire  Net_7614;
           wire  Net_7613;
@@ -882,6 +888,7 @@ module top ;
     electrical  Net_7769;
     electrical  Net_7768;
     electrical  Net_7767;
+          wire  lat;
     electrical  Net_7766;
     electrical  Net_7765;
     electrical  Net_7764;
@@ -893,7 +900,7 @@ module top ;
     electrical  Net_7758;
     electrical  Net_7757;
     electrical  Net_7756;
-          wire  lat;
+    electrical  done;
     electrical  Net_7755;
     electrical  Net_7754;
     electrical  Net_7753;
@@ -905,7 +912,6 @@ module top ;
     electrical  Net_7747;
     electrical  Net_7871;
     electrical  Net_7746;
-    electrical  done;
     electrical  Net_7745;
     electrical  Net_7862;
     electrical  Net_7863;
@@ -934,12 +940,6 @@ module top ;
           wire  Net_7543;
           wire  Net_7542;
           wire  Net_7640;
-    electrical  Net_7897;
-          wire  Net_7952;
-          wire  Net_7951;
-          wire  Net_7950;
-          wire  Net_7949;
-    electrical  Net_7948;
           wire  Net_7538;
     electrical  Net_221;
           wire  Net_7537;
@@ -1163,14 +1163,6 @@ module top ;
 
 	assign tmpOE__P0_6_OE_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    ADC_SAR_SEQ_P4_v1_10_0 ADC (
-        .Vref(Net_7948),
-        .sdone(Net_7949),
-        .eoc(Net_7950),
-        .aclk(1'b0),
-        .soc(1'b0),
-        .vinPlus0(Net_7897));
-
     CyControlReg_v1_70 CR_Addr (
         .control_1(Net_7152),
         .control_2(Net_7153),
@@ -1195,7 +1187,7 @@ module top ;
     defparam CR_Addr.ExtrReset = 0;
     defparam CR_Addr.NumOutputs = 4;
 
-    KEES_PinHelper_v1_1_1 KEES_PinHelper_1 ();
+    KEES_PinHelper_v1_1_0 KEES_PinHelper_1 ();
 
 	wire [0:0] tmpOE__P1_1_B_net;
 	wire [0:0] tmpFB_0__P1_1_B_net;
@@ -1477,7 +1469,7 @@ module top ;
 
 	assign tmpOE__P1_4_LAT_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-    PSoC_4_Pioneer_Kit_2 PSoC_4_Pioneer_Kit_1 (
+    PSoC_4_Pioneer_Kit_1 PSoC_4_Pioneer_Kit_1 (
         .Terminal_20(Net_7737),
         .Terminal_21(Net_7738),
         .Terminal_22(Net_7739),
@@ -1547,11 +1539,11 @@ module top ;
         .Terminal_51(Net_7794),
         .Terminal_52(Net_7795));
 
-	wire [0:0] tmpOE__P0_4_R1_net;
-	wire [0:0] tmpFB_0__P0_4_R1_net;
-	wire [0:0] tmpIO_0__P0_4_R1_net;
-	wire [0:0] tmpINTERRUPT_0__P0_4_R1_net;
-	electrical [0:0] tmpSIOVREF__P0_4_R1_net;
+	wire [0:0] tmpOE__P0_7_R1_net;
+	wire [0:0] tmpFB_0__P0_7_R1_net;
+	wire [0:0] tmpIO_0__P0_7_R1_net;
+	wire [0:0] tmpINTERRUPT_0__P0_7_R1_net;
+	electrical [0:0] tmpSIOVREF__P0_7_R1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("52f31aa9-2f0a-497d-9a1f-1424095e13e6"),
@@ -1600,13 +1592,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P0_4_R1
-		 (.oe(tmpOE__P0_4_R1_net),
+		P0_7_R1
+		 (.oe(tmpOE__P0_7_R1_net),
 		  .y({Net_7605}),
-		  .fb({tmpFB_0__P0_4_R1_net[0:0]}),
-		  .io({tmpIO_0__P0_4_R1_net[0:0]}),
-		  .siovref(tmpSIOVREF__P0_4_R1_net),
-		  .interrupt({tmpINTERRUPT_0__P0_4_R1_net[0:0]}),
+		  .fb({tmpFB_0__P0_7_R1_net[0:0]}),
+		  .io({tmpIO_0__P0_7_R1_net[0:0]}),
+		  .siovref(tmpSIOVREF__P0_7_R1_net),
+		  .interrupt({tmpINTERRUPT_0__P0_7_R1_net[0:0]}),
 		  .annotation({Net_11}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
@@ -1615,13 +1607,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P0_4_R1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P0_7_R1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__P0_5_G1_net;
-	wire [0:0] tmpFB_0__P0_5_G1_net;
-	wire [0:0] tmpIO_0__P0_5_G1_net;
-	wire [0:0] tmpINTERRUPT_0__P0_5_G1_net;
-	electrical [0:0] tmpSIOVREF__P0_5_G1_net;
+	wire [0:0] tmpOE__P3_7_G1_net;
+	wire [0:0] tmpFB_0__P3_7_G1_net;
+	wire [0:0] tmpIO_0__P3_7_G1_net;
+	wire [0:0] tmpINTERRUPT_0__P3_7_G1_net;
+	electrical [0:0] tmpSIOVREF__P3_7_G1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("072c43bd-b004-4237-9373-665572e73a21"),
@@ -1670,13 +1662,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P0_5_G1
-		 (.oe(tmpOE__P0_5_G1_net),
+		P3_7_G1
+		 (.oe(tmpOE__P3_7_G1_net),
 		  .y({Net_7606}),
-		  .fb({tmpFB_0__P0_5_G1_net[0:0]}),
-		  .io({tmpIO_0__P0_5_G1_net[0:0]}),
-		  .siovref(tmpSIOVREF__P0_5_G1_net),
-		  .interrupt({tmpINTERRUPT_0__P0_5_G1_net[0:0]}),
+		  .fb({tmpFB_0__P3_7_G1_net[0:0]}),
+		  .io({tmpIO_0__P3_7_G1_net[0:0]}),
+		  .siovref(tmpSIOVREF__P3_7_G1_net),
+		  .interrupt({tmpINTERRUPT_0__P3_7_G1_net[0:0]}),
 		  .annotation({Net_7869}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
@@ -1685,13 +1677,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P0_5_G1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P3_7_G1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__P0_0_G2_net;
-	wire [0:0] tmpFB_0__P0_0_G2_net;
-	wire [0:0] tmpIO_0__P0_0_G2_net;
-	wire [0:0] tmpINTERRUPT_0__P0_0_G2_net;
-	electrical [0:0] tmpSIOVREF__P0_0_G2_net;
+	wire [0:0] tmpOE__P1_0_G2_net;
+	wire [0:0] tmpFB_0__P1_0_G2_net;
+	wire [0:0] tmpIO_0__P1_0_G2_net;
+	wire [0:0] tmpINTERRUPT_0__P1_0_G2_net;
+	electrical [0:0] tmpSIOVREF__P1_0_G2_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("5b353b43-9cea-4258-a34f-292bc4eb90fa"),
@@ -1740,13 +1732,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P0_0_G2
-		 (.oe(tmpOE__P0_0_G2_net),
+		P1_0_G2
+		 (.oe(tmpOE__P1_0_G2_net),
 		  .y({Net_7607}),
-		  .fb({tmpFB_0__P0_0_G2_net[0:0]}),
-		  .io({tmpIO_0__P0_0_G2_net[0:0]}),
-		  .siovref(tmpSIOVREF__P0_0_G2_net),
-		  .interrupt({tmpINTERRUPT_0__P0_0_G2_net[0:0]}),
+		  .fb({tmpFB_0__P1_0_G2_net[0:0]}),
+		  .io({tmpIO_0__P1_0_G2_net[0:0]}),
+		  .siovref(tmpSIOVREF__P1_0_G2_net),
+		  .interrupt({tmpINTERRUPT_0__P1_0_G2_net[0:0]}),
 		  .annotation({Net_15}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
@@ -1755,13 +1747,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P0_0_G2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P1_0_G2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__P0_7_B1_net;
-	wire [0:0] tmpFB_0__P0_7_B1_net;
-	wire [0:0] tmpIO_0__P0_7_B1_net;
-	wire [0:0] tmpINTERRUPT_0__P0_7_B1_net;
-	electrical [0:0] tmpSIOVREF__P0_7_B1_net;
+	wire [0:0] tmpOE__P0_0_B1_net;
+	wire [0:0] tmpFB_0__P0_0_B1_net;
+	wire [0:0] tmpIO_0__P0_0_B1_net;
+	wire [0:0] tmpINTERRUPT_0__P0_0_B1_net;
+	electrical [0:0] tmpSIOVREF__P0_0_B1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("b50cefd4-3de6-4318-987d-b8598618ffd5"),
@@ -1810,13 +1802,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P0_7_B1
-		 (.oe(tmpOE__P0_7_B1_net),
+		P0_0_B1
+		 (.oe(tmpOE__P0_0_B1_net),
 		  .y({Net_7608}),
-		  .fb({tmpFB_0__P0_7_B1_net[0:0]}),
-		  .io({tmpIO_0__P0_7_B1_net[0:0]}),
-		  .siovref(tmpSIOVREF__P0_7_B1_net),
-		  .interrupt({tmpINTERRUPT_0__P0_7_B1_net[0:0]}),
+		  .fb({tmpFB_0__P0_0_B1_net[0:0]}),
+		  .io({tmpIO_0__P0_0_B1_net[0:0]}),
+		  .siovref(tmpSIOVREF__P0_0_B1_net),
+		  .interrupt({tmpINTERRUPT_0__P0_0_B1_net[0:0]}),
 		  .annotation({Net_13}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
@@ -1825,13 +1817,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P0_7_B1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P0_0_B1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__P3_7_R2_net;
-	wire [0:0] tmpFB_0__P3_7_R2_net;
-	wire [0:0] tmpIO_0__P3_7_R2_net;
-	wire [0:0] tmpINTERRUPT_0__P3_7_R2_net;
-	electrical [0:0] tmpSIOVREF__P3_7_R2_net;
+	wire [0:0] tmpOE__P3_5_R2_net;
+	wire [0:0] tmpFB_0__P3_5_R2_net;
+	wire [0:0] tmpIO_0__P3_5_R2_net;
+	wire [0:0] tmpINTERRUPT_0__P3_5_R2_net;
+	electrical [0:0] tmpSIOVREF__P3_5_R2_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("198ebeb7-39f0-499a-9fa5-ec6022a797d6"),
@@ -1880,13 +1872,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P3_7_R2
-		 (.oe(tmpOE__P3_7_R2_net),
+		P3_5_R2
+		 (.oe(tmpOE__P3_5_R2_net),
 		  .y({Net_7609}),
-		  .fb({tmpFB_0__P3_7_R2_net[0:0]}),
-		  .io({tmpIO_0__P3_7_R2_net[0:0]}),
-		  .siovref(tmpSIOVREF__P3_7_R2_net),
-		  .interrupt({tmpINTERRUPT_0__P3_7_R2_net[0:0]}),
+		  .fb({tmpFB_0__P3_5_R2_net[0:0]}),
+		  .io({tmpIO_0__P3_5_R2_net[0:0]}),
+		  .siovref(tmpSIOVREF__P3_5_R2_net),
+		  .interrupt({tmpINTERRUPT_0__P3_5_R2_net[0:0]}),
 		  .annotation({Net_7715}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
@@ -1895,7 +1887,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P3_7_R2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P3_5_R2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 	wire [0:0] tmpOE__P1_3_done_net;
 	wire [0:0] tmpFB_0__P1_3_done_net;
@@ -2007,17 +1999,25 @@ module top ;
     defparam LED_Matrix_1.D0_init_a = 0;
     defparam LED_Matrix_1.D1_init_a = 0;
 
-	wire [0:0] tmpOE__P2_0_ADC0_net;
-	wire [0:0] tmpFB_0__P2_0_ADC0_net;
-	wire [0:0] tmpIO_0__P2_0_ADC0_net;
-	wire [0:0] tmpINTERRUPT_0__P2_0_ADC0_net;
-	electrical [0:0] tmpSIOVREF__P2_0_ADC0_net;
+    ADC_SAR_SEQ_P4_v1_10_2 ADC (
+        .Vref(Net_8026),
+        .sdone(Net_8027),
+        .eoc(Net_8028),
+        .aclk(1'b0),
+        .soc(1'b0),
+        .vinPlus0(Net_8015));
+
+	wire [0:0] tmpOE__ADC_P2_0_net;
+	wire [0:0] tmpFB_0__ADC_P2_0_net;
+	wire [0:0] tmpIO_0__ADC_P2_0_net;
+	wire [0:0] tmpINTERRUPT_0__ADC_P2_0_net;
+	electrical [0:0] tmpSIOVREF__ADC_P2_0_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("05a9c8de-3ba2-4909-8250-95fdc61c0bf4"),
 		  .drive_mode(3'b000),
 		  .ibuf_enabled(1'b0),
-		  .init_dr_st(1'b1),
+		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -2060,14 +2060,14 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b10),
 		  .width(1))
-		P2_0_ADC0
-		 (.oe(tmpOE__P2_0_ADC0_net),
+		ADC_P2_0
+		 (.oe(tmpOE__ADC_P2_0_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__P2_0_ADC0_net[0:0]}),
-		  .analog({Net_7897}),
-		  .io({tmpIO_0__P2_0_ADC0_net[0:0]}),
-		  .siovref(tmpSIOVREF__P2_0_ADC0_net),
-		  .interrupt({tmpINTERRUPT_0__P2_0_ADC0_net[0:0]}),
+		  .fb({tmpFB_0__ADC_P2_0_net[0:0]}),
+		  .analog({Net_8015}),
+		  .io({tmpIO_0__ADC_P2_0_net[0:0]}),
+		  .siovref(tmpSIOVREF__ADC_P2_0_net),
+		  .interrupt({tmpINTERRUPT_0__ADC_P2_0_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2075,7 +2075,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P2_0_ADC0_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__ADC_P2_0_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 

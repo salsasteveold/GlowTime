@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
   30:.\Generated_Source\PSoC4/cyPm.c **** *  its main clock can be removed. It is identical to Active from a peripheral
   31:.\Generated_Source\PSoC4/cyPm.c **** *  point of view. Any enabled interrupts can cause wakeup from a Sleep mode.
   32:.\Generated_Source\PSoC4/cyPm.c **** *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/cyPm.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
   59              	.LFE0:
   60              		.size	CySysPmSleep, .-CySysPmSleep
   61              		.section	.text.CySysPmDeepSleep,"ax",%progbits
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 3
 
 
   62              		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
   87:.\Generated_Source\PSoC4/cyPm.c ****         /* Device enters DeepSleep mode when CPU asserts SLEEPDEEP signal */
   88:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_CONTROL_REG &= (uint32) (~CY_PM_PWR_CONTROL_HIBERNATE);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 4
 
 
   84 0008 0E4B     		ldr	r3, .L5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  103:.\Generated_Source\PSoC4/cyPm.c ****     #endif /* (CY_PSOC4A) */
  104:.\Generated_Source\PSoC4/cyPm.c **** 
  105:.\Generated_Source\PSoC4/cyPm.c ****     /* Sleep and wait for interrupt */
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 5
 
 
  106:.\Generated_Source\PSoC4/cyPm.c ****     CY_PM_WFI;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  120:.\Generated_Source\PSoC4/cyPm.c ****     * Function Name: CySysPmHibernate
  121:.\Generated_Source\PSoC4/cyPm.c ****     ********************************************************************************
  122:.\Generated_Source\PSoC4/cyPm.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 6
 
 
  123:.\Generated_Source\PSoC4/cyPm.c ****     * Summary:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  160:.\Generated_Source\PSoC4/cyPm.c ****         /* Adjust delay to wait for references to settle on wakeup from hibernate */
  161:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_KEY_DELAY_REG = CY_SFLASH_HIB_KEY_DELAY_REG;
  176              		.loc 1 161 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 7
 
 
  177 0012 0B4B     		ldr	r3, .L8+4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  211              	.L8:
  212 003c 00000B40 		.word	1074462720
  213 0040 50F1FF0F 		.word	268431696
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 8
 
 
  214 0044 0C000B40 		.word	1074462732
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  221:.\Generated_Source\PSoC4/cyPm.c ****                             CY_PM_PWR_STOP_TOKEN_STOP | CY_PM_PWR_STOP_STOP;
  222:.\Generated_Source\PSoC4/cyPm.c **** 
  223:.\Generated_Source\PSoC4/cyPm.c ****         /* Depending on the clock frequency and internal timing delays,
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 9
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 9
 
 
  224:.\Generated_Source\PSoC4/cyPm.c ****          * the final AHB transaction may or may not complete. To guard against
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  240              	.LVL12:
  266:.\Generated_Source\PSoC4/cyPm.c **** 
  267:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_STOP_REG = (CY_PM_STOP_WAKEUP_ACTIVE_LOW != polarity) ?
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 10
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 10
 
 
  268:.\Generated_Source\PSoC4/cyPm.c ****                             (CY_PM_PWR_STOP_REG | CY_PM_PWR_STOP_POLARITY) :
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  285              		.type	CySysPmGetResetReason, %function
  286              	CySysPmGetResetReason:
  287              	.LFB5:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 11
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 11
 
 
  273:.\Generated_Source\PSoC4/cyPm.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  302:.\Generated_Source\PSoC4/cyPm.c ****         case CY_PM_PWR_STOP_TOKEN_XRES:
  303:.\Generated_Source\PSoC4/cyPm.c ****             reason = CY_PM_RESET_REASON_XRES;
  304:.\Generated_Source\PSoC4/cyPm.c ****             break;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 12
 
 
  305:.\Generated_Source\PSoC4/cyPm.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  325:.\Generated_Source\PSoC4/cyPm.c ****     /*******************************************************************************
  326:.\Generated_Source\PSoC4/cyPm.c ****     * Function Name: CySysPmFreezeIo
  327:.\Generated_Source\PSoC4/cyPm.c ****     ********************************************************************************
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 13
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 13
 
 
  328:.\Generated_Source\PSoC4/cyPm.c ****     *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  364 0012 0948     		ldr	r0, .L27+4
  365              	.LVL23:
  356:.\Generated_Source\PSoC4/cyPm.c ****             CY_PM_PWR_STOP_REG = CY_PM_PWR_STOP_STOP | CY_PM_PWR_STOP_FREEZE | CY_PM_PWR_STOP_UNLOC
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 14
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 14
 
 
  366              		.loc 1 356 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  408              		.loc 1 213 0
  409              		.cfi_startproc
  410 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 15
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 15
 
 
  411              	.LCFI7:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  454              	.L30:
  455 0020 2C000B40 		.word	1074462764
  456 0024 00FFFF7F 		.word	2147483392
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 16
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 16
 
 
  457 0028 F2000080 		.word	-2147483406
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  482 0006 094C     		ldr	r4, .L33
  483 0008 094D     		ldr	r5, .L33+4
  484 000a 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 17
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 17
 
 
  395:.\Generated_Source\PSoC4/cyPm.c ****         CY_PM_PWR_STOP_REG = CY_PM_PWR_STOP_UNLOCK |
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  526              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
  527              		.section	.debug_info,"",%progbits
  528              	.Ldebug_info0:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 18
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 18
 
 
  529 0000 47030000 		.4byte	0x347
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  583 0070 B0000000 		.4byte	.LASF9
  584 0074 02       		.byte	0x2
  585 0075 5B       		.byte	0x5b
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 19
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 19
 
 
  586 0076 30000000 		.4byte	0x30
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  640 00eb 01       		.byte	0x1
  641 00ec 2A       		.byte	0x2a
  642 00ed 6F000000 		.4byte	0x6f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 20
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 20
 
 
  643 00f1 20000000 		.4byte	.LLST1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  697 016c 00       		.byte	0
  698 016d 06       		.uleb128 0x6
  699 016e 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 21
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 21
 
 
  700 016f 53000000 		.4byte	.LASF22
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  754 01f9 85010000 		.4byte	.LASF34
  755 01fd 01       		.byte	0x1
  756 01fe 2701     		.2byte	0x127
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 22
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 22
 
 
  757 0200 01       		.byte	0x1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  811 027e 00       		.byte	0
  812 027f 06       		.uleb128 0x6
  813 0280 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 23
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 23
 
 
  814 0281 F1000000 		.4byte	.LASF26
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  868 0301 00       		.sleb128 0
  869 0302 00       		.byte	0
  870 0303 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 24
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 24
 
 
  871 0304 10       		.uleb128 0x10
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  925 000b 55       		.uleb128 0x55
  926 000c 06       		.uleb128 0x6
  927 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 25
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 25
 
 
  928 000e 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  982 0044 03       		.uleb128 0x3
  983 0045 0E       		.uleb128 0xe
  984 0046 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 26
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 26
 
 
  985 0047 0B       		.uleb128 0xb
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1039 0084 00       		.byte	0
  1040 0085 02       		.uleb128 0x2
  1041 0086 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 27
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 27
 
 
  1042 0087 9142     		.uleb128 0x2111
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1096 00c1 34       		.uleb128 0x34
  1097 00c2 00       		.byte	0
  1098 00c3 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 28
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 28
 
 
  1099 00c4 0E       		.uleb128 0xe
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1153 00fb 0C       		.uleb128 0xc
  1154 00fc 00       		.byte	0
  1155 00fd 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 29
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 29
 
 
  1156 00fe 11       		.uleb128 0x11
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1210 0014 0200     		.2byte	0x2
  1211 0016 7D       		.byte	0x7d
  1212 0017 08       		.sleb128 8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 30
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 30
 
 
  1213 0018 00000000 		.4byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1267 00a6 7D       		.byte	0x7d
  1268 00a7 00       		.sleb128 0
  1269 00a8 02000000 		.4byte	.LCFI3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 31
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 31
 
 
  1270 00ac 50000000 		.4byte	.LFE2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1324 0130 00000000 		.4byte	0
  1325              	.LLST9:
  1326 0134 08000000 		.4byte	.LVL12
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 32
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 32
 
 
  1327 0138 1B000000 		.4byte	.LVL14-1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1381 01c0 10       		.sleb128 16
  1382 01c1 00000000 		.4byte	0
  1383 01c5 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 33
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 33
 
 
  1384              	.LLST13:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1438 000c 0000     		.2byte	0
  1439 000e 0000     		.2byte	0
  1440 0010 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 34
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 34
 
 
  1441 0014 1C000000 		.4byte	.LFE0-.LFB0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1486      3200
  1487              	.LASF23:
  1488 001a 43795379 		.ascii	"CySysPmSetWakeupPolarity\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 35
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 35
 
 
  1488      73506D53 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1508      6F63756D 
  1509 00e3 5F4D6174 		.ascii	"_Matrix.cydsn\000"
  1509      7269782E 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 36
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 36
 
 
  1509      63796473 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1533      65745265 
  1533      73657452 
  1533      6561736F 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 37
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 37
 
 
  1534              	.LASF17:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 1
  1556      73506D46 
  1556      7265657A 
  1556      65496F00 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccucCOLs.s 			page 38
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccW7ddvY.s 			page 38
 
 
  1557              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

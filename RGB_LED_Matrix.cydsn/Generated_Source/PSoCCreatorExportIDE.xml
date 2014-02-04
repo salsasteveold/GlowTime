@@ -57,6 +57,21 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cydisabledsheets.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CR_Addr.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CR_Addr.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_R1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_R1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_R1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_G1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_G1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_G1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_0_G2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_0_G2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_0_G2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_B1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_B1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_B1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_5_R2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_5_R2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_5_R2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_2.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_2.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_Matrix_1.h</File>
@@ -88,21 +103,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_4_LAT.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_4_LAT.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_4_LAT_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_4_R1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_4_R1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_4_R1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_5_G1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_5_G1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_5_G1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_G2.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_G2.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_0_G2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_B1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_B1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_B1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_R2.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_R2.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_7_R2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_3_done.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_3_done.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P1_3_done_aliases.h</File>
@@ -110,9 +110,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P2_0_ADC0.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P2_0_ADC0.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P2_0_ADC0_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_intClock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_intClock.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_IRQ.c</File>
@@ -129,6 +126,9 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_0_B2.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_0_B2.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P3_0_B2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

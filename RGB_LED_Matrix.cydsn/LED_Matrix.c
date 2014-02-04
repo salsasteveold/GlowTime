@@ -389,31 +389,117 @@ void drawA(int8 x0, int8 y0,RGB c, color *matrix)
 
 void drawB(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	
+	drawFastHLine(x0+1,y0+5,3,c,matrix);
+	drawFastVLine(x0,y0,12,c,matrix);
+	drawFastVLine(x0+4,y0+1,4,c,matrix);
+	drawFastVLine(x0+4,y0+6,5,c,matrix);
+	drawFastHLine(x0+1,y0,3,c,matrix);
+	drawFastHLine(x0+1,y0+11,3,c,matrix);
 }
-/*
+
 void drawC(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	
+	drawFastVLine(x0,y0+2,8,c,matrix);
+	drawFastHLine(x0+2,y0,3,c,matrix);
+	drawFastHLine(x0+2,y0+11,3,c,matrix);
+	//drawPixel(x0+4,y0+1,c,matrix);
+	//drawPixel(x0+4,y0+10,c,matrix);
+	drawPixel(x0+1,y0+1,c,matrix);
+	drawPixel(x0+1,y0+10,c,matrix);
 }
 
 void drawD(int8 x0, int8 y0,RGB c, color *matrix)
 {
-
+	drawFastHLine(x0+1,y0,3,c,matrix);
+	drawFastVLine(x0,y0,12,c,matrix);
+	drawFastHLine(x0+1,y0+11,3,c,matrix);
+	drawFastVLine(x0+4,y0+1,10,c,matrix);
+	
 }
 
 void drawE(int8 x0, int8 y0,RGB c, color *matrix)
 {
-
+	drawFastHLine(x0+1,y0,4,c,matrix);
+	drawFastVLine(x0,y0,12,c,matrix);
+	drawFastHLine(x0+1,y0+11,4,c,matrix);
+	drawFastHLine(x0+1,y0+5,4,c,matrix);
 }
 
 void drawF(int8 x0, int8 y0,RGB c, color *matrix)
 {
-
+	drawFastHLine(x0+1,y0,4,c,matrix);
+	drawFastVLine(x0,y0,12,c,matrix);
+	drawFastHLine(x0+1,y0+5,4,c,matrix);
 }
-void printHex(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
+
+void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
 {
-	NULL;
-}*/
+	uint8 tokens[4]={0,0,0,0};	
+	tokens[3] = 0x000F & num;
+	tokens[2] = 0x000F & num>>4;
+	tokens[1] = 0x000F & num>>8;
+	tokens[0] = 0x000F & num>>12;
+	
+	drawHex(tokens[0],3, 2,c, matrix);
+	drawHex(tokens[1],9, 2,c, matrix);
+	drawHex(tokens[2],15, 2,c, matrix);
+	drawHex(tokens[3],21, 2,c, matrix);
+}
+
+void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)
+{
+	switch (num) 
+	{
+		case 0x1:
+		  drawOne(x0,y0,c,matrix);
+		  break;
+		case 0x2:
+		  drawTwo(x0,y0,c,matrix);
+		  break;
+		case 0x3:
+		  drawThree(x0,y0,c,matrix);
+		  break;
+		case 0x4:
+		  drawFour(x0,y0,c,matrix);
+		  break;
+		case 0x5:
+		  drawFive(x0,y0,c,matrix);
+		  break;
+		case 0x6:
+		  drawSix(x0,y0,c,matrix);
+		  break;
+		case 0x7:
+		  drawSeven(x0,y0,c,matrix);
+		  break;
+		case 0x8:
+		  drawEight(x0,y0,c,matrix);
+		  break;
+		case 0x9:
+		  drawNine(x0,y0,c,matrix);
+		  break;
+		case 0xA:
+		  drawA(x0,y0,c,matrix);
+		  break;
+		case 0xB:
+		  drawB(x0,y0,c,matrix);
+		  break;
+		case 0xC:
+		  drawC(x0,y0,c,matrix);
+		  break;
+		case 0xD:
+		  drawD(x0,y0,c,matrix);
+		  break;
+		case 0xE:
+		  drawE(x0,y0,c,matrix);
+		  break;
+		case 0xF:
+		  drawF(x0,y0,c,matrix);
+		  break;
+		default:
+		  drawZero(x0,y0,c,matrix);
+		  break;
+	}	
+}
+
 
 /* [] END OF FILE */

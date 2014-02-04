@@ -204,8 +204,8 @@ void main()
 	
 	LED_Matrix_1_Start();
     //UART_Start();
-	ADC_Start();
-	//ADC_StartConvert(); 
+    ADC_Start();
+	
 	
 	/* Enable Component */
 	LED_Matrix_1_WriteControl(0x03);
@@ -221,22 +221,27 @@ void main()
 	num.r = 0;
 	num.g = 0;
 	num.b = 31;
-	/*uint16 result;
-	float32 ADCVoltage;
-	ADC_StartConvert();
-	ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);*/
+	uint16 result = 0x0000;
+	
 	
 	for(;;)
     { 	
-		
-		/*result = ADC_GetResult16(0);
-		ADCVoltage = ADC_CountsTo_Volts(0,result);*/
-		
-		drawA(3,2,num,matrix);
-		drawZero(9,2,num, matrix);
-		drawColon(15,2,num,matrix);
-		drawSix(17,2,c,matrix);
-		drawNine(23,2,c,matrix);
+		ADC_StartConvert();
+		ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
+		result = ADC_GetResult16(0);
+		if((result & 0xFF00) == 0xFF00)
+		{
+			result = 0;
+		}
+		//ADCVoltage = ADC_CountsTo_Volts(0,result);*/
+		//drawF(3,2,num,matrix);
+		//drawC(9,2,num, matrix);
+		///drawColon(15,2,num,matrix);
+		//drawD(17,2,c,matrix);
+		//drawE(23,2,c,matrix);
+		clearScreen(matrix);
+		printHexString(result,23, 2,c,matrix);
+		//CyDelayUs(10);
 		//UART_UartPutCRLF()
 	}
 

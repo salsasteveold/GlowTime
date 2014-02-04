@@ -81,14 +81,14 @@ void drawEight(int8 x0, int8 y0,RGB c, color *matrix);
 void drawNine(int8 x0, int8 y0,RGB c, color *matrix);
 void drawZero(int8 x0, int8 y0,RGB c, color *matrix);
 void drawA(int8 x0, int8 y0,RGB c, color *matrix);
-/*
 void drawB(int8 x0, int8 y0,RGB c, color *matrix);
 void drawC(int8 x0, int8 y0,RGB c, color *matrix);
 void drawD(int8 x0, int8 y0,RGB c, color *matrix);
 void drawE(int8 x0, int8 y0,RGB c, color *matrix);
 void drawF(int8 x0, int8 y0,RGB c, color *matrix);
-*/
-void printHex(uint16 num,int8 x0, int8 y0,RGB c, color *matrix);
+
+void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix);
+void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix);
 
 
 //[] END OF FILE
