@@ -1,5 +1,5 @@
 -- Project:   RGB_LED_Matrix
--- Generated: 02/04/2014 09:36:09
+-- Generated: 02/04/2014 23:48:04
 -- 
 
 ENTITY RGB_LED_Matrix IS
@@ -34,24 +34,24 @@ ARCHITECTURE __DEFAULT__ OF RGB_LED_Matrix IS
     SIGNAL Net_7152 : bit;
     SIGNAL Net_7153 : bit;
     SIGNAL Net_7537 : bit;
-    ATTRIBUTE placement_force OF Net_7537 : SIGNAL IS "U(0,1,B)2";
+    ATTRIBUTE placement_force OF Net_7537 : SIGNAL IS "U(1,1,A)0";
     SIGNAL Net_7538 : bit;
     SIGNAL Net_7548 : bit;
-    ATTRIBUTE placement_force OF Net_7548 : SIGNAL IS "U(0,1,B)1";
+    ATTRIBUTE placement_force OF Net_7548 : SIGNAL IS "U(1,1,B)1";
     SIGNAL Net_7605 : bit;
-    ATTRIBUTE placement_force OF Net_7605 : SIGNAL IS "U(1,1,B)1";
+    ATTRIBUTE placement_force OF Net_7605 : SIGNAL IS "U(1,1,B)3";
     SIGNAL Net_7606 : bit;
-    ATTRIBUTE placement_force OF Net_7606 : SIGNAL IS "U(0,1,B)3";
+    ATTRIBUTE placement_force OF Net_7606 : SIGNAL IS "U(1,1,A)1";
     SIGNAL Net_7607 : bit;
-    ATTRIBUTE placement_force OF Net_7607 : SIGNAL IS "U(1,1,B)2";
+    ATTRIBUTE placement_force OF Net_7607 : SIGNAL IS "U(1,1,B)0";
     SIGNAL Net_7608 : bit;
-    ATTRIBUTE placement_force OF Net_7608 : SIGNAL IS "U(1,1,B)0";
+    ATTRIBUTE placement_force OF Net_7608 : SIGNAL IS "U(1,1,A)2";
     SIGNAL Net_7609 : bit;
-    ATTRIBUTE placement_force OF Net_7609 : SIGNAL IS "U(1,0,B)1";
+    ATTRIBUTE placement_force OF Net_7609 : SIGNAL IS "U(1,0,B)2";
     SIGNAL Net_7639 : bit;
     ATTRIBUTE placement_force OF Net_7639 : SIGNAL IS "U(1,0,A)0";
-    SIGNAL Net_8027 : bit;
-    SIGNAL Net_8028 : bit;
+    SIGNAL Net_8032 : bit;
+    SIGNAL Net_8033 : bit;
     SIGNAL P0_0_B1(0)__PA : bit;
     SIGNAL P0_6_OE(0)__PA : bit;
     SIGNAL P0_7_R1(0)__PA : bit;
@@ -105,11 +105,11 @@ ARCHITECTURE __DEFAULT__ OF RGB_LED_Matrix IS
     SIGNAL \LED_Matrix_1:control_1_6\ : bit;
     SIGNAL \LED_Matrix_1:control_1_7\ : bit;
     SIGNAL \LED_Matrix_1:count8_0\ : bit;
-    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_0\ : SIGNAL IS "U(0,1,B)0";
+    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_0\ : SIGNAL IS "U(1,0,B)1";
     SIGNAL \LED_Matrix_1:count8_1\ : bit;
-    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_1\ : SIGNAL IS "U(1,0,B)2";
+    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_1\ : SIGNAL IS "U(1,1,A)3";
     SIGNAL \LED_Matrix_1:count8_2\ : bit;
-    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_2\ : SIGNAL IS "U(1,1,B)3";
+    ATTRIBUTE placement_force OF \LED_Matrix_1:count8_2\ : SIGNAL IS "U(1,1,B)2";
     SIGNAL \LED_Matrix_1:f1_empty\ : bit;
     SIGNAL \LED_Matrix_1:f1_notfull\ : bit;
     SIGNAL \LED_Matrix_1:so_0\ : bit;
@@ -130,13 +130,13 @@ ARCHITECTURE __DEFAULT__ OF RGB_LED_Matrix IS
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE lib_model OF Net_7537 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_7537 : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF Net_7537 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_7548 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_7548 : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF Net_7548 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_7605 : LABEL IS "macrocell3";
     ATTRIBUTE Location OF Net_7605 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_7606 : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF Net_7606 : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF Net_7606 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_7607 : LABEL IS "macrocell5";
     ATTRIBUTE Location OF Net_7607 : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF Net_7608 : LABEL IS "macrocell6";
@@ -184,18 +184,19 @@ ARCHITECTURE __DEFAULT__ OF RGB_LED_Matrix IS
     ATTRIBUTE lib_model OF \LED_Matrix_1:State_2\ : LABEL IS "macrocell11";
     ATTRIBUTE Location OF \LED_Matrix_1:State_2\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:count8_0\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \LED_Matrix_1:count8_0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \LED_Matrix_1:count8_0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:count8_1\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \LED_Matrix_1:count8_1\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \LED_Matrix_1:count8_1\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:count8_2\ : LABEL IS "macrocell14";
     ATTRIBUTE Location OF \LED_Matrix_1:count8_2\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:datapath_0:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE Location OF \LED_Matrix_1:datapath_0:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:datapath_1:u0\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \LED_Matrix_1:datapath_1:u0\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \LED_Matrix_1:datapath_1:u0\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \LED_Matrix_1:datapath_2:u0\ : LABEL IS "datapathcell3";
-    ATTRIBUTE Location OF \LED_Matrix_1:datapath_2:u0\ : LABEL IS "U(1,1)";
-    ATTRIBUTE Location OF isr_2 : LABEL IS "[IntrHod=(0)][IntrId=(0)]";
+    ATTRIBUTE Location OF \LED_Matrix_1:datapath_2:u0\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF eoc : LABEL IS "[IntrHod=(0)][IntrId=(0)]";
+    ATTRIBUTE Location OF isr_2 : LABEL IS "[IntrHod=(0)][IntrId=(2)]";
     ATTRIBUTE lib_model OF lat : LABEL IS "macrocell15";
     ATTRIBUTE Location OF lat : LABEL IS "U(1,0)";
     COMPONENT abufcell
@@ -2464,7 +2465,7 @@ BEGIN
             cy_registers => "")
         PORT MAP(
             clock => \ADC:Net_17_ff7\,
-            sample_done => Net_8027,
+            sample_done => Net_8032,
             chan_id_valid => \ADC:Net_2269\,
             chan_id_3 => \ADC:Net_2270_3\,
             chan_id_2 => \ADC:Net_2270_2\,
@@ -2483,7 +2484,7 @@ BEGIN
             data_2 => \ADC:Net_2272_2\,
             data_1 => \ADC:Net_2272_1\,
             data_0 => \ADC:Net_2272_0\,
-            eos_intr => Net_8028,
+            eos_intr => Net_8033,
             irq => \ADC:Net_2273\,
             sw_negvref => open,
             cfg_st_sel_1 => open,
@@ -2715,6 +2716,13 @@ BEGIN
             so_comb => \LED_Matrix_1:so_2\,
             clk_en => \LED_Matrix_1:control_1_0\,
             busclk => ClockBlock_HFCLK);
+
+    eoc:interrupt
+        GENERIC MAP(
+            int_type => "00")
+        PORT MAP(
+            interrupt => Net_8033,
+            clock => ClockBlock_HFCLK);
 
     isr_2:interrupt
         GENERIC MAP(

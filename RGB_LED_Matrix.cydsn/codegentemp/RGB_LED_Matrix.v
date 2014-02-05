@@ -1,6 +1,6 @@
 // ======================================================================
 // RGB_LED_Matrix.v generated from TopDesign.cysch
-// 02/04/2014 at 09:36
+// 02/04/2014 at 23:48
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -360,7 +360,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v"
 `endif
 
-// ADC_SAR_SEQ_P4_v1_10(AdcAClock=4, AdcAdjust=0, AdcAlternateResolution=0, AdcAvgMode=1, AdcAvgSamplesNum=0, AdcBClock=4, AdcCClock=4, AdcChannelsEnConf=1, AdcChannelsModeConf=0, AdcClock=1, AdcClockFrequency=5999976, AdcCompareMode=0, AdcDataFormatJustification=0, AdcDClock=4, AdcDifferentialResultFormat=0, AdcHighLimit=4095, AdcInjChannelEnabled=false, AdcInputBufGain=0, AdcLowLimit=0, AdcMaxResolution=12, AdcSampleMode=0, AdcSarMuxChannelConfig=0, AdcSequencedChannels=1, AdcSingleEndedNegativeInput=0, AdcSingleResultFormat=1, AdcSymbolHasSingleEndedInputChannel=false, AdcTotalChannels=1, AdcVrefSelect=1, AdcVrefVoltage_mV=1024, rm_int=false, SeqChannelsConfigTable=<?xml version="1.0" encoding="utf-16"?><CyChannelsConfigTable xmlns:Version="1_10"><m_channelsConfigTable><CyChannelsConfigTableRow><m_enabled>false</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Diff</m_mode><m_averaged>false</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow><CyChannelsConfigTableRow><m_enabled>true</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Single</m_mode><m_averaged>true</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow></m_channelsConfigTable></CyChannelsConfigTable>, CY_COMPONENT_NAME=ADC_SAR_SEQ_P4_v1_10, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=ADC, CY_INSTANCE_SHORT_NAME=ADC, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=ADC, )
+// ADC_SAR_SEQ_P4_v1_10(AdcAClock=6, AdcAdjust=0, AdcAlternateResolution=0, AdcAvgMode=1, AdcAvgSamplesNum=0, AdcBClock=4, AdcCClock=4, AdcChannelsEnConf=1, AdcChannelsModeConf=0, AdcClock=1, AdcClockFrequency=1200000, AdcCompareMode=0, AdcDataFormatJustification=0, AdcDClock=4, AdcDifferentialResultFormat=0, AdcHighLimit=4095, AdcInjChannelEnabled=false, AdcInputBufGain=0, AdcLowLimit=0, AdcMaxResolution=12, AdcSampleMode=0, AdcSarMuxChannelConfig=0, AdcSequencedChannels=1, AdcSingleEndedNegativeInput=0, AdcSingleResultFormat=1, AdcSymbolHasSingleEndedInputChannel=false, AdcTotalChannels=1, AdcVrefSelect=1, AdcVrefVoltage_mV=1650, rm_int=false, SeqChannelsConfigTable=<?xml version="1.0" encoding="utf-16"?><CyChannelsConfigTable xmlns:Version="1_10"><m_channelsConfigTable><CyChannelsConfigTableRow><m_enabled>false</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Diff</m_mode><m_averaged>false</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow><CyChannelsConfigTableRow><m_enabled>true</m_enabled><m_resolution>Twelve</m_resolution><m_mode>Single</m_mode><m_averaged>true</m_averaged><m_acqTime>AClocks</m_acqTime><m_limitsDetectIntrEnabled>false</m_limitsDetectIntrEnabled><m_saturationIntrEnabled>false</m_saturationIntrEnabled></CyChannelsConfigTableRow></m_channelsConfigTable></CyChannelsConfigTable>, CY_COMPONENT_NAME=ADC_SAR_SEQ_P4_v1_10, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=ADC, CY_INSTANCE_SHORT_NAME=ADC, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=ADC, )
 module ADC_SAR_SEQ_P4_v1_10_2 (
     soc,
     aclk,
@@ -512,7 +512,7 @@ module ADC_SAR_SEQ_P4_v1_10_2 (
 		#(.id("c0438d7d-b618-4458-bf19-9d8f78e88f79/a12a1691-924f-48e5-a017-176d592c3b32"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("166667333.336"),
+		  .period("833333333.333333"),
 		  .is_direct(0),
 		  .is_digital(0))
 		intClock
@@ -841,11 +841,11 @@ endmodule
 module top ;
 
     electrical  Net_8015;
-          wire  Net_8030;
-          wire  Net_8029;
-          wire  Net_8028;
-          wire  Net_8027;
-    electrical  Net_8026;
+          wire  Net_8035;
+          wire  Net_8034;
+          wire  Net_8033;
+          wire  Net_8032;
+    electrical  Net_8031;
           wire  Net_7615;
           wire  Net_7614;
           wire  Net_7613;
@@ -871,7 +871,6 @@ module top ;
     electrical  Net_7786;
     electrical  Net_7785;
     electrical  Net_7784;
-    electrical  Net_7783;
     electrical  Net_7796;
     electrical  Net_7781;
     electrical  Net_7780;
@@ -888,8 +887,8 @@ module top ;
     electrical  Net_7769;
     electrical  Net_7768;
     electrical  Net_7767;
-          wire  lat;
     electrical  Net_7766;
+          wire  lat;
     electrical  Net_7765;
     electrical  Net_7764;
     electrical  Net_7763;
@@ -900,8 +899,8 @@ module top ;
     electrical  Net_7758;
     electrical  Net_7757;
     electrical  Net_7756;
-    electrical  done;
     electrical  Net_7755;
+    electrical  done;
     electrical  Net_7754;
     electrical  Net_7753;
     electrical  Net_7752;
@@ -1525,7 +1524,7 @@ module top ;
         .Terminal_11(Net_7781),
         .Terminal_9(Net_7796),
         .Terminal_6(done),
-        .Terminal_8(Net_7783),
+        .Terminal_8(done),
         .Terminal_7(Net_7784),
         .Terminal_5(Net_7785),
         .Terminal_2(Net_7786),
@@ -2000,9 +1999,9 @@ module top ;
     defparam LED_Matrix_1.D1_init_a = 0;
 
     ADC_SAR_SEQ_P4_v1_10_2 ADC (
-        .Vref(Net_8026),
-        .sdone(Net_8027),
-        .eoc(Net_8028),
+        .Vref(Net_8031),
+        .sdone(Net_8032),
+        .eoc(Net_8033),
         .aclk(1'b0),
         .soc(1'b0),
         .vinPlus0(Net_8015));
@@ -2076,6 +2075,13 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__ADC_P2_0_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b00))
+		eoc
+		 (.int_signal(Net_8033));
+
 
 
 

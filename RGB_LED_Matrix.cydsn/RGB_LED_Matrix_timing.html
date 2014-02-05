@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> RGB_LED_Matrix</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 02/04/14 09:36:11</td></tr>
+<td class="proptext"> 02/04/14 23:48:05</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4245AXI-483</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -587,8 +587,8 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">ADC_intClock(FFB)</td>
  <td class = "text_info">ADC_intClock(FFB)</td>
- <td class = "number">6.000&nbsp;MHz</td>
- <td class = "number">6.000&nbsp;MHz</td>
+ <td class = "number">1.200&nbsp;MHz</td>
+ <td class = "number">1.200&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -597,14 +597,14 @@ Clock Summary Section</span>
  <td class = "text_info">CyHFCLK</td>
  <td class = "number">48.000&nbsp;MHz</td>
  <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">74.727&nbsp;MHz</td>
+ <td class = "number">73.335&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
  <td class = "text_info">ADC_intClock</td>
  <td class = "text_info">CyHFCLK</td>
- <td class = "number">6.000&nbsp;MHz</td>
- <td class = "number">6.000&nbsp;MHz</td>
+ <td class = "number">1.200&nbsp;MHz</td>
+ <td class = "number">1.200&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -681,6 +681,69 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 </tr>
 </thead> 
 <tbody>
+<tr> 
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\/cs_addr_0</td>
+ <td class = "number">73.335&nbsp;MHz</td>
+ <td class = "number">13.636</td>
+ <td class = "number">7.197</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\/cs_addr_0</td>
+ <td class = "number">6.086</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.300</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
 <tr> 
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_blk_stat_comb</td>
  <td class = "text_info">Net_7639/main_8</td>
@@ -936,9 +999,9 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">Net_7639/main_4</td>
- <td class = "number">75.443&nbsp;MHz</td>
- <td class = "number">13.255</td>
- <td class = "number">7.578</td>
+ <td class = "number">75.375&nbsp;MHz</td>
+ <td class = "number">13.267</td>
+ <td class = "number">7.566</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -972,7 +1035,7 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\LED_Matrix_1:f1_notfull\</td>
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">Net_7639/main_4</td>
- <td class = "number">2.535</td>
+ <td class = "number">2.547</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell8</td>
@@ -999,9 +1062,9 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">\LED_Matrix_1:State_0\/main_3</td>
- <td class = "number">75.443&nbsp;MHz</td>
- <td class = "number">13.255</td>
- <td class = "number">7.578</td>
+ <td class = "number">75.375&nbsp;MHz</td>
+ <td class = "number">13.267</td>
+ <td class = "number">7.566</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1035,7 +1098,7 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\LED_Matrix_1:f1_notfull\</td>
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">\LED_Matrix_1:State_0\/main_3</td>
- <td class = "number">2.535</td>
+ <td class = "number">2.547</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
@@ -1062,9 +1125,9 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">\LED_Matrix_1:State_1\/main_3</td>
- <td class = "number">75.512&nbsp;MHz</td>
- <td class = "number">13.243</td>
- <td class = "number">7.590</td>
+ <td class = "number">75.438&nbsp;MHz</td>
+ <td class = "number">13.256</td>
+ <td class = "number">7.577</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1098,7 +1161,7 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\LED_Matrix_1:f1_notfull\</td>
  <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/f1_bus_stat_comb</td>
  <td class = "text_info">\LED_Matrix_1:State_1\/main_3</td>
- <td class = "number">2.523</td>
+ <td class = "number">2.536</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
@@ -1123,74 +1186,11 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_0</td>
- <td class = "number">81.846&nbsp;MHz</td>
- <td class = "number">12.218</td>
- <td class = "number">8.615</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_0\</td>
- <td class = "text_info">\LED_Matrix_1:State_0\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_0\</td>
- <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_0</td>
- <td class = "number">4.668</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">6.300</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
  <td class = "text_info">\LED_Matrix_1:State_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_1</td>
- <td class = "number">81.907&nbsp;MHz</td>
- <td class = "number">12.209</td>
- <td class = "number">8.624</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\/cs_addr_1</td>
+ <td class = "number">78.315&nbsp;MHz</td>
+ <td class = "number">12.769</td>
+ <td class = "number">8.064</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1223,14 +1223,14 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "number">1</td>
  <td class = "text_info">\LED_Matrix_1:State_1\</td>
  <td class = "text_info">\LED_Matrix_1:State_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_1</td>
- <td class = "number">4.659</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\/cs_addr_1</td>
+ <td class = "number">5.219</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell3</td>
+ <td class = "text_info">datapathcell2</td>
  <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_1:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">6.300</td>
@@ -1249,11 +1249,11 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_2</td>
- <td class = "number">83.752&nbsp;MHz</td>
- <td class = "number">11.940</td>
- <td class = "number">8.893</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/cs_addr_0</td>
+ <td class = "number">80.103&nbsp;MHz</td>
+ <td class = "number">12.484</td>
+ <td class = "number">8.349</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1272,28 +1272,28 @@ Destination Clock : CyHFCLK : Positive edge(Required Frequency 48&nbsp;MHz)</spa
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell11</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\/cs_addr_2</td>
- <td class = "number">4.390</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_0:u0\/cs_addr_0</td>
+ <td class = "number">4.934</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:datapath_2:u0\</td>
+ <td class = "text_info">\LED_Matrix_1:datapath_0:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">6.300</td>
@@ -1350,7 +1350,7 @@ Destination Clock : CyHFCLK : Positive edge</span>
 <tr> 
  <td class = "text_info">\LED_Matrix_1:count8_2\/q</td>
  <td class = "text_info">\LED_Matrix_1:count8_2\/main_3</td>
- <td class = "number">3.544</td>
+ <td class = "number">3.898</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1384,7 +1384,7 @@ Destination Clock : CyHFCLK : Positive edge</span>
  <td class = "text_info">\LED_Matrix_1:count8_2\</td>
  <td class = "text_info">\LED_Matrix_1:count8_2\/q</td>
  <td class = "text_info">\LED_Matrix_1:count8_2\/main_3</td>
- <td class = "number">2.294</td>
+ <td class = "number">2.648</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
@@ -1410,8 +1410,8 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/main_3</td>
- <td class = "number">4.036</td>
+ <td class = "text_info">Net_7639/main_7</td>
+ <td class = "number">3.928</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1431,143 +1431,21 @@ Destination Clock : CyHFCLK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/main_3</td>
- <td class = "number">2.786</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:count8_2\/main_5</td>
- <td class = "number">4.051</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\</td>
- <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
- <td class = "text_info">\LED_Matrix_1:count8_2\/main_5</td>
- <td class = "number">2.801</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_2\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">Net_7639/main_6</td>
- <td class = "number">4.052</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell13</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">Net_7639/main_6</td>
- <td class = "number">2.802</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">Net_7639/main_7</td>
+ <td class = "number">2.678</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell8</td>
@@ -1592,9 +1470,9 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_0\/main_5</td>
- <td class = "number">4.052</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/main_6</td>
+ <td class = "number">3.928</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1613,22 +1491,22 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell13</td>
+ <td class = "text_info">macrocell12</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_0\/main_5</td>
- <td class = "number">2.802</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:State_0\/main_6</td>
+ <td class = "number">2.678</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
@@ -1653,9 +1531,9 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">lat/main_5</td>
- <td class = "number">4.052</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">lat/main_6</td>
+ <td class = "number">3.928</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1674,22 +1552,22 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell13</td>
+ <td class = "text_info">macrocell12</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">lat/main_5</td>
- <td class = "number">2.802</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">lat/main_6</td>
+ <td class = "number">2.678</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell15</td>
@@ -1714,9 +1592,9 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_1\/main_5</td>
- <td class = "number">4.053</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:State_1\/main_6</td>
+ <td class = "number">3.929</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1735,22 +1613,22 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell13</td>
+ <td class = "text_info">macrocell12</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\</td>
- <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_1\/main_5</td>
- <td class = "number">2.803</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:State_1\/main_6</td>
+ <td class = "number">2.679</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
@@ -1775,9 +1653,70 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/main_3</td>
+ <td class = "number">3.929</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\/main_3</td>
+ <td class = "number">2.679</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:count8_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\/main_3</td>
- <td class = "number">4.053</td>
+ <td class = "number">4.031</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1797,7 +1736,7 @@ Destination Clock : CyHFCLK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
@@ -1806,16 +1745,16 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\/main_3</td>
- <td class = "number">2.803</td>
+ <td class = "number">2.781</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\LED_Matrix_1:count8_1\</td>
  <td class = "text_info"> </td>
@@ -1836,9 +1775,9 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">Net_7609/main_3</td>
- <td class = "number">4.242</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_2\/main_4</td>
+ <td class = "number">4.040</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1857,28 +1796,28 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\/clock_0</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">Net_7609/main_3</td>
- <td class = "number">2.992</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\</td>
+ <td class = "text_info">\LED_Matrix_1:count8_1\/q</td>
+ <td class = "text_info">\LED_Matrix_1:count8_2\/main_4</td>
+ <td class = "number">2.790</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_7609</td>
+ <td class = "text_info">\LED_Matrix_1:count8_2\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -1897,9 +1836,9 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_1\/main_2</td>
- <td class = "number">4.242</td>
+ <td class = "text_info">Net_7639/q</td>
+ <td class = "text_info">Net_7639/main_0</td>
+ <td class = "number">4.423</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1918,28 +1857,89 @@ Destination Clock : CyHFCLK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell11</td>
+ <td class = "text_info">macrocell8</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/clock_0</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
+ <td class = "text_info">Net_7639</td>
+ <td class = "text_info">Net_7639/clock_0</td>
+ <td class = "text_info">Net_7639/q</td>
  <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7639</td>
+ <td class = "text_info">Net_7639/q</td>
+ <td class = "text_info">Net_7639/main_0</td>
+ <td class = "number">3.173</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7639</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\LED_Matrix_1:ControlReg_1\/control_0</td>
+ <td class = "text_info">Net_7537/clk_en</td>
+ <td class = "number">4.670</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\LED_Matrix_1:ControlReg_1\</td>
+ <td class = "text_info">\LED_Matrix_1:ControlReg_1\/busclk</td>
+ <td class = "text_info">\LED_Matrix_1:ControlReg_1\/control_0</td>
+ <td class = "number">2.040</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_2\</td>
- <td class = "text_info">\LED_Matrix_1:State_2\/q</td>
- <td class = "text_info">\LED_Matrix_1:State_1\/main_2</td>
- <td class = "number">2.992</td>
+ <td class = "text_info">\LED_Matrix_1:control_1_0\</td>
+ <td class = "text_info">\LED_Matrix_1:ControlReg_1\/control_0</td>
+ <td class = "text_info">Net_7537/clk_en</td>
+ <td class = "number">2.630</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(1,0)</td>
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\LED_Matrix_1:State_1\</td>
+ <td class = "text_info">Net_7537</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -1991,7 +1991,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_2</td>
  <td class = "text_info">P1_5_C(0)_PAD</td>
- <td class = "number">24.878</td>
+ <td class = "number">24.982</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2024,7 +2024,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7153</td>
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_2</td>
  <td class = "text_info">P1_5_C(0)/pin_input</td>
- <td class = "number">5.818</td>
+ <td class = "number">5.922</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell10</td>
@@ -2060,7 +2060,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">P1_2_A(0)_PAD</td>
- <td class = "number">24.726</td>
+ <td class = "number">24.603</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2093,7 +2093,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7149</td>
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">P1_2_A(0)/pin_input</td>
- <td class = "number">5.916</td>
+ <td class = "number">5.793</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell7</td>
@@ -2129,7 +2129,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">Net_7639/q</td>
  <td class = "text_info">P1_3_done(0)_PAD</td>
- <td class = "number">23.952</td>
+ <td class = "number">24.431</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2162,7 +2162,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7639</td>
  <td class = "text_info">Net_7639/q</td>
  <td class = "text_info">P1_3_done(0)/pin_input</td>
- <td class = "number">6.112</td>
+ <td class = "number">6.591</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell8</td>
@@ -2267,7 +2267,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">P1_1_B(0)_PAD</td>
- <td class = "number">23.348</td>
+ <td class = "number">23.071</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2300,7 +2300,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7152</td>
  <td class = "text_info">\CR_Addr:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">P1_1_B(0)/pin_input</td>
- <td class = "number">5.788</td>
+ <td class = "number">5.511</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell6</td>
@@ -2334,78 +2334,9 @@ CyHFCLK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_7606/q</td>
- <td class = "text_info">P3_7_G1(0)_PAD</td>
- <td class = "number">23.055</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_7606</td>
- <td class = "text_info">Net_7606/clock_0</td>
- <td class = "text_info">Net_7606/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_7606</td>
- <td class = "text_info">Net_7606/q</td>
- <td class = "text_info">P3_7_G1(0)/pin_input</td>
- <td class = "number">6.425</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell14</td>
- <td class = "text_info">P3[7]</td>
- <td class = "number">1</td>
- <td class = "text_info">P3_7_G1(0)</td>
- <td class = "text_info">P3_7_G1(0)/pin_input</td>
- <td class = "text_info">P3_7_G1(0)/pad_out</td>
- <td class = "number">15.380</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">P3_7_G1(0)_PAD</td>
- <td class = "text_info">P3_7_G1(0)/pad_out</td>
- <td class = "text_info">P3_7_G1(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
  <td class = "text_info">Net_7608/q</td>
  <td class = "text_info">P0_0_B1(0)_PAD</td>
- <td class = "number">23.027</td>
+ <td class = "number">22.940</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2438,7 +2369,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7608</td>
  <td class = "text_info">Net_7608/q</td>
  <td class = "text_info">P0_0_B1(0)/pin_input</td>
- <td class = "number">6.247</td>
+ <td class = "number">6.160</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell2</td>
@@ -2472,78 +2403,9 @@ CyHFCLK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_7607/q</td>
- <td class = "text_info">P1_0_G2(0)_PAD</td>
- <td class = "number">22.809</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_7607</td>
- <td class = "text_info">Net_7607/clock_0</td>
- <td class = "text_info">Net_7607/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_7607</td>
- <td class = "text_info">Net_7607/q</td>
- <td class = "text_info">P1_0_G2(0)/pin_input</td>
- <td class = "number">6.439</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell5</td>
- <td class = "text_info">P1[0]</td>
- <td class = "number">1</td>
- <td class = "text_info">P1_0_G2(0)</td>
- <td class = "text_info">P1_0_G2(0)/pin_input</td>
- <td class = "text_info">P1_0_G2(0)/pad_out</td>
- <td class = "number">15.120</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">P1_0_G2(0)_PAD</td>
- <td class = "text_info">P1_0_G2(0)/pad_out</td>
- <td class = "text_info">P1_0_G2(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
  <td class = "text_info">Net_7605/q</td>
  <td class = "text_info">P0_7_R1(0)_PAD</td>
- <td class = "number">22.785</td>
+ <td class = "number">22.838</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2576,7 +2438,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7605</td>
  <td class = "text_info">Net_7605/q</td>
  <td class = "text_info">P0_7_R1(0)/pin_input</td>
- <td class = "number">5.785</td>
+ <td class = "number">5.838</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell4</td>
@@ -2612,7 +2474,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">Net_7548/q</td>
  <td class = "text_info">P3_0_B2(0)_PAD</td>
- <td class = "number">22.733</td>
+ <td class = "number">22.780</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2631,7 +2493,7 @@ CyHFCLK</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_7548</td>
  <td class = "text_info">Net_7548/clock_0</td>
@@ -2645,7 +2507,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7548</td>
  <td class = "text_info">Net_7548/q</td>
  <td class = "text_info">P3_0_B2(0)/pin_input</td>
- <td class = "number">6.403</td>
+ <td class = "number">6.450</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell11</td>
@@ -2679,9 +2541,147 @@ CyHFCLK</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">Net_7607/q</td>
+ <td class = "text_info">P1_0_G2(0)_PAD</td>
+ <td class = "number">22.756</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7607</td>
+ <td class = "text_info">Net_7607/clock_0</td>
+ <td class = "text_info">Net_7607/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7607</td>
+ <td class = "text_info">Net_7607/q</td>
+ <td class = "text_info">P1_0_G2(0)/pin_input</td>
+ <td class = "number">6.386</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell5</td>
+ <td class = "text_info">P1[0]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">P1_0_G2(0)</td>
+ <td class = "text_info">P1_0_G2(0)/pin_input</td>
+ <td class = "text_info">P1_0_G2(0)/pad_out</td>
+ <td class = "number">15.120</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">P1_0_G2(0)_PAD</td>
+ <td class = "text_info">P1_0_G2(0)/pad_out</td>
+ <td class = "text_info">P1_0_G2(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_7606/q</td>
+ <td class = "text_info">P3_7_G1(0)_PAD</td>
+ <td class = "number">22.675</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell4</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7606</td>
+ <td class = "text_info">Net_7606/clock_0</td>
+ <td class = "text_info">Net_7606/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_7606</td>
+ <td class = "text_info">Net_7606/q</td>
+ <td class = "text_info">P3_7_G1(0)/pin_input</td>
+ <td class = "number">6.045</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell14</td>
+ <td class = "text_info">P3[7]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">P3_7_G1(0)</td>
+ <td class = "text_info">P3_7_G1(0)/pin_input</td>
+ <td class = "text_info">P3_7_G1(0)/pad_out</td>
+ <td class = "number">15.380</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">P3_7_G1(0)_PAD</td>
+ <td class = "text_info">P3_7_G1(0)/pad_out</td>
+ <td class = "text_info">P3_7_G1(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">Net_7609/q</td>
  <td class = "text_info">P3_5_R2(0)_PAD</td>
- <td class = "number">22.554</td>
+ <td class = "number">22.531</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2714,7 +2714,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7609</td>
  <td class = "text_info">Net_7609/q</td>
  <td class = "text_info">P3_5_R2(0)/pin_input</td>
- <td class = "number">6.094</td>
+ <td class = "number">6.071</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell13</td>
@@ -2750,7 +2750,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">Net_7537/q</td>
  <td class = "text_info">P3_1_CLK(0)_PAD</td>
- <td class = "number">22.304</td>
+ <td class = "number">22.387</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2769,7 +2769,7 @@ CyHFCLK</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_7537</td>
  <td class = "text_info">Net_7537/clock_0</td>
@@ -2783,7 +2783,7 @@ CyHFCLK</span>
  <td class = "text_info">Net_7537</td>
  <td class = "text_info">Net_7537/q</td>
  <td class = "text_info">P3_1_CLK(0)/pin_input</td>
- <td class = "number">6.404</td>
+ <td class = "number">6.487</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell12</td>
@@ -2819,7 +2819,7 @@ CyHFCLK</span>
 <tr> 
  <td class = "text_info">lat/q</td>
  <td class = "text_info">P1_4_LAT(0)_PAD</td>
- <td class = "number">22.194</td>
+ <td class = "number">21.818</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2852,7 +2852,7 @@ CyHFCLK</span>
  <td class = "text_info">lat</td>
  <td class = "text_info">lat/q</td>
  <td class = "text_info">P1_4_LAT(0)/pin_input</td>
- <td class = "number">6.084</td>
+ <td class = "number">5.708</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell9</td>

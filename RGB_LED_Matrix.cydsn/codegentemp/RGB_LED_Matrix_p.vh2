@@ -1,5 +1,5 @@
 -- Project:   RGB_LED_Matrix
--- Generated: 02/04/2014 09:36:08
+-- Generated: 02/04/2014 23:48:03
 -- 
 
 ENTITY RGB_LED_Matrix IS
@@ -42,8 +42,8 @@ ARCHITECTURE __DEFAULT__ OF RGB_LED_Matrix IS
     SIGNAL Net_7608 : bit;
     SIGNAL Net_7609 : bit;
     SIGNAL Net_7639 : bit;
-    SIGNAL Net_8027 : bit;
-    SIGNAL Net_8028 : bit;
+    SIGNAL Net_8032 : bit;
+    SIGNAL Net_8033 : bit;
     SIGNAL P0_0_B1(0)__PA : bit;
     SIGNAL P0_6_OE(0)__PA : bit;
     SIGNAL P0_7_R1(0)__PA : bit;
@@ -2456,7 +2456,7 @@ BEGIN
             cy_registers => "")
         PORT MAP(
             clock => \ADC:Net_17_ff7\,
-            sample_done => Net_8027,
+            sample_done => Net_8032,
             chan_id_valid => \ADC:Net_2269\,
             chan_id_3 => \ADC:Net_2270_3\,
             chan_id_2 => \ADC:Net_2270_2\,
@@ -2475,7 +2475,7 @@ BEGIN
             data_2 => \ADC:Net_2272_2\,
             data_1 => \ADC:Net_2272_1\,
             data_0 => \ADC:Net_2272_0\,
-            eos_intr => Net_8028,
+            eos_intr => Net_8033,
             irq => \ADC:Net_2273\,
             sw_negvref => open,
             cfg_st_sel_1 => open,
@@ -2725,6 +2725,13 @@ BEGIN
             so_comb => \LED_Matrix_1:so_2\,
             clk_en => \LED_Matrix_1:control_1_0\,
             busclk => ClockBlock_HFCLK);
+
+    eoc:interrupt
+        GENERIC MAP(
+            int_type => "00")
+        PORT MAP(
+            interrupt => Net_8033,
+            clock => ClockBlock_HFCLK);
 
     isr_2:interrupt
         GENERIC MAP(

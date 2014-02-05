@@ -129,6 +129,8 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\eoc.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\eoc.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

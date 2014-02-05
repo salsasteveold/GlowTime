@@ -169,6 +169,15 @@ CY_ISR(FIFO_EMPTY)
 	LED_Matrix_1_F1_REG_0 = (uint8)matrix[3 + (j+8)*4].r[bit_shift];
 }
 
+uint16 result = 0x0000;
+CY_ISR(eoc_isr)
+{
+	result = ADC_GetResult16(0);
+	if((result & 0xFF00) == 0xFF00)
+	{
+		result = 0;
+	}
+}
 
 /*******************************************************************************
 * Function Name: main
@@ -204,7 +213,7 @@ void main()
 	
 	LED_Matrix_1_Start();
     //UART_Start();
-    ADC_Start();
+    
 	
 	
 	/* Enable Component */
@@ -212,6 +221,9 @@ void main()
 
 	/* Start the isr that is triggered everytime the Component finishes writing to the matrix */
 	isr_2_StartEx(FIFO_EMPTY);
+	ADC_Start();
+	eoc_StartEx(eoc_isr);
+	ADC_StartConvert();
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
@@ -221,18 +233,12 @@ void main()
 	num.r = 0;
 	num.g = 0;
 	num.b = 31;
-	uint16 result = 0x0000;
 	
 	
 	for(;;)
     { 	
-		ADC_StartConvert();
-		ADC_IsEndConversion(ADC_WAIT_FOR_RESULT);
-		result = ADC_GetResult16(0);
-		if((result & 0xFF00) == 0xFF00)
-		{
-			result = 0;
-		}
+		
+		
 		//ADCVoltage = ADC_CountsTo_Volts(0,result);*/
 		//drawF(3,2,num,matrix);
 		//drawC(9,2,num, matrix);

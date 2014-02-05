@@ -50,6 +50,7 @@
 #include <ADC.h>
 #include <ADC_P2_0.h>
 #include <ADC_P2_0_aliases.h>
+#include <eoc.h>
 #include <ADC_intClock.h>
 #include <ADC_IRQ.h>
 #include <core_cm0_psoc4.h>

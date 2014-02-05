@@ -14,6 +14,8 @@ Archive member included because of file (symbol)
                               .\CortexM0\ARM_GCC_473\Debug\main.o (ADC_Start)
 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
                               .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o) (ADC_ISR)
+.\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+                              .\CortexM0\ARM_GCC_473\Debug\main.o (eoc_StartEx)
 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
                               .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o) (__aeabi_uidiv)
 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
@@ -48,6 +50,8 @@ c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4
                               c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o) (_global_impure_ptr)
 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
                               c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+                              .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o) (memcpy)
 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
                               c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
 
@@ -228,6 +232,8 @@ Discarded input sections
                 0x00000000       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
  .text.ADC_StopConvert
                 0x00000000       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .text.ADC_IsEndConversion
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
  .text.ADC_SetChanMask
                 0x00000000       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
  .text.ADC_SetLowLimit
@@ -251,6 +257,31 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_Interrupt
+                0x00000000        0x4 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_Stop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_SetVector
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_GetVector
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_Start
+                0x00000000       0x2c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_GetPriority
+                0x00000000       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_Enable
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_GetState
+                0x00000000       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_Disable
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_SetPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .text.eoc_ClearPending
+                0x00000000        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
  .text          0x00000000       0x9c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
@@ -321,6 +352,9 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
@@ -377,7 +411,7 @@ END GROUP
                 0x00003f80                appl2_start = (appl1_start + ALIGN ((((0x8000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
                 0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
 
-.text           0x00000000     0x1576
+.text           0x00000000     0x15e8
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -391,136 +425,143 @@ END GROUP
                 0x00000010                Reset
                 0x00000001                ASSERT ((. != __cy_reset), No reset code)
  *(.psocinit)
- .psocinit      0x00000018      0x274 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .psocinit      0x00000018      0x298 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
                 0x00000018                cyfitter_cfg
-                0x0000028c                . = MAX (., 0x100)
+                0x000002b0                . = MAX (., 0x100)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x0000028c       0x60 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .text          0x000002b0       0x60 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
  .text.FIFO_EMPTY
-                0x000002ec      0x214 .\CortexM0\ARM_GCC_473\Debug\main.o
-                0x000002ec                FIFO_EMPTY
+                0x00000310      0x214 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x00000310                FIFO_EMPTY
+ .text.eoc_isr  0x00000524       0x28 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x00000524                eoc_isr
  .text.startup.main
-                0x00000500       0x7c .\CortexM0\ARM_GCC_473\Debug\main.o
-                0x00000500                main
+                0x0000054c       0x68 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x0000054c                main
  .text.clearPixel
-                0x0000057c       0x78 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000057c                clearPixel
+                0x000005b4       0x78 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x000005b4                clearPixel
  .text.drawPixel
-                0x000005f4       0xe8 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x000005f4                drawPixel
+                0x0000062c       0xe8 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x0000062c                drawPixel
  .text.clearScreen
-                0x000006dc       0x50 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x000006dc                clearScreen
+                0x00000714       0x50 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000714                clearScreen
  .text.drawLine
-                0x0000072c      0x200 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000072c                drawLine
+                0x00000764      0x200 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000764                drawLine
  .text.drawFastVLine
-                0x0000092c       0x28 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000092c                drawFastVLine
+                0x00000964       0x28 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000964                drawFastVLine
  .text.drawFastHLine
-                0x00000954       0x28 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000954                drawFastHLine
- .text.drawOne  0x0000097c       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000097c                drawOne
- .text.drawTwo  0x00000a04       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000a04                drawTwo
+                0x0000098c       0x28 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x0000098c                drawFastHLine
+ .text.drawOne  0x000009b4       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x000009b4                drawOne
+ .text.drawTwo  0x00000a3c       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000a3c                drawTwo
  .text.drawThree
-                0x00000a8c       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000a8c                drawThree
+                0x00000ac4       0x88 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000ac4                drawThree
  .text.drawFour
-                0x00000b14       0x3c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000b14                drawFour
+                0x00000b4c       0x3c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000b4c                drawFour
  .text.drawFive
-                0x00000b50       0x78 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000b50                drawFive
- .text.drawSix  0x00000bc8       0x70 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000bc8                drawSix
+                0x00000b88       0x78 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000b88                drawFive
+ .text.drawSix  0x00000c00       0x70 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000c00                drawSix
  .text.drawSeven
-                0x00000c38       0x3c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000c38                drawSeven
+                0x00000c70       0x3c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000c70                drawSeven
  .text.drawEight
-                0x00000c74       0xa0 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000c74                drawEight
+                0x00000cac       0xa0 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000cac                drawEight
  .text.drawNine
-                0x00000d14       0x60 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000d14                drawNine
+                0x00000d4c       0x60 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000d4c                drawNine
  .text.drawZero
-                0x00000d74       0x64 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000d74                drawZero
- .text.drawA    0x00000dd8       0xb0 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000dd8                drawA
- .text.drawB    0x00000e88       0x90 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000e88                drawB
- .text.drawC    0x00000f18       0x70 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000f18                drawC
- .text.drawD    0x00000f88       0x60 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000f88                drawD
- .text.drawE    0x00000fe8       0x54 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00000fe8                drawE
- .text.drawF    0x0000103c       0x40 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000103c                drawF
- .text.drawHex  0x0000107c       0xf8 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x0000107c                drawHex
+                0x00000dac       0x64 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000dac                drawZero
+ .text.drawA    0x00000e10       0xb0 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000e10                drawA
+ .text.drawB    0x00000ec0       0x90 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000ec0                drawB
+ .text.drawC    0x00000f50       0x70 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000f50                drawC
+ .text.drawD    0x00000fc0       0x60 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000fc0                drawD
+ .text.drawE    0x00001020       0x54 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00001020                drawE
+ .text.drawF    0x00001074       0x40 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00001074                drawF
+ .text.drawHex  0x000010b4       0xf8 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x000010b4                drawHex
  .text.printHexString
-                0x00001174       0x4c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
-                0x00001174                printHexString
+                0x000011ac       0x4c .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x000011ac                printHexString
  .text.IntDefaultHandler
-                0x000011c0        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
-                0x000011c0                IntDefaultHandler
- .text.Start_c  0x000011c4       0xb4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
-                0x000011c4                Start_c
+                0x000011f8        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x000011f8                IntDefaultHandler
+ .text.Start_c  0x000011fc       0xb4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x000011fc                Start_c
  .text.startup.initialize_psoc
-                0x00001278       0x50 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
-                0x00001278                initialize_psoc
+                0x000012b0       0x50 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x000012b0                initialize_psoc
  .text.isr_2_SetPriority
-                0x000012c8       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
-                0x000012c8                isr_2_SetPriority
+                0x00001300       0x28 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+                0x00001300                isr_2_SetPriority
  .text.isr_2_StartEx
-                0x000012e8       0x24 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
-                0x000012e8                isr_2_StartEx
+                0x00001328       0x24 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+                0x00001328                isr_2_StartEx
  .text.LED_Matrix_1_Start
-                0x0000130c        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
-                0x0000130c                LED_Matrix_1_Start
- .text          0x00001318       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
-                0x00001318                CyDelayCycles
-                0x0000132a                CyEnterCriticalSection
-                0x00001332                CyExitCriticalSection
+                0x0000134c        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+                0x0000134c                LED_Matrix_1_Start
+ .text          0x00001358       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
+                0x00001358                CyDelayCycles
+                0x0000136a                CyEnterCriticalSection
+                0x00001372                CyExitCriticalSection
  .text.CyIntSetVector
-                0x00001338       0x18 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
-                0x00001338                CyIntSetVector
+                0x00001378       0x18 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+                0x00001378                CyIntSetVector
  .text.CyIntSetPriority
-                0x00001350       0x40 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
-                0x00001350                CyIntSetPriority
- .text.CyHalt   0x00001390        0x4 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
-                0x00001390                CyHalt
+                0x00001390       0x40 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+                0x00001390                CyIntSetPriority
+ .text.CyHalt   0x000013d0        0x4 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+                0x000013d0                CyHalt
  .text.CyDelayUs
-                0x00001394       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
-                0x00001394                CyDelayUs
+                0x000013d4       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+                0x000013d4                CyDelayUs
  .text.ADC_Init
-                0x000013a8       0xcc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x000013a8                ADC_Init
+                0x000013e8       0xd4 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x000013e8                ADC_Init
  .text.ADC_Enable
-                0x00001474       0x1c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x00001474                ADC_Enable
+                0x000014bc       0x1c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x000014bc                ADC_Enable
  .text.ADC_Start
-                0x00001490       0x1c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x00001490                ADC_Start
+                0x000014d8       0x1c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x000014d8                ADC_Start
  .text.ADC_StartConvert
-                0x000014ac       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x000014ac                ADC_StartConvert
- .text.ADC_IsEndConversion
-                0x000014c0       0x2c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x000014c0                ADC_IsEndConversion
+                0x000014f4       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x000014f4                ADC_StartConvert
  .text.ADC_GetResult16
-                0x000014ec       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x000014ec                ADC_GetResult16
- .text.ADC_ISR  0x0000150c        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
-                0x0000150c                ADC_ISR
+                0x00001508       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x00001508                ADC_GetResult16
+ .text.ADC_ISR  0x00001528        0xc .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+                0x00001528                ADC_ISR
+ .text.eoc_SetPriority
+                0x00001534       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+                0x00001534                eoc_SetPriority
+ .text.eoc_StartEx
+                0x00001554       0x24 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+                0x00001554                eoc_StartEx
  .text.__libc_init_array
-                0x00001518       0x4c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
-                0x00001518                __libc_init_array
- .text.memset   0x00001564       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
-                0x00001564                memset
+                0x00001578       0x4c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+                0x00001578                __libc_init_array
+ .text.memcpy   0x000015c4       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+                0x000015c4                memcpy
+ .text.memset   0x000015d6       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+                0x000015d6                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -533,76 +574,75 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00001578        0x0
+.v4_bx          0x000015e8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001578        0x0
+.iplt           0x000015e8        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00001578        0x4
+.eh_frame       0x000015e8        0x4
  *(.eh_frame)
- .eh_frame      0x00001578        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
- .eh_frame      0x00001578        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
-                0x0000157c                PROVIDE (__exidx_start, .)
+ .eh_frame      0x000015e8        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .eh_frame      0x000015e8        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+                0x000015ec                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000157c                __exidx_end = .
+                0x000015ec                __exidx_end = .
 
-.rodata         0x0000157c      0x2ec
+.rodata         0x000015ec      0x2fc
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000157c       0x40 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .rodata        0x000015bc      0x274 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
-                0x00001830                . = ALIGN (0x4)
+ .rodata        0x000015ec       0x40 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .rodata        0x0000162c      0x288 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+                0x000018b4                . = ALIGN (0x4)
  *(.init)
- .init          0x00001830        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
-                0x00001830                _init
- .init          0x00001834        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
-                0x0000183c                . = ALIGN (0x4)
-                0x0000183c                __preinit_array_start = .
+ .init          0x000018b4        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+                0x000018b4                _init
+ .init          0x000018b8        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+                0x000018c0                . = ALIGN (0x4)
+                0x000018c0                __preinit_array_start = .
  *(.preinit_array)
-                0x0000183c                __preinit_array_end = .
-                0x0000183c                . = ALIGN (0x4)
-                0x0000183c                __init_array_start = .
+                0x000018c0                __preinit_array_end = .
+                0x000018c0                . = ALIGN (0x4)
+                0x000018c0                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0000183c        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
- .init_array    0x00001840        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
-                0x00001844                __init_array_end = .
-                0x00001844                . = ALIGN (0x4)
+ .init_array    0x000018c0        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .init_array    0x000018c4        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x000018c8                __init_array_end = .
+                0x000018c8                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00001844        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
-                0x00001844                _fini
- .fini          0x00001848        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
-                0x00001850                . = ALIGN (0x4)
-                0x00001850                __fini_array_start = .
+ .fini          0x000018c8        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crti.o
+                0x000018c8                _fini
+ .fini          0x000018cc        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+                0x000018d4                . = ALIGN (0x4)
+                0x000018d4                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00001850        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
+ .fini_array    0x000018d4        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00001854                __fini_array_end = .
-                0x00001854                . = ALIGN (0x4)
+                0x000018d8                __fini_array_end = .
+                0x000018d8                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00001854                . = ALIGN (0x4)
+                0x000018d8                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00001854                . = ALIGN (0x4)
-                0x00001854                __cy_regions = .
-                0x00001854        0x4 LONG 0x1868 __cy_region_init_ram
-                0x00001858        0x4 LONG 0x200000c8 __cy_region_start_data
-                0x0000185c        0x4 LONG 0x18 __cy_region_init_size_ram
-                0x00001860        0x4 LONG 0x3f0 __cy_region_zero_size_ram
-                0x00001864                __cy_regions_end = .
-                0x00001868                . = ALIGN (0x8)
- *fill*         0x00001864        0x4 00
-                0x00001868                _etext = .
+                0x000018d8                . = ALIGN (0x4)
+                0x000018d8                __cy_regions = .
+                0x000018d8        0x4 LONG 0x18e8 __cy_region_init_ram
+                0x000018dc        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x000018e0        0x4 LONG 0x18 __cy_region_init_size_ram
+                0x000018e4        0x4 LONG 0x3f0 __cy_region_zero_size_ram
+                0x000018e8                __cy_regions_end = .
+                0x000018e8                . = ALIGN (0x8)
+                0x000018e8                _etext = .
 
 .ramvectors     0x20000000       0xc0
                 0x20000000                __cy_region_start_ram = .
@@ -614,7 +654,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
 
-.data           0x200000c8       0x18 load address 0x00001868
+.data           0x200000c8       0x18 load address 0x000018e8
                 0x200000c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c8        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
@@ -633,40 +673,41 @@ END GROUP
  *(.ram)
                 0x200000e0                _edata = .
 
-.igot.plt       0x200000e0        0x0 load address 0x00001880
+.igot.plt       0x200000e0        0x0 load address 0x00001900
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
 
-.bss            0x200000e0      0x3f0 load address 0x00001880
+.bss            0x200000e0      0x3f0 load address 0x00001900
                 0x200000e0                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x200000e0       0x1c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
- .bss           0x200000fc        0x2 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .bss           0x200000fc        0x4 .\CortexM0\ARM_GCC_473\Debug\main.o
                 0x200000fc                pwm_count
                 0x200000fd                j
- .bss           0x200000fe        0x1 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x200000fe                ADC_initVar
+                0x200000fe                result
+ .bss           0x20000100        0x1 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x20000100                ADC_initVar
  *(COMMON)
- *fill*         0x200000ff        0x1 00
- COMMON         0x20000100      0x3c1 .\CortexM0\ARM_GCC_473\Debug\main.o
-                0x20000100                matrix
-                0x200004c0                bit_shift
- *fill*         0x200004c1        0x3 00
- COMMON         0x200004c4        0x6 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
-                0x200004c4                ADC_countsPer10Volt
-                0x200004c8                ADC_offset
+ *fill*         0x20000101        0x3 00
+ COMMON         0x20000104      0x3c1 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x20000104                matrix
+                0x200004c4                bit_shift
+ *fill*         0x200004c5        0x3 00
+ COMMON         0x200004c8        0x6 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x200004c8                ADC_countsPer10Volt
+                0x200004cc                ADC_offset
                 0x200004d0                . = ALIGN (0x8)
- *fill*         0x200004ca        0x6 00
+ *fill*         0x200004ce        0x2 00
  *(.ram.b)
                 0x200004d0                _end = .
                 0x200004d0                __end = .
                 0x200004d0                PROVIDE (end, .)
                 0x200004d0                PROVIDE (__bss_end__, .)
-                0x00001868                __cy_region_init_ram = LOADADDR (.data)
+                0x000018e8                __cy_region_init_ram = LOADADDR (.data)
                 0x00000018                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x000003f0                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x200004d0      0x100 load address 0x00001880
+.heap           0x200004d0      0x100 load address 0x00001900
                 0x200004d0                . = _end
                 0x200005d0                . = (. + 0x100)
  *fill*         0x200004d0      0x100 00
@@ -702,7 +743,7 @@ END GROUP
                 0x90600000        0x4 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00001880        0x0 load address 0x90600004
+.rel.dyn        0x00001900        0x0 load address 0x90600004
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtbegin.o
 
 .stab
@@ -723,103 +764,110 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x4d8
+.debug_aranges  0x00000000      0x560
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 .\CortexM0\ARM_GCC_473\Debug\main.o
+                0x00000000       0x30 .\CortexM0\ARM_GCC_473\Debug\main.o
  .debug_aranges
-                0x00000028      0x110 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+                0x00000030      0x110 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
  .debug_aranges
-                0x00000138       0x18 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+                0x00000140       0x18 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
  .debug_aranges
-                0x00000150       0x40 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+                0x00000158       0x40 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
  .debug_aranges
-                0x00000190       0x28 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+                0x00000198       0x28 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
  .debug_aranges
-                0x000001b8       0x80 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+                0x000001c0       0x80 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
  .debug_aranges
-                0x00000238       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+                0x00000240       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
  .debug_aranges
-                0x00000258       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
+                0x00000260       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000278      0x198 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+                0x00000280      0x198 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
  .debug_aranges
-                0x00000410       0xa8 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+                0x00000418       0xa8 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
  .debug_aranges
-                0x000004b8       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+                0x000004c0       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_aranges
+                0x000004e0       0x80 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x481b
+.debug_info     0x00000000     0x4ce6
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x387 .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_info    0x00000387     0x2089 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_info    0x00002410      0x100 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
- .debug_info    0x00002510      0x310 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_info    0x00002820      0x547 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_info    0x00002d67      0x38e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_info    0x000030f5       0xdb .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_info    0x000031d0       0x8b .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
- .debug_info    0x0000325b      0xf03 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_info    0x0000415e      0x5f3 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
- .debug_info    0x00004751       0xca .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_info    0x00000000      0x39b .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_info    0x0000039b     0x2089 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_info    0x00002424      0x100 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_info    0x00002524      0x310 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_info    0x00002834      0x670 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_info    0x00002ea4      0x38e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_info    0x00003232       0xdb .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_info    0x0000330d       0x8b .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
+ .debug_info    0x00003398      0xf03 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_info    0x0000429b      0x5f3 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_info    0x0000488e       0xca .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_info    0x00004958      0x38e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
-.debug_abbrev   0x00000000     0x106a
+.debug_abbrev   0x00000000     0x12c0
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x1ba .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_abbrev  0x000001ba      0x19f .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_abbrev  0x00000359       0x5d .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
- .debug_abbrev  0x000003b6      0x199 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_abbrev  0x0000054f      0x27f .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_abbrev  0x000007ce      0x249 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_abbrev  0x00000a17       0x8d .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_abbrev  0x00000aa4       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000ab8      0x361 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_abbrev  0x00000e19      0x1ea .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
- .debug_abbrev  0x00001003       0x67 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_abbrev  0x00000000      0x1c5 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_abbrev  0x000001c5      0x19f .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_abbrev  0x00000364       0x5d .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_abbrev  0x000003c1      0x199 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_abbrev  0x0000055a      0x281 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000007db      0x249 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_abbrev  0x00000a24       0x8d .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_abbrev  0x00000ab1       0x14 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000ac5      0x361 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_abbrev  0x00000e26      0x1ea .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_abbrev  0x00001010       0x67 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_abbrev  0x00001077      0x249 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
-.debug_line     0x00000000     0x1763
+.debug_line     0x00000000     0x192c
  *(.debug_line)
- .debug_line    0x00000000      0x15c .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_line    0x0000015c      0x6d3 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_line    0x0000082f       0x53 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
- .debug_line    0x00000882      0x1b9 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_line    0x00000a3b      0x21e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_line    0x00000c59      0x1a7 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_line    0x00000e00       0x73 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_line    0x00000e73       0x68 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
- .debug_line    0x00000edb      0x5d1 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_line    0x000014ac      0x24d .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
- .debug_line    0x000016f9       0x6a .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_line    0x00000000      0x17b .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_line    0x0000017b      0x6d3 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_line    0x0000084e       0x53 .\CortexM0\ARM_GCC_473\Debug\cymetadata.o
+ .debug_line    0x000008a1      0x1b9 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_line    0x00000a5a      0x220 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_line    0x00000c7a      0x1a7 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_line    0x00000e21       0x73 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_line    0x00000e94       0x68 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyBootAsmGnu.o)
+ .debug_line    0x00000efc      0x5d1 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_line    0x000014cd      0x250 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_line    0x0000171d       0x6a .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_line    0x00001787      0x1a5 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
-.debug_frame    0x00000000     0x10a8
+.debug_frame    0x00000000     0x11f0
  *(.debug_frame)
- .debug_frame   0x00000000       0x6c .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_frame   0x0000006c      0x534 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_frame   0x000005a0       0xa8 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_frame   0x00000648       0x58 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_frame   0x000006a0      0x104 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_frame   0x000007a4       0x2c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_frame   0x000007d0      0x444 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_frame   0x00000c14      0x1b8 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
- .debug_frame   0x00000dcc       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
- .debug_frame   0x00000dec       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00000e0c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
- .debug_frame   0x00000e2c       0x30 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_muldi3.o)
- .debug_frame   0x00000e5c       0x60 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(bpabi.o)
- .debug_frame   0x00000ebc       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
- .debug_frame   0x00000ef8       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(mulsf3.o)
- .debug_frame   0x00000f34       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
- .debug_frame   0x00000f60       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00000f9c       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x00000fd8       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
- .debug_frame   0x00001000       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
- .debug_frame   0x00001028       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
- .debug_frame   0x00001054       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
- .debug_frame   0x00001080       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x84 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_frame   0x00000084      0x534 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_frame   0x000005b8       0xa8 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_frame   0x00000660       0x58 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_frame   0x000006b8      0x108 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_frame   0x000007c0       0x2c .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_frame   0x000007ec      0x444 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_frame   0x00000c30      0x1b8 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_frame   0x00000de8       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_frame   0x00000e08      0x104 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+ .debug_frame   0x00000f0c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000f2c       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000f4c       0x30 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_muldi3.o)
+ .debug_frame   0x00000f7c       0x60 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00000fdc       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
+ .debug_frame   0x00001018       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(mulsf3.o)
+ .debug_frame   0x00001054       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
+ .debug_frame   0x00001080       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x000010bc       0x3c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivdi3.o)
+ .debug_frame   0x000010f8       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+ .debug_frame   0x00001120       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+ .debug_frame   0x00001148       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+ .debug_frame   0x00001174       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+ .debug_frame   0x000011a0       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
+ .debug_frame   0x000011c8       0x28 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000      0xe1e
+.debug_str      0x00000000      0xf43
  *(.debug_str)
  .debug_str     0x00000000      0x1d2 .\CortexM0\ARM_GCC_473\Debug\main.o
                                 0x216 (size before relaxing)
@@ -829,44 +877,48 @@ END GROUP
                                 0x184 (size before relaxing)
  .debug_str     0x0000039e      0x10f .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
                                 0x271 (size before relaxing)
- .debug_str     0x000004ad      0x197 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
-                                0x323 (size before relaxing)
- .debug_str     0x00000644      0x12e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_str     0x000004ad      0x1e8 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+                                0x374 (size before relaxing)
+ .debug_str     0x00000695      0x12e .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
                                 0x294 (size before relaxing)
- .debug_str     0x00000772       0x28 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_str     0x000007c3       0x28 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
                                 0x189 (size before relaxing)
- .debug_str     0x0000079a      0x4c0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_str     0x000007eb      0x4c0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
                                 0x680 (size before relaxing)
- .debug_str     0x00000c5a      0x18d .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_str     0x00000cab      0x1a1 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
                                 0x37b (size before relaxing)
- .debug_str     0x00000de7       0x37 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_str     0x00000e4c       0x37 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
                                 0x167 (size before relaxing)
+ .debug_str     0x00000e83       0xc0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
+                                0x278 (size before relaxing)
 
-.debug_loc      0x00000000     0x3666
+.debug_loc      0x00000000     0x37cc
  *(.debug_loc)
- .debug_loc     0x00000000       0x8f .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_loc     0x0000008f     0x1d9e .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_loc     0x00001e2d      0x1b0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_loc     0x00001fdd      0x278 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_loc     0x00002255      0x10a .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_loc     0x0000235f       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_loc     0x0000237f      0xdd3 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_loc     0x00003152      0x514 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_loc     0x00000000       0x85 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_loc     0x00000085     0x1d9e .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_loc     0x00001e23      0x1b0 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_loc     0x00001fd3      0x2dd .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_loc     0x000022b0      0x10b .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_loc     0x000023bb       0x20 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_loc     0x000023db      0xdd3 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_loc     0x000031ae      0x514 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_loc     0x000036c2      0x10a .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x6b8
+.debug_ranges   0x00000000      0x7d8
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x18 .\CortexM0\ARM_GCC_473\Debug\main.o
- .debug_ranges  0x00000018      0x100 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
- .debug_ranges  0x00000118       0x30 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
- .debug_ranges  0x00000148      0x198 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
- .debug_ranges  0x000002e0      0x130 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
- .debug_ranges  0x00000410       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
- .debug_ranges  0x00000420      0x1f0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
- .debug_ranges  0x00000610       0x98 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
- .debug_ranges  0x000006a8       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_ranges  0x00000000       0x20 .\CortexM0\ARM_GCC_473\Debug\main.o
+ .debug_ranges  0x00000020      0x100 .\CortexM0\ARM_GCC_473\Debug\LED_Matrix.o
+ .debug_ranges  0x00000120       0x30 .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o
+ .debug_ranges  0x00000150      0x180 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(cyfitter_cfg.o)
+ .debug_ranges  0x000002d0      0x130 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(isr_2.o)
+ .debug_ranges  0x00000400       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(LED_Matrix_1.o)
+ .debug_ranges  0x00000410      0x1f0 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
+ .debug_ranges  0x00000600       0x98 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
+ .debug_ranges  0x00000698       0x10 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .debug_ranges  0x000006a8      0x130 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_473\Debug\main.o
@@ -880,6 +932,7 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(CyLib.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
+ .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -928,45 +981,49 @@ END GROUP
  .ARM.attributes
                 0x00000240       0x31 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(ADC_INT.o)
  .ARM.attributes
-                0x00000271       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x00000271       0x31 .\CortexM0\ARM_GCC_473\Debug\RGB_LED_Matrix.a(eoc.o)
  .ARM.attributes
-                0x0000028f       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
+                0x000002a2       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x000002ad       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x000002c0       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divsi3.o)
  .ARM.attributes
-                0x000002cb       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_aeabi_ldivmod.o)
+                0x000002de       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x000002e9       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_muldi3.o)
+                0x000002fc       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_aeabi_ldivmod.o)
  .ARM.attributes
-                0x00000315       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(bpabi.o)
+                0x0000031a       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_muldi3.o)
  .ARM.attributes
-                0x00000341       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
+                0x00000346       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(bpabi.o)
  .ARM.attributes
-                0x0000036d       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(mulsf3.o)
+                0x00000372       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
  .ARM.attributes
-                0x00000399       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
+                0x0000039e       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(mulsf3.o)
  .ARM.attributes
-                0x000003c5       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x000003ca       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
  .ARM.attributes
-                0x000003e3       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divdi3.o)
+                0x000003f6       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
  .ARM.attributes
-                0x0000040f       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivdi3.o)
+                0x00000414       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_divdi3.o)
  .ARM.attributes
-                0x0000043b       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
+                0x00000440       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivdi3.o)
  .ARM.attributes
-                0x00000467       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
+                0x0000046c       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-__atexit2.o)
  .ARM.attributes
-                0x00000493       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
+                0x00000498       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-exit.o)
  .ARM.attributes
-                0x000004bf       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
+                0x000004c4       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-fini.o)
  .ARM.attributes
-                0x000004eb       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
+                0x000004f0       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000517       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+                0x0000051c       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-init.o)
  .ARM.attributes
-                0x00000543       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+                0x00000548       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x0000056f       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
+                0x00000574       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv6-m\libc_s.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000005a0       0x2c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtend.o
+ .ARM.attributes
+                0x000005cc       0x1e c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)
