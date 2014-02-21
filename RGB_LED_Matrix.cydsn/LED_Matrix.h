@@ -58,7 +58,7 @@ extern color matrix[64];
 /*******************************************************************************
 * Function Prototypes
 ********************************************************************************/
-void drawPixel(uint8 x, uint8 y, RGB c, color *matrix);
+void drawPixel(int8 x, int8 y, RGB c, color *matrix);
 void clearPixel(uint8 x, uint8 y, color *matrix);
 void clearScreen(color *matrix);
 void drawCircle(int8 x0, int8 y0, int8 r,RGB c, color *matrix);
@@ -86,7 +86,7 @@ void drawC(int8 x0, int8 y0,RGB c, color *matrix);
 void drawD(int8 x0, int8 y0,RGB c, color *matrix);
 void drawE(int8 x0, int8 y0,RGB c, color *matrix);
 void drawF(int8 x0, int8 y0,RGB c, color *matrix);
-
+void printTime(uint8 hours,uint8 min,RGB c, color *matrix);
 void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix);
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix);
 

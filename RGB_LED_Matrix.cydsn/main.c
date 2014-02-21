@@ -38,6 +38,7 @@
 
 #include <device.h>
 #include <LED_Matrix.h>
+#include "I2CDriver.h"
 
 /* j is the row counter (0-7), pwm_count is used for Binary Coded Modulation */
 uint8 j = 0, pwm_count = 0;
@@ -84,8 +85,31 @@ CY_ISR(FIFO_EMPTY)
 	pwm_count++;
 
 	/* Binary coded modulation. Read more here: http://www.batsocks.co.uk/readme/art_bcm_1.htm  */
-	if(pwm_count == 31)
+	/*if(pwm_count == 31)
 	{
+		bit_shift = 0;
+		pwm_count = 0;
+		j++;
+		
+		if(j == 8)
+		{
+			j = 0;
+		}
+	}*/
+	/*if(pwm_count == 7)
+	{
+		bit_shift = 0;
+		pwm_count = 0;
+		j++;
+		
+		if(j == 8)
+		{
+			j = 0;
+		}
+	}*/
+	if(pwm_count == 3)
+	{
+		//bit_shift = 2;
 		bit_shift = 0;
 		pwm_count = 0;
 		j++;
@@ -99,18 +123,16 @@ CY_ISR(FIFO_EMPTY)
 	{
 		bit_shift = 1;
 	}
-	else if(pwm_count == 3)
-	{
-		bit_shift = 2;
-	}
+	
+	/*
 	else if(pwm_count == 7)
 	{
 		bit_shift = 3;
-	}
-	else if(pwm_count == 15)
+	}*/
+	/*else if(pwm_count == 15)
 	{
 		bit_shift = 4;
-	}
+	}*/
 
 	/* Write the values to the FIFOs. Note that the data is not written to the matrix until all the FIFOs are written to */
 	
@@ -168,15 +190,18 @@ CY_ISR(FIFO_EMPTY)
 	/* Once F1_REG_0 is full (this line does it), the Component will begin shifting out values */
 	LED_Matrix_1_F1_REG_0 = (uint8)matrix[3 + (j+8)*4].r[bit_shift];
 }
-
+uint8 dataReady = 0;
 uint16 result = 0x0000;
+uint16 oldResult = 0x0000;
 CY_ISR(eoc_isr)
 {
-	result = ADC_GetResult16(0);
+	result = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
 	if((result & 0xFF00) == 0xFF00)
 	{
 		result = 0;
 	}
+	result=result & 0x0FE0;
+	dataReady = 1;
 }
 
 /*******************************************************************************
@@ -193,17 +218,24 @@ CY_ISR(eoc_isr)
 *   None
 *
 *******************************************************************************/
-void main()
+
+int main()
 {	
 	/* struct that can accomodate 8-bit RGB color */
 	RGB c;
-	RGB num;
+	RTC_Start();
+	PCF8583 rtc;
+	uint8 I2C_Status;
+	localTimeInit(&rtc);
+	//setTime(&rtc);
+	
+	
+	I2C_Status = getTime(&rtc);
+	
 	
 	/* Buffer for UART data */
 	//uint16 array[6] = {0, 0, 0, 0, 0, 0};
-	uint8 x = 0; /* index */
-	uint8 y = 0;
-	uint8 z = 0;
+	
 
 	/* Initializations */
 	c.r = 0x00;
@@ -227,30 +259,54 @@ void main()
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
-	c.r = 30;
+	c.r = 3;
 	c.g = 0;
-	c.b = 15;
-	num.r = 0;
-	num.g = 0;
-	num.b = 31;
-	
-	
+	c.b = 0;
+	int8 tmp = 0x07;
+	int i;
 	for(;;)
     { 	
 		
-		
-		//ADCVoltage = ADC_CountsTo_Volts(0,result);*/
-		//drawF(3,2,num,matrix);
-		//drawC(9,2,num, matrix);
-		///drawColon(15,2,num,matrix);
+		/*
+		//ADCVoltage = ADC_CountsTo_Volts(0,result);
+		//drawF(3,2,c,matrix);
+		//drawC(9,2,c, matrix);
+		//drawColon(15,2,c,matrix);
 		//drawD(17,2,c,matrix);
 		//drawE(23,2,c,matrix);
-		clearScreen(matrix);
-		printHexString(result,23, 2,c,matrix);
-		//CyDelayUs(10);
-		//UART_UartPutCRLF()
+		if((dataReady != 0) && (result != oldResult))
+		{
+			oldResult = result;
+			dataReady = 0 ;
+			tmp = (int8)(result>>7);
+			clearScreen(matrix);
+			if(tmp<0)
+			{
+				tmp = 0;	
+			}
+			else if(tmp>16)
+			{
+				tmp=16;
+			}
+			for(i=0;i<32;i++)
+			{
+				drawFastVLine(i, 0, 5, c, matrix);
+			}
+			
+		}
+		else
+		{
+			
+			for(i=0;i<32;i++)
+			{
+				drawFastVLine(i, 0, 5, c, matrix);
+			}
+		}
+		*/
+		printTime(decToBcd(rtc.hour),decToBcd(rtc.minute),c, matrix);
+		//fillScreen(c, matrix);
 	}
-
+	return 0;
 }
 
 ///* [] END OF FILE */

@@ -1,0 +1,1172 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"RTC_I2C.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.RTC_I2CInit,"ax",%progbits
+  18              		.align	2
+  19              		.global	RTC_I2CInit
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	RTC_I2CInit, %function
+  23              	RTC_I2CInit:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\RTC_I2C.c"
+   1:.\Generated_Source\PSoC4/RTC_I2C.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/RTC_I2C.c **** * File Name: RTC_I2C.c
+   3:.\Generated_Source\PSoC4/RTC_I2C.c **** * Version 1.10
+   4:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+   5:.\Generated_Source\PSoC4/RTC_I2C.c **** * Description:
+   6:.\Generated_Source\PSoC4/RTC_I2C.c **** *  This file provides the source code to the API for the SCB Component in
+   7:.\Generated_Source\PSoC4/RTC_I2C.c **** *  I2C mode.
+   8:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+   9:.\Generated_Source\PSoC4/RTC_I2C.c **** * Note:
+  10:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+  11:.\Generated_Source\PSoC4/RTC_I2C.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC4/RTC_I2C.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/RTC_I2C.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/RTC_I2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/RTC_I2C.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/RTC_I2C.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  18:.\Generated_Source\PSoC4/RTC_I2C.c **** #include "RTC_PVT.h"
+  19:.\Generated_Source\PSoC4/RTC_I2C.c **** #include "RTC_I2C_PVT.h"
+  20:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  21:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  22:.\Generated_Source\PSoC4/RTC_I2C.c **** /***************************************
+  23:.\Generated_Source\PSoC4/RTC_I2C.c **** *      I2C Private Vars
+  24:.\Generated_Source\PSoC4/RTC_I2C.c **** ***************************************/
+  25:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  26:.\Generated_Source\PSoC4/RTC_I2C.c **** volatile uint8 RTC_state;  /* Current state of I2C FSM */
+  27:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  28:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  29:.\Generated_Source\PSoC4/RTC_I2C.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+  30:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  31:.\Generated_Source\PSoC4/RTC_I2C.c ****     /***************************************
+  32:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  Config Structure Initialization
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/RTC_I2C.c ****     ***************************************/
+  34:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  35:.\Generated_Source\PSoC4/RTC_I2C.c ****     /* Constant configuration of I2C */
+  36:.\Generated_Source\PSoC4/RTC_I2C.c ****     const RTC_I2C_INIT_STRUCT RTC_configI2C =
+  37:.\Generated_Source\PSoC4/RTC_I2C.c ****     {
+  38:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_MODE,
+  39:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_OVS_FACTOR_LOW,
+  40:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_OVS_FACTOR_HIGH,
+  41:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_MEDIAN_FILTER_ENABLE,
+  42:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_SLAVE_ADDRESS,
+  43:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_SLAVE_ADDRESS_MASK,
+  44:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_ACCEPT_ADDRESS,
+  45:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_WAKE_ENABLE
+  46:.\Generated_Source\PSoC4/RTC_I2C.c ****     };
+  47:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  48:.\Generated_Source\PSoC4/RTC_I2C.c ****     /*******************************************************************************
+  49:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Function Name: RTC_I2CInit
+  50:.\Generated_Source\PSoC4/RTC_I2C.c ****     ********************************************************************************
+  51:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+  52:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Summary:
+  53:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  Configures the SCB for I2C operation.
+  54:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+  55:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Parameters:
+  56:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  config:  Pointer to a structure that contains the following ordered list of
+  57:.\Generated_Source\PSoC4/RTC_I2C.c ****     *           fields. These fields match the selections available in the
+  58:.\Generated_Source\PSoC4/RTC_I2C.c ****     *           customizer.
+  59:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+  60:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Return:
+  61:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  None
+  62:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+  63:.\Generated_Source\PSoC4/RTC_I2C.c ****     *******************************************************************************/
+  64:.\Generated_Source\PSoC4/RTC_I2C.c ****     void RTC_I2CInit(const RTC_I2C_INIT_STRUCT *config)
+  65:.\Generated_Source\PSoC4/RTC_I2C.c ****     {
+  66:.\Generated_Source\PSoC4/RTC_I2C.c ****         if(NULL == config)
+  67:.\Generated_Source\PSoC4/RTC_I2C.c ****         {
+  68:.\Generated_Source\PSoC4/RTC_I2C.c ****             CYASSERT(0u != 0u); /* Halt execution due bad fucntion parameter */
+  69:.\Generated_Source\PSoC4/RTC_I2C.c ****         }
+  70:.\Generated_Source\PSoC4/RTC_I2C.c ****         else
+  71:.\Generated_Source\PSoC4/RTC_I2C.c ****         {
+  72:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure pins */
+  73:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_SetPins(RTC_SCB_MODE_I2C, RTC_DUMMY_PARAM,
+  74:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                                     RTC_DUMMY_PARAM);
+  75:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  76:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Store internal configuration */
+  77:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_scbMode       = (uint8) RTC_SCB_MODE_I2C;
+  78:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_scbEnableWake = (uint8) config->enableWake;
+  79:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_scbEnableIntr = (uint8) RTC_SCB_IRQ_INTERNAL;
+  80:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  81:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mode          = (uint8) config->mode;
+  82:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_acceptAddr    = (uint8) config->acceptAddr;
+  83:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  84:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure I2C interface */
+  85:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_CTRL_REG     = RTC_GET_CTRL_ADDR_ACCEPT(config->acceptAddr) |
+  86:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_GET_CTRL_EC_AM_MODE (config->enableWake);
+  87:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  88:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_I2C_CTRL_REG = RTC_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHigh) |
+  89:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow) 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_GET_I2C_CTRL_SL_MSTR_MODE  (config->mode)          
+  91:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_I2C_CTRL;
+  92:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  93:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Adjust SDA filter settigns */
+  94:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_SET_I2C_CFG_SDA_FILT_TRIM(RTC_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+  95:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  96:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+  97:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure RX direction */
+  98:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_RX_CTRL_REG      = RTC_GET_RX_CTRL_MEDIAN(config->enableMedianFilter) |
+  99:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                 RTC_I2C_RX_CTRL;
+ 100:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_RX_FIFO_CTRL_REG = RTC_CLEAR_REG;
+ 101:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 102:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Set default address and mask */
+ 103:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_RX_MATCH_REG    = ((RTC_I2C_SLAVE) ?
+ 104:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                 (RTC_GET_I2C_8BIT_ADDRESS(config->slaveAddr) |
+ 105:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                  RTC_GET_RX_MATCH_MASK(config->slaveAddrMask)) :
+ 106:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                 (RTC_CLEAR_REG));
+ 107:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 108:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 109:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure TX direction */
+ 110:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_TX_CTRL_REG      = RTC_I2C_TX_CTRL;
+ 111:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_TX_FIFO_CTRL_REG = RTC_CLEAR_REG;
+ 112:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 113:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure interrupt with I2C handler */
+ 114:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_SCB_IRQ_Disable();
+ 115:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_SCB_IRQ_SetVector(&RTC_I2C_ISR);
+ 116:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_SCB_IRQ_SetPriority((uint8)RTC_SCB_IRQ_INTC_PRIOR_NUMBER);
+ 117:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 118:.\Generated_Source\PSoC4/RTC_I2C.c ****             
+ 119:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure interrupt sources */
+ 120:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_I2C_EC_MASK_REG = RTC_NO_INTR_SOURCES;
+ 121:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_SPI_EC_MASK_REG = RTC_NO_INTR_SOURCES;
+ 122:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_RX_MASK_REG     = RTC_NO_INTR_SOURCES;
+ 123:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_TX_MASK_REG     = RTC_NO_INTR_SOURCES;
+ 124:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 125:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_SLAVE_MASK_REG  = ((RTC_I2C_SLAVE) ?
+ 126:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                      (RTC_I2C_INTR_SLAVE_MASK) :
+ 127:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                      (RTC_CLEAR_REG));
+ 128:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 129:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_INTR_MASTER_MASK_REG = ((RTC_I2C_MASTER) ?
+ 130:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                      (RTC_I2C_INTR_MASTER_MASK) :
+ 131:.\Generated_Source\PSoC4/RTC_I2C.c ****                                                      (RTC_CLEAR_REG));
+ 132:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 133:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Configure global variables */
+ 134:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_state = RTC_I2C_FSM_IDLE;
+ 135:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 136:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Internal slave variable */
+ 137:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slStatus        = 0u;
+ 138:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slRdBufIndex    = 0u;
+ 139:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slWrBufIndex    = 0u;
+ 140:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slOverFlowCount = 0u;
+ 141:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 142:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Internal master variable */
+ 143:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrStatus     = 0u;
+ 144:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrRdBufIndex = 0u;
+ 145:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrWrBufIndex = 0u;
+ 146:.\Generated_Source\PSoC4/RTC_I2C.c ****         }
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 4
+
+
+ 147:.\Generated_Source\PSoC4/RTC_I2C.c ****     }
+ 148:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 149:.\Generated_Source\PSoC4/RTC_I2C.c **** #else
+ 150:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 151:.\Generated_Source\PSoC4/RTC_I2C.c ****     /*******************************************************************************
+ 152:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Function Name: RTC_I2CInit
+ 153:.\Generated_Source\PSoC4/RTC_I2C.c ****     ********************************************************************************
+ 154:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+ 155:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Summary:
+ 156:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  Configures the SCB for I2C operation.
+ 157:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+ 158:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Parameters:
+ 159:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  None
+ 160:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+ 161:.\Generated_Source\PSoC4/RTC_I2C.c ****     * Return:
+ 162:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  None
+ 163:.\Generated_Source\PSoC4/RTC_I2C.c ****     *
+ 164:.\Generated_Source\PSoC4/RTC_I2C.c ****     *******************************************************************************/
+ 165:.\Generated_Source\PSoC4/RTC_I2C.c ****     void RTC_I2CInit(void)
+ 166:.\Generated_Source\PSoC4/RTC_I2C.c ****     {
+  26              		.loc 1 166 0
+  27              		.cfi_startproc
+ 167:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure I2C interface */
+ 168:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_CTRL_REG     = RTC_I2C_DEFAULT_CTRL;
+  28              		.loc 1 168 0
+  29 0000 1B4B     		ldr	r3, .L2
+ 166:.\Generated_Source\PSoC4/RTC_I2C.c ****     {
+  30              		.loc 1 166 0
+  31 0002 10B5     		push	{r4, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+ 169:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_CTRL_REG = RTC_I2C_DEFAULT_I2C_CTRL;
+  36              		.loc 1 169 0
+  37 0004 1B4A     		ldr	r2, .L2+4
+ 168:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_CTRL_REG     = RTC_I2C_DEFAULT_CTRL;
+  38              		.loc 1 168 0
+  39 0006 0024     		mov	r4, #0
+  40              		.loc 1 169 0
+  41 0008 1B48     		ldr	r0, .L2+8
+ 168:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_CTRL_REG     = RTC_I2C_DEFAULT_CTRL;
+  42              		.loc 1 168 0
+  43 000a 1C60     		str	r4, [r3]
+ 170:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 171:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Adjust SDA filter settigns */
+ 172:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_SET_I2C_CFG_SDA_FILT_TRIM(RTC_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+  44              		.loc 1 172 0
+  45 000c 1B4B     		ldr	r3, .L2+12
+ 169:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_I2C_CTRL_REG = RTC_I2C_DEFAULT_I2C_CTRL;
+  46              		.loc 1 169 0
+  47 000e 0260     		str	r2, [r0]
+  48              		.loc 1 172 0
+  49 0010 1968     		ldr	r1, [r3]
+  50 0012 0C22     		mov	r2, #12
+  51 0014 0A43     		orr	r2, r1
+  52 0016 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 5
+
+
+ 173:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 174:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure RX direction */
+ 175:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_CTRL_REG      = RTC_I2C_DEFAULT_RX_CTRL;
+  53              		.loc 1 175 0
+  54 0018 1948     		ldr	r0, .L2+16
+  55 001a 1A4B     		ldr	r3, .L2+20
+ 176:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_FIFO_CTRL_REG = RTC_I2C_DEFAULT_RX_FIFO_CTRL;
+  56              		.loc 1 176 0
+  57 001c 1A49     		ldr	r1, .L2+24
+ 175:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_CTRL_REG      = RTC_I2C_DEFAULT_RX_CTRL;
+  58              		.loc 1 175 0
+  59 001e 1860     		str	r0, [r3]
+ 177:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 178:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Set default address and mask */
+ 179:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_MATCH_REG     = RTC_I2C_DEFAULT_RX_MATCH;
+  60              		.loc 1 179 0
+  61 0020 1A4A     		ldr	r2, .L2+28
+ 176:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_FIFO_CTRL_REG = RTC_I2C_DEFAULT_RX_FIFO_CTRL;
+  62              		.loc 1 176 0
+  63 0022 0C60     		str	r4, [r1]
+ 180:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 181:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure TX direction */
+ 182:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_TX_CTRL_REG      = RTC_I2C_DEFAULT_TX_CTRL;
+  64              		.loc 1 182 0
+  65 0024 1A4B     		ldr	r3, .L2+32
+ 183:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_TX_FIFO_CTRL_REG = RTC_I2C_DEFAULT_TX_FIFO_CTRL;
+  66              		.loc 1 183 0
+  67 0026 1B49     		ldr	r1, .L2+36
+ 182:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_TX_CTRL_REG      = RTC_I2C_DEFAULT_TX_CTRL;
+  68              		.loc 1 182 0
+  69 0028 1B48     		ldr	r0, .L2+40
+ 179:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_RX_MATCH_REG     = RTC_I2C_DEFAULT_RX_MATCH;
+  70              		.loc 1 179 0
+  71 002a 1460     		str	r4, [r2]
+ 182:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_TX_CTRL_REG      = RTC_I2C_DEFAULT_TX_CTRL;
+  72              		.loc 1 182 0
+  73 002c 1860     		str	r0, [r3]
+  74              		.loc 1 183 0
+  75 002e 0C60     		str	r4, [r1]
+ 184:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 185:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure interrupt with I2C handler */
+ 186:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_SCB_IRQ_Disable();
+  76              		.loc 1 186 0
+  77 0030 FFF7FEFF 		bl	RTC_SCB_IRQ_Disable
+  78              	.LVL0:
+ 187:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_SCB_IRQ_SetVector(&RTC_I2C_ISR);
+  79              		.loc 1 187 0
+  80 0034 1948     		ldr	r0, .L2+44
+  81 0036 FFF7FEFF 		bl	RTC_SCB_IRQ_SetVector
+  82              	.LVL1:
+ 188:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_SCB_IRQ_SetPriority((uint8)RTC_SCB_IRQ_INTC_PRIOR_NUMBER);
+  83              		.loc 1 188 0
+  84 003a 0320     		mov	r0, #3
+  85 003c FFF7FEFF 		bl	RTC_SCB_IRQ_SetPriority
+  86              	.LVL2:
+ 189:.\Generated_Source\PSoC4/RTC_I2C.c ****         
+ 190:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure interrupt sources */
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 6
+
+
+ 191:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_I2C_EC_MASK_REG = RTC_I2C_DEFAULT_INTR_I2C_EC_MASK;
+  87              		.loc 1 191 0
+  88 0040 174A     		ldr	r2, .L2+48
+ 192:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_SPI_EC_MASK_REG = RTC_I2C_DEFAULT_INTR_SPI_EC_MASK;
+  89              		.loc 1 192 0
+  90 0042 1848     		ldr	r0, .L2+52
+ 191:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_I2C_EC_MASK_REG = RTC_I2C_DEFAULT_INTR_I2C_EC_MASK;
+  91              		.loc 1 191 0
+  92 0044 1460     		str	r4, [r2]
+ 193:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_SLAVE_MASK_REG  = RTC_I2C_DEFAULT_INTR_SLAVE_MASK;
+  93              		.loc 1 193 0
+  94 0046 184B     		ldr	r3, .L2+56
+ 194:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_MASTER_MASK_REG = RTC_I2C_DEFAULT_INTR_MASTER_MASK;
+  95              		.loc 1 194 0
+  96 0048 1849     		ldr	r1, .L2+60
+  97 004a 194A     		ldr	r2, .L2+64
+ 192:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_SPI_EC_MASK_REG = RTC_I2C_DEFAULT_INTR_SPI_EC_MASK;
+  98              		.loc 1 192 0
+  99 004c 0460     		str	r4, [r0]
+ 193:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_SLAVE_MASK_REG  = RTC_I2C_DEFAULT_INTR_SLAVE_MASK;
+ 100              		.loc 1 193 0
+ 101 004e 1C60     		str	r4, [r3]
+ 195:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_RX_MASK_REG     = RTC_I2C_DEFAULT_INTR_RX_MASK;
+ 102              		.loc 1 195 0
+ 103 0050 1848     		ldr	r0, .L2+68
+ 194:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_MASTER_MASK_REG = RTC_I2C_DEFAULT_INTR_MASTER_MASK;
+ 104              		.loc 1 194 0
+ 105 0052 1160     		str	r1, [r2]
+ 196:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_TX_MASK_REG     = RTC_I2C_DEFAULT_INTR_TX_MASK;
+ 106              		.loc 1 196 0
+ 107 0054 184B     		ldr	r3, .L2+72
+ 197:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 198:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure global variables */
+ 199:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_state = RTC_I2C_FSM_IDLE;
+ 108              		.loc 1 199 0
+ 109 0056 194A     		ldr	r2, .L2+76
+ 110 0058 1021     		mov	r1, #16
+ 195:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_RX_MASK_REG     = RTC_I2C_DEFAULT_INTR_RX_MASK;
+ 111              		.loc 1 195 0
+ 112 005a 0460     		str	r4, [r0]
+ 196:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_TX_MASK_REG     = RTC_I2C_DEFAULT_INTR_TX_MASK;
+ 113              		.loc 1 196 0
+ 114 005c 1C60     		str	r4, [r3]
+ 200:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 201:.\Generated_Source\PSoC4/RTC_I2C.c ****         #if(RTC_I2C_SLAVE)
+ 202:.\Generated_Source\PSoC4/RTC_I2C.c ****             /* Internal slave variable */
+ 203:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slStatus        = 0u;
+ 204:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slRdBufIndex    = 0u;
+ 205:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slWrBufIndex    = 0u;
+ 206:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_slOverFlowCount = 0u;
+ 207:.\Generated_Source\PSoC4/RTC_I2C.c ****         #endif /* (RTC_I2C_SLAVE) */
+ 208:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 209:.\Generated_Source\PSoC4/RTC_I2C.c ****         #if(RTC_I2C_MASTER)
+ 210:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Internal master variable */
+ 211:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrStatus     = 0u;
+ 115              		.loc 1 211 0
+ 116 005e 1848     		ldr	r0, .L2+80
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 7
+
+
+ 199:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_state = RTC_I2C_FSM_IDLE;
+ 117              		.loc 1 199 0
+ 118 0060 1170     		strb	r1, [r2]
+ 212:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrRdBufIndex = 0u;
+ 119              		.loc 1 212 0
+ 120 0062 184B     		ldr	r3, .L2+84
+ 213:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrWrBufIndex = 0u;
+ 121              		.loc 1 213 0
+ 122 0064 1849     		ldr	r1, .L2+88
+ 211:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrStatus     = 0u;
+ 123              		.loc 1 211 0
+ 124 0066 0480     		strh	r4, [r0]
+ 214:.\Generated_Source\PSoC4/RTC_I2C.c ****         #endif /* (RTC_I2C_MASTER) */
+ 215:.\Generated_Source\PSoC4/RTC_I2C.c ****     }
+ 125              		.loc 1 215 0
+ 126              		@ sp needed for prologue
+ 212:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrRdBufIndex = 0u;
+ 127              		.loc 1 212 0
+ 128 0068 1C60     		str	r4, [r3]
+ 213:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrWrBufIndex = 0u;
+ 129              		.loc 1 213 0
+ 130 006a 0C60     		str	r4, [r1]
+ 131              		.loc 1 215 0
+ 132 006c 10BD     		pop	{r4, pc}
+ 133              	.L3:
+ 134 006e C046     		.align	2
+ 135              	.L2:
+ 136 0070 00000640 		.word	1074135040
+ 137 0074 77080080 		.word	-2147481481
+ 138 0078 60000640 		.word	1074135136
+ 139 007c 70000640 		.word	1074135152
+ 140 0080 07030080 		.word	-2147482873
+ 141 0084 00030640 		.word	1074135808
+ 142 0088 04030640 		.word	1074135812
+ 143 008c 10030640 		.word	1074135824
+ 144 0090 00020640 		.word	1074135552
+ 145 0094 04020640 		.word	1074135556
+ 146 0098 07010080 		.word	-2147483385
+ 147 009c 00000000 		.word	RTC_I2C_ISR
+ 148 00a0 880E0640 		.word	1074138760
+ 149 00a4 C80E0640 		.word	1074138824
+ 150 00a8 480F0640 		.word	1074138952
+ 151 00ac 13010000 		.word	275
+ 152 00b0 080F0640 		.word	1074138888
+ 153 00b4 C80F0640 		.word	1074139080
+ 154 00b8 880F0640 		.word	1074139016
+ 155 00bc 00000000 		.word	RTC_state
+ 156 00c0 00000000 		.word	RTC_mstrStatus
+ 157 00c4 00000000 		.word	RTC_mstrRdBufIndex
+ 158 00c8 00000000 		.word	RTC_mstrWrBufIndex
+ 159              		.cfi_endproc
+ 160              	.LFE0:
+ 161              		.size	RTC_I2CInit, .-RTC_I2CInit
+ 162              		.section	.text.RTC_I2CStop,"ax",%progbits
+ 163              		.align	2
+ 164              		.global	RTC_I2CStop
+ 165              		.code	16
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 8
+
+
+ 166              		.thumb_func
+ 167              		.type	RTC_I2CStop, %function
+ 168              	RTC_I2CStop:
+ 169              	.LFB1:
+ 216:.\Generated_Source\PSoC4/RTC_I2C.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 217:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 218:.\Generated_Source\PSoC4/RTC_I2C.c **** 
+ 219:.\Generated_Source\PSoC4/RTC_I2C.c **** /*******************************************************************************
+ 220:.\Generated_Source\PSoC4/RTC_I2C.c **** * Function Name: RTC_I2CStop
+ 221:.\Generated_Source\PSoC4/RTC_I2C.c **** ********************************************************************************
+ 222:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 223:.\Generated_Source\PSoC4/RTC_I2C.c **** * Summary:
+ 224:.\Generated_Source\PSoC4/RTC_I2C.c **** *  Initializes I2C registers with initial values provided from customizer.
+ 225:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 226:.\Generated_Source\PSoC4/RTC_I2C.c **** * Parameters:
+ 227:.\Generated_Source\PSoC4/RTC_I2C.c **** *  None
+ 228:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 229:.\Generated_Source\PSoC4/RTC_I2C.c **** * Return:
+ 230:.\Generated_Source\PSoC4/RTC_I2C.c **** *  None
+ 231:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 232:.\Generated_Source\PSoC4/RTC_I2C.c **** * Global variables:
+ 233:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 234:.\Generated_Source\PSoC4/RTC_I2C.c **** *
+ 235:.\Generated_Source\PSoC4/RTC_I2C.c **** *******************************************************************************/
+ 236:.\Generated_Source\PSoC4/RTC_I2C.c **** void RTC_I2CStop(void)
+ 237:.\Generated_Source\PSoC4/RTC_I2C.c **** {
+ 170              		.loc 1 237 0
+ 171              		.cfi_startproc
+ 238:.\Generated_Source\PSoC4/RTC_I2C.c ****     RTC_state = RTC_I2C_FSM_IDLE;
+ 172              		.loc 1 238 0
+ 173 0000 014B     		ldr	r3, .L5
+ 174 0002 1022     		mov	r2, #16
+ 175 0004 1A70     		strb	r2, [r3]
+ 239:.\Generated_Source\PSoC4/RTC_I2C.c **** }
+ 176              		.loc 1 239 0
+ 177              		@ sp needed for prologue
+ 178 0006 7047     		bx	lr
+ 179              	.L6:
+ 180              		.align	2
+ 181              	.L5:
+ 182 0008 00000000 		.word	RTC_state
+ 183              		.cfi_endproc
+ 184              	.LFE1:
+ 185              		.size	RTC_I2CStop, .-RTC_I2CStop
+ 186              		.comm	RTC_state,1,1
+ 187              		.text
+ 188              	.Letext0:
+ 189              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 190              		.file 3 ".\\Generated_Source\\PSoC4\\RTC_I2C_PVT.h"
+ 191              		.file 4 ".\\Generated_Source\\PSoC4\\RTC_SCB_IRQ.h"
+ 192              		.section	.debug_info,"",%progbits
+ 193              	.Ldebug_info0:
+ 194 0000 8F010000 		.4byte	0x18f
+ 195 0004 0200     		.2byte	0x2
+ 196 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 197 000a 04       		.byte	0x4
+ 198 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 9
+
+
+ 199 000c 1D010000 		.4byte	.LASF22
+ 200 0010 01       		.byte	0x1
+ 201 0011 06000000 		.4byte	.LASF23
+ 202 0015 66010000 		.4byte	.LASF24
+ 203 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 204 001d 00000000 		.4byte	0
+ 205 0021 00000000 		.4byte	0
+ 206 0025 00000000 		.4byte	.Ldebug_line0
+ 207 0029 02       		.uleb128 0x2
+ 208 002a 01       		.byte	0x1
+ 209 002b 06       		.byte	0x6
+ 210 002c B9010000 		.4byte	.LASF0
+ 211 0030 02       		.uleb128 0x2
+ 212 0031 01       		.byte	0x1
+ 213 0032 08       		.byte	0x8
+ 214 0033 7C000000 		.4byte	.LASF1
+ 215 0037 02       		.uleb128 0x2
+ 216 0038 02       		.byte	0x2
+ 217 0039 05       		.byte	0x5
+ 218 003a FF000000 		.4byte	.LASF2
+ 219 003e 02       		.uleb128 0x2
+ 220 003f 02       		.byte	0x2
+ 221 0040 07       		.byte	0x7
+ 222 0041 29000000 		.4byte	.LASF3
+ 223 0045 02       		.uleb128 0x2
+ 224 0046 04       		.byte	0x4
+ 225 0047 05       		.byte	0x5
+ 226 0048 A1010000 		.4byte	.LASF4
+ 227 004c 02       		.uleb128 0x2
+ 228 004d 04       		.byte	0x4
+ 229 004e 07       		.byte	0x7
+ 230 004f 4E000000 		.4byte	.LASF5
+ 231 0053 02       		.uleb128 0x2
+ 232 0054 08       		.byte	0x8
+ 233 0055 05       		.byte	0x5
+ 234 0056 D9000000 		.4byte	.LASF6
+ 235 005a 02       		.uleb128 0x2
+ 236 005b 08       		.byte	0x8
+ 237 005c 07       		.byte	0x7
+ 238 005d AC000000 		.4byte	.LASF7
+ 239 0061 03       		.uleb128 0x3
+ 240 0062 04       		.byte	0x4
+ 241 0063 05       		.byte	0x5
+ 242 0064 696E7400 		.ascii	"int\000"
+ 243 0068 02       		.uleb128 0x2
+ 244 0069 04       		.byte	0x4
+ 245 006a 07       		.byte	0x7
+ 246 006b 9F000000 		.4byte	.LASF8
+ 247 006f 04       		.uleb128 0x4
+ 248 0070 60000000 		.4byte	.LASF9
+ 249 0074 02       		.byte	0x2
+ 250 0075 5B       		.byte	0x5b
+ 251 0076 30000000 		.4byte	0x30
+ 252 007a 04       		.uleb128 0x4
+ 253 007b 91000000 		.4byte	.LASF10
+ 254 007f 02       		.byte	0x2
+ 255 0080 5C       		.byte	0x5c
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 10
+
+
+ 256 0081 3E000000 		.4byte	0x3e
+ 257 0085 04       		.uleb128 0x4
+ 258 0086 98000000 		.4byte	.LASF11
+ 259 008a 02       		.byte	0x2
+ 260 008b 5D       		.byte	0x5d
+ 261 008c 4C000000 		.4byte	0x4c
+ 262 0090 02       		.uleb128 0x2
+ 263 0091 04       		.byte	0x4
+ 264 0092 04       		.byte	0x4
+ 265 0093 3C000000 		.4byte	.LASF12
+ 266 0097 02       		.uleb128 0x2
+ 267 0098 08       		.byte	0x8
+ 268 0099 04       		.byte	0x4
+ 269 009a 8A000000 		.4byte	.LASF13
+ 270 009e 02       		.uleb128 0x2
+ 271 009f 01       		.byte	0x1
+ 272 00a0 08       		.byte	0x8
+ 273 00a1 E7000000 		.4byte	.LASF14
+ 274 00a5 05       		.uleb128 0x5
+ 275 00a6 6F000000 		.4byte	0x6f
+ 276 00aa 05       		.uleb128 0x5
+ 277 00ab 7A000000 		.4byte	0x7a
+ 278 00af 04       		.uleb128 0x4
+ 279 00b0 00000000 		.4byte	.LASF15
+ 280 00b4 02       		.byte	0x2
+ 281 00b5 F2       		.byte	0xf2
+ 282 00b6 BA000000 		.4byte	0xba
+ 283 00ba 05       		.uleb128 0x5
+ 284 00bb 85000000 		.4byte	0x85
+ 285 00bf 06       		.uleb128 0x6
+ 286 00c0 C3000000 		.4byte	.LASF16
+ 287 00c4 02       		.byte	0x2
+ 288 00c5 0201     		.2byte	0x102
+ 289 00c7 CB000000 		.4byte	0xcb
+ 290 00cb 07       		.uleb128 0x7
+ 291 00cc 04       		.byte	0x4
+ 292 00cd D1000000 		.4byte	0xd1
+ 293 00d1 08       		.uleb128 0x8
+ 294 00d2 01       		.byte	0x1
+ 295 00d3 02       		.uleb128 0x2
+ 296 00d4 04       		.byte	0x4
+ 297 00d5 07       		.byte	0x7
+ 298 00d6 D0000000 		.4byte	.LASF17
+ 299 00da 09       		.uleb128 0x9
+ 300 00db 01       		.byte	0x1
+ 301 00dc E7010000 		.4byte	.LASF25
+ 302 00e0 01       		.byte	0x1
+ 303 00e1 A5       		.byte	0xa5
+ 304 00e2 01       		.byte	0x1
+ 305 00e3 00000000 		.4byte	.LFB0
+ 306 00e7 CC000000 		.4byte	.LFE0
+ 307 00eb 00000000 		.4byte	.LLST0
+ 308 00ef 01       		.byte	0x1
+ 309 00f0 16010000 		.4byte	0x116
+ 310 00f4 0A       		.uleb128 0xa
+ 311 00f5 34000000 		.4byte	.LVL0
+ 312 00f9 64010000 		.4byte	0x164
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 11
+
+
+ 313 00fd 0A       		.uleb128 0xa
+ 314 00fe 3A000000 		.4byte	.LVL1
+ 315 0102 6E010000 		.4byte	0x16e
+ 316 0106 0B       		.uleb128 0xb
+ 317 0107 40000000 		.4byte	.LVL2
+ 318 010b 82010000 		.4byte	0x182
+ 319 010f 0C       		.uleb128 0xc
+ 320 0110 01       		.byte	0x1
+ 321 0111 50       		.byte	0x50
+ 322 0112 01       		.byte	0x1
+ 323 0113 33       		.byte	0x33
+ 324 0114 00       		.byte	0
+ 325 0115 00       		.byte	0
+ 326 0116 0D       		.uleb128 0xd
+ 327 0117 01       		.byte	0x1
+ 328 0118 42000000 		.4byte	.LASF26
+ 329 011c 01       		.byte	0x1
+ 330 011d EC       		.byte	0xec
+ 331 011e 01       		.byte	0x1
+ 332 011f 00000000 		.4byte	.LFB1
+ 333 0123 0C000000 		.4byte	.LFE1
+ 334 0127 02       		.byte	0x2
+ 335 0128 7D       		.byte	0x7d
+ 336 0129 00       		.sleb128 0
+ 337 012a 01       		.byte	0x1
+ 338 012b 0E       		.uleb128 0xe
+ 339 012c C5010000 		.4byte	.LASF18
+ 340 0130 01       		.byte	0x1
+ 341 0131 1A       		.byte	0x1a
+ 342 0132 A5000000 		.4byte	0xa5
+ 343 0136 01       		.byte	0x1
+ 344 0137 05       		.byte	0x5
+ 345 0138 03       		.byte	0x3
+ 346 0139 00000000 		.4byte	RTC_state
+ 347 013d 0F       		.uleb128 0xf
+ 348 013e AA010000 		.4byte	.LASF19
+ 349 0142 03       		.byte	0x3
+ 350 0143 30       		.byte	0x30
+ 351 0144 AA000000 		.4byte	0xaa
+ 352 0148 01       		.byte	0x1
+ 353 0149 01       		.byte	0x1
+ 354 014a 0F       		.uleb128 0xf
+ 355 014b F3010000 		.4byte	.LASF20
+ 356 014f 03       		.byte	0x3
+ 357 0150 36       		.byte	0x36
+ 358 0151 BA000000 		.4byte	0xba
+ 359 0155 01       		.byte	0x1
+ 360 0156 01       		.byte	0x1
+ 361 0157 0F       		.uleb128 0xf
+ 362 0158 EC000000 		.4byte	.LASF21
+ 363 015c 03       		.byte	0x3
+ 364 015d 3B       		.byte	0x3b
+ 365 015e BA000000 		.4byte	0xba
+ 366 0162 01       		.byte	0x1
+ 367 0163 01       		.byte	0x1
+ 368 0164 10       		.uleb128 0x10
+ 369 0165 01       		.byte	0x1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 12
+
+
+ 370 0166 09010000 		.4byte	.LASF27
+ 371 016a 04       		.byte	0x4
+ 372 016b 25       		.byte	0x25
+ 373 016c 01       		.byte	0x1
+ 374 016d 01       		.byte	0x1
+ 375 016e 11       		.uleb128 0x11
+ 376 016f 01       		.byte	0x1
+ 377 0170 66000000 		.4byte	.LASF28
+ 378 0174 04       		.byte	0x4
+ 379 0175 1D       		.byte	0x1d
+ 380 0176 01       		.byte	0x1
+ 381 0177 01       		.byte	0x1
+ 382 0178 82010000 		.4byte	0x182
+ 383 017c 12       		.uleb128 0x12
+ 384 017d BF000000 		.4byte	0xbf
+ 385 0181 00       		.byte	0
+ 386 0182 13       		.uleb128 0x13
+ 387 0183 01       		.byte	0x1
+ 388 0184 CF010000 		.4byte	.LASF29
+ 389 0188 04       		.byte	0x4
+ 390 0189 20       		.byte	0x20
+ 391 018a 01       		.byte	0x1
+ 392 018b 01       		.byte	0x1
+ 393 018c 12       		.uleb128 0x12
+ 394 018d 6F000000 		.4byte	0x6f
+ 395 0191 00       		.byte	0
+ 396 0192 00       		.byte	0
+ 397              		.section	.debug_abbrev,"",%progbits
+ 398              	.Ldebug_abbrev0:
+ 399 0000 01       		.uleb128 0x1
+ 400 0001 11       		.uleb128 0x11
+ 401 0002 01       		.byte	0x1
+ 402 0003 25       		.uleb128 0x25
+ 403 0004 0E       		.uleb128 0xe
+ 404 0005 13       		.uleb128 0x13
+ 405 0006 0B       		.uleb128 0xb
+ 406 0007 03       		.uleb128 0x3
+ 407 0008 0E       		.uleb128 0xe
+ 408 0009 1B       		.uleb128 0x1b
+ 409 000a 0E       		.uleb128 0xe
+ 410 000b 55       		.uleb128 0x55
+ 411 000c 06       		.uleb128 0x6
+ 412 000d 11       		.uleb128 0x11
+ 413 000e 01       		.uleb128 0x1
+ 414 000f 52       		.uleb128 0x52
+ 415 0010 01       		.uleb128 0x1
+ 416 0011 10       		.uleb128 0x10
+ 417 0012 06       		.uleb128 0x6
+ 418 0013 00       		.byte	0
+ 419 0014 00       		.byte	0
+ 420 0015 02       		.uleb128 0x2
+ 421 0016 24       		.uleb128 0x24
+ 422 0017 00       		.byte	0
+ 423 0018 0B       		.uleb128 0xb
+ 424 0019 0B       		.uleb128 0xb
+ 425 001a 3E       		.uleb128 0x3e
+ 426 001b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 13
+
+
+ 427 001c 03       		.uleb128 0x3
+ 428 001d 0E       		.uleb128 0xe
+ 429 001e 00       		.byte	0
+ 430 001f 00       		.byte	0
+ 431 0020 03       		.uleb128 0x3
+ 432 0021 24       		.uleb128 0x24
+ 433 0022 00       		.byte	0
+ 434 0023 0B       		.uleb128 0xb
+ 435 0024 0B       		.uleb128 0xb
+ 436 0025 3E       		.uleb128 0x3e
+ 437 0026 0B       		.uleb128 0xb
+ 438 0027 03       		.uleb128 0x3
+ 439 0028 08       		.uleb128 0x8
+ 440 0029 00       		.byte	0
+ 441 002a 00       		.byte	0
+ 442 002b 04       		.uleb128 0x4
+ 443 002c 16       		.uleb128 0x16
+ 444 002d 00       		.byte	0
+ 445 002e 03       		.uleb128 0x3
+ 446 002f 0E       		.uleb128 0xe
+ 447 0030 3A       		.uleb128 0x3a
+ 448 0031 0B       		.uleb128 0xb
+ 449 0032 3B       		.uleb128 0x3b
+ 450 0033 0B       		.uleb128 0xb
+ 451 0034 49       		.uleb128 0x49
+ 452 0035 13       		.uleb128 0x13
+ 453 0036 00       		.byte	0
+ 454 0037 00       		.byte	0
+ 455 0038 05       		.uleb128 0x5
+ 456 0039 35       		.uleb128 0x35
+ 457 003a 00       		.byte	0
+ 458 003b 49       		.uleb128 0x49
+ 459 003c 13       		.uleb128 0x13
+ 460 003d 00       		.byte	0
+ 461 003e 00       		.byte	0
+ 462 003f 06       		.uleb128 0x6
+ 463 0040 16       		.uleb128 0x16
+ 464 0041 00       		.byte	0
+ 465 0042 03       		.uleb128 0x3
+ 466 0043 0E       		.uleb128 0xe
+ 467 0044 3A       		.uleb128 0x3a
+ 468 0045 0B       		.uleb128 0xb
+ 469 0046 3B       		.uleb128 0x3b
+ 470 0047 05       		.uleb128 0x5
+ 471 0048 49       		.uleb128 0x49
+ 472 0049 13       		.uleb128 0x13
+ 473 004a 00       		.byte	0
+ 474 004b 00       		.byte	0
+ 475 004c 07       		.uleb128 0x7
+ 476 004d 0F       		.uleb128 0xf
+ 477 004e 00       		.byte	0
+ 478 004f 0B       		.uleb128 0xb
+ 479 0050 0B       		.uleb128 0xb
+ 480 0051 49       		.uleb128 0x49
+ 481 0052 13       		.uleb128 0x13
+ 482 0053 00       		.byte	0
+ 483 0054 00       		.byte	0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 14
+
+
+ 484 0055 08       		.uleb128 0x8
+ 485 0056 15       		.uleb128 0x15
+ 486 0057 00       		.byte	0
+ 487 0058 27       		.uleb128 0x27
+ 488 0059 0C       		.uleb128 0xc
+ 489 005a 00       		.byte	0
+ 490 005b 00       		.byte	0
+ 491 005c 09       		.uleb128 0x9
+ 492 005d 2E       		.uleb128 0x2e
+ 493 005e 01       		.byte	0x1
+ 494 005f 3F       		.uleb128 0x3f
+ 495 0060 0C       		.uleb128 0xc
+ 496 0061 03       		.uleb128 0x3
+ 497 0062 0E       		.uleb128 0xe
+ 498 0063 3A       		.uleb128 0x3a
+ 499 0064 0B       		.uleb128 0xb
+ 500 0065 3B       		.uleb128 0x3b
+ 501 0066 0B       		.uleb128 0xb
+ 502 0067 27       		.uleb128 0x27
+ 503 0068 0C       		.uleb128 0xc
+ 504 0069 11       		.uleb128 0x11
+ 505 006a 01       		.uleb128 0x1
+ 506 006b 12       		.uleb128 0x12
+ 507 006c 01       		.uleb128 0x1
+ 508 006d 40       		.uleb128 0x40
+ 509 006e 06       		.uleb128 0x6
+ 510 006f 9742     		.uleb128 0x2117
+ 511 0071 0C       		.uleb128 0xc
+ 512 0072 01       		.uleb128 0x1
+ 513 0073 13       		.uleb128 0x13
+ 514 0074 00       		.byte	0
+ 515 0075 00       		.byte	0
+ 516 0076 0A       		.uleb128 0xa
+ 517 0077 898201   		.uleb128 0x4109
+ 518 007a 00       		.byte	0
+ 519 007b 11       		.uleb128 0x11
+ 520 007c 01       		.uleb128 0x1
+ 521 007d 31       		.uleb128 0x31
+ 522 007e 13       		.uleb128 0x13
+ 523 007f 00       		.byte	0
+ 524 0080 00       		.byte	0
+ 525 0081 0B       		.uleb128 0xb
+ 526 0082 898201   		.uleb128 0x4109
+ 527 0085 01       		.byte	0x1
+ 528 0086 11       		.uleb128 0x11
+ 529 0087 01       		.uleb128 0x1
+ 530 0088 31       		.uleb128 0x31
+ 531 0089 13       		.uleb128 0x13
+ 532 008a 00       		.byte	0
+ 533 008b 00       		.byte	0
+ 534 008c 0C       		.uleb128 0xc
+ 535 008d 8A8201   		.uleb128 0x410a
+ 536 0090 00       		.byte	0
+ 537 0091 02       		.uleb128 0x2
+ 538 0092 0A       		.uleb128 0xa
+ 539 0093 9142     		.uleb128 0x2111
+ 540 0095 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 15
+
+
+ 541 0096 00       		.byte	0
+ 542 0097 00       		.byte	0
+ 543 0098 0D       		.uleb128 0xd
+ 544 0099 2E       		.uleb128 0x2e
+ 545 009a 00       		.byte	0
+ 546 009b 3F       		.uleb128 0x3f
+ 547 009c 0C       		.uleb128 0xc
+ 548 009d 03       		.uleb128 0x3
+ 549 009e 0E       		.uleb128 0xe
+ 550 009f 3A       		.uleb128 0x3a
+ 551 00a0 0B       		.uleb128 0xb
+ 552 00a1 3B       		.uleb128 0x3b
+ 553 00a2 0B       		.uleb128 0xb
+ 554 00a3 27       		.uleb128 0x27
+ 555 00a4 0C       		.uleb128 0xc
+ 556 00a5 11       		.uleb128 0x11
+ 557 00a6 01       		.uleb128 0x1
+ 558 00a7 12       		.uleb128 0x12
+ 559 00a8 01       		.uleb128 0x1
+ 560 00a9 40       		.uleb128 0x40
+ 561 00aa 0A       		.uleb128 0xa
+ 562 00ab 9742     		.uleb128 0x2117
+ 563 00ad 0C       		.uleb128 0xc
+ 564 00ae 00       		.byte	0
+ 565 00af 00       		.byte	0
+ 566 00b0 0E       		.uleb128 0xe
+ 567 00b1 34       		.uleb128 0x34
+ 568 00b2 00       		.byte	0
+ 569 00b3 03       		.uleb128 0x3
+ 570 00b4 0E       		.uleb128 0xe
+ 571 00b5 3A       		.uleb128 0x3a
+ 572 00b6 0B       		.uleb128 0xb
+ 573 00b7 3B       		.uleb128 0x3b
+ 574 00b8 0B       		.uleb128 0xb
+ 575 00b9 49       		.uleb128 0x49
+ 576 00ba 13       		.uleb128 0x13
+ 577 00bb 3F       		.uleb128 0x3f
+ 578 00bc 0C       		.uleb128 0xc
+ 579 00bd 02       		.uleb128 0x2
+ 580 00be 0A       		.uleb128 0xa
+ 581 00bf 00       		.byte	0
+ 582 00c0 00       		.byte	0
+ 583 00c1 0F       		.uleb128 0xf
+ 584 00c2 34       		.uleb128 0x34
+ 585 00c3 00       		.byte	0
+ 586 00c4 03       		.uleb128 0x3
+ 587 00c5 0E       		.uleb128 0xe
+ 588 00c6 3A       		.uleb128 0x3a
+ 589 00c7 0B       		.uleb128 0xb
+ 590 00c8 3B       		.uleb128 0x3b
+ 591 00c9 0B       		.uleb128 0xb
+ 592 00ca 49       		.uleb128 0x49
+ 593 00cb 13       		.uleb128 0x13
+ 594 00cc 3F       		.uleb128 0x3f
+ 595 00cd 0C       		.uleb128 0xc
+ 596 00ce 3C       		.uleb128 0x3c
+ 597 00cf 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 16
+
+
+ 598 00d0 00       		.byte	0
+ 599 00d1 00       		.byte	0
+ 600 00d2 10       		.uleb128 0x10
+ 601 00d3 2E       		.uleb128 0x2e
+ 602 00d4 00       		.byte	0
+ 603 00d5 3F       		.uleb128 0x3f
+ 604 00d6 0C       		.uleb128 0xc
+ 605 00d7 03       		.uleb128 0x3
+ 606 00d8 0E       		.uleb128 0xe
+ 607 00d9 3A       		.uleb128 0x3a
+ 608 00da 0B       		.uleb128 0xb
+ 609 00db 3B       		.uleb128 0x3b
+ 610 00dc 0B       		.uleb128 0xb
+ 611 00dd 27       		.uleb128 0x27
+ 612 00de 0C       		.uleb128 0xc
+ 613 00df 3C       		.uleb128 0x3c
+ 614 00e0 0C       		.uleb128 0xc
+ 615 00e1 00       		.byte	0
+ 616 00e2 00       		.byte	0
+ 617 00e3 11       		.uleb128 0x11
+ 618 00e4 2E       		.uleb128 0x2e
+ 619 00e5 01       		.byte	0x1
+ 620 00e6 3F       		.uleb128 0x3f
+ 621 00e7 0C       		.uleb128 0xc
+ 622 00e8 03       		.uleb128 0x3
+ 623 00e9 0E       		.uleb128 0xe
+ 624 00ea 3A       		.uleb128 0x3a
+ 625 00eb 0B       		.uleb128 0xb
+ 626 00ec 3B       		.uleb128 0x3b
+ 627 00ed 0B       		.uleb128 0xb
+ 628 00ee 27       		.uleb128 0x27
+ 629 00ef 0C       		.uleb128 0xc
+ 630 00f0 3C       		.uleb128 0x3c
+ 631 00f1 0C       		.uleb128 0xc
+ 632 00f2 01       		.uleb128 0x1
+ 633 00f3 13       		.uleb128 0x13
+ 634 00f4 00       		.byte	0
+ 635 00f5 00       		.byte	0
+ 636 00f6 12       		.uleb128 0x12
+ 637 00f7 05       		.uleb128 0x5
+ 638 00f8 00       		.byte	0
+ 639 00f9 49       		.uleb128 0x49
+ 640 00fa 13       		.uleb128 0x13
+ 641 00fb 00       		.byte	0
+ 642 00fc 00       		.byte	0
+ 643 00fd 13       		.uleb128 0x13
+ 644 00fe 2E       		.uleb128 0x2e
+ 645 00ff 01       		.byte	0x1
+ 646 0100 3F       		.uleb128 0x3f
+ 647 0101 0C       		.uleb128 0xc
+ 648 0102 03       		.uleb128 0x3
+ 649 0103 0E       		.uleb128 0xe
+ 650 0104 3A       		.uleb128 0x3a
+ 651 0105 0B       		.uleb128 0xb
+ 652 0106 3B       		.uleb128 0x3b
+ 653 0107 0B       		.uleb128 0xb
+ 654 0108 27       		.uleb128 0x27
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 17
+
+
+ 655 0109 0C       		.uleb128 0xc
+ 656 010a 3C       		.uleb128 0x3c
+ 657 010b 0C       		.uleb128 0xc
+ 658 010c 00       		.byte	0
+ 659 010d 00       		.byte	0
+ 660 010e 00       		.byte	0
+ 661              		.section	.debug_loc,"",%progbits
+ 662              	.Ldebug_loc0:
+ 663              	.LLST0:
+ 664 0000 00000000 		.4byte	.LFB0
+ 665 0004 04000000 		.4byte	.LCFI0
+ 666 0008 0200     		.2byte	0x2
+ 667 000a 7D       		.byte	0x7d
+ 668 000b 00       		.sleb128 0
+ 669 000c 04000000 		.4byte	.LCFI0
+ 670 0010 CC000000 		.4byte	.LFE0
+ 671 0014 0200     		.2byte	0x2
+ 672 0016 7D       		.byte	0x7d
+ 673 0017 08       		.sleb128 8
+ 674 0018 00000000 		.4byte	0
+ 675 001c 00000000 		.4byte	0
+ 676              		.section	.debug_aranges,"",%progbits
+ 677 0000 24000000 		.4byte	0x24
+ 678 0004 0200     		.2byte	0x2
+ 679 0006 00000000 		.4byte	.Ldebug_info0
+ 680 000a 04       		.byte	0x4
+ 681 000b 00       		.byte	0
+ 682 000c 0000     		.2byte	0
+ 683 000e 0000     		.2byte	0
+ 684 0010 00000000 		.4byte	.LFB0
+ 685 0014 CC000000 		.4byte	.LFE0-.LFB0
+ 686 0018 00000000 		.4byte	.LFB1
+ 687 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 688 0020 00000000 		.4byte	0
+ 689 0024 00000000 		.4byte	0
+ 690              		.section	.debug_ranges,"",%progbits
+ 691              	.Ldebug_ranges0:
+ 692 0000 00000000 		.4byte	.LFB0
+ 693 0004 CC000000 		.4byte	.LFE0
+ 694 0008 00000000 		.4byte	.LFB1
+ 695 000c 0C000000 		.4byte	.LFE1
+ 696 0010 00000000 		.4byte	0
+ 697 0014 00000000 		.4byte	0
+ 698              		.section	.debug_line,"",%progbits
+ 699              	.Ldebug_line0:
+ 700 0000 C3000000 		.section	.debug_str,"MS",%progbits,1
+ 700      02006800 
+ 700      00000201 
+ 700      FB0E0D00 
+ 700      01010101 
+ 701              	.LASF15:
+ 702 0000 72656733 		.ascii	"reg32\000"
+ 702      3200
+ 703              	.LASF23:
+ 704 0006 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\RTC_I2C.c\000"
+ 704      6E657261 
+ 704      7465645F 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 18
+
+
+ 704      536F7572 
+ 704      63655C50 
+ 705              	.LASF3:
+ 706 0029 73686F72 		.ascii	"short unsigned int\000"
+ 706      7420756E 
+ 706      7369676E 
+ 706      65642069 
+ 706      6E7400
+ 707              	.LASF12:
+ 708 003c 666C6F61 		.ascii	"float\000"
+ 708      7400
+ 709              	.LASF26:
+ 710 0042 5254435F 		.ascii	"RTC_I2CStop\000"
+ 710      49324353 
+ 710      746F7000 
+ 711              	.LASF5:
+ 712 004e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 712      20756E73 
+ 712      69676E65 
+ 712      6420696E 
+ 712      7400
+ 713              	.LASF9:
+ 714 0060 75696E74 		.ascii	"uint8\000"
+ 714      3800
+ 715              	.LASF28:
+ 716 0066 5254435F 		.ascii	"RTC_SCB_IRQ_SetVector\000"
+ 716      5343425F 
+ 716      4952515F 
+ 716      53657456 
+ 716      6563746F 
+ 717              	.LASF1:
+ 718 007c 756E7369 		.ascii	"unsigned char\000"
+ 718      676E6564 
+ 718      20636861 
+ 718      7200
+ 719              	.LASF13:
+ 720 008a 646F7562 		.ascii	"double\000"
+ 720      6C6500
+ 721              	.LASF10:
+ 722 0091 75696E74 		.ascii	"uint16\000"
+ 722      313600
+ 723              	.LASF11:
+ 724 0098 75696E74 		.ascii	"uint32\000"
+ 724      333200
+ 725              	.LASF8:
+ 726 009f 756E7369 		.ascii	"unsigned int\000"
+ 726      676E6564 
+ 726      20696E74 
+ 726      00
+ 727              	.LASF7:
+ 728 00ac 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 728      206C6F6E 
+ 728      6720756E 
+ 728      7369676E 
+ 728      65642069 
+ 729              	.LASF16:
+ 730 00c3 63796973 		.ascii	"cyisraddress\000"
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 19
+
+
+ 730      72616464 
+ 730      72657373 
+ 730      00
+ 731              	.LASF17:
+ 732 00d0 73697A65 		.ascii	"sizetype\000"
+ 732      74797065 
+ 732      00
+ 733              	.LASF6:
+ 734 00d9 6C6F6E67 		.ascii	"long long int\000"
+ 734      206C6F6E 
+ 734      6720696E 
+ 734      7400
+ 735              	.LASF14:
+ 736 00e7 63686172 		.ascii	"char\000"
+ 736      00
+ 737              	.LASF21:
+ 738 00ec 5254435F 		.ascii	"RTC_mstrWrBufIndex\000"
+ 738      6D737472 
+ 738      57724275 
+ 738      66496E64 
+ 738      657800
+ 739              	.LASF2:
+ 740 00ff 73686F72 		.ascii	"short int\000"
+ 740      7420696E 
+ 740      7400
+ 741              	.LASF27:
+ 742 0109 5254435F 		.ascii	"RTC_SCB_IRQ_Disable\000"
+ 742      5343425F 
+ 742      4952515F 
+ 742      44697361 
+ 742      626C6500 
+ 743              	.LASF22:
+ 744 011d 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 744      4320342E 
+ 744      372E3320 
+ 744      32303133 
+ 744      30333132 
+ 745 0150 616E6368 		.ascii	"anch revision 196615]\000"
+ 745      20726576 
+ 745      6973696F 
+ 745      6E203139 
+ 745      36363135 
+ 746              	.LASF24:
+ 747 0166 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 747      73657273 
+ 747      5C537465 
+ 747      76655C44 
+ 747      6F63756D 
+ 748 0193 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 748      7269782E 
+ 748      63796473 
+ 748      6E00
+ 749              	.LASF4:
+ 750 01a1 6C6F6E67 		.ascii	"long int\000"
+ 750      20696E74 
+ 750      00
+ 751              	.LASF19:
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjreSn3.s 			page 20
+
+
+ 752 01aa 5254435F 		.ascii	"RTC_mstrStatus\000"
+ 752      6D737472 
+ 752      53746174 
+ 752      757300
+ 753              	.LASF0:
+ 754 01b9 7369676E 		.ascii	"signed char\000"
+ 754      65642063 
+ 754      68617200 
+ 755              	.LASF18:
+ 756 01c5 5254435F 		.ascii	"RTC_state\000"
+ 756      73746174 
+ 756      6500
+ 757              	.LASF29:
+ 758 01cf 5254435F 		.ascii	"RTC_SCB_IRQ_SetPriority\000"
+ 758      5343425F 
+ 758      4952515F 
+ 758      53657450 
+ 758      72696F72 
+ 759              	.LASF25:
+ 760 01e7 5254435F 		.ascii	"RTC_I2CInit\000"
+ 760      49324349 
+ 760      6E697400 
+ 761              	.LASF20:
+ 762 01f3 5254435F 		.ascii	"RTC_mstrRdBufIndex\000"
+ 762      6D737472 
+ 762      52644275 
+ 762      66496E64 
+ 762      657800
+ 763              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

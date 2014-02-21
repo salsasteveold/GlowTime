@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Feb 04 23:48:02 2014
+--	Fri Feb 21 14:35:17 2014
 --
 
 USE cypress.cypress.all;
@@ -539,7 +539,7 @@ TERMINAL \ADC:Net_124\ : bit;
 TERMINAL \ADC:Net_8\ : bit;
 TERMINAL \ADC:Net_43\ : bit;
 SIGNAL \ADC:Net_17\ : bit;
-SIGNAL Net_8032 : bit;
+SIGNAL Net_8093 : bit;
 SIGNAL \ADC:Net_2269\ : bit;
 SIGNAL \ADC:Net_2270_3\ : bit;
 SIGNAL \ADC:Net_2270_2\ : bit;
@@ -658,6 +658,41 @@ SIGNAL tmpFB_0__ADC_P2_0_net_0 : bit;
 SIGNAL tmpIO_0__ADC_P2_0_net_0 : bit;
 TERMINAL tmpSIOVREF__ADC_P2_0_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__ADC_P2_0_net_0 : bit;
+SIGNAL \RTC:Net_237\ : bit;
+SIGNAL Net_8109 : bit;
+SIGNAL \RTC:Net_244\ : bit;
+SIGNAL \RTC:Net_151\ : bit;
+SIGNAL \RTC:Net_84\ : bit;
+SIGNAL \RTC:Net_410\ : bit;
+SIGNAL \RTC:ss_3\ : bit;
+SIGNAL \RTC:ss_2\ : bit;
+SIGNAL \RTC:ss_1\ : bit;
+SIGNAL \RTC:ss_0\ : bit;
+SIGNAL \RTC:Net_88\ : bit;
+SIGNAL \RTC:Net_89\ : bit;
+SIGNAL \RTC:Net_152\ : bit;
+SIGNAL \RTC:Net_430\ : bit;
+SIGNAL \RTC:Net_413\ : bit;
+SIGNAL \RTC:Net_149\ : bit;
+SIGNAL \RTC:Net_150\ : bit;
+SIGNAL \RTC:Net_284\ : bit;
+SIGNAL Net_8108 : bit;
+SIGNAL \RTC:Net_427\ : bit;
+SIGNAL \RTC:tmpOE__scl_net_0\ : bit;
+SIGNAL \RTC:tmpFB_0__scl_net_0\ : bit;
+TERMINAL \RTC:tmpSIOVREF__scl_net_0\ : bit;
+SIGNAL \RTC:tmpINTERRUPT_0__scl_net_0\ : bit;
+SIGNAL \RTC:tmpOE__sda_net_0\ : bit;
+SIGNAL \RTC:tmpFB_0__sda_net_0\ : bit;
+TERMINAL \RTC:tmpSIOVREF__sda_net_0\ : bit;
+SIGNAL \RTC:tmpINTERRUPT_0__sda_net_0\ : bit;
+SIGNAL \RTC:Net_436\ : bit;
+SIGNAL \RTC:Net_449\ : bit;
+SIGNAL \RTC:Net_433\ : bit;
+SIGNAL \RTC:Net_373\ : bit;
+SIGNAL \RTC:uncfg_rx_irq\ : bit;
+SIGNAL \RTC:Net_452\ : bit;
+SIGNAL \RTC:Net_459\ : bit;
 SIGNAL Net_7537D : bit;
 SIGNAL Net_7548D : bit;
 SIGNAL latD : bit;
@@ -1917,7 +1952,7 @@ Clock_3:cy_clock_v1_0
 		vref=>\ADC:Net_8\,
 		ext_vref=>\ADC:Net_43\,
 		clock=>\ADC:Net_17\,
-		sample_done=>Net_8032,
+		sample_done=>Net_8093,
 		chan_id_valid=>\ADC:Net_2269\,
 		chan_id=>(\ADC:Net_2270_3\, \ADC:Net_2270_2\, \ADC:Net_2270_1\, \ADC:Net_2270_0\),
 		data_valid=>\ADC:Net_2271\,
@@ -1950,7 +1985,7 @@ Clock_3:cy_clock_v1_0
 		id=>"c0438d7d-b618-4458-bf19-9d8f78e88f79/a12a1691-924f-48e5-a017-176d592c3b32",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"833333333.333333",
+		period=>"1000000000",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\ADC:Net_17\,
@@ -2321,6 +2356,166 @@ ADC_P2_0:cy_psoc3_pins_v1_10
 eoc:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
 	PORT MAP(int_signal=>Net_8033);
+\RTC:SCB\:cy_m0s8_scb_v1_0
+	GENERIC MAP(cy_registers=>"",
+		scb_mode=>0)
+	PORT MAP(clock=>\RTC:Net_237\,
+		interrupt=>Net_8109,
+		rx=>zero,
+		tx=>\RTC:Net_151\,
+		mosi_m=>\RTC:Net_84\,
+		miso_m=>zero,
+		select_m=>(\RTC:ss_3\, \RTC:ss_2\, \RTC:ss_1\, \RTC:ss_0\),
+		sclk_m=>\RTC:Net_88\,
+		mosi_s=>zero,
+		miso_s=>\RTC:Net_152\,
+		select_s=>zero,
+		sclk_s=>zero,
+		scl=>\RTC:Net_149\,
+		sda=>\RTC:Net_150\);
+\RTC:SCB_IRQ\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>Net_8109);
+\RTC:SCBCLK\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"010a08ed-7390-437f-bfc3-91b92a7772d0/29084e80-7594-46a9-94af-639e276dfc5f",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"625000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\RTC:Net_237\,
+		dig_domain_out=>open);
+\RTC:scl\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"010a08ed-7390-437f-bfc3-91b92a7772d0/22863ebe-a37b-476f-b252-6e49a8c00b12",
+		drive_mode=>"100",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"B",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"0",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__P1_2_A_net_0),
+		y=>(zero),
+		fb=>(\RTC:tmpFB_0__scl_net_0\),
+		analog=>(open),
+		io=>\RTC:Net_149\,
+		siovref=>(\RTC:tmpSIOVREF__scl_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__P1_2_A_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__P1_2_A_net_0,
+		out_reset=>zero,
+		interrupt=>\RTC:tmpINTERRUPT_0__scl_net_0\);
+\RTC:sda\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"010a08ed-7390-437f-bfc3-91b92a7772d0/5382e105-1382-4a2e-b9f4-3bb2feba71e0",
+		drive_mode=>"100",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"B",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"0",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__P1_2_A_net_0),
+		y=>(zero),
+		fb=>(\RTC:tmpFB_0__sda_net_0\),
+		analog=>(open),
+		io=>\RTC:Net_150\,
+		siovref=>(\RTC:tmpSIOVREF__sda_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__P1_2_A_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__P1_2_A_net_0,
+		out_reset=>zero,
+		interrupt=>\RTC:tmpINTERRUPT_0__sda_net_0\);
 Net_7537:cy_dff
 	PORT MAP(d=>Net_7537D,
 		clk=>\LED_Matrix_1:ClockOutFromEnBlock\,

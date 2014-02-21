@@ -1,0 +1,1448 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"RTC.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.RTC_Init,"ax",%progbits
+  18              		.align	2
+  19              		.global	RTC_Init
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	RTC_Init, %function
+  23              	RTC_Init:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\RTC.c"
+   1:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/RTC.c **** * File Name: RTC.c
+   3:.\Generated_Source\PSoC4/RTC.c **** * Version 1.10
+   4:.\Generated_Source\PSoC4/RTC.c **** *
+   5:.\Generated_Source\PSoC4/RTC.c **** * Description:
+   6:.\Generated_Source\PSoC4/RTC.c **** *  This file provides the source code to the API for the SCB Component.
+   7:.\Generated_Source\PSoC4/RTC.c **** *
+   8:.\Generated_Source\PSoC4/RTC.c **** * Note:
+   9:.\Generated_Source\PSoC4/RTC.c **** *
+  10:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************
+  11:.\Generated_Source\PSoC4/RTC.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/RTC.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:.\Generated_Source\PSoC4/RTC.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:.\Generated_Source\PSoC4/RTC.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/RTC.c **** 
+  17:.\Generated_Source\PSoC4/RTC.c **** #include "RTC_PVT.h"
+  18:.\Generated_Source\PSoC4/RTC.c **** 
+  19:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_I2C_INC)
+  20:.\Generated_Source\PSoC4/RTC.c ****     #include "RTC_I2C_PVT.h"
+  21:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_I2C_INC) */
+  22:.\Generated_Source\PSoC4/RTC.c **** 
+  23:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_EZI2C_INC)
+  24:.\Generated_Source\PSoC4/RTC.c ****     #include "RTC_EZI2C_PVT.h"
+  25:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_EZI2C_INC) */
+  26:.\Generated_Source\PSoC4/RTC.c **** 
+  27:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_SPI_INC || RTC_SCB_MODE_UART_INC)
+  28:.\Generated_Source\PSoC4/RTC.c ****     #include "RTC_SPI_UART_PVT.h"
+  29:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_SPI_INC || RTC_SCB_MODE_UART_INC) */
+  30:.\Generated_Source\PSoC4/RTC.c **** 
+  31:.\Generated_Source\PSoC4/RTC.c **** 
+  32:.\Generated_Source\PSoC4/RTC.c **** /**********************************
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/RTC.c **** *    Run Time Configuration Vars
+  34:.\Generated_Source\PSoC4/RTC.c **** **********************************/
+  35:.\Generated_Source\PSoC4/RTC.c **** 
+  36:.\Generated_Source\PSoC4/RTC.c **** /* Stores internal component configuration for unconfigured mode */
+  37:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+  38:.\Generated_Source\PSoC4/RTC.c ****     /* Common config vars */
+  39:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_scbMode = RTC_SCB_MODE_UNCONFIG;
+  40:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_scbEnableWake;
+  41:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_scbEnableIntr;
+  42:.\Generated_Source\PSoC4/RTC.c **** 
+  43:.\Generated_Source\PSoC4/RTC.c ****     /* I2C config vars */
+  44:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_mode;
+  45:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_acceptAddr;
+  46:.\Generated_Source\PSoC4/RTC.c **** 
+  47:.\Generated_Source\PSoC4/RTC.c ****     /* SPI/UART config vars */
+  48:.\Generated_Source\PSoC4/RTC.c ****     volatile uint8 * RTC_rxBuffer;
+  49:.\Generated_Source\PSoC4/RTC.c ****     uint8  RTC_rxDataBits;
+  50:.\Generated_Source\PSoC4/RTC.c ****     uint32 RTC_rxBufferSize;
+  51:.\Generated_Source\PSoC4/RTC.c **** 
+  52:.\Generated_Source\PSoC4/RTC.c ****     volatile uint8 * RTC_txBuffer;
+  53:.\Generated_Source\PSoC4/RTC.c ****     uint8  RTC_txDataBits;
+  54:.\Generated_Source\PSoC4/RTC.c ****     uint32 RTC_txBufferSize;
+  55:.\Generated_Source\PSoC4/RTC.c **** 
+  56:.\Generated_Source\PSoC4/RTC.c ****     /* EZI2C config vars */
+  57:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_numberOfAddr;
+  58:.\Generated_Source\PSoC4/RTC.c ****     uint8 RTC_subAddrSize;
+  59:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+  60:.\Generated_Source\PSoC4/RTC.c **** 
+  61:.\Generated_Source\PSoC4/RTC.c **** 
+  62:.\Generated_Source\PSoC4/RTC.c **** /**********************************
+  63:.\Generated_Source\PSoC4/RTC.c **** *     Common SCB Vars
+  64:.\Generated_Source\PSoC4/RTC.c **** **********************************/
+  65:.\Generated_Source\PSoC4/RTC.c **** 
+  66:.\Generated_Source\PSoC4/RTC.c **** uint8 RTC_initVar = 0u;
+  67:.\Generated_Source\PSoC4/RTC.c **** cyisraddress RTC_customIntrHandler = NULL;
+  68:.\Generated_Source\PSoC4/RTC.c **** 
+  69:.\Generated_Source\PSoC4/RTC.c **** 
+  70:.\Generated_Source\PSoC4/RTC.c **** /***************************************
+  71:.\Generated_Source\PSoC4/RTC.c **** *    Private Function Prototypes
+  72:.\Generated_Source\PSoC4/RTC.c **** ***************************************/
+  73:.\Generated_Source\PSoC4/RTC.c **** 
+  74:.\Generated_Source\PSoC4/RTC.c **** static void RTC_ScbEnableIntr(void);
+  75:.\Generated_Source\PSoC4/RTC.c **** static void RTC_ScbModeStop(void);
+  76:.\Generated_Source\PSoC4/RTC.c **** 
+  77:.\Generated_Source\PSoC4/RTC.c **** 
+  78:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+  79:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_Init
+  80:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+  81:.\Generated_Source\PSoC4/RTC.c **** *
+  82:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+  83:.\Generated_Source\PSoC4/RTC.c **** *  Initializes SCB component to operate in one of selected configurations:
+  84:.\Generated_Source\PSoC4/RTC.c **** *  I2C, SPI, UART, EZI2C or EZSPI.
+  85:.\Generated_Source\PSoC4/RTC.c **** *  This function does not do any initialization when configuration is set to
+  86:.\Generated_Source\PSoC4/RTC.c **** *  Unconfigured SCB.
+  87:.\Generated_Source\PSoC4/RTC.c **** *
+  88:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+  89:.\Generated_Source\PSoC4/RTC.c **** *  None
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 3
+
+
+  90:.\Generated_Source\PSoC4/RTC.c **** *
+  91:.\Generated_Source\PSoC4/RTC.c **** * Return:
+  92:.\Generated_Source\PSoC4/RTC.c **** *  None
+  93:.\Generated_Source\PSoC4/RTC.c **** *
+  94:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+  95:.\Generated_Source\PSoC4/RTC.c **** void RTC_Init(void)
+  96:.\Generated_Source\PSoC4/RTC.c **** {
+  26              		.loc 1 96 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 3, -8
+  32              		.cfi_offset 14, -4
+  97:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+  98:.\Generated_Source\PSoC4/RTC.c ****     if(RTC_SCB_MODE_UNCONFIG_RUNTM_CFG)
+  99:.\Generated_Source\PSoC4/RTC.c ****     {
+ 100:.\Generated_Source\PSoC4/RTC.c ****         RTC_initVar = 0u; /* Clear init var */
+ 101:.\Generated_Source\PSoC4/RTC.c ****     }
+ 102:.\Generated_Source\PSoC4/RTC.c ****     else
+ 103:.\Generated_Source\PSoC4/RTC.c ****     {
+ 104:.\Generated_Source\PSoC4/RTC.c ****         /* Initialization was done before call */
+ 105:.\Generated_Source\PSoC4/RTC.c ****     }
+ 106:.\Generated_Source\PSoC4/RTC.c **** 
+ 107:.\Generated_Source\PSoC4/RTC.c **** #elif(RTC_SCB_MODE_I2C_CONST_CFG)
+ 108:.\Generated_Source\PSoC4/RTC.c ****     RTC_I2CInit();
+  33              		.loc 1 108 0
+  34 0002 FFF7FEFF 		bl	RTC_I2CInit
+  35              	.LVL0:
+ 109:.\Generated_Source\PSoC4/RTC.c **** 
+ 110:.\Generated_Source\PSoC4/RTC.c **** #elif(RTC_SCB_MODE_SPI_CONST_CFG)
+ 111:.\Generated_Source\PSoC4/RTC.c ****     RTC_SpiInit();
+ 112:.\Generated_Source\PSoC4/RTC.c **** 
+ 113:.\Generated_Source\PSoC4/RTC.c **** #elif(RTC_SCB_MODE_UART_CONST_CFG)
+ 114:.\Generated_Source\PSoC4/RTC.c ****     RTC_UartInit();
+ 115:.\Generated_Source\PSoC4/RTC.c **** 
+ 116:.\Generated_Source\PSoC4/RTC.c **** #elif(RTC_SCB_MODE_EZI2C_CONST_CFG)
+ 117:.\Generated_Source\PSoC4/RTC.c ****     RTC_EzI2CInit();
+ 118:.\Generated_Source\PSoC4/RTC.c **** 
+ 119:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 120:.\Generated_Source\PSoC4/RTC.c **** }
+  36              		.loc 1 120 0
+  37              		@ sp needed for prologue
+  38 0006 08BD     		pop	{r3, pc}
+  39              		.cfi_endproc
+  40              	.LFE0:
+  41              		.size	RTC_Init, .-RTC_Init
+  42              		.section	.text.RTC_Enable,"ax",%progbits
+  43              		.align	2
+  44              		.global	RTC_Enable
+  45              		.code	16
+  46              		.thumb_func
+  47              		.type	RTC_Enable, %function
+  48              	RTC_Enable:
+  49              	.LFB1:
+ 121:.\Generated_Source\PSoC4/RTC.c **** 
+ 122:.\Generated_Source\PSoC4/RTC.c **** 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 4
+
+
+ 123:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 124:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_Enable
+ 125:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 126:.\Generated_Source\PSoC4/RTC.c **** *
+ 127:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 128:.\Generated_Source\PSoC4/RTC.c **** *  Enables SCB component operation.
+ 129:.\Generated_Source\PSoC4/RTC.c **** *  The SCB configuration should be not changed when the component is enabled.
+ 130:.\Generated_Source\PSoC4/RTC.c **** *  Any configuration changes should be made after disabling the component.
+ 131:.\Generated_Source\PSoC4/RTC.c **** *
+ 132:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 133:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 134:.\Generated_Source\PSoC4/RTC.c **** *
+ 135:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 136:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 137:.\Generated_Source\PSoC4/RTC.c **** *
+ 138:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 139:.\Generated_Source\PSoC4/RTC.c **** void RTC_Enable(void)
+ 140:.\Generated_Source\PSoC4/RTC.c **** {
+  50              		.loc 1 140 0
+  51              		.cfi_startproc
+  52 0000 08B5     		push	{r3, lr}
+  53              	.LCFI1:
+  54              		.cfi_def_cfa_offset 8
+  55              		.cfi_offset 3, -8
+  56              		.cfi_offset 14, -4
+ 141:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 142:.\Generated_Source\PSoC4/RTC.c ****     if(!RTC_SCB_MODE_UNCONFIG_RUNTM_CFG)
+ 143:.\Generated_Source\PSoC4/RTC.c ****     {
+ 144:.\Generated_Source\PSoC4/RTC.c ****         /* Enable SCB block, only if already configured */
+ 145:.\Generated_Source\PSoC4/RTC.c ****         RTC_CTRL_REG |= RTC_CTRL_ENABLED;
+ 146:.\Generated_Source\PSoC4/RTC.c ****         
+ 147:.\Generated_Source\PSoC4/RTC.c ****         /* Enable interrupt */
+ 148:.\Generated_Source\PSoC4/RTC.c ****         RTC_ScbEnableIntr();
+ 149:.\Generated_Source\PSoC4/RTC.c ****     }
+ 150:.\Generated_Source\PSoC4/RTC.c **** #else
+ 151:.\Generated_Source\PSoC4/RTC.c ****     RTC_CTRL_REG |= RTC_CTRL_ENABLED; /* Enable SCB block */
+  57              		.loc 1 151 0
+  58 0002 044B     		ldr	r3, .L3
+  59 0004 8022     		mov	r2, #128
+  60 0006 1968     		ldr	r1, [r3]
+  61 0008 1006     		lsl	r0, r2, #24
+  62 000a 0843     		orr	r0, r1
+  63 000c 1860     		str	r0, [r3]
+  64              	.LBB8:
+  65              	.LBB9:
+ 152:.\Generated_Source\PSoC4/RTC.c ****     
+ 153:.\Generated_Source\PSoC4/RTC.c ****     RTC_ScbEnableIntr();
+ 154:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 155:.\Generated_Source\PSoC4/RTC.c **** }
+ 156:.\Generated_Source\PSoC4/RTC.c **** 
+ 157:.\Generated_Source\PSoC4/RTC.c **** 
+ 158:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 159:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_Start
+ 160:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 161:.\Generated_Source\PSoC4/RTC.c **** *
+ 162:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 163:.\Generated_Source\PSoC4/RTC.c **** *  Invokes SCB_Init() and SCB_Enable().
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 5
+
+
+ 164:.\Generated_Source\PSoC4/RTC.c **** *  After this function call the component is enabled and ready for operation.
+ 165:.\Generated_Source\PSoC4/RTC.c **** *
+ 166:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 167:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 168:.\Generated_Source\PSoC4/RTC.c **** *
+ 169:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 170:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 171:.\Generated_Source\PSoC4/RTC.c **** *
+ 172:.\Generated_Source\PSoC4/RTC.c **** * Global variables:
+ 173:.\Generated_Source\PSoC4/RTC.c **** *  RTC_initVar - used to check initial configuration, modified
+ 174:.\Generated_Source\PSoC4/RTC.c **** *  on first function call.
+ 175:.\Generated_Source\PSoC4/RTC.c **** *
+ 176:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 177:.\Generated_Source\PSoC4/RTC.c **** void RTC_Start(void)
+ 178:.\Generated_Source\PSoC4/RTC.c **** {
+ 179:.\Generated_Source\PSoC4/RTC.c ****     if(0u == RTC_initVar)
+ 180:.\Generated_Source\PSoC4/RTC.c ****     {
+ 181:.\Generated_Source\PSoC4/RTC.c ****         RTC_initVar = 1u; /* Component was initialized */
+ 182:.\Generated_Source\PSoC4/RTC.c ****         RTC_Init();       /* Initialize component      */
+ 183:.\Generated_Source\PSoC4/RTC.c ****     }
+ 184:.\Generated_Source\PSoC4/RTC.c **** 
+ 185:.\Generated_Source\PSoC4/RTC.c ****     RTC_Enable();
+ 186:.\Generated_Source\PSoC4/RTC.c **** }
+ 187:.\Generated_Source\PSoC4/RTC.c **** 
+ 188:.\Generated_Source\PSoC4/RTC.c **** 
+ 189:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 190:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_Stop
+ 191:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 192:.\Generated_Source\PSoC4/RTC.c **** *
+ 193:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 194:.\Generated_Source\PSoC4/RTC.c **** *  Disables the SCB component.
+ 195:.\Generated_Source\PSoC4/RTC.c **** *
+ 196:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 197:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 198:.\Generated_Source\PSoC4/RTC.c **** *
+ 199:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 200:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 201:.\Generated_Source\PSoC4/RTC.c **** *
+ 202:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 203:.\Generated_Source\PSoC4/RTC.c **** void RTC_Stop(void)
+ 204:.\Generated_Source\PSoC4/RTC.c **** {
+ 205:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_IRQ_INTERNAL)
+ 206:.\Generated_Source\PSoC4/RTC.c ****     RTC_SCB_IRQ_Disable();     /* Disable interrupt before block */
+ 207:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_IRQ_INTERNAL) */
+ 208:.\Generated_Source\PSoC4/RTC.c **** 
+ 209:.\Generated_Source\PSoC4/RTC.c ****     RTC_CTRL_REG &= (uint32) ~RTC_CTRL_ENABLED;  /* Disable SCB block */
+ 210:.\Generated_Source\PSoC4/RTC.c **** 
+ 211:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_IRQ_INTERNAL)
+ 212:.\Generated_Source\PSoC4/RTC.c ****     RTC_SCB_IRQ_ClearPending(); /* Clear pending interrupt */
+ 213:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_IRQ_INTERNAL) */
+ 214:.\Generated_Source\PSoC4/RTC.c ****     
+ 215:.\Generated_Source\PSoC4/RTC.c ****     RTC_ScbModeStop(); /* Calls scbMode specific Stop function */
+ 216:.\Generated_Source\PSoC4/RTC.c **** }
+ 217:.\Generated_Source\PSoC4/RTC.c **** 
+ 218:.\Generated_Source\PSoC4/RTC.c **** 
+ 219:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 220:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_SetCustomInterruptHandler
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 6
+
+
+ 221:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 222:.\Generated_Source\PSoC4/RTC.c **** *
+ 223:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 224:.\Generated_Source\PSoC4/RTC.c **** *  Registers a function to be called by the internal interrupt handler.
+ 225:.\Generated_Source\PSoC4/RTC.c **** *  First the function that is registered is called, then the internal interrupt
+ 226:.\Generated_Source\PSoC4/RTC.c **** *  handler performs any operations such as software buffer management functions
+ 227:.\Generated_Source\PSoC4/RTC.c **** *  before the interrupt returns.  It is user's responsibility to not break the
+ 228:.\Generated_Source\PSoC4/RTC.c **** *  software buffer operations. Only one custom handler is supported, which is
+ 229:.\Generated_Source\PSoC4/RTC.c **** *  the function provided by the most recent call.
+ 230:.\Generated_Source\PSoC4/RTC.c **** *  At initialization time no custom handler is registered.
+ 231:.\Generated_Source\PSoC4/RTC.c **** *
+ 232:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 233:.\Generated_Source\PSoC4/RTC.c **** *  func: Pointer to the function to register.
+ 234:.\Generated_Source\PSoC4/RTC.c **** *        The value NULL indicates to remove the current custom interrupt
+ 235:.\Generated_Source\PSoC4/RTC.c **** *        handler.
+ 236:.\Generated_Source\PSoC4/RTC.c **** *
+ 237:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 238:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 239:.\Generated_Source\PSoC4/RTC.c **** *
+ 240:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 241:.\Generated_Source\PSoC4/RTC.c **** void RTC_SetCustomInterruptHandler(cyisraddress func)
+ 242:.\Generated_Source\PSoC4/RTC.c **** {
+ 243:.\Generated_Source\PSoC4/RTC.c ****     RTC_customIntrHandler = func; /* Register interrupt handler */
+ 244:.\Generated_Source\PSoC4/RTC.c **** }
+ 245:.\Generated_Source\PSoC4/RTC.c **** 
+ 246:.\Generated_Source\PSoC4/RTC.c **** 
+ 247:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 248:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_ScbModeEnableIntr
+ 249:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 250:.\Generated_Source\PSoC4/RTC.c **** *
+ 251:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 252:.\Generated_Source\PSoC4/RTC.c **** *  Enables interrupt for specific mode.
+ 253:.\Generated_Source\PSoC4/RTC.c **** *
+ 254:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 255:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 256:.\Generated_Source\PSoC4/RTC.c **** *
+ 257:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 258:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 259:.\Generated_Source\PSoC4/RTC.c **** *
+ 260:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 261:.\Generated_Source\PSoC4/RTC.c **** static void RTC_ScbEnableIntr(void)
+ 262:.\Generated_Source\PSoC4/RTC.c **** {
+ 263:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_IRQ_INTERNAL)
+ 264:.\Generated_Source\PSoC4/RTC.c ****     #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 265:.\Generated_Source\PSoC4/RTC.c ****         /* Enable interrupt source */
+ 266:.\Generated_Source\PSoC4/RTC.c ****         if(0u != RTC_scbEnableIntr)
+ 267:.\Generated_Source\PSoC4/RTC.c ****         {
+ 268:.\Generated_Source\PSoC4/RTC.c ****             RTC_SCB_IRQ_Enable();
+ 269:.\Generated_Source\PSoC4/RTC.c ****         }
+ 270:.\Generated_Source\PSoC4/RTC.c ****     #else
+ 271:.\Generated_Source\PSoC4/RTC.c ****         RTC_SCB_IRQ_Enable();
+  66              		.loc 1 271 0
+  67 000e FFF7FEFF 		bl	RTC_SCB_IRQ_Enable
+  68              	.LVL1:
+  69              	.LBE9:
+  70              	.LBE8:
+ 155:.\Generated_Source\PSoC4/RTC.c **** }
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 7
+
+
+  71              		.loc 1 155 0
+  72              		@ sp needed for prologue
+  73 0012 08BD     		pop	{r3, pc}
+  74              	.L4:
+  75              		.align	2
+  76              	.L3:
+  77 0014 00000640 		.word	1074135040
+  78              		.cfi_endproc
+  79              	.LFE1:
+  80              		.size	RTC_Enable, .-RTC_Enable
+  81              		.section	.text.RTC_Start,"ax",%progbits
+  82              		.align	2
+  83              		.global	RTC_Start
+  84              		.code	16
+  85              		.thumb_func
+  86              		.type	RTC_Start, %function
+  87              	RTC_Start:
+  88              	.LFB2:
+ 178:.\Generated_Source\PSoC4/RTC.c **** {
+  89              		.loc 1 178 0
+  90              		.cfi_startproc
+  91 0000 08B5     		push	{r3, lr}
+  92              	.LCFI2:
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 3, -8
+  95              		.cfi_offset 14, -4
+ 179:.\Generated_Source\PSoC4/RTC.c ****     if(0u == RTC_initVar)
+  96              		.loc 1 179 0
+  97 0002 054B     		ldr	r3, .L8
+  98 0004 1A78     		ldrb	r2, [r3]
+  99 0006 002A     		cmp	r2, #0
+ 100 0008 03D1     		bne	.L6
+ 181:.\Generated_Source\PSoC4/RTC.c ****         RTC_initVar = 1u; /* Component was initialized */
+ 101              		.loc 1 181 0
+ 102 000a 0120     		mov	r0, #1
+ 103 000c 1870     		strb	r0, [r3]
+ 104              	.LBB10:
+ 105              	.LBB11:
+ 108:.\Generated_Source\PSoC4/RTC.c ****     RTC_I2CInit();
+ 106              		.loc 1 108 0
+ 107 000e FFF7FEFF 		bl	RTC_I2CInit
+ 108              	.LVL2:
+ 109              	.L6:
+ 110              	.LBE11:
+ 111              	.LBE10:
+ 185:.\Generated_Source\PSoC4/RTC.c ****     RTC_Enable();
+ 112              		.loc 1 185 0
+ 113 0012 FFF7FEFF 		bl	RTC_Enable
+ 114              	.LVL3:
+ 186:.\Generated_Source\PSoC4/RTC.c **** }
+ 115              		.loc 1 186 0
+ 116              		@ sp needed for prologue
+ 117 0016 08BD     		pop	{r3, pc}
+ 118              	.L9:
+ 119              		.align	2
+ 120              	.L8:
+ 121 0018 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 8
+
+
+ 122              		.cfi_endproc
+ 123              	.LFE2:
+ 124              		.size	RTC_Start, .-RTC_Start
+ 125              		.section	.text.RTC_Stop,"ax",%progbits
+ 126              		.align	2
+ 127              		.global	RTC_Stop
+ 128              		.code	16
+ 129              		.thumb_func
+ 130              		.type	RTC_Stop, %function
+ 131              	RTC_Stop:
+ 132              	.LFB3:
+ 204:.\Generated_Source\PSoC4/RTC.c **** {
+ 133              		.loc 1 204 0
+ 134              		.cfi_startproc
+ 135 0000 08B5     		push	{r3, lr}
+ 136              	.LCFI3:
+ 137              		.cfi_def_cfa_offset 8
+ 138              		.cfi_offset 3, -8
+ 139              		.cfi_offset 14, -4
+ 206:.\Generated_Source\PSoC4/RTC.c ****     RTC_SCB_IRQ_Disable();     /* Disable interrupt before block */
+ 140              		.loc 1 206 0
+ 141 0002 FFF7FEFF 		bl	RTC_SCB_IRQ_Disable
+ 142              	.LVL4:
+ 209:.\Generated_Source\PSoC4/RTC.c ****     RTC_CTRL_REG &= (uint32) ~RTC_CTRL_ENABLED;  /* Disable SCB block */
+ 143              		.loc 1 209 0
+ 144 0006 054B     		ldr	r3, .L11
+ 216:.\Generated_Source\PSoC4/RTC.c **** }
+ 145              		.loc 1 216 0
+ 146              		@ sp needed for prologue
+ 209:.\Generated_Source\PSoC4/RTC.c ****     RTC_CTRL_REG &= (uint32) ~RTC_CTRL_ENABLED;  /* Disable SCB block */
+ 147              		.loc 1 209 0
+ 148 0008 1A68     		ldr	r2, [r3]
+ 149 000a 5000     		lsl	r0, r2, #1
+ 150 000c 4108     		lsr	r1, r0, #1
+ 151 000e 1960     		str	r1, [r3]
+ 212:.\Generated_Source\PSoC4/RTC.c ****     RTC_SCB_IRQ_ClearPending(); /* Clear pending interrupt */
+ 152              		.loc 1 212 0
+ 153 0010 FFF7FEFF 		bl	RTC_SCB_IRQ_ClearPending
+ 154              	.LVL5:
+ 155              	.LBB12:
+ 156              	.LBB13:
+ 272:.\Generated_Source\PSoC4/RTC.c ****         
+ 273:.\Generated_Source\PSoC4/RTC.c ****     #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 274:.\Generated_Source\PSoC4/RTC.c **** #endif /* (RTC_SCB_IRQ_INTERNAL) */
+ 275:.\Generated_Source\PSoC4/RTC.c **** }
+ 276:.\Generated_Source\PSoC4/RTC.c **** 
+ 277:.\Generated_Source\PSoC4/RTC.c **** 
+ 278:.\Generated_Source\PSoC4/RTC.c **** /*******************************************************************************
+ 279:.\Generated_Source\PSoC4/RTC.c **** * Function Name: RTC_ScbModeEnableIntr
+ 280:.\Generated_Source\PSoC4/RTC.c **** ********************************************************************************
+ 281:.\Generated_Source\PSoC4/RTC.c **** *
+ 282:.\Generated_Source\PSoC4/RTC.c **** * Summary:
+ 283:.\Generated_Source\PSoC4/RTC.c **** *  Calls Stop function for specific operation mode.
+ 284:.\Generated_Source\PSoC4/RTC.c **** *
+ 285:.\Generated_Source\PSoC4/RTC.c **** * Parameters:
+ 286:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 287:.\Generated_Source\PSoC4/RTC.c **** *
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 9
+
+
+ 288:.\Generated_Source\PSoC4/RTC.c **** * Return:
+ 289:.\Generated_Source\PSoC4/RTC.c **** *  None
+ 290:.\Generated_Source\PSoC4/RTC.c **** *
+ 291:.\Generated_Source\PSoC4/RTC.c **** *******************************************************************************/
+ 292:.\Generated_Source\PSoC4/RTC.c **** static void RTC_ScbModeStop(void)
+ 293:.\Generated_Source\PSoC4/RTC.c **** {
+ 294:.\Generated_Source\PSoC4/RTC.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 295:.\Generated_Source\PSoC4/RTC.c ****     if(RTC_SCB_MODE_I2C_RUNTM_CFG)
+ 296:.\Generated_Source\PSoC4/RTC.c ****     {
+ 297:.\Generated_Source\PSoC4/RTC.c ****         RTC_I2CStop();
+ 298:.\Generated_Source\PSoC4/RTC.c ****     }
+ 299:.\Generated_Source\PSoC4/RTC.c ****     else if(RTC_SCB_MODE_EZI2C_RUNTM_CFG)
+ 300:.\Generated_Source\PSoC4/RTC.c ****     {
+ 301:.\Generated_Source\PSoC4/RTC.c ****         RTC_EzI2CStop();
+ 302:.\Generated_Source\PSoC4/RTC.c ****     }
+ 303:.\Generated_Source\PSoC4/RTC.c ****     else
+ 304:.\Generated_Source\PSoC4/RTC.c ****     {
+ 305:.\Generated_Source\PSoC4/RTC.c ****         /* None of modes above */
+ 306:.\Generated_Source\PSoC4/RTC.c ****     }
+ 307:.\Generated_Source\PSoC4/RTC.c **** #elif(RTC_SCB_MODE_I2C_CONST_CFG)
+ 308:.\Generated_Source\PSoC4/RTC.c ****     RTC_I2CStop();
+ 157              		.loc 1 308 0
+ 158 0014 FFF7FEFF 		bl	RTC_I2CStop
+ 159              	.LVL6:
+ 160              	.LBE13:
+ 161              	.LBE12:
+ 216:.\Generated_Source\PSoC4/RTC.c **** }
+ 162              		.loc 1 216 0
+ 163 0018 08BD     		pop	{r3, pc}
+ 164              	.L12:
+ 165 001a C046     		.align	2
+ 166              	.L11:
+ 167 001c 00000640 		.word	1074135040
+ 168              		.cfi_endproc
+ 169              	.LFE3:
+ 170              		.size	RTC_Stop, .-RTC_Stop
+ 171              		.section	.text.RTC_SetCustomInterruptHandler,"ax",%progbits
+ 172              		.align	2
+ 173              		.global	RTC_SetCustomInterruptHandler
+ 174              		.code	16
+ 175              		.thumb_func
+ 176              		.type	RTC_SetCustomInterruptHandler, %function
+ 177              	RTC_SetCustomInterruptHandler:
+ 178              	.LFB4:
+ 242:.\Generated_Source\PSoC4/RTC.c **** {
+ 179              		.loc 1 242 0
+ 180              		.cfi_startproc
+ 181              	.LVL7:
+ 243:.\Generated_Source\PSoC4/RTC.c ****     RTC_customIntrHandler = func; /* Register interrupt handler */
+ 182              		.loc 1 243 0
+ 183 0000 014B     		ldr	r3, .L14
+ 244:.\Generated_Source\PSoC4/RTC.c **** }
+ 184              		.loc 1 244 0
+ 185              		@ sp needed for prologue
+ 243:.\Generated_Source\PSoC4/RTC.c ****     RTC_customIntrHandler = func; /* Register interrupt handler */
+ 186              		.loc 1 243 0
+ 187 0002 5860     		str	r0, [r3, #4]
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 10
+
+
+ 244:.\Generated_Source\PSoC4/RTC.c **** }
+ 188              		.loc 1 244 0
+ 189 0004 7047     		bx	lr
+ 190              	.L15:
+ 191 0006 C046     		.align	2
+ 192              	.L14:
+ 193 0008 00000000 		.word	.LANCHOR0
+ 194              		.cfi_endproc
+ 195              	.LFE4:
+ 196              		.size	RTC_SetCustomInterruptHandler, .-RTC_SetCustomInterruptHandler
+ 197              		.global	RTC_customIntrHandler
+ 198              		.global	RTC_initVar
+ 199              		.bss
+ 200              		.align	2
+ 201              		.set	.LANCHOR0,. + 0
+ 202              		.type	RTC_initVar, %object
+ 203              		.size	RTC_initVar, 1
+ 204              	RTC_initVar:
+ 205 0000 00       		.space	1
+ 206 0001 000000   		.space	3
+ 207              		.type	RTC_customIntrHandler, %object
+ 208              		.size	RTC_customIntrHandler, 4
+ 209              	RTC_customIntrHandler:
+ 210 0004 00000000 		.space	4
+ 211              		.text
+ 212              	.Letext0:
+ 213              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 214              		.file 3 ".\\Generated_Source\\PSoC4\\RTC_I2C_PVT.h"
+ 215              		.file 4 ".\\Generated_Source\\PSoC4\\RTC_SCB_IRQ.h"
+ 216              		.section	.debug_info,"",%progbits
+ 217              	.Ldebug_info0:
+ 218 0000 3C020000 		.4byte	0x23c
+ 219 0004 0200     		.2byte	0x2
+ 220 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 221 000a 04       		.byte	0x4
+ 222 000b 01       		.uleb128 0x1
+ 223 000c 81010000 		.4byte	.LASF31
+ 224 0010 01       		.byte	0x1
+ 225 0011 0B010000 		.4byte	.LASF32
+ 226 0015 EC010000 		.4byte	.LASF33
+ 227 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 228 001d 00000000 		.4byte	0
+ 229 0021 00000000 		.4byte	0
+ 230 0025 00000000 		.4byte	.Ldebug_line0
+ 231 0029 02       		.uleb128 0x2
+ 232 002a 01       		.byte	0x1
+ 233 002b 06       		.byte	0x6
+ 234 002c 30020000 		.4byte	.LASF0
+ 235 0030 02       		.uleb128 0x2
+ 236 0031 01       		.byte	0x1
+ 237 0032 08       		.byte	0x8
+ 238 0033 A4000000 		.4byte	.LASF1
+ 239 0037 02       		.uleb128 0x2
+ 240 0038 02       		.byte	0x2
+ 241 0039 05       		.byte	0x5
+ 242 003a 63010000 		.4byte	.LASF2
+ 243 003e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 11
+
+
+ 244 003f 02       		.byte	0x2
+ 245 0040 07       		.byte	0x7
+ 246 0041 36000000 		.4byte	.LASF3
+ 247 0045 02       		.uleb128 0x2
+ 248 0046 04       		.byte	0x4
+ 249 0047 05       		.byte	0x5
+ 250 0048 27020000 		.4byte	.LASF4
+ 251 004c 02       		.uleb128 0x2
+ 252 004d 04       		.byte	0x4
+ 253 004e 07       		.byte	0x7
+ 254 004f 79000000 		.4byte	.LASF5
+ 255 0053 02       		.uleb128 0x2
+ 256 0054 08       		.byte	0x8
+ 257 0055 05       		.byte	0x5
+ 258 0056 40010000 		.4byte	.LASF6
+ 259 005a 02       		.uleb128 0x2
+ 260 005b 08       		.byte	0x8
+ 261 005c 07       		.byte	0x7
+ 262 005d F4000000 		.4byte	.LASF7
+ 263 0061 03       		.uleb128 0x3
+ 264 0062 04       		.byte	0x4
+ 265 0063 05       		.byte	0x5
+ 266 0064 696E7400 		.ascii	"int\000"
+ 267 0068 02       		.uleb128 0x2
+ 268 0069 04       		.byte	0x4
+ 269 006a 07       		.byte	0x7
+ 270 006b D1000000 		.4byte	.LASF8
+ 271 006f 04       		.uleb128 0x4
+ 272 0070 8B000000 		.4byte	.LASF9
+ 273 0074 02       		.byte	0x2
+ 274 0075 5B       		.byte	0x5b
+ 275 0076 30000000 		.4byte	0x30
+ 276 007a 04       		.uleb128 0x4
+ 277 007b CA000000 		.4byte	.LASF10
+ 278 007f 02       		.byte	0x2
+ 279 0080 5D       		.byte	0x5d
+ 280 0081 4C000000 		.4byte	0x4c
+ 281 0085 02       		.uleb128 0x2
+ 282 0086 04       		.byte	0x4
+ 283 0087 04       		.byte	0x4
+ 284 0088 52000000 		.4byte	.LASF11
+ 285 008c 02       		.uleb128 0x2
+ 286 008d 08       		.byte	0x8
+ 287 008e 04       		.byte	0x4
+ 288 008f B2000000 		.4byte	.LASF12
+ 289 0093 02       		.uleb128 0x2
+ 290 0094 01       		.byte	0x1
+ 291 0095 08       		.byte	0x8
+ 292 0096 5E010000 		.4byte	.LASF13
+ 293 009a 04       		.uleb128 0x4
+ 294 009b 00000000 		.4byte	.LASF14
+ 295 009f 02       		.byte	0x2
+ 296 00a0 F2       		.byte	0xf2
+ 297 00a1 A5000000 		.4byte	0xa5
+ 298 00a5 05       		.uleb128 0x5
+ 299 00a6 7A000000 		.4byte	0x7a
+ 300 00aa 06       		.uleb128 0x6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 12
+
+
+ 301 00ab 2A010000 		.4byte	.LASF15
+ 302 00af 02       		.byte	0x2
+ 303 00b0 0201     		.2byte	0x102
+ 304 00b2 B6000000 		.4byte	0xb6
+ 305 00b6 07       		.uleb128 0x7
+ 306 00b7 04       		.byte	0x4
+ 307 00b8 BC000000 		.4byte	0xbc
+ 308 00bc 08       		.uleb128 0x8
+ 309 00bd 01       		.byte	0x1
+ 310 00be 02       		.uleb128 0x2
+ 311 00bf 04       		.byte	0x4
+ 312 00c0 07       		.byte	0x7
+ 313 00c1 37010000 		.4byte	.LASF16
+ 314 00c5 09       		.uleb128 0x9
+ 315 00c6 24000000 		.4byte	.LASF17
+ 316 00ca 01       		.byte	0x1
+ 317 00cb 0501     		.2byte	0x105
+ 318 00cd 01       		.byte	0x1
+ 319 00ce 01       		.byte	0x1
+ 320 00cf 0A       		.uleb128 0xa
+ 321 00d0 01       		.byte	0x1
+ 322 00d1 CA010000 		.4byte	.LASF25
+ 323 00d5 01       		.byte	0x1
+ 324 00d6 5F       		.byte	0x5f
+ 325 00d7 01       		.byte	0x1
+ 326 00d8 01       		.byte	0x1
+ 327 00d9 09       		.uleb128 0x9
+ 328 00da 4E010000 		.4byte	.LASF18
+ 329 00de 01       		.byte	0x1
+ 330 00df 2401     		.2byte	0x124
+ 331 00e1 01       		.byte	0x1
+ 332 00e2 01       		.byte	0x1
+ 333 00e3 0B       		.uleb128 0xb
+ 334 00e4 CF000000 		.4byte	0xcf
+ 335 00e8 00000000 		.4byte	.LFB0
+ 336 00ec 08000000 		.4byte	.LFE0
+ 337 00f0 00000000 		.4byte	.LLST0
+ 338 00f4 01       		.byte	0x1
+ 339 00f5 03010000 		.4byte	0x103
+ 340 00f9 0C       		.uleb128 0xc
+ 341 00fa 06000000 		.4byte	.LVL0
+ 342 00fe 0D020000 		.4byte	0x20d
+ 343 0102 00       		.byte	0
+ 344 0103 0D       		.uleb128 0xd
+ 345 0104 01       		.byte	0x1
+ 346 0105 6E000000 		.4byte	.LASF19
+ 347 0109 01       		.byte	0x1
+ 348 010a 8B       		.byte	0x8b
+ 349 010b 01       		.byte	0x1
+ 350 010c 00000000 		.4byte	.LFB1
+ 351 0110 18000000 		.4byte	.LFE1
+ 352 0114 20000000 		.4byte	.LLST1
+ 353 0118 01       		.byte	0x1
+ 354 0119 37010000 		.4byte	0x137
+ 355 011d 0E       		.uleb128 0xe
+ 356 011e C5000000 		.4byte	0xc5
+ 357 0122 0E000000 		.4byte	.LBB8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 13
+
+
+ 358 0126 12000000 		.4byte	.LBE8
+ 359 012a 01       		.byte	0x1
+ 360 012b 99       		.byte	0x99
+ 361 012c 0C       		.uleb128 0xc
+ 362 012d 12000000 		.4byte	.LVL1
+ 363 0131 17020000 		.4byte	0x217
+ 364 0135 00       		.byte	0
+ 365 0136 00       		.byte	0
+ 366 0137 0D       		.uleb128 0xd
+ 367 0138 01       		.byte	0x1
+ 368 0139 58000000 		.4byte	.LASF20
+ 369 013d 01       		.byte	0x1
+ 370 013e B1       		.byte	0xb1
+ 371 013f 01       		.byte	0x1
+ 372 0140 00000000 		.4byte	.LFB2
+ 373 0144 1C000000 		.4byte	.LFE2
+ 374 0148 40000000 		.4byte	.LLST2
+ 375 014c 01       		.byte	0x1
+ 376 014d 78010000 		.4byte	0x178
+ 377 0151 0F       		.uleb128 0xf
+ 378 0152 CF000000 		.4byte	0xcf
+ 379 0156 0E000000 		.4byte	.LBB10
+ 380 015a 12000000 		.4byte	.LBE10
+ 381 015e 01       		.byte	0x1
+ 382 015f B6       		.byte	0xb6
+ 383 0160 6E010000 		.4byte	0x16e
+ 384 0164 0C       		.uleb128 0xc
+ 385 0165 12000000 		.4byte	.LVL2
+ 386 0169 0D020000 		.4byte	0x20d
+ 387 016d 00       		.byte	0
+ 388 016e 0C       		.uleb128 0xc
+ 389 016f 16000000 		.4byte	.LVL3
+ 390 0173 03010000 		.4byte	0x103
+ 391 0177 00       		.byte	0
+ 392 0178 0D       		.uleb128 0xd
+ 393 0179 01       		.byte	0x1
+ 394 017a 49000000 		.4byte	.LASF21
+ 395 017e 01       		.byte	0x1
+ 396 017f CB       		.byte	0xcb
+ 397 0180 01       		.byte	0x1
+ 398 0181 00000000 		.4byte	.LFB3
+ 399 0185 20000000 		.4byte	.LFE3
+ 400 0189 60000000 		.4byte	.LLST3
+ 401 018d 01       		.byte	0x1
+ 402 018e C2010000 		.4byte	0x1c2
+ 403 0192 0F       		.uleb128 0xf
+ 404 0193 D9000000 		.4byte	0xd9
+ 405 0197 14000000 		.4byte	.LBB12
+ 406 019b 18000000 		.4byte	.LBE12
+ 407 019f 01       		.byte	0x1
+ 408 01a0 D7       		.byte	0xd7
+ 409 01a1 AF010000 		.4byte	0x1af
+ 410 01a5 0C       		.uleb128 0xc
+ 411 01a6 18000000 		.4byte	.LVL6
+ 412 01aa 21020000 		.4byte	0x221
+ 413 01ae 00       		.byte	0
+ 414 01af 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 14
+
+
+ 415 01b0 06000000 		.4byte	.LVL4
+ 416 01b4 2B020000 		.4byte	0x22b
+ 417 01b8 0C       		.uleb128 0xc
+ 418 01b9 14000000 		.4byte	.LVL5
+ 419 01bd 35020000 		.4byte	0x235
+ 420 01c1 00       		.byte	0
+ 421 01c2 10       		.uleb128 0x10
+ 422 01c3 01       		.byte	0x1
+ 423 01c4 06000000 		.4byte	.LASF22
+ 424 01c8 01       		.byte	0x1
+ 425 01c9 F1       		.byte	0xf1
+ 426 01ca 01       		.byte	0x1
+ 427 01cb 00000000 		.4byte	.LFB4
+ 428 01cf 0C000000 		.4byte	.LFE4
+ 429 01d3 02       		.byte	0x2
+ 430 01d4 7D       		.byte	0x7d
+ 431 01d5 00       		.sleb128 0
+ 432 01d6 01       		.byte	0x1
+ 433 01d7 E9010000 		.4byte	0x1e9
+ 434 01db 11       		.uleb128 0x11
+ 435 01dc C5000000 		.4byte	.LASF34
+ 436 01e0 01       		.byte	0x1
+ 437 01e1 F1       		.byte	0xf1
+ 438 01e2 AA000000 		.4byte	0xaa
+ 439 01e6 01       		.byte	0x1
+ 440 01e7 50       		.byte	0x50
+ 441 01e8 00       		.byte	0
+ 442 01e9 12       		.uleb128 0x12
+ 443 01ea B9000000 		.4byte	.LASF23
+ 444 01ee 01       		.byte	0x1
+ 445 01ef 42       		.byte	0x42
+ 446 01f0 6F000000 		.4byte	0x6f
+ 447 01f4 01       		.byte	0x1
+ 448 01f5 05       		.byte	0x5
+ 449 01f6 03       		.byte	0x3
+ 450 01f7 00000000 		.4byte	RTC_initVar
+ 451 01fb 12       		.uleb128 0x12
+ 452 01fc DE000000 		.4byte	.LASF24
+ 453 0200 01       		.byte	0x1
+ 454 0201 43       		.byte	0x43
+ 455 0202 AA000000 		.4byte	0xaa
+ 456 0206 01       		.byte	0x1
+ 457 0207 05       		.byte	0x5
+ 458 0208 03       		.byte	0x3
+ 459 0209 00000000 		.4byte	RTC_customIntrHandler
+ 460 020d 13       		.uleb128 0x13
+ 461 020e 01       		.byte	0x1
+ 462 020f 3C020000 		.4byte	.LASF26
+ 463 0213 03       		.byte	0x3
+ 464 0214 45       		.byte	0x45
+ 465 0215 01       		.byte	0x1
+ 466 0216 01       		.byte	0x1
+ 467 0217 13       		.uleb128 0x13
+ 468 0218 01       		.byte	0x1
+ 469 0219 91000000 		.4byte	.LASF27
+ 470 021d 04       		.byte	0x4
+ 471 021e 23       		.byte	0x23
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 15
+
+
+ 472 021f 01       		.byte	0x1
+ 473 0220 01       		.byte	0x1
+ 474 0221 13       		.uleb128 0x13
+ 475 0222 01       		.byte	0x1
+ 476 0223 62000000 		.4byte	.LASF28
+ 477 0227 03       		.byte	0x3
+ 478 0228 48       		.byte	0x48
+ 479 0229 01       		.byte	0x1
+ 480 022a 01       		.byte	0x1
+ 481 022b 13       		.uleb128 0x13
+ 482 022c 01       		.byte	0x1
+ 483 022d 6D010000 		.4byte	.LASF29
+ 484 0231 04       		.byte	0x4
+ 485 0232 25       		.byte	0x25
+ 486 0233 01       		.byte	0x1
+ 487 0234 01       		.byte	0x1
+ 488 0235 13       		.uleb128 0x13
+ 489 0236 01       		.byte	0x1
+ 490 0237 D3010000 		.4byte	.LASF30
+ 491 023b 04       		.byte	0x4
+ 492 023c 28       		.byte	0x28
+ 493 023d 01       		.byte	0x1
+ 494 023e 01       		.byte	0x1
+ 495 023f 00       		.byte	0
+ 496              		.section	.debug_abbrev,"",%progbits
+ 497              	.Ldebug_abbrev0:
+ 498 0000 01       		.uleb128 0x1
+ 499 0001 11       		.uleb128 0x11
+ 500 0002 01       		.byte	0x1
+ 501 0003 25       		.uleb128 0x25
+ 502 0004 0E       		.uleb128 0xe
+ 503 0005 13       		.uleb128 0x13
+ 504 0006 0B       		.uleb128 0xb
+ 505 0007 03       		.uleb128 0x3
+ 506 0008 0E       		.uleb128 0xe
+ 507 0009 1B       		.uleb128 0x1b
+ 508 000a 0E       		.uleb128 0xe
+ 509 000b 55       		.uleb128 0x55
+ 510 000c 06       		.uleb128 0x6
+ 511 000d 11       		.uleb128 0x11
+ 512 000e 01       		.uleb128 0x1
+ 513 000f 52       		.uleb128 0x52
+ 514 0010 01       		.uleb128 0x1
+ 515 0011 10       		.uleb128 0x10
+ 516 0012 06       		.uleb128 0x6
+ 517 0013 00       		.byte	0
+ 518 0014 00       		.byte	0
+ 519 0015 02       		.uleb128 0x2
+ 520 0016 24       		.uleb128 0x24
+ 521 0017 00       		.byte	0
+ 522 0018 0B       		.uleb128 0xb
+ 523 0019 0B       		.uleb128 0xb
+ 524 001a 3E       		.uleb128 0x3e
+ 525 001b 0B       		.uleb128 0xb
+ 526 001c 03       		.uleb128 0x3
+ 527 001d 0E       		.uleb128 0xe
+ 528 001e 00       		.byte	0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 16
+
+
+ 529 001f 00       		.byte	0
+ 530 0020 03       		.uleb128 0x3
+ 531 0021 24       		.uleb128 0x24
+ 532 0022 00       		.byte	0
+ 533 0023 0B       		.uleb128 0xb
+ 534 0024 0B       		.uleb128 0xb
+ 535 0025 3E       		.uleb128 0x3e
+ 536 0026 0B       		.uleb128 0xb
+ 537 0027 03       		.uleb128 0x3
+ 538 0028 08       		.uleb128 0x8
+ 539 0029 00       		.byte	0
+ 540 002a 00       		.byte	0
+ 541 002b 04       		.uleb128 0x4
+ 542 002c 16       		.uleb128 0x16
+ 543 002d 00       		.byte	0
+ 544 002e 03       		.uleb128 0x3
+ 545 002f 0E       		.uleb128 0xe
+ 546 0030 3A       		.uleb128 0x3a
+ 547 0031 0B       		.uleb128 0xb
+ 548 0032 3B       		.uleb128 0x3b
+ 549 0033 0B       		.uleb128 0xb
+ 550 0034 49       		.uleb128 0x49
+ 551 0035 13       		.uleb128 0x13
+ 552 0036 00       		.byte	0
+ 553 0037 00       		.byte	0
+ 554 0038 05       		.uleb128 0x5
+ 555 0039 35       		.uleb128 0x35
+ 556 003a 00       		.byte	0
+ 557 003b 49       		.uleb128 0x49
+ 558 003c 13       		.uleb128 0x13
+ 559 003d 00       		.byte	0
+ 560 003e 00       		.byte	0
+ 561 003f 06       		.uleb128 0x6
+ 562 0040 16       		.uleb128 0x16
+ 563 0041 00       		.byte	0
+ 564 0042 03       		.uleb128 0x3
+ 565 0043 0E       		.uleb128 0xe
+ 566 0044 3A       		.uleb128 0x3a
+ 567 0045 0B       		.uleb128 0xb
+ 568 0046 3B       		.uleb128 0x3b
+ 569 0047 05       		.uleb128 0x5
+ 570 0048 49       		.uleb128 0x49
+ 571 0049 13       		.uleb128 0x13
+ 572 004a 00       		.byte	0
+ 573 004b 00       		.byte	0
+ 574 004c 07       		.uleb128 0x7
+ 575 004d 0F       		.uleb128 0xf
+ 576 004e 00       		.byte	0
+ 577 004f 0B       		.uleb128 0xb
+ 578 0050 0B       		.uleb128 0xb
+ 579 0051 49       		.uleb128 0x49
+ 580 0052 13       		.uleb128 0x13
+ 581 0053 00       		.byte	0
+ 582 0054 00       		.byte	0
+ 583 0055 08       		.uleb128 0x8
+ 584 0056 15       		.uleb128 0x15
+ 585 0057 00       		.byte	0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 17
+
+
+ 586 0058 27       		.uleb128 0x27
+ 587 0059 0C       		.uleb128 0xc
+ 588 005a 00       		.byte	0
+ 589 005b 00       		.byte	0
+ 590 005c 09       		.uleb128 0x9
+ 591 005d 2E       		.uleb128 0x2e
+ 592 005e 00       		.byte	0
+ 593 005f 03       		.uleb128 0x3
+ 594 0060 0E       		.uleb128 0xe
+ 595 0061 3A       		.uleb128 0x3a
+ 596 0062 0B       		.uleb128 0xb
+ 597 0063 3B       		.uleb128 0x3b
+ 598 0064 05       		.uleb128 0x5
+ 599 0065 27       		.uleb128 0x27
+ 600 0066 0C       		.uleb128 0xc
+ 601 0067 20       		.uleb128 0x20
+ 602 0068 0B       		.uleb128 0xb
+ 603 0069 00       		.byte	0
+ 604 006a 00       		.byte	0
+ 605 006b 0A       		.uleb128 0xa
+ 606 006c 2E       		.uleb128 0x2e
+ 607 006d 00       		.byte	0
+ 608 006e 3F       		.uleb128 0x3f
+ 609 006f 0C       		.uleb128 0xc
+ 610 0070 03       		.uleb128 0x3
+ 611 0071 0E       		.uleb128 0xe
+ 612 0072 3A       		.uleb128 0x3a
+ 613 0073 0B       		.uleb128 0xb
+ 614 0074 3B       		.uleb128 0x3b
+ 615 0075 0B       		.uleb128 0xb
+ 616 0076 27       		.uleb128 0x27
+ 617 0077 0C       		.uleb128 0xc
+ 618 0078 20       		.uleb128 0x20
+ 619 0079 0B       		.uleb128 0xb
+ 620 007a 00       		.byte	0
+ 621 007b 00       		.byte	0
+ 622 007c 0B       		.uleb128 0xb
+ 623 007d 2E       		.uleb128 0x2e
+ 624 007e 01       		.byte	0x1
+ 625 007f 31       		.uleb128 0x31
+ 626 0080 13       		.uleb128 0x13
+ 627 0081 11       		.uleb128 0x11
+ 628 0082 01       		.uleb128 0x1
+ 629 0083 12       		.uleb128 0x12
+ 630 0084 01       		.uleb128 0x1
+ 631 0085 40       		.uleb128 0x40
+ 632 0086 06       		.uleb128 0x6
+ 633 0087 9742     		.uleb128 0x2117
+ 634 0089 0C       		.uleb128 0xc
+ 635 008a 01       		.uleb128 0x1
+ 636 008b 13       		.uleb128 0x13
+ 637 008c 00       		.byte	0
+ 638 008d 00       		.byte	0
+ 639 008e 0C       		.uleb128 0xc
+ 640 008f 898201   		.uleb128 0x4109
+ 641 0092 00       		.byte	0
+ 642 0093 11       		.uleb128 0x11
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 18
+
+
+ 643 0094 01       		.uleb128 0x1
+ 644 0095 31       		.uleb128 0x31
+ 645 0096 13       		.uleb128 0x13
+ 646 0097 00       		.byte	0
+ 647 0098 00       		.byte	0
+ 648 0099 0D       		.uleb128 0xd
+ 649 009a 2E       		.uleb128 0x2e
+ 650 009b 01       		.byte	0x1
+ 651 009c 3F       		.uleb128 0x3f
+ 652 009d 0C       		.uleb128 0xc
+ 653 009e 03       		.uleb128 0x3
+ 654 009f 0E       		.uleb128 0xe
+ 655 00a0 3A       		.uleb128 0x3a
+ 656 00a1 0B       		.uleb128 0xb
+ 657 00a2 3B       		.uleb128 0x3b
+ 658 00a3 0B       		.uleb128 0xb
+ 659 00a4 27       		.uleb128 0x27
+ 660 00a5 0C       		.uleb128 0xc
+ 661 00a6 11       		.uleb128 0x11
+ 662 00a7 01       		.uleb128 0x1
+ 663 00a8 12       		.uleb128 0x12
+ 664 00a9 01       		.uleb128 0x1
+ 665 00aa 40       		.uleb128 0x40
+ 666 00ab 06       		.uleb128 0x6
+ 667 00ac 9742     		.uleb128 0x2117
+ 668 00ae 0C       		.uleb128 0xc
+ 669 00af 01       		.uleb128 0x1
+ 670 00b0 13       		.uleb128 0x13
+ 671 00b1 00       		.byte	0
+ 672 00b2 00       		.byte	0
+ 673 00b3 0E       		.uleb128 0xe
+ 674 00b4 1D       		.uleb128 0x1d
+ 675 00b5 01       		.byte	0x1
+ 676 00b6 31       		.uleb128 0x31
+ 677 00b7 13       		.uleb128 0x13
+ 678 00b8 11       		.uleb128 0x11
+ 679 00b9 01       		.uleb128 0x1
+ 680 00ba 12       		.uleb128 0x12
+ 681 00bb 01       		.uleb128 0x1
+ 682 00bc 58       		.uleb128 0x58
+ 683 00bd 0B       		.uleb128 0xb
+ 684 00be 59       		.uleb128 0x59
+ 685 00bf 0B       		.uleb128 0xb
+ 686 00c0 00       		.byte	0
+ 687 00c1 00       		.byte	0
+ 688 00c2 0F       		.uleb128 0xf
+ 689 00c3 1D       		.uleb128 0x1d
+ 690 00c4 01       		.byte	0x1
+ 691 00c5 31       		.uleb128 0x31
+ 692 00c6 13       		.uleb128 0x13
+ 693 00c7 11       		.uleb128 0x11
+ 694 00c8 01       		.uleb128 0x1
+ 695 00c9 12       		.uleb128 0x12
+ 696 00ca 01       		.uleb128 0x1
+ 697 00cb 58       		.uleb128 0x58
+ 698 00cc 0B       		.uleb128 0xb
+ 699 00cd 59       		.uleb128 0x59
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 19
+
+
+ 700 00ce 0B       		.uleb128 0xb
+ 701 00cf 01       		.uleb128 0x1
+ 702 00d0 13       		.uleb128 0x13
+ 703 00d1 00       		.byte	0
+ 704 00d2 00       		.byte	0
+ 705 00d3 10       		.uleb128 0x10
+ 706 00d4 2E       		.uleb128 0x2e
+ 707 00d5 01       		.byte	0x1
+ 708 00d6 3F       		.uleb128 0x3f
+ 709 00d7 0C       		.uleb128 0xc
+ 710 00d8 03       		.uleb128 0x3
+ 711 00d9 0E       		.uleb128 0xe
+ 712 00da 3A       		.uleb128 0x3a
+ 713 00db 0B       		.uleb128 0xb
+ 714 00dc 3B       		.uleb128 0x3b
+ 715 00dd 0B       		.uleb128 0xb
+ 716 00de 27       		.uleb128 0x27
+ 717 00df 0C       		.uleb128 0xc
+ 718 00e0 11       		.uleb128 0x11
+ 719 00e1 01       		.uleb128 0x1
+ 720 00e2 12       		.uleb128 0x12
+ 721 00e3 01       		.uleb128 0x1
+ 722 00e4 40       		.uleb128 0x40
+ 723 00e5 0A       		.uleb128 0xa
+ 724 00e6 9742     		.uleb128 0x2117
+ 725 00e8 0C       		.uleb128 0xc
+ 726 00e9 01       		.uleb128 0x1
+ 727 00ea 13       		.uleb128 0x13
+ 728 00eb 00       		.byte	0
+ 729 00ec 00       		.byte	0
+ 730 00ed 11       		.uleb128 0x11
+ 731 00ee 05       		.uleb128 0x5
+ 732 00ef 00       		.byte	0
+ 733 00f0 03       		.uleb128 0x3
+ 734 00f1 0E       		.uleb128 0xe
+ 735 00f2 3A       		.uleb128 0x3a
+ 736 00f3 0B       		.uleb128 0xb
+ 737 00f4 3B       		.uleb128 0x3b
+ 738 00f5 0B       		.uleb128 0xb
+ 739 00f6 49       		.uleb128 0x49
+ 740 00f7 13       		.uleb128 0x13
+ 741 00f8 02       		.uleb128 0x2
+ 742 00f9 0A       		.uleb128 0xa
+ 743 00fa 00       		.byte	0
+ 744 00fb 00       		.byte	0
+ 745 00fc 12       		.uleb128 0x12
+ 746 00fd 34       		.uleb128 0x34
+ 747 00fe 00       		.byte	0
+ 748 00ff 03       		.uleb128 0x3
+ 749 0100 0E       		.uleb128 0xe
+ 750 0101 3A       		.uleb128 0x3a
+ 751 0102 0B       		.uleb128 0xb
+ 752 0103 3B       		.uleb128 0x3b
+ 753 0104 0B       		.uleb128 0xb
+ 754 0105 49       		.uleb128 0x49
+ 755 0106 13       		.uleb128 0x13
+ 756 0107 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 20
+
+
+ 757 0108 0C       		.uleb128 0xc
+ 758 0109 02       		.uleb128 0x2
+ 759 010a 0A       		.uleb128 0xa
+ 760 010b 00       		.byte	0
+ 761 010c 00       		.byte	0
+ 762 010d 13       		.uleb128 0x13
+ 763 010e 2E       		.uleb128 0x2e
+ 764 010f 00       		.byte	0
+ 765 0110 3F       		.uleb128 0x3f
+ 766 0111 0C       		.uleb128 0xc
+ 767 0112 03       		.uleb128 0x3
+ 768 0113 0E       		.uleb128 0xe
+ 769 0114 3A       		.uleb128 0x3a
+ 770 0115 0B       		.uleb128 0xb
+ 771 0116 3B       		.uleb128 0x3b
+ 772 0117 0B       		.uleb128 0xb
+ 773 0118 27       		.uleb128 0x27
+ 774 0119 0C       		.uleb128 0xc
+ 775 011a 3C       		.uleb128 0x3c
+ 776 011b 0C       		.uleb128 0xc
+ 777 011c 00       		.byte	0
+ 778 011d 00       		.byte	0
+ 779 011e 00       		.byte	0
+ 780              		.section	.debug_loc,"",%progbits
+ 781              	.Ldebug_loc0:
+ 782              	.LLST0:
+ 783 0000 00000000 		.4byte	.LFB0
+ 784 0004 02000000 		.4byte	.LCFI0
+ 785 0008 0200     		.2byte	0x2
+ 786 000a 7D       		.byte	0x7d
+ 787 000b 00       		.sleb128 0
+ 788 000c 02000000 		.4byte	.LCFI0
+ 789 0010 08000000 		.4byte	.LFE0
+ 790 0014 0200     		.2byte	0x2
+ 791 0016 7D       		.byte	0x7d
+ 792 0017 08       		.sleb128 8
+ 793 0018 00000000 		.4byte	0
+ 794 001c 00000000 		.4byte	0
+ 795              	.LLST1:
+ 796 0020 00000000 		.4byte	.LFB1
+ 797 0024 02000000 		.4byte	.LCFI1
+ 798 0028 0200     		.2byte	0x2
+ 799 002a 7D       		.byte	0x7d
+ 800 002b 00       		.sleb128 0
+ 801 002c 02000000 		.4byte	.LCFI1
+ 802 0030 18000000 		.4byte	.LFE1
+ 803 0034 0200     		.2byte	0x2
+ 804 0036 7D       		.byte	0x7d
+ 805 0037 08       		.sleb128 8
+ 806 0038 00000000 		.4byte	0
+ 807 003c 00000000 		.4byte	0
+ 808              	.LLST2:
+ 809 0040 00000000 		.4byte	.LFB2
+ 810 0044 02000000 		.4byte	.LCFI2
+ 811 0048 0200     		.2byte	0x2
+ 812 004a 7D       		.byte	0x7d
+ 813 004b 00       		.sleb128 0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 21
+
+
+ 814 004c 02000000 		.4byte	.LCFI2
+ 815 0050 1C000000 		.4byte	.LFE2
+ 816 0054 0200     		.2byte	0x2
+ 817 0056 7D       		.byte	0x7d
+ 818 0057 08       		.sleb128 8
+ 819 0058 00000000 		.4byte	0
+ 820 005c 00000000 		.4byte	0
+ 821              	.LLST3:
+ 822 0060 00000000 		.4byte	.LFB3
+ 823 0064 02000000 		.4byte	.LCFI3
+ 824 0068 0200     		.2byte	0x2
+ 825 006a 7D       		.byte	0x7d
+ 826 006b 00       		.sleb128 0
+ 827 006c 02000000 		.4byte	.LCFI3
+ 828 0070 20000000 		.4byte	.LFE3
+ 829 0074 0200     		.2byte	0x2
+ 830 0076 7D       		.byte	0x7d
+ 831 0077 08       		.sleb128 8
+ 832 0078 00000000 		.4byte	0
+ 833 007c 00000000 		.4byte	0
+ 834              		.section	.debug_aranges,"",%progbits
+ 835 0000 3C000000 		.4byte	0x3c
+ 836 0004 0200     		.2byte	0x2
+ 837 0006 00000000 		.4byte	.Ldebug_info0
+ 838 000a 04       		.byte	0x4
+ 839 000b 00       		.byte	0
+ 840 000c 0000     		.2byte	0
+ 841 000e 0000     		.2byte	0
+ 842 0010 00000000 		.4byte	.LFB0
+ 843 0014 08000000 		.4byte	.LFE0-.LFB0
+ 844 0018 00000000 		.4byte	.LFB1
+ 845 001c 18000000 		.4byte	.LFE1-.LFB1
+ 846 0020 00000000 		.4byte	.LFB2
+ 847 0024 1C000000 		.4byte	.LFE2-.LFB2
+ 848 0028 00000000 		.4byte	.LFB3
+ 849 002c 20000000 		.4byte	.LFE3-.LFB3
+ 850 0030 00000000 		.4byte	.LFB4
+ 851 0034 0C000000 		.4byte	.LFE4-.LFB4
+ 852 0038 00000000 		.4byte	0
+ 853 003c 00000000 		.4byte	0
+ 854              		.section	.debug_ranges,"",%progbits
+ 855              	.Ldebug_ranges0:
+ 856 0000 00000000 		.4byte	.LFB0
+ 857 0004 08000000 		.4byte	.LFE0
+ 858 0008 00000000 		.4byte	.LFB1
+ 859 000c 18000000 		.4byte	.LFE1
+ 860 0010 00000000 		.4byte	.LFB2
+ 861 0014 1C000000 		.4byte	.LFE2
+ 862 0018 00000000 		.4byte	.LFB3
+ 863 001c 20000000 		.4byte	.LFE3
+ 864 0020 00000000 		.4byte	.LFB4
+ 865 0024 0C000000 		.4byte	.LFE4
+ 866 0028 00000000 		.4byte	0
+ 867 002c 00000000 		.4byte	0
+ 868              		.section	.debug_line,"",%progbits
+ 869              	.Ldebug_line0:
+ 870 0000 E9000000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 22
+
+
+ 870      02006400 
+ 870      00000201 
+ 870      FB0E0D00 
+ 870      01010101 
+ 871              	.LASF14:
+ 872 0000 72656733 		.ascii	"reg32\000"
+ 872      3200
+ 873              	.LASF22:
+ 874 0006 5254435F 		.ascii	"RTC_SetCustomInterruptHandler\000"
+ 874      53657443 
+ 874      7573746F 
+ 874      6D496E74 
+ 874      65727275 
+ 875              	.LASF17:
+ 876 0024 5254435F 		.ascii	"RTC_ScbEnableIntr\000"
+ 876      53636245 
+ 876      6E61626C 
+ 876      65496E74 
+ 876      7200
+ 877              	.LASF3:
+ 878 0036 73686F72 		.ascii	"short unsigned int\000"
+ 878      7420756E 
+ 878      7369676E 
+ 878      65642069 
+ 878      6E7400
+ 879              	.LASF21:
+ 880 0049 5254435F 		.ascii	"RTC_Stop\000"
+ 880      53746F70 
+ 880      00
+ 881              	.LASF11:
+ 882 0052 666C6F61 		.ascii	"float\000"
+ 882      7400
+ 883              	.LASF20:
+ 884 0058 5254435F 		.ascii	"RTC_Start\000"
+ 884      53746172 
+ 884      7400
+ 885              	.LASF28:
+ 886 0062 5254435F 		.ascii	"RTC_I2CStop\000"
+ 886      49324353 
+ 886      746F7000 
+ 887              	.LASF19:
+ 888 006e 5254435F 		.ascii	"RTC_Enable\000"
+ 888      456E6162 
+ 888      6C6500
+ 889              	.LASF5:
+ 890 0079 6C6F6E67 		.ascii	"long unsigned int\000"
+ 890      20756E73 
+ 890      69676E65 
+ 890      6420696E 
+ 890      7400
+ 891              	.LASF9:
+ 892 008b 75696E74 		.ascii	"uint8\000"
+ 892      3800
+ 893              	.LASF27:
+ 894 0091 5254435F 		.ascii	"RTC_SCB_IRQ_Enable\000"
+ 894      5343425F 
+ 894      4952515F 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 23
+
+
+ 894      456E6162 
+ 894      6C6500
+ 895              	.LASF1:
+ 896 00a4 756E7369 		.ascii	"unsigned char\000"
+ 896      676E6564 
+ 896      20636861 
+ 896      7200
+ 897              	.LASF12:
+ 898 00b2 646F7562 		.ascii	"double\000"
+ 898      6C6500
+ 899              	.LASF23:
+ 900 00b9 5254435F 		.ascii	"RTC_initVar\000"
+ 900      696E6974 
+ 900      56617200 
+ 901              	.LASF34:
+ 902 00c5 66756E63 		.ascii	"func\000"
+ 902      00
+ 903              	.LASF10:
+ 904 00ca 75696E74 		.ascii	"uint32\000"
+ 904      333200
+ 905              	.LASF8:
+ 906 00d1 756E7369 		.ascii	"unsigned int\000"
+ 906      676E6564 
+ 906      20696E74 
+ 906      00
+ 907              	.LASF24:
+ 908 00de 5254435F 		.ascii	"RTC_customIntrHandler\000"
+ 908      63757374 
+ 908      6F6D496E 
+ 908      74724861 
+ 908      6E646C65 
+ 909              	.LASF7:
+ 910 00f4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 910      206C6F6E 
+ 910      6720756E 
+ 910      7369676E 
+ 910      65642069 
+ 911              	.LASF32:
+ 912 010b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\RTC.c\000"
+ 912      6E657261 
+ 912      7465645F 
+ 912      536F7572 
+ 912      63655C50 
+ 913              	.LASF15:
+ 914 012a 63796973 		.ascii	"cyisraddress\000"
+ 914      72616464 
+ 914      72657373 
+ 914      00
+ 915              	.LASF16:
+ 916 0137 73697A65 		.ascii	"sizetype\000"
+ 916      74797065 
+ 916      00
+ 917              	.LASF6:
+ 918 0140 6C6F6E67 		.ascii	"long long int\000"
+ 918      206C6F6E 
+ 918      6720696E 
+ 918      7400
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 24
+
+
+ 919              	.LASF18:
+ 920 014e 5254435F 		.ascii	"RTC_ScbModeStop\000"
+ 920      5363624D 
+ 920      6F646553 
+ 920      746F7000 
+ 921              	.LASF13:
+ 922 015e 63686172 		.ascii	"char\000"
+ 922      00
+ 923              	.LASF2:
+ 924 0163 73686F72 		.ascii	"short int\000"
+ 924      7420696E 
+ 924      7400
+ 925              	.LASF29:
+ 926 016d 5254435F 		.ascii	"RTC_SCB_IRQ_Disable\000"
+ 926      5343425F 
+ 926      4952515F 
+ 926      44697361 
+ 926      626C6500 
+ 927              	.LASF31:
+ 928 0181 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 928      4320342E 
+ 928      372E3320 
+ 928      32303133 
+ 928      30333132 
+ 929 01b4 616E6368 		.ascii	"anch revision 196615]\000"
+ 929      20726576 
+ 929      6973696F 
+ 929      6E203139 
+ 929      36363135 
+ 930              	.LASF25:
+ 931 01ca 5254435F 		.ascii	"RTC_Init\000"
+ 931      496E6974 
+ 931      00
+ 932              	.LASF30:
+ 933 01d3 5254435F 		.ascii	"RTC_SCB_IRQ_ClearPending\000"
+ 933      5343425F 
+ 933      4952515F 
+ 933      436C6561 
+ 933      7250656E 
+ 934              	.LASF33:
+ 935 01ec 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 935      73657273 
+ 935      5C537465 
+ 935      76655C44 
+ 935      6F63756D 
+ 936 0219 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 936      7269782E 
+ 936      63796473 
+ 936      6E00
+ 937              	.LASF4:
+ 938 0227 6C6F6E67 		.ascii	"long int\000"
+ 938      20696E74 
+ 938      00
+ 939              	.LASF0:
+ 940 0230 7369676E 		.ascii	"signed char\000"
+ 940      65642063 
+ 940      68617200 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccrtyi4m.s 			page 25
+
+
+ 941              	.LASF26:
+ 942 023c 5254435F 		.ascii	"RTC_I2CInit\000"
+ 942      49324349 
+ 942      6E697400 
+ 943              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

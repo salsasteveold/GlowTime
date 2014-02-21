@@ -1,5 +1,5 @@
 # RGB_LED_Matrix
-# 2014-02-05 04:48:03Z
+# 2014-02-21 19:35:19Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -21,3 +21,5 @@ set_io "P3_1_CLK(0)" iocell 3 1
 set_io "P3_5_R2(0)" iocell 3 5
 set_io "P3_7_G1(0)" iocell 3 7
 set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0
+set_io "\RTC:scl(0)\" iocell 4 0
+set_io "\RTC:sda(0)\" iocell 4 1

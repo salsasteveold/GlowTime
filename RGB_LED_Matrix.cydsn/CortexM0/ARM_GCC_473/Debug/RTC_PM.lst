@@ -1,0 +1,1264 @@
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"RTC_PM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.RTC_Sleep,"ax",%progbits
+  18              		.align	2
+  19              		.global	RTC_Sleep
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	RTC_Sleep, %function
+  23              	RTC_Sleep:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\RTC_PM.c"
+   1:.\Generated_Source\PSoC4/RTC_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/RTC_PM.c **** * File Name: RTC_PM.c
+   3:.\Generated_Source\PSoC4/RTC_PM.c **** * Version 1.10
+   4:.\Generated_Source\PSoC4/RTC_PM.c **** *
+   5:.\Generated_Source\PSoC4/RTC_PM.c **** * Description:
+   6:.\Generated_Source\PSoC4/RTC_PM.c **** *  This file provides the source code to the Power Management support for
+   7:.\Generated_Source\PSoC4/RTC_PM.c **** *  the SCB Component.
+   8:.\Generated_Source\PSoC4/RTC_PM.c **** *
+   9:.\Generated_Source\PSoC4/RTC_PM.c **** * Note:
+  10:.\Generated_Source\PSoC4/RTC_PM.c **** *
+  11:.\Generated_Source\PSoC4/RTC_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/RTC_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/RTC_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC4/RTC_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC4/RTC_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/RTC_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  18:.\Generated_Source\PSoC4/RTC_PM.c **** #include "RTC.h"
+  19:.\Generated_Source\PSoC4/RTC_PM.c **** #include "RTC_PVT.h"
+  20:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  21:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_I2C_INC)
+  22:.\Generated_Source\PSoC4/RTC_PM.c ****     #include "RTC_I2C_PVT.h"
+  23:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_I2C_INC) */
+  24:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  25:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_EZI2C_INC)
+  26:.\Generated_Source\PSoC4/RTC_PM.c ****     #include "RTC_EZI2C_PVT.h"
+  27:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_EZI2C_INC) */
+  28:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  29:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_SPI_INC || RTC_SCB_MODE_UART_INC)
+  30:.\Generated_Source\PSoC4/RTC_PM.c ****     #include "RTC_SPI_UART_PVT.h"
+  31:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_SPI_INC || RTC_SCB_MODE_UART_INC) */
+  32:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  34:.\Generated_Source\PSoC4/RTC_PM.c **** /***************************************
+  35:.\Generated_Source\PSoC4/RTC_PM.c **** *   Backup Structure declaration
+  36:.\Generated_Source\PSoC4/RTC_PM.c **** ***************************************/
+  37:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  38:.\Generated_Source\PSoC4/RTC_PM.c **** RTC_BACKUP_STRUCT RTC_backup =
+  39:.\Generated_Source\PSoC4/RTC_PM.c **** {
+  40:.\Generated_Source\PSoC4/RTC_PM.c ****     0u, /* enableState */
+  41:.\Generated_Source\PSoC4/RTC_PM.c **** };
+  42:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  43:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  44:.\Generated_Source\PSoC4/RTC_PM.c **** /*******************************************************************************
+  45:.\Generated_Source\PSoC4/RTC_PM.c **** * Function Name: RTC_Sleep
+  46:.\Generated_Source\PSoC4/RTC_PM.c **** ********************************************************************************
+  47:.\Generated_Source\PSoC4/RTC_PM.c **** *
+  48:.\Generated_Source\PSoC4/RTC_PM.c **** * Summary:
+  49:.\Generated_Source\PSoC4/RTC_PM.c **** *  Calls SaveConfig function fucntion for selected mode.
+  50:.\Generated_Source\PSoC4/RTC_PM.c **** *
+  51:.\Generated_Source\PSoC4/RTC_PM.c **** * Parameters:
+  52:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+  53:.\Generated_Source\PSoC4/RTC_PM.c **** *
+  54:.\Generated_Source\PSoC4/RTC_PM.c **** * Return:
+  55:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+  56:.\Generated_Source\PSoC4/RTC_PM.c **** *
+  57:.\Generated_Source\PSoC4/RTC_PM.c **** *******************************************************************************/
+  58:.\Generated_Source\PSoC4/RTC_PM.c **** void RTC_Sleep(void)
+  59:.\Generated_Source\PSoC4/RTC_PM.c **** {
+  26              		.loc 1 59 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 3, -8
+  32              		.cfi_offset 14, -4
+  60:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+  61:.\Generated_Source\PSoC4/RTC_PM.c **** 
+  62:.\Generated_Source\PSoC4/RTC_PM.c ****     if(0u != RTC_scbEnableWake)
+  63:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+  64:.\Generated_Source\PSoC4/RTC_PM.c ****         if(RTC_SCB_MODE_I2C_RUNTM_CFG)
+  65:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  66:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_I2CSaveConfig();
+  67:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  68:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_SPI_RUNTM_CFG)
+  69:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  70:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_SpiSaveConfig();
+  71:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  72:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_UART_RUNTM_CFG)
+  73:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  74:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_UartSaveConfig();
+  75:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  76:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_EZI2C_RUNTM_CFG)
+  77:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  78:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_EzI2CSaveConfig();
+  79:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  80:.\Generated_Source\PSoC4/RTC_PM.c ****         else
+  81:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  82:.\Generated_Source\PSoC4/RTC_PM.c ****             /* Unknown mode: do nothing */
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 3
+
+
+  83:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  84:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+  85:.\Generated_Source\PSoC4/RTC_PM.c ****     else
+  86:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+  87:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_backup.enableState = (uint8) RTC_GET_CTRL_ENABLED;
+  88:.\Generated_Source\PSoC4/RTC_PM.c ****         
+  89:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != RTC_backup.enableState)
+  90:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+  91:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_Stop();
+  92:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+  93:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+  94:.\Generated_Source\PSoC4/RTC_PM.c ****     
+  95:.\Generated_Source\PSoC4/RTC_PM.c ****     RTC_DisableTxPinsInputBuffer();
+  96:.\Generated_Source\PSoC4/RTC_PM.c ****     
+  97:.\Generated_Source\PSoC4/RTC_PM.c **** #else
+  98:.\Generated_Source\PSoC4/RTC_PM.c ****     
+  99:.\Generated_Source\PSoC4/RTC_PM.c ****     #if defined (RTC_I2C_WAKE_ENABLE_CONST) && (RTC_I2C_WAKE_ENABLE_CONST)
+ 100:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_I2CSaveConfig();
+ 101:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 102:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_SPI_WAKE_ENABLE_CONST) && (RTC_SPI_WAKE_ENABLE_CONST)
+ 103:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_SpiSaveConfig();
+ 104:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 105:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_UART_WAKE_ENABLE_CONST) && (RTC_UART_WAKE_ENABLE_CONST)
+ 106:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_UartSaveConfig();
+ 107:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 108:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_EZI2C_WAKE_ENABLE_CONST) && (RTC_EZI2C_WAKE_ENABLE_CONST)
+ 109:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_EzI2CSaveConfig();
+ 110:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 111:.\Generated_Source\PSoC4/RTC_PM.c ****     #else
+ 112:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 113:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_backup.enableState = (uint8) RTC_GET_CTRL_ENABLED;
+  33              		.loc 1 113 0
+  34 0002 044B     		ldr	r3, .L7
+  35 0004 044A     		ldr	r2, .L7+4
+  36 0006 1868     		ldr	r0, [r3]
+  37 0008 C10F     		lsr	r1, r0, #31
+  38 000a 1170     		strb	r1, [r2]
+ 114:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 115:.\Generated_Source\PSoC4/RTC_PM.c ****         /* Check enable state */
+ 116:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != RTC_backup.enableState)
+  39              		.loc 1 116 0
+  40 000c 01D0     		beq	.L1
+ 117:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 118:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_Stop();
+  41              		.loc 1 118 0
+  42 000e FFF7FEFF 		bl	RTC_Stop
+  43              	.LVL0:
+  44              	.L1:
+ 119:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 120:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 121:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* defined (RTC_SCB_MODE_I2C_CONST_CFG) && (RTC_I2C_WAKE_ENABLE_CONST) */
+ 122:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 123:.\Generated_Source\PSoC4/RTC_PM.c ****     RTC_DisableTxPinsInputBuffer();
+ 124:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 125:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 126:.\Generated_Source\PSoC4/RTC_PM.c **** }
+  45              		.loc 1 126 0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 4
+
+
+  46              		@ sp needed for prologue
+  47 0012 08BD     		pop	{r3, pc}
+  48              	.L8:
+  49              		.align	2
+  50              	.L7:
+  51 0014 00000640 		.word	1074135040
+  52 0018 00000000 		.word	.LANCHOR0
+  53              		.cfi_endproc
+  54              	.LFE0:
+  55              		.size	RTC_Sleep, .-RTC_Sleep
+  56              		.section	.text.RTC_Wakeup,"ax",%progbits
+  57              		.align	2
+  58              		.global	RTC_Wakeup
+  59              		.code	16
+  60              		.thumb_func
+  61              		.type	RTC_Wakeup, %function
+  62              	RTC_Wakeup:
+  63              	.LFB1:
+ 127:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 128:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 129:.\Generated_Source\PSoC4/RTC_PM.c **** /*******************************************************************************
+ 130:.\Generated_Source\PSoC4/RTC_PM.c **** * Function Name: RTC_Wakeup
+ 131:.\Generated_Source\PSoC4/RTC_PM.c **** ********************************************************************************
+ 132:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 133:.\Generated_Source\PSoC4/RTC_PM.c **** * Summary:
+ 134:.\Generated_Source\PSoC4/RTC_PM.c **** *  Calls RestoreConfig function fucntion for selected mode.
+ 135:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 136:.\Generated_Source\PSoC4/RTC_PM.c **** * Parameters:
+ 137:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 138:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 139:.\Generated_Source\PSoC4/RTC_PM.c **** * Return:
+ 140:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 141:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 142:.\Generated_Source\PSoC4/RTC_PM.c **** *******************************************************************************/
+ 143:.\Generated_Source\PSoC4/RTC_PM.c **** void RTC_Wakeup(void)
+ 144:.\Generated_Source\PSoC4/RTC_PM.c **** {
+  64              		.loc 1 144 0
+  65              		.cfi_startproc
+  66 0000 08B5     		push	{r3, lr}
+  67              	.LCFI1:
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 3, -8
+  70              		.cfi_offset 14, -4
+ 145:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 146:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 147:.\Generated_Source\PSoC4/RTC_PM.c ****     RTC_EnableTxPinsInputBuffer();
+ 148:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 149:.\Generated_Source\PSoC4/RTC_PM.c ****     if(0u != RTC_scbEnableWake)
+ 150:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 151:.\Generated_Source\PSoC4/RTC_PM.c ****         if(RTC_SCB_MODE_I2C_RUNTM_CFG)
+ 152:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 153:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_I2CRestoreConfig();
+ 154:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 155:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_SPI_RUNTM_CFG)
+ 156:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 157:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_SpiRestoreConfig();
+ 158:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 5
+
+
+ 159:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_UART_RUNTM_CFG)
+ 160:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 161:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_UartRestoreConfig();
+ 162:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 163:.\Generated_Source\PSoC4/RTC_PM.c ****         else if(RTC_SCB_MODE_EZI2C_RUNTM_CFG)
+ 164:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 165:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_EzI2CRestoreConfig();
+ 166:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 167:.\Generated_Source\PSoC4/RTC_PM.c ****         else
+ 168:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 169:.\Generated_Source\PSoC4/RTC_PM.c ****             /* Unknown mode: do nothing */
+ 170:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 171:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 172:.\Generated_Source\PSoC4/RTC_PM.c ****     else
+ 173:.\Generated_Source\PSoC4/RTC_PM.c ****     {    
+ 174:.\Generated_Source\PSoC4/RTC_PM.c ****         /* Restore enable state */
+ 175:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != RTC_backup.enableState)
+ 176:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 177:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_Enable();
+ 178:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 179:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 180:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 181:.\Generated_Source\PSoC4/RTC_PM.c **** #else
+ 182:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 183:.\Generated_Source\PSoC4/RTC_PM.c ****     RTC_EnableTxPinsInputBuffer();
+ 184:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 185:.\Generated_Source\PSoC4/RTC_PM.c ****     #if defined (RTC_I2C_WAKE_ENABLE_CONST) && (RTC_I2C_WAKE_ENABLE_CONST)
+ 186:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_I2CRestoreConfig();
+ 187:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 188:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_SPI_WAKE_ENABLE_CONST) && (RTC_SPI_WAKE_ENABLE_CONST)
+ 189:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_SpiRestoreConfig();
+ 190:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 191:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_UART_WAKE_ENABLE_CONST) && (RTC_UART_WAKE_ENABLE_CONST)
+ 192:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_UartRestoreConfig();
+ 193:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 194:.\Generated_Source\PSoC4/RTC_PM.c ****     #elif defined (RTC_EZI2C_WAKE_ENABLE_CONST) && (RTC_EZI2C_WAKE_ENABLE_CONST)
+ 195:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_EzI2CRestoreConfig();
+ 196:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 197:.\Generated_Source\PSoC4/RTC_PM.c ****     #else
+ 198:.\Generated_Source\PSoC4/RTC_PM.c ****         /* Check enable state */
+ 199:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != RTC_backup.enableState)
+  71              		.loc 1 199 0
+  72 0002 034B     		ldr	r3, .L14
+  73 0004 1878     		ldrb	r0, [r3]
+  74 0006 0028     		cmp	r0, #0
+  75 0008 01D0     		beq	.L9
+ 200:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 201:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_Enable();
+  76              		.loc 1 201 0
+  77 000a FFF7FEFF 		bl	RTC_Enable
+  78              	.LVL1:
+  79              	.L9:
+ 202:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 203:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 204:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_I2C_WAKE_ENABLE_CONST) */
+ 205:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 206:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 6
+
+
+ 207:.\Generated_Source\PSoC4/RTC_PM.c **** }
+  80              		.loc 1 207 0
+  81              		@ sp needed for prologue
+  82 000e 08BD     		pop	{r3, pc}
+  83              	.L15:
+  84              		.align	2
+  85              	.L14:
+  86 0010 00000000 		.word	.LANCHOR0
+  87              		.cfi_endproc
+  88              	.LFE1:
+  89              		.size	RTC_Wakeup, .-RTC_Wakeup
+  90              		.section	.text.RTC_DisableTxPinsInputBuffer,"ax",%progbits
+  91              		.align	2
+  92              		.global	RTC_DisableTxPinsInputBuffer
+  93              		.code	16
+  94              		.thumb_func
+  95              		.type	RTC_DisableTxPinsInputBuffer, %function
+  96              	RTC_DisableTxPinsInputBuffer:
+  97              	.LFB2:
+ 208:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 209:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 210:.\Generated_Source\PSoC4/RTC_PM.c **** /*******************************************************************************
+ 211:.\Generated_Source\PSoC4/RTC_PM.c **** * Function Name: RTC_DisableTxPinsInputBuffer
+ 212:.\Generated_Source\PSoC4/RTC_PM.c **** ********************************************************************************
+ 213:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 214:.\Generated_Source\PSoC4/RTC_PM.c **** * Summary:
+ 215:.\Generated_Source\PSoC4/RTC_PM.c **** *  Disables input buffers for TX pins. This action removes leakage current while
+ 216:.\Generated_Source\PSoC4/RTC_PM.c **** *  low power mode (Cypress ID 149635).
+ 217:.\Generated_Source\PSoC4/RTC_PM.c **** *   SCB mode is I2C and EZI2C: bus is pulled-up. Leave pins as it is.
+ 218:.\Generated_Source\PSoC4/RTC_PM.c **** *   SCB mode SPI:
+ 219:.\Generated_Source\PSoC4/RTC_PM.c **** *     Slave  - disable input buffer for MISO pin.
+ 220:.\Generated_Source\PSoC4/RTC_PM.c **** *     Master - disable input buffer for all pins.
+ 221:.\Generated_Source\PSoC4/RTC_PM.c **** *   SCB mode SmartCard: 
+ 222:.\Generated_Source\PSoC4/RTC_PM.c **** *     Standard and IrDA - disable input buffer for TX pin.
+ 223:.\Generated_Source\PSoC4/RTC_PM.c **** *     SmartCard - RX_TX pin is pulled-up. Leave pin as it is.
+ 224:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 225:.\Generated_Source\PSoC4/RTC_PM.c **** * Parameters:
+ 226:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 227:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 228:.\Generated_Source\PSoC4/RTC_PM.c **** * Return:
+ 229:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 230:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 231:.\Generated_Source\PSoC4/RTC_PM.c **** *******************************************************************************/
+ 232:.\Generated_Source\PSoC4/RTC_PM.c **** void RTC_DisableTxPinsInputBuffer(void)
+ 233:.\Generated_Source\PSoC4/RTC_PM.c **** {
+  98              		.loc 1 233 0
+  99              		.cfi_startproc
+ 234:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 235:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 236:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is I2C and EZI2C: bus is pulled-up. Does nothing */
+ 237:.\Generated_Source\PSoC4/RTC_PM.c ****        
+ 238:.\Generated_Source\PSoC4/RTC_PM.c ****     if(RTC_SCB_MODE_SPI_RUNTM_CFG)
+ 239:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 240:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != (RTC_SPI_CTRL_REG & RTC_SPI_CTRL_MASTER))
+ 241:.\Generated_Source\PSoC4/RTC_PM.c ****         /* SPI Master */
+ 242:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 243:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MOSI_SCL_RX_WAKE_PIN)
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 7
+
+
+ 244:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_mosi_i2c_scl_uart_rx_wake_INP_DIS |= \
+ 245:.\Generated_Source\PSoC4/RTC_PM.c ****                                                                 RTC_spi_mosi_i2c_scl_uart_rx_wake_M
+ 246:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MOSI_SCL_RX_WAKE_PIN) */
+ 247:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 248:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MOSI_SCL_RX_PIN)
+ 249:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_mosi_i2c_scl_uart_rx_INP_DIS |= RTC_spi_mosi_i2c_scl_uart_rx_MASK;
+ 250:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MOSI_SCL_RX_PIN) */
+ 251:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 252:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 253:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS |= RTC_spi_miso_i2c_sda_uart_tx_MASK;
+ 254:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 255:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 256:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SCLK_PIN)
+ 257:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_sclk_INP_DIS |= RTC_spi_sclk_MASK;
+ 258:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SCLK_PIN) */
+ 259:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 260:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS0_PIN)
+ 261:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss0_INP_DIS |= RTC_spi_ss0_MASK;
+ 262:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS1_PIN) */
+ 263:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 264:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS1_PIN)
+ 265:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss1_INP_DIS |= RTC_spi_ss1_MASK;
+ 266:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS1_PIN) */
+ 267:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 268:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS2_PIN)
+ 269:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss2_INP_DIS |= RTC_spi_ss2_MASK;
+ 270:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS2_PIN) */
+ 271:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 272:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS3_PIN)
+ 273:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss3_INP_DIS |= RTC_spi_ss3_MASK;
+ 274:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS3_PIN) */
+ 275:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 276:.\Generated_Source\PSoC4/RTC_PM.c ****         else
+ 277:.\Generated_Source\PSoC4/RTC_PM.c ****         /* SPI Slave */
+ 278:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 279:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 280:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS |= RTC_spi_miso_i2c_sda_uart_tx_MASK;
+ 281:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 282:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 283:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 284:.\Generated_Source\PSoC4/RTC_PM.c ****     else if (RTC_SCB_MODE_UART_RUNTM_CFG)
+ 285:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 286:.\Generated_Source\PSoC4/RTC_PM.c ****         if(RTC_UART_CTRL_MODE_UART_SMARTCARD != 
+ 287:.\Generated_Source\PSoC4/RTC_PM.c ****             (RTC_UART_CTRL_REG & RTC_UART_CTRL_MODE_MASK))
+ 288:.\Generated_Source\PSoC4/RTC_PM.c ****         /* UART Standard or IrDA */
+ 289:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 290:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 291:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS |= RTC_spi_miso_i2c_sda_uart_tx_MASK;
+ 292:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 293:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 294:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 295:.\Generated_Source\PSoC4/RTC_PM.c ****     else
+ 296:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 297:.\Generated_Source\PSoC4/RTC_PM.c ****         /* Does nothing */
+ 298:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 299:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 300:.\Generated_Source\PSoC4/RTC_PM.c **** #else
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 8
+
+
+ 301:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 302:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is I2C and EZI2C: bus is pulled-up. Does nothing */
+ 303:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 304:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is SPI Master */
+ 305:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_PINS)
+ 306:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_sclk_m_INP_DIS |= RTC_sclk_m_MASK;
+ 307:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_mosi_m_INP_DIS |= RTC_mosi_m_MASK;
+ 308:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_miso_m_INP_DIS |= RTC_miso_m_MASK;
+ 309:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_PINS) */
+ 310:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 311:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS0_PIN)
+ 312:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss0_m_INP_DIS |= RTC_ss0_m_MASK;
+ 313:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS0_PIN) */
+ 314:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 315:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS1_PIN)
+ 316:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss1_m_INP_DIS |= RTC_ss1_m_MASK;
+ 317:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS1_PIN) */
+ 318:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 319:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS2_PIN)
+ 320:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss2_m_INP_DIS |= RTC_ss2_m_MASK;
+ 321:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS2_PIN) */
+ 322:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 323:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS3_PIN)
+ 324:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss3_m_INP_DIS |= RTC_ss3_m_MASK;
+ 325:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS3_PIN) */
+ 326:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 327:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is SPI Slave */
+ 328:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_SLAVE_PINS)
+ 329:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_miso_s_INP_DIS |= RTC_miso_s_MASK;
+ 330:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_SLAVE_PINS) */
+ 331:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 332:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is UART */
+ 333:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_UART_TX_PIN)
+ 334:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_tx_INP_DIS |= RTC_tx_MASK;
+ 335:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_UART_TX_PIN) */
+ 336:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 337:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 338:.\Generated_Source\PSoC4/RTC_PM.c **** }
+ 100              		.loc 1 338 0
+ 101              		@ sp needed for prologue
+ 102 0000 7047     		bx	lr
+ 103              		.cfi_endproc
+ 104              	.LFE2:
+ 105              		.size	RTC_DisableTxPinsInputBuffer, .-RTC_DisableTxPinsInputBuffer
+ 106 0002 C046     		.section	.text.RTC_EnableTxPinsInputBuffer,"ax",%progbits
+ 107              		.align	2
+ 108              		.global	RTC_EnableTxPinsInputBuffer
+ 109              		.code	16
+ 110              		.thumb_func
+ 111              		.type	RTC_EnableTxPinsInputBuffer, %function
+ 112              	RTC_EnableTxPinsInputBuffer:
+ 113              	.LFB3:
+ 339:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 340:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 341:.\Generated_Source\PSoC4/RTC_PM.c **** /*******************************************************************************
+ 342:.\Generated_Source\PSoC4/RTC_PM.c **** * Function Name: RTC_EnableTxPinsInputBuffer
+ 343:.\Generated_Source\PSoC4/RTC_PM.c **** ********************************************************************************
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 9
+
+
+ 344:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 345:.\Generated_Source\PSoC4/RTC_PM.c **** * Summary:
+ 346:.\Generated_Source\PSoC4/RTC_PM.c **** *  Enables input buffers for TX pins. Restore changes done byte
+ 347:.\Generated_Source\PSoC4/RTC_PM.c **** *RTC_DisableTxPinsInputBuffer.
+ 348:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 349:.\Generated_Source\PSoC4/RTC_PM.c **** * Parameters:
+ 350:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 351:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 352:.\Generated_Source\PSoC4/RTC_PM.c **** * Return:
+ 353:.\Generated_Source\PSoC4/RTC_PM.c **** *  None
+ 354:.\Generated_Source\PSoC4/RTC_PM.c **** *
+ 355:.\Generated_Source\PSoC4/RTC_PM.c **** *******************************************************************************/
+ 356:.\Generated_Source\PSoC4/RTC_PM.c **** void RTC_EnableTxPinsInputBuffer(void)
+ 357:.\Generated_Source\PSoC4/RTC_PM.c **** {
+ 114              		.loc 1 357 0
+ 115              		.cfi_startproc
+ 358:.\Generated_Source\PSoC4/RTC_PM.c **** #if(RTC_SCB_MODE_UNCONFIG_CONST_CFG)
+ 359:.\Generated_Source\PSoC4/RTC_PM.c ****     if(RTC_SCB_MODE_SPI_RUNTM_CFG)
+ 360:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 361:.\Generated_Source\PSoC4/RTC_PM.c ****         if(0u != (RTC_SPI_CTRL_REG & RTC_SPI_CTRL_MASTER))
+ 362:.\Generated_Source\PSoC4/RTC_PM.c ****         /* SPI Master */
+ 363:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 364:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MOSI_SCL_RX_WAKE_PIN)
+ 365:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_mosi_i2c_scl_uart_rx_wake_INP_DIS &= \
+ 366:.\Generated_Source\PSoC4/RTC_PM.c ****                                             (uint32) ~((uint32) RTC_spi_mosi_i2c_scl_uart_rx_wake_M
+ 367:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MOSI_SCL_RX_WAKE_PIN) */
+ 368:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 369:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MOSI_SCL_RX_PIN)
+ 370:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_mosi_i2c_scl_uart_rx_INP_DIS &= \
+ 371:.\Generated_Source\PSoC4/RTC_PM.c ****                                             (uint32) ~((uint32) RTC_spi_mosi_i2c_scl_uart_rx_MASK);
+ 372:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MOSI_SCL_RX_PIN) */
+ 373:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 374:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 375:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS &= \
+ 376:.\Generated_Source\PSoC4/RTC_PM.c ****                                             (uint32) ~((uint32) RTC_spi_miso_i2c_sda_uart_tx_MASK);
+ 377:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 378:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 379:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SCLK_PIN)
+ 380:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_sclk_INP_DIS &= (uint32) ~((uint32) RTC_spi_sclk_MASK);
+ 381:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SCLK_PIN) */
+ 382:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 383:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS0_PIN)
+ 384:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss0_INP_DIS &= (uint32) ~((uint32) RTC_spi_ss0_MASK);
+ 385:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS1_PIN) */
+ 386:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 387:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS1_PIN)
+ 388:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss1_INP_DIS &= (uint32) ~((uint32) RTC_spi_ss1_MASK);
+ 389:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS1_PIN) */
+ 390:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 391:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS2_PIN)
+ 392:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss2_INP_DIS &= (uint32) ~((uint32) RTC_spi_ss2_MASK);
+ 393:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS2_PIN) */
+ 394:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 395:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_SS3_PIN)
+ 396:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_ss3_INP_DIS &= (uint32) ~((uint32) RTC_spi_ss3_MASK);
+ 397:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_SS3_PIN) */
+ 398:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 10
+
+
+ 399:.\Generated_Source\PSoC4/RTC_PM.c ****         else
+ 400:.\Generated_Source\PSoC4/RTC_PM.c ****         /* SPI Slave */
+ 401:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 402:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 403:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS &= \
+ 404:.\Generated_Source\PSoC4/RTC_PM.c ****                                                 (uint32) ~((uint32) RTC_spi_miso_i2c_sda_uart_tx_MA
+ 405:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 406:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 407:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 408:.\Generated_Source\PSoC4/RTC_PM.c ****     else if (RTC_SCB_MODE_UART_RUNTM_CFG)
+ 409:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 410:.\Generated_Source\PSoC4/RTC_PM.c ****         if(RTC_UART_CTRL_MODE_UART_SMARTCARD != 
+ 411:.\Generated_Source\PSoC4/RTC_PM.c ****                 (RTC_UART_CTRL_REG & RTC_UART_CTRL_MODE_MASK))
+ 412:.\Generated_Source\PSoC4/RTC_PM.c ****         /* UART Standard or IrDA */
+ 413:.\Generated_Source\PSoC4/RTC_PM.c ****         {
+ 414:.\Generated_Source\PSoC4/RTC_PM.c ****         #if(RTC_MISO_SDA_TX_PIN)
+ 415:.\Generated_Source\PSoC4/RTC_PM.c ****             RTC_spi_miso_i2c_sda_uart_tx_INP_DIS &= \
+ 416:.\Generated_Source\PSoC4/RTC_PM.c ****                                                 (uint32) ~((uint32) RTC_spi_miso_i2c_sda_uart_tx_MA
+ 417:.\Generated_Source\PSoC4/RTC_PM.c ****         #endif /* (RTC_MISO_SDA_TX_PIN_PIN) */
+ 418:.\Generated_Source\PSoC4/RTC_PM.c ****         }
+ 419:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 420:.\Generated_Source\PSoC4/RTC_PM.c ****     else
+ 421:.\Generated_Source\PSoC4/RTC_PM.c ****     {
+ 422:.\Generated_Source\PSoC4/RTC_PM.c ****         /* Does nothing */
+ 423:.\Generated_Source\PSoC4/RTC_PM.c ****     }
+ 424:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 425:.\Generated_Source\PSoC4/RTC_PM.c **** #else
+ 426:.\Generated_Source\PSoC4/RTC_PM.c ****         
+ 427:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is SPI Master */
+ 428:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_PINS)
+ 429:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_sclk_m_INP_DIS &= (uint32) ~((uint32) RTC_sclk_m_MASK);
+ 430:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_mosi_m_INP_DIS &= (uint32) ~((uint32) RTC_mosi_m_MASK);
+ 431:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_miso_m_INP_DIS &= (uint32) ~((uint32) RTC_miso_m_MASK);
+ 432:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_PINS) */
+ 433:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 434:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS0_PIN)
+ 435:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss0_m_INP_DIS &= (uint32) ~((uint32) RTC_ss0_m_MASK);
+ 436:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS0_PIN) */
+ 437:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 438:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS1_PIN)
+ 439:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss1_m_INP_DIS &= (uint32) ~((uint32) RTC_ss1_m_MASK);
+ 440:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS1_PIN) */
+ 441:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 442:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS2_PIN)
+ 443:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss2_m_INP_DIS &= (uint32) ~((uint32) RTC_ss2_m_MASK);
+ 444:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS2_PIN) */
+ 445:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 446:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_MASTER_SS3_PIN)
+ 447:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_ss3_m_INP_DIS &= (uint32) ~((uint32) RTC_ss3_m_MASK);
+ 448:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_MASTER_SS3_PIN) */
+ 449:.\Generated_Source\PSoC4/RTC_PM.c ****     
+ 450:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is SPI Slave */
+ 451:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_SPI_SLAVE_PINS)
+ 452:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_miso_s_INP_DIS &= (uint32) ~((uint32) RTC_miso_s_MASK);
+ 453:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_SPI_SLAVE_PINS) */
+ 454:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 455:.\Generated_Source\PSoC4/RTC_PM.c ****     /* SCB mode is UART */
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 11
+
+
+ 456:.\Generated_Source\PSoC4/RTC_PM.c ****     #if(RTC_UART_TX_PIN)
+ 457:.\Generated_Source\PSoC4/RTC_PM.c ****         RTC_tx_INP_DIS &= (uint32) ~((uint32) RTC_tx_MASK);
+ 458:.\Generated_Source\PSoC4/RTC_PM.c ****     #endif /* (RTC_UART_TX_PIN) */
+ 459:.\Generated_Source\PSoC4/RTC_PM.c **** 
+ 460:.\Generated_Source\PSoC4/RTC_PM.c **** #endif /* (RTC_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 461:.\Generated_Source\PSoC4/RTC_PM.c **** }
+ 116              		.loc 1 461 0
+ 117              		@ sp needed for prologue
+ 118 0000 7047     		bx	lr
+ 119              		.cfi_endproc
+ 120              	.LFE3:
+ 121              		.size	RTC_EnableTxPinsInputBuffer, .-RTC_EnableTxPinsInputBuffer
+ 122              		.global	RTC_backup
+ 123 0002 C046     		.bss
+ 124              		.align	2
+ 125              		.set	.LANCHOR0,. + 0
+ 126              		.type	RTC_backup, %object
+ 127              		.size	RTC_backup, 1
+ 128              	RTC_backup:
+ 129 0000 00       		.space	1
+ 130 0001 000000   		.text
+ 131              	.Letext0:
+ 132              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 133              		.file 3 ".\\Generated_Source\\PSoC4\\RTC.h"
+ 134              		.section	.debug_info,"",%progbits
+ 135              	.Ldebug_info0:
+ 136 0000 75010000 		.4byte	0x175
+ 137 0004 0200     		.2byte	0x2
+ 138 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 139 000a 04       		.byte	0x4
+ 140 000b 01       		.uleb128 0x1
+ 141 000c DF000000 		.4byte	.LASF23
+ 142 0010 01       		.byte	0x1
+ 143 0011 AD010000 		.4byte	.LASF24
+ 144 0015 8C000000 		.4byte	.LASF25
+ 145 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 146 001d 00000000 		.4byte	0
+ 147 0021 00000000 		.4byte	0
+ 148 0025 00000000 		.4byte	.Ldebug_line0
+ 149 0029 02       		.uleb128 0x2
+ 150 002a 01       		.byte	0x1
+ 151 002b 06       		.byte	0x6
+ 152 002c 79010000 		.4byte	.LASF0
+ 153 0030 02       		.uleb128 0x2
+ 154 0031 01       		.byte	0x1
+ 155 0032 08       		.byte	0x8
+ 156 0033 28010000 		.4byte	.LASF1
+ 157 0037 02       		.uleb128 0x2
+ 158 0038 02       		.byte	0x2
+ 159 0039 05       		.byte	0x5
+ 160 003a 4F010000 		.4byte	.LASF2
+ 161 003e 02       		.uleb128 0x2
+ 162 003f 02       		.byte	0x2
+ 163 0040 07       		.byte	0x7
+ 164 0041 66010000 		.4byte	.LASF3
+ 165 0045 02       		.uleb128 0x2
+ 166 0046 04       		.byte	0x4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 12
+
+
+ 167 0047 05       		.byte	0x5
+ 168 0048 46010000 		.4byte	.LASF4
+ 169 004c 02       		.uleb128 0x2
+ 170 004d 04       		.byte	0x4
+ 171 004e 07       		.byte	0x7
+ 172 004f 63000000 		.4byte	.LASF5
+ 173 0053 02       		.uleb128 0x2
+ 174 0054 08       		.byte	0x8
+ 175 0055 05       		.byte	0x5
+ 176 0056 00000000 		.4byte	.LASF6
+ 177 005a 02       		.uleb128 0x2
+ 178 005b 08       		.byte	0x8
+ 179 005c 07       		.byte	0x7
+ 180 005d 75000000 		.4byte	.LASF7
+ 181 0061 03       		.uleb128 0x3
+ 182 0062 04       		.byte	0x4
+ 183 0063 05       		.byte	0x5
+ 184 0064 696E7400 		.ascii	"int\000"
+ 185 0068 02       		.uleb128 0x2
+ 186 0069 04       		.byte	0x4
+ 187 006a 07       		.byte	0x7
+ 188 006b 21000000 		.4byte	.LASF8
+ 189 006f 04       		.uleb128 0x4
+ 190 0070 5D000000 		.4byte	.LASF9
+ 191 0074 02       		.byte	0x2
+ 192 0075 5B       		.byte	0x5b
+ 193 0076 30000000 		.4byte	0x30
+ 194 007a 04       		.uleb128 0x4
+ 195 007b 0E000000 		.4byte	.LASF10
+ 196 007f 02       		.byte	0x2
+ 197 0080 5D       		.byte	0x5d
+ 198 0081 4C000000 		.4byte	0x4c
+ 199 0085 02       		.uleb128 0x2
+ 200 0086 04       		.byte	0x4
+ 201 0087 04       		.byte	0x4
+ 202 0088 C7000000 		.4byte	.LASF11
+ 203 008c 02       		.uleb128 0x2
+ 204 008d 08       		.byte	0x8
+ 205 008e 04       		.byte	0x4
+ 206 008f 59010000 		.4byte	.LASF12
+ 207 0093 02       		.uleb128 0x2
+ 208 0094 01       		.byte	0x1
+ 209 0095 08       		.byte	0x8
+ 210 0096 36010000 		.4byte	.LASF13
+ 211 009a 04       		.uleb128 0x4
+ 212 009b 60010000 		.4byte	.LASF14
+ 213 009f 02       		.byte	0x2
+ 214 00a0 F2       		.byte	0xf2
+ 215 00a1 A5000000 		.4byte	0xa5
+ 216 00a5 05       		.uleb128 0x5
+ 217 00a6 7A000000 		.4byte	0x7a
+ 218 00aa 02       		.uleb128 0x2
+ 219 00ab 04       		.byte	0x4
+ 220 00ac 07       		.byte	0x7
+ 221 00ad DA010000 		.4byte	.LASF15
+ 222 00b1 06       		.uleb128 0x6
+ 223 00b2 01       		.byte	0x1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 13
+
+
+ 224 00b3 03       		.byte	0x3
+ 225 00b4 5F       		.byte	0x5f
+ 226 00b5 C8000000 		.4byte	0xc8
+ 227 00b9 07       		.uleb128 0x7
+ 228 00ba 15000000 		.4byte	.LASF26
+ 229 00be 03       		.byte	0x3
+ 230 00bf 61       		.byte	0x61
+ 231 00c0 6F000000 		.4byte	0x6f
+ 232 00c4 02       		.byte	0x2
+ 233 00c5 23       		.byte	0x23
+ 234 00c6 00       		.uleb128 0
+ 235 00c7 00       		.byte	0
+ 236 00c8 04       		.uleb128 0x4
+ 237 00c9 CD000000 		.4byte	.LASF16
+ 238 00cd 03       		.byte	0x3
+ 239 00ce 62       		.byte	0x62
+ 240 00cf B1000000 		.4byte	0xb1
+ 241 00d3 08       		.uleb128 0x8
+ 242 00d4 01       		.byte	0x1
+ 243 00d5 85010000 		.4byte	.LASF17
+ 244 00d9 01       		.byte	0x1
+ 245 00da E8       		.byte	0xe8
+ 246 00db 01       		.byte	0x1
+ 247 00dc 01       		.byte	0x1
+ 248 00dd 09       		.uleb128 0x9
+ 249 00de 01       		.byte	0x1
+ 250 00df 2E000000 		.4byte	.LASF18
+ 251 00e3 01       		.byte	0x1
+ 252 00e4 6401     		.2byte	0x164
+ 253 00e6 01       		.byte	0x1
+ 254 00e7 01       		.byte	0x1
+ 255 00e8 0A       		.uleb128 0xa
+ 256 00e9 01       		.byte	0x1
+ 257 00ea 53000000 		.4byte	.LASF19
+ 258 00ee 01       		.byte	0x1
+ 259 00ef 3A       		.byte	0x3a
+ 260 00f0 01       		.byte	0x1
+ 261 00f1 00000000 		.4byte	.LFB0
+ 262 00f5 1C000000 		.4byte	.LFE0
+ 263 00f9 00000000 		.4byte	.LLST0
+ 264 00fd 01       		.byte	0x1
+ 265 00fe 0C010000 		.4byte	0x10c
+ 266 0102 0B       		.uleb128 0xb
+ 267 0103 12000000 		.4byte	.LVL0
+ 268 0107 64010000 		.4byte	0x164
+ 269 010b 00       		.byte	0
+ 270 010c 0A       		.uleb128 0xa
+ 271 010d 01       		.byte	0x1
+ 272 010e A2010000 		.4byte	.LASF20
+ 273 0112 01       		.byte	0x1
+ 274 0113 8F       		.byte	0x8f
+ 275 0114 01       		.byte	0x1
+ 276 0115 00000000 		.4byte	.LFB1
+ 277 0119 14000000 		.4byte	.LFE1
+ 278 011d 20000000 		.4byte	.LLST1
+ 279 0121 01       		.byte	0x1
+ 280 0122 30010000 		.4byte	0x130
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 14
+
+
+ 281 0126 0B       		.uleb128 0xb
+ 282 0127 0E000000 		.4byte	.LVL1
+ 283 012b 6E010000 		.4byte	0x16e
+ 284 012f 00       		.byte	0
+ 285 0130 0C       		.uleb128 0xc
+ 286 0131 D3000000 		.4byte	0xd3
+ 287 0135 00000000 		.4byte	.LFB2
+ 288 0139 02000000 		.4byte	.LFE2
+ 289 013d 02       		.byte	0x2
+ 290 013e 7D       		.byte	0x7d
+ 291 013f 00       		.sleb128 0
+ 292 0140 01       		.byte	0x1
+ 293 0141 0C       		.uleb128 0xc
+ 294 0142 DD000000 		.4byte	0xdd
+ 295 0146 00000000 		.4byte	.LFB3
+ 296 014a 02000000 		.4byte	.LFE3
+ 297 014e 02       		.byte	0x2
+ 298 014f 7D       		.byte	0x7d
+ 299 0150 00       		.sleb128 0
+ 300 0151 01       		.byte	0x1
+ 301 0152 0D       		.uleb128 0xd
+ 302 0153 3B010000 		.4byte	.LASF27
+ 303 0157 01       		.byte	0x1
+ 304 0158 26       		.byte	0x26
+ 305 0159 C8000000 		.4byte	0xc8
+ 306 015d 01       		.byte	0x1
+ 307 015e 05       		.byte	0x5
+ 308 015f 03       		.byte	0x3
+ 309 0160 00000000 		.4byte	RTC_backup
+ 310 0164 0E       		.uleb128 0xe
+ 311 0165 01       		.byte	0x1
+ 312 0166 4A000000 		.4byte	.LASF21
+ 313 016a 03       		.byte	0x3
+ 314 016b 6D       		.byte	0x6d
+ 315 016c 01       		.byte	0x1
+ 316 016d 01       		.byte	0x1
+ 317 016e 0E       		.uleb128 0xe
+ 318 016f 01       		.byte	0x1
+ 319 0170 CF010000 		.4byte	.LASF22
+ 320 0174 03       		.byte	0x3
+ 321 0175 6B       		.byte	0x6b
+ 322 0176 01       		.byte	0x1
+ 323 0177 01       		.byte	0x1
+ 324 0178 00       		.byte	0
+ 325              		.section	.debug_abbrev,"",%progbits
+ 326              	.Ldebug_abbrev0:
+ 327 0000 01       		.uleb128 0x1
+ 328 0001 11       		.uleb128 0x11
+ 329 0002 01       		.byte	0x1
+ 330 0003 25       		.uleb128 0x25
+ 331 0004 0E       		.uleb128 0xe
+ 332 0005 13       		.uleb128 0x13
+ 333 0006 0B       		.uleb128 0xb
+ 334 0007 03       		.uleb128 0x3
+ 335 0008 0E       		.uleb128 0xe
+ 336 0009 1B       		.uleb128 0x1b
+ 337 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 15
+
+
+ 338 000b 55       		.uleb128 0x55
+ 339 000c 06       		.uleb128 0x6
+ 340 000d 11       		.uleb128 0x11
+ 341 000e 01       		.uleb128 0x1
+ 342 000f 52       		.uleb128 0x52
+ 343 0010 01       		.uleb128 0x1
+ 344 0011 10       		.uleb128 0x10
+ 345 0012 06       		.uleb128 0x6
+ 346 0013 00       		.byte	0
+ 347 0014 00       		.byte	0
+ 348 0015 02       		.uleb128 0x2
+ 349 0016 24       		.uleb128 0x24
+ 350 0017 00       		.byte	0
+ 351 0018 0B       		.uleb128 0xb
+ 352 0019 0B       		.uleb128 0xb
+ 353 001a 3E       		.uleb128 0x3e
+ 354 001b 0B       		.uleb128 0xb
+ 355 001c 03       		.uleb128 0x3
+ 356 001d 0E       		.uleb128 0xe
+ 357 001e 00       		.byte	0
+ 358 001f 00       		.byte	0
+ 359 0020 03       		.uleb128 0x3
+ 360 0021 24       		.uleb128 0x24
+ 361 0022 00       		.byte	0
+ 362 0023 0B       		.uleb128 0xb
+ 363 0024 0B       		.uleb128 0xb
+ 364 0025 3E       		.uleb128 0x3e
+ 365 0026 0B       		.uleb128 0xb
+ 366 0027 03       		.uleb128 0x3
+ 367 0028 08       		.uleb128 0x8
+ 368 0029 00       		.byte	0
+ 369 002a 00       		.byte	0
+ 370 002b 04       		.uleb128 0x4
+ 371 002c 16       		.uleb128 0x16
+ 372 002d 00       		.byte	0
+ 373 002e 03       		.uleb128 0x3
+ 374 002f 0E       		.uleb128 0xe
+ 375 0030 3A       		.uleb128 0x3a
+ 376 0031 0B       		.uleb128 0xb
+ 377 0032 3B       		.uleb128 0x3b
+ 378 0033 0B       		.uleb128 0xb
+ 379 0034 49       		.uleb128 0x49
+ 380 0035 13       		.uleb128 0x13
+ 381 0036 00       		.byte	0
+ 382 0037 00       		.byte	0
+ 383 0038 05       		.uleb128 0x5
+ 384 0039 35       		.uleb128 0x35
+ 385 003a 00       		.byte	0
+ 386 003b 49       		.uleb128 0x49
+ 387 003c 13       		.uleb128 0x13
+ 388 003d 00       		.byte	0
+ 389 003e 00       		.byte	0
+ 390 003f 06       		.uleb128 0x6
+ 391 0040 13       		.uleb128 0x13
+ 392 0041 01       		.byte	0x1
+ 393 0042 0B       		.uleb128 0xb
+ 394 0043 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 16
+
+
+ 395 0044 3A       		.uleb128 0x3a
+ 396 0045 0B       		.uleb128 0xb
+ 397 0046 3B       		.uleb128 0x3b
+ 398 0047 0B       		.uleb128 0xb
+ 399 0048 01       		.uleb128 0x1
+ 400 0049 13       		.uleb128 0x13
+ 401 004a 00       		.byte	0
+ 402 004b 00       		.byte	0
+ 403 004c 07       		.uleb128 0x7
+ 404 004d 0D       		.uleb128 0xd
+ 405 004e 00       		.byte	0
+ 406 004f 03       		.uleb128 0x3
+ 407 0050 0E       		.uleb128 0xe
+ 408 0051 3A       		.uleb128 0x3a
+ 409 0052 0B       		.uleb128 0xb
+ 410 0053 3B       		.uleb128 0x3b
+ 411 0054 0B       		.uleb128 0xb
+ 412 0055 49       		.uleb128 0x49
+ 413 0056 13       		.uleb128 0x13
+ 414 0057 38       		.uleb128 0x38
+ 415 0058 0A       		.uleb128 0xa
+ 416 0059 00       		.byte	0
+ 417 005a 00       		.byte	0
+ 418 005b 08       		.uleb128 0x8
+ 419 005c 2E       		.uleb128 0x2e
+ 420 005d 00       		.byte	0
+ 421 005e 3F       		.uleb128 0x3f
+ 422 005f 0C       		.uleb128 0xc
+ 423 0060 03       		.uleb128 0x3
+ 424 0061 0E       		.uleb128 0xe
+ 425 0062 3A       		.uleb128 0x3a
+ 426 0063 0B       		.uleb128 0xb
+ 427 0064 3B       		.uleb128 0x3b
+ 428 0065 0B       		.uleb128 0xb
+ 429 0066 27       		.uleb128 0x27
+ 430 0067 0C       		.uleb128 0xc
+ 431 0068 20       		.uleb128 0x20
+ 432 0069 0B       		.uleb128 0xb
+ 433 006a 00       		.byte	0
+ 434 006b 00       		.byte	0
+ 435 006c 09       		.uleb128 0x9
+ 436 006d 2E       		.uleb128 0x2e
+ 437 006e 00       		.byte	0
+ 438 006f 3F       		.uleb128 0x3f
+ 439 0070 0C       		.uleb128 0xc
+ 440 0071 03       		.uleb128 0x3
+ 441 0072 0E       		.uleb128 0xe
+ 442 0073 3A       		.uleb128 0x3a
+ 443 0074 0B       		.uleb128 0xb
+ 444 0075 3B       		.uleb128 0x3b
+ 445 0076 05       		.uleb128 0x5
+ 446 0077 27       		.uleb128 0x27
+ 447 0078 0C       		.uleb128 0xc
+ 448 0079 20       		.uleb128 0x20
+ 449 007a 0B       		.uleb128 0xb
+ 450 007b 00       		.byte	0
+ 451 007c 00       		.byte	0
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 17
+
+
+ 452 007d 0A       		.uleb128 0xa
+ 453 007e 2E       		.uleb128 0x2e
+ 454 007f 01       		.byte	0x1
+ 455 0080 3F       		.uleb128 0x3f
+ 456 0081 0C       		.uleb128 0xc
+ 457 0082 03       		.uleb128 0x3
+ 458 0083 0E       		.uleb128 0xe
+ 459 0084 3A       		.uleb128 0x3a
+ 460 0085 0B       		.uleb128 0xb
+ 461 0086 3B       		.uleb128 0x3b
+ 462 0087 0B       		.uleb128 0xb
+ 463 0088 27       		.uleb128 0x27
+ 464 0089 0C       		.uleb128 0xc
+ 465 008a 11       		.uleb128 0x11
+ 466 008b 01       		.uleb128 0x1
+ 467 008c 12       		.uleb128 0x12
+ 468 008d 01       		.uleb128 0x1
+ 469 008e 40       		.uleb128 0x40
+ 470 008f 06       		.uleb128 0x6
+ 471 0090 9742     		.uleb128 0x2117
+ 472 0092 0C       		.uleb128 0xc
+ 473 0093 01       		.uleb128 0x1
+ 474 0094 13       		.uleb128 0x13
+ 475 0095 00       		.byte	0
+ 476 0096 00       		.byte	0
+ 477 0097 0B       		.uleb128 0xb
+ 478 0098 898201   		.uleb128 0x4109
+ 479 009b 00       		.byte	0
+ 480 009c 11       		.uleb128 0x11
+ 481 009d 01       		.uleb128 0x1
+ 482 009e 31       		.uleb128 0x31
+ 483 009f 13       		.uleb128 0x13
+ 484 00a0 00       		.byte	0
+ 485 00a1 00       		.byte	0
+ 486 00a2 0C       		.uleb128 0xc
+ 487 00a3 2E       		.uleb128 0x2e
+ 488 00a4 00       		.byte	0
+ 489 00a5 31       		.uleb128 0x31
+ 490 00a6 13       		.uleb128 0x13
+ 491 00a7 11       		.uleb128 0x11
+ 492 00a8 01       		.uleb128 0x1
+ 493 00a9 12       		.uleb128 0x12
+ 494 00aa 01       		.uleb128 0x1
+ 495 00ab 40       		.uleb128 0x40
+ 496 00ac 0A       		.uleb128 0xa
+ 497 00ad 9742     		.uleb128 0x2117
+ 498 00af 0C       		.uleb128 0xc
+ 499 00b0 00       		.byte	0
+ 500 00b1 00       		.byte	0
+ 501 00b2 0D       		.uleb128 0xd
+ 502 00b3 34       		.uleb128 0x34
+ 503 00b4 00       		.byte	0
+ 504 00b5 03       		.uleb128 0x3
+ 505 00b6 0E       		.uleb128 0xe
+ 506 00b7 3A       		.uleb128 0x3a
+ 507 00b8 0B       		.uleb128 0xb
+ 508 00b9 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 18
+
+
+ 509 00ba 0B       		.uleb128 0xb
+ 510 00bb 49       		.uleb128 0x49
+ 511 00bc 13       		.uleb128 0x13
+ 512 00bd 3F       		.uleb128 0x3f
+ 513 00be 0C       		.uleb128 0xc
+ 514 00bf 02       		.uleb128 0x2
+ 515 00c0 0A       		.uleb128 0xa
+ 516 00c1 00       		.byte	0
+ 517 00c2 00       		.byte	0
+ 518 00c3 0E       		.uleb128 0xe
+ 519 00c4 2E       		.uleb128 0x2e
+ 520 00c5 00       		.byte	0
+ 521 00c6 3F       		.uleb128 0x3f
+ 522 00c7 0C       		.uleb128 0xc
+ 523 00c8 03       		.uleb128 0x3
+ 524 00c9 0E       		.uleb128 0xe
+ 525 00ca 3A       		.uleb128 0x3a
+ 526 00cb 0B       		.uleb128 0xb
+ 527 00cc 3B       		.uleb128 0x3b
+ 528 00cd 0B       		.uleb128 0xb
+ 529 00ce 27       		.uleb128 0x27
+ 530 00cf 0C       		.uleb128 0xc
+ 531 00d0 3C       		.uleb128 0x3c
+ 532 00d1 0C       		.uleb128 0xc
+ 533 00d2 00       		.byte	0
+ 534 00d3 00       		.byte	0
+ 535 00d4 00       		.byte	0
+ 536              		.section	.debug_loc,"",%progbits
+ 537              	.Ldebug_loc0:
+ 538              	.LLST0:
+ 539 0000 00000000 		.4byte	.LFB0
+ 540 0004 02000000 		.4byte	.LCFI0
+ 541 0008 0200     		.2byte	0x2
+ 542 000a 7D       		.byte	0x7d
+ 543 000b 00       		.sleb128 0
+ 544 000c 02000000 		.4byte	.LCFI0
+ 545 0010 1C000000 		.4byte	.LFE0
+ 546 0014 0200     		.2byte	0x2
+ 547 0016 7D       		.byte	0x7d
+ 548 0017 08       		.sleb128 8
+ 549 0018 00000000 		.4byte	0
+ 550 001c 00000000 		.4byte	0
+ 551              	.LLST1:
+ 552 0020 00000000 		.4byte	.LFB1
+ 553 0024 02000000 		.4byte	.LCFI1
+ 554 0028 0200     		.2byte	0x2
+ 555 002a 7D       		.byte	0x7d
+ 556 002b 00       		.sleb128 0
+ 557 002c 02000000 		.4byte	.LCFI1
+ 558 0030 14000000 		.4byte	.LFE1
+ 559 0034 0200     		.2byte	0x2
+ 560 0036 7D       		.byte	0x7d
+ 561 0037 08       		.sleb128 8
+ 562 0038 00000000 		.4byte	0
+ 563 003c 00000000 		.4byte	0
+ 564              		.section	.debug_aranges,"",%progbits
+ 565 0000 34000000 		.4byte	0x34
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 19
+
+
+ 566 0004 0200     		.2byte	0x2
+ 567 0006 00000000 		.4byte	.Ldebug_info0
+ 568 000a 04       		.byte	0x4
+ 569 000b 00       		.byte	0
+ 570 000c 0000     		.2byte	0
+ 571 000e 0000     		.2byte	0
+ 572 0010 00000000 		.4byte	.LFB0
+ 573 0014 1C000000 		.4byte	.LFE0-.LFB0
+ 574 0018 00000000 		.4byte	.LFB1
+ 575 001c 14000000 		.4byte	.LFE1-.LFB1
+ 576 0020 00000000 		.4byte	.LFB2
+ 577 0024 02000000 		.4byte	.LFE2-.LFB2
+ 578 0028 00000000 		.4byte	.LFB3
+ 579 002c 02000000 		.4byte	.LFE3-.LFB3
+ 580 0030 00000000 		.4byte	0
+ 581 0034 00000000 		.4byte	0
+ 582              		.section	.debug_ranges,"",%progbits
+ 583              	.Ldebug_ranges0:
+ 584 0000 00000000 		.4byte	.LFB0
+ 585 0004 1C000000 		.4byte	.LFE0
+ 586 0008 00000000 		.4byte	.LFB1
+ 587 000c 14000000 		.4byte	.LFE1
+ 588 0010 00000000 		.4byte	.LFB2
+ 589 0014 02000000 		.4byte	.LFE2
+ 590 0018 00000000 		.4byte	.LFB3
+ 591 001c 02000000 		.4byte	.LFE3
+ 592 0020 00000000 		.4byte	0
+ 593 0024 00000000 		.4byte	0
+ 594              		.section	.debug_line,"",%progbits
+ 595              	.Ldebug_line0:
+ 596 0000 A6000000 		.section	.debug_str,"MS",%progbits,1
+ 596      02004E00 
+ 596      00000201 
+ 596      FB0E0D00 
+ 596      01010101 
+ 597              	.LASF6:
+ 598 0000 6C6F6E67 		.ascii	"long long int\000"
+ 598      206C6F6E 
+ 598      6720696E 
+ 598      7400
+ 599              	.LASF10:
+ 600 000e 75696E74 		.ascii	"uint32\000"
+ 600      333200
+ 601              	.LASF26:
+ 602 0015 656E6162 		.ascii	"enableState\000"
+ 602      6C655374 
+ 602      61746500 
+ 603              	.LASF8:
+ 604 0021 756E7369 		.ascii	"unsigned int\000"
+ 604      676E6564 
+ 604      20696E74 
+ 604      00
+ 605              	.LASF18:
+ 606 002e 5254435F 		.ascii	"RTC_EnableTxPinsInputBuffer\000"
+ 606      456E6162 
+ 606      6C655478 
+ 606      50696E73 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 20
+
+
+ 606      496E7075 
+ 607              	.LASF21:
+ 608 004a 5254435F 		.ascii	"RTC_Stop\000"
+ 608      53746F70 
+ 608      00
+ 609              	.LASF19:
+ 610 0053 5254435F 		.ascii	"RTC_Sleep\000"
+ 610      536C6565 
+ 610      7000
+ 611              	.LASF9:
+ 612 005d 75696E74 		.ascii	"uint8\000"
+ 612      3800
+ 613              	.LASF5:
+ 614 0063 6C6F6E67 		.ascii	"long unsigned int\000"
+ 614      20756E73 
+ 614      69676E65 
+ 614      6420696E 
+ 614      7400
+ 615              	.LASF7:
+ 616 0075 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 616      206C6F6E 
+ 616      6720756E 
+ 616      7369676E 
+ 616      65642069 
+ 617              	.LASF25:
+ 618 008c 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
+ 618      73657273 
+ 618      5C537465 
+ 618      76655C44 
+ 618      6F63756D 
+ 619 00b9 5F4D6174 		.ascii	"_Matrix.cydsn\000"
+ 619      7269782E 
+ 619      63796473 
+ 619      6E00
+ 620              	.LASF11:
+ 621 00c7 666C6F61 		.ascii	"float\000"
+ 621      7400
+ 622              	.LASF16:
+ 623 00cd 5254435F 		.ascii	"RTC_BACKUP_STRUCT\000"
+ 623      4241434B 
+ 623      55505F53 
+ 623      54525543 
+ 623      5400
+ 624              	.LASF23:
+ 625 00df 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 625      4320342E 
+ 625      372E3320 
+ 625      32303133 
+ 625      30333132 
+ 626 0112 616E6368 		.ascii	"anch revision 196615]\000"
+ 626      20726576 
+ 626      6973696F 
+ 626      6E203139 
+ 626      36363135 
+ 627              	.LASF1:
+ 628 0128 756E7369 		.ascii	"unsigned char\000"
+ 628      676E6564 
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 21
+
+
+ 628      20636861 
+ 628      7200
+ 629              	.LASF13:
+ 630 0136 63686172 		.ascii	"char\000"
+ 630      00
+ 631              	.LASF27:
+ 632 013b 5254435F 		.ascii	"RTC_backup\000"
+ 632      6261636B 
+ 632      757000
+ 633              	.LASF4:
+ 634 0146 6C6F6E67 		.ascii	"long int\000"
+ 634      20696E74 
+ 634      00
+ 635              	.LASF2:
+ 636 014f 73686F72 		.ascii	"short int\000"
+ 636      7420696E 
+ 636      7400
+ 637              	.LASF12:
+ 638 0159 646F7562 		.ascii	"double\000"
+ 638      6C6500
+ 639              	.LASF14:
+ 640 0160 72656733 		.ascii	"reg32\000"
+ 640      3200
+ 641              	.LASF3:
+ 642 0166 73686F72 		.ascii	"short unsigned int\000"
+ 642      7420756E 
+ 642      7369676E 
+ 642      65642069 
+ 642      6E7400
+ 643              	.LASF0:
+ 644 0179 7369676E 		.ascii	"signed char\000"
+ 644      65642063 
+ 644      68617200 
+ 645              	.LASF17:
+ 646 0185 5254435F 		.ascii	"RTC_DisableTxPinsInputBuffer\000"
+ 646      44697361 
+ 646      626C6554 
+ 646      7850696E 
+ 646      73496E70 
+ 647              	.LASF20:
+ 648 01a2 5254435F 		.ascii	"RTC_Wakeup\000"
+ 648      57616B65 
+ 648      757000
+ 649              	.LASF24:
+ 650 01ad 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\RTC_PM.c\000"
+ 650      6E657261 
+ 650      7465645F 
+ 650      536F7572 
+ 650      63655C50 
+ 651              	.LASF22:
+ 652 01cf 5254435F 		.ascii	"RTC_Enable\000"
+ 652      456E6162 
+ 652      6C6500
+ 653              	.LASF15:
+ 654 01da 73697A65 		.ascii	"sizetype\000"
+ 654      74797065 
+ 654      00
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\cce8ghf6.s 			page 22
+
+
+ 655              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

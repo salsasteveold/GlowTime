@@ -38,26 +38,26 @@
 *   None
 *
 *******************************************************************************/
-void drawPixel(uint8 x, uint8 y, RGB c, color *matrix)
+void drawPixel(int8 x, int8 y, RGB c, color *matrix)
 {
 	/* pre-calculate some values to index the matrix 
 	 * Note that the translation has been done here to
 	 * leave the ISR clean
 	 */
-	uint8 i = 0, index;
+	int8 i = 0, index;
 	
 	/* index indexes the elements of 'matrix' 
 	 * 'matrix' consists of 64 'color' structs, 4 elements per row
 	 * The formula for index thus is index = y*4 + x/8
 	 */
-	uint8 scratch1 = y*4;
+	int8 scratch1 = y*4;
 	
 	/* The x-coordinate is broken up into 2 parts:
 	* 1. Which of the 4 FIFO bytes need to be written (scratch2)
 	* 2. Which bit of that byte needs to be written (bit_pos)
 	*/
-	uint8 scratch2 = (uint8)(x/8);
-	uint8 bit_pos = (uint8)x%8;
+	int8 scratch2 = (int8)(x/8);
+	int8 bit_pos = (int8)x%8;
 	
 	index = scratch1 + scratch2;
 	
@@ -65,9 +65,9 @@ void drawPixel(uint8 x, uint8 y, RGB c, color *matrix)
 	
 	for(i = 0; i < 5 ; i++)
 	{
-		matrix[index].r[i] |= (uint8)((uint8)((c.r & (0x01 << i)) && 1)<<(bit_pos));
-		matrix[index].g[i] |= (uint8)((uint8)((c.g & (0x01 << i)) && 1)<<(bit_pos));
-		matrix[index].b[i] |= (uint8)((uint8)((c.b & (0x01 << i)) && 1)<<(bit_pos));
+		matrix[index].r[i] |= (int8)((int8)((c.r & (0x01 << i)) && 1)<<(bit_pos));
+		matrix[index].g[i] |= (int8)((int8)((c.g & (0x01 << i)) && 1)<<(bit_pos));
+		matrix[index].b[i] |= (int8)((int8)((c.b & (0x01 << i)) && 1)<<(bit_pos));
 	}
 }
 
@@ -446,9 +446,22 @@ void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
 	drawHex(tokens[3],21, 2,c, matrix);
 }
 
+void printTime(uint8 hours,uint8 min,RGB c, color *matrix)
+{
+	uint8 tHour = hours >>4;
+	if(tHour > 0)
+	{
+		drawHex(hours>>4,3, 2,c, matrix);
+	}
+	drawHex(hours,9, 2,c, matrix);
+	drawColon(15, 2,c, matrix);
+	drawHex(min>>4,17, 2,c, matrix);
+	drawHex(min,23, 2,c, matrix);
+}
+
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)
 {
-	switch (num) 
+	switch (num & 0x0F) 
 	{
 		case 0x1:
 		  drawOne(x0,y0,c,matrix);

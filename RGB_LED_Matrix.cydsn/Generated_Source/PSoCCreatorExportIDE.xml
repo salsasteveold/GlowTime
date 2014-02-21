@@ -31,8 +31,10 @@
         <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\LED_Matrix.c</File>
+          <File BuildType="BUILD" Toolchain="">.\I2CDriver.c</File>
           <File BuildType="BUILD" Toolchain="">.\device.h</File>
           <File BuildType="BUILD" Toolchain="">.\LED_Matrix.h</File>
+          <File BuildType="BUILD" Toolchain="">.\I2CDriver.h</File>
         </Files>
       </Folder>
       <Folder BuildType="BUILD" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\API">
@@ -131,6 +133,28 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_0_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\eoc.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\eoc.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C_MASTER.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_I2C_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_SCB_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_SCB_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_scl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_scl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_scl_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>
