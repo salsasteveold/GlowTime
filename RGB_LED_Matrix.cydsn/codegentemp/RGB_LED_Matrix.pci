@@ -1,14 +1,22 @@
 # RGB_LED_Matrix
-# 2014-02-21 19:35:19Z
+# 2014-03-30 01:18:06Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 3
 set_io "ADC_P2_0(0)" iocell 2 0
+set_io "ADC_P2_1(0)" iocell 2 1
+set_io "ADC_P2_2(0)" iocell 2 2
+set_io "ADC_P2_3(0)" iocell 2 3
+set_io "ADC_P2_4(0)" iocell 2 4
+set_io "ADC_P2_5(0)" iocell 2 5
+set_io "ADC_P2_6(0)" iocell 2 6
+set_io "ADC_P2_7(0)" iocell 2 7
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "P0_0_B1(0)" iocell 0 0
 set_io "P0_6_OE(0)" iocell 0 6
+set_io "P0_7(0)" iocell 0 4
 set_io "P0_7_R1(0)" iocell 0 7
 set_io "P1_0_G2(0)" iocell 1 0
 set_io "P1_1_B(0)" iocell 1 1

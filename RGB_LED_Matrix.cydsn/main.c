@@ -47,6 +47,8 @@ uint8 bit_shift;
 /* stores the currently displayed image in 5-bit color */
 color matrix[16*4];
 
+int8 height[]={0,2,4,6,8,10,12,14};
+
 /*******************************************************************************
 * Function Name: isr_2
 ********************************************************************************
@@ -65,6 +67,19 @@ color matrix[16*4];
 *   None
 *
 *******************************************************************************/
+int PB = 0; 
+CY_ISR(PB_ISR)
+{
+	if(PB==0)
+	{
+		PB=1;
+	}
+	else
+	{
+		PB=0;
+	}
+}
+
 CY_ISR(FIFO_EMPTY)
 {
 	/* Clear pending interrupts */
@@ -85,31 +100,8 @@ CY_ISR(FIFO_EMPTY)
 	pwm_count++;
 
 	/* Binary coded modulation. Read more here: http://www.batsocks.co.uk/readme/art_bcm_1.htm  */
-	/*if(pwm_count == 31)
+	if(pwm_count == 31)
 	{
-		bit_shift = 0;
-		pwm_count = 0;
-		j++;
-		
-		if(j == 8)
-		{
-			j = 0;
-		}
-	}*/
-	/*if(pwm_count == 7)
-	{
-		bit_shift = 0;
-		pwm_count = 0;
-		j++;
-		
-		if(j == 8)
-		{
-			j = 0;
-		}
-	}*/
-	if(pwm_count == 3)
-	{
-		//bit_shift = 2;
 		bit_shift = 0;
 		pwm_count = 0;
 		j++;
@@ -123,16 +115,18 @@ CY_ISR(FIFO_EMPTY)
 	{
 		bit_shift = 1;
 	}
-	
-	/*
+	else if(pwm_count == 3)
+	{
+		bit_shift = 2;
+	}
 	else if(pwm_count == 7)
 	{
 		bit_shift = 3;
-	}*/
-	/*else if(pwm_count == 15)
+	}
+	else if(pwm_count == 15)
 	{
 		bit_shift = 4;
-	}*/
+	}
 
 	/* Write the values to the FIFOs. Note that the data is not written to the matrix until all the FIFOs are written to */
 	
@@ -191,16 +185,28 @@ CY_ISR(FIFO_EMPTY)
 	LED_Matrix_1_F1_REG_0 = (uint8)matrix[3 + (j+8)*4].r[bit_shift];
 }
 uint8 dataReady = 0;
-uint16 result = 0x0000;
-uint16 oldResult = 0x0000;
+int16 result[8] = {0,0,0,0,0,0,0,0};
+int16 oldResult[8] = {0,0,0,0,0,0,0,0};
+int w = 0;
 CY_ISR(eoc_isr)
 {
-	result = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
-	if((result & 0xFF00) == 0xFF00)
+	
+	result[0] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
+	result[1] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
+	result[2] = (uint16)(ADC_SAR_CHAN2_RESULT_REG & ADC_RESULT_MASK);
+	result[3] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
+	result[4] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
+	result[5] = (uint16)(ADC_SAR_CHAN2_RESULT_REG & ADC_RESULT_MASK);
+	result[6] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
+	result[7] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
+	for(w=0;w<8;w++)
 	{
-		result = 0;
+		if((result[w] & 0xFF00) == 0xFF00)
+		{
+			result[w] = 0;
+		}
+		result[w]=(result[w] & 0x0FE0)>>7;
 	}
-	result=result & 0x0FE0;
 	dataReady = 1;
 }
 
@@ -221,92 +227,62 @@ CY_ISR(eoc_isr)
 
 int main()
 {	
+	int i;
 	/* struct that can accomodate 8-bit RGB color */
-	RGB c;
-	RTC_Start();
-	PCF8583 rtc;
-	uint8 I2C_Status;
-	localTimeInit(&rtc);
-	//setTime(&rtc);
+	RGB lotsOfColors[8];
+	lotsOfColors[0].r = 12;
+	lotsOfColors[0].g = 0;
+	lotsOfColors[0].b = 0;
 	
+	lotsOfColors[1].r = 24;
+	lotsOfColors[1].g = 0;
+	lotsOfColors[1].b = 0;
 	
-	I2C_Status = getTime(&rtc);
+	lotsOfColors[2].r = 0;
+	lotsOfColors[2].g = 4;
+	lotsOfColors[2].b = 0;
 	
+	lotsOfColors[3].r = 0;
+	lotsOfColors[3].g = 16;
+	lotsOfColors[3].b = 0;
 	
-	/* Buffer for UART data */
-	//uint16 array[6] = {0, 0, 0, 0, 0, 0};
+	lotsOfColors[4].r = 0;
+	lotsOfColors[4].g = 28;
+	lotsOfColors[4].b = 0;
 	
-
-	/* Initializations */
-	c.r = 0x00;
-	c.g = 0x00;
-	c.b = 0x00;
+	lotsOfColors[5].r = 0;
+	lotsOfColors[5].g = 8;
+	lotsOfColors[5].b = 0;
+	
+	lotsOfColors[6].r = 0;
+	lotsOfColors[6].g = 0;
+	lotsOfColors[6].b = 20;
+	
+	lotsOfColors[7].r = 0;
+	lotsOfColors[7].g = 0;
+	lotsOfColors[7].b = 31;
+	
 	clearScreen(matrix);
 	
 	LED_Matrix_1_Start();
-    //UART_Start();
-    
-	
 	
 	/* Enable Component */
 	LED_Matrix_1_WriteControl(0x03);
 
 	/* Start the isr that is triggered everytime the Component finishes writing to the matrix */
 	isr_2_StartEx(FIFO_EMPTY);
-	ADC_Start();
-	eoc_StartEx(eoc_isr);
-	ADC_StartConvert();
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
-	c.r = 3;
-	c.g = 0;
-	c.b = 0;
-	int8 tmp = 0x07;
-	int i;
+
 	for(;;)
     { 	
-		
-		/*
-		//ADCVoltage = ADC_CountsTo_Volts(0,result);
-		//drawF(3,2,c,matrix);
-		//drawC(9,2,c, matrix);
-		//drawColon(15,2,c,matrix);
-		//drawD(17,2,c,matrix);
-		//drawE(23,2,c,matrix);
-		if((dataReady != 0) && (result != oldResult))
+		for(i=0;i<8;i++)
 		{
-			oldResult = result;
-			dataReady = 0 ;
-			tmp = (int8)(result>>7);
-			clearScreen(matrix);
-			if(tmp<0)
-			{
-				tmp = 0;	
-			}
-			else if(tmp>16)
-			{
-				tmp=16;
-			}
-			for(i=0;i<32;i++)
-			{
-				drawFastVLine(i, 0, 5, c, matrix);
-			}
-			
+			drawblock(i,height[i],lotsOfColors[i],matrix);
 		}
-		else
-		{
-			
-			for(i=0;i<32;i++)
-			{
-				drawFastVLine(i, 0, 5, c, matrix);
-			}
-		}
-		*/
-		printTime(decToBcd(rtc.hour),decToBcd(rtc.minute),c, matrix);
-		//fillScreen(c, matrix);
+	
 	}
-	return 0;
 }
 
 ///* [] END OF FILE */

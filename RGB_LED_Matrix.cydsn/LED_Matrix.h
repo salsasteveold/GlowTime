@@ -89,6 +89,6 @@ void drawF(int8 x0, int8 y0,RGB c, color *matrix);
 void printTime(uint8 hours,uint8 min,RGB c, color *matrix);
 void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix);
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix);
-
+void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix);
 
 //[] END OF FILE

@@ -155,6 +155,32 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\RTC_sda_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_3.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_3.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_4.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_4.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_4_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_5.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_5.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_5_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_6.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_6.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_6_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PB.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PB.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

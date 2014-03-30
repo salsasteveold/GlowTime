@@ -246,21 +246,21 @@ void drawLine(int8 x0, int8 y0, int8 x1, int8 y1, RGB c, color *matrix)
 
 void drawRect(int16_t x, int16_t y,int16_t w, int16_t h,RGB c, color *matrix) {
   drawFastHLine(x, y, w, c, matrix);
-  drawFastHLine(x, y+h-1, w, c, matrix);
+  drawFastHLine(x, y+h, w, c, matrix);
   drawFastVLine(x, y, h, c, matrix);
-  drawFastVLine(x+w-1, y, h, c, matrix);
+  drawFastVLine(x+w, y, h, c, matrix);
 }
 
 void drawFastVLine(int8 x, int8 y, int8 h, RGB c, color *matrix) 
 {
   // Update in subclasses if desired!
-  drawLine(x, y, x, y+h-1, c, matrix);
+  drawLine(x, y, x, y+h, c, matrix);
 }
 
 void drawFastHLine(int8 x, int8 y, int8 w, RGB c, color *matrix) 
 {
   // Update in subclasses if desired!
-  drawLine(x, y, x+w-1, y, c, matrix);
+  drawLine(x, y, x+w, y, c, matrix);
 }
 
 void fillRect(int8 x, int8 y, int8 w, int8 h, RGB c, color *matrix) 
@@ -514,5 +514,23 @@ void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)
 	}	
 }
 
-
+void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
+{
+	int i = 0;
+	blockLoc = blockLoc*4;
+	if(blockLoc>28)
+	{
+		blockLoc=28;
+	}
+	else if(blockLoc<0)
+	{
+		blockLoc=0;
+	}
+	
+	for(i=0;i<4;i++)
+	{
+		drawFastVLine(blockLoc+i, 0,h, c, matrix);
+	}
+}
+	
 /* [] END OF FILE */

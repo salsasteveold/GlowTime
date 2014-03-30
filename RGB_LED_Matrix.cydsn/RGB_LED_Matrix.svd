@@ -3961,7 +3961,7 @@
     <peripheral>
       <name>CR_Addr</name>
       <description>No description available</description>
-      <baseAddress>0x400F0070</baseAddress>
+      <baseAddress>0x400F0072</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x1</size>

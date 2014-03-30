@@ -80,6 +80,32 @@
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\RTC_PINS.h" value="NONE;RTC" />
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\RTC_I2C_PVT.h" value="NONE;RTC" />
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\RTC_PVT.h" value="NONE;RTC" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_1.c" value="ARM_C_FILE;ADC_P2_1" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_1.h" value="NONE;ADC_P2_1" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_1_aliases.h" value="NONE;ADC_P2_1" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_2.c" value="ARM_C_FILE;ADC_P2_2" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_2.h" value="NONE;ADC_P2_2" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_2_aliases.h" value="NONE;ADC_P2_2" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_3.c" value="ARM_C_FILE;ADC_P2_3" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_3.h" value="NONE;ADC_P2_3" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_3_aliases.h" value="NONE;ADC_P2_3" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_4.c" value="ARM_C_FILE;ADC_P2_4" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_4.h" value="NONE;ADC_P2_4" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_4_aliases.h" value="NONE;ADC_P2_4" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_5.c" value="ARM_C_FILE;ADC_P2_5" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_5.h" value="NONE;ADC_P2_5" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_5_aliases.h" value="NONE;ADC_P2_5" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_6.c" value="ARM_C_FILE;ADC_P2_6" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_6.h" value="NONE;ADC_P2_6" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_6_aliases.h" value="NONE;ADC_P2_6" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_7.c" value="ARM_C_FILE;ADC_P2_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_7.h" value="NONE;ADC_P2_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_P2_7_aliases.h" value="NONE;ADC_P2_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\P0_7.c" value="ARM_C_FILE;P0_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\P0_7.h" value="NONE;P0_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\P0_7_aliases.h" value="NONE;P0_7" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\PB.c" value="ARM_C_FILE;PB" />
+  <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\PB.h" value="NONE;PB" />
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_intClock.c" value="ARM_C_FILE;ADC_intClock" />
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_intClock.h" value="NONE;ADC_intClock" />
   <file name="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_IRQ.c" value="ARM_C_FILE;ADC_IRQ" />

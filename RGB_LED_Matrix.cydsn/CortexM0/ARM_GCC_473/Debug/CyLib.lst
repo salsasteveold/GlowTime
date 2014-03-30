@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
   30:.\Generated_Source\PSoC4/CyLib.c **** /*******************************************************************************
   31:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CySysClkImoStart
   32:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CyLib.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
   60:.\Generated_Source\PSoC4/CyLib.c **** * Return:
   61:.\Generated_Source\PSoC4/CyLib.c **** *  None
   62:.\Generated_Source\PSoC4/CyLib.c **** *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 3
 
 
   63:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
   86:.\Generated_Source\PSoC4/CyLib.c ****     CY_SYS_CLK_ILO_CONFIG_REG |= CY_SYS_CLK_ILO_CONFIG_ENABLE;
   83              		.loc 1 86 0
   84 0000 034B     		ldr	r3, .L8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 4
 
 
   85 0002 8022     		mov	r2, #128
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  113              		@ sp needed for prologue
  111:.\Generated_Source\PSoC4/CyLib.c ****     CY_SYS_CLK_ILO_CONFIG_REG &= ( uint32 ) ( ~( uint32 )CY_SYS_CLK_ILO_CONFIG_ENABLE);
  114              		.loc 1 111 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 5
 
 
  115 0002 1A68     		ldr	r2, [r3]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  146:.\Generated_Source\PSoC4/CyLib.c ****     {
  136              		.loc 1 146 0
  137              		.cfi_startproc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 6
 
 
  138              	.LVL0:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  166:.\Generated_Source\PSoC4/CyLib.c ****     *   CY_SYS_CLK_SYSCLK_DIV8        SYSCLK = HFCLK / 8
  167:.\Generated_Source\PSoC4/CyLib.c ****     *   CY_SYS_CLK_SYSCLK_DIV16       SYSCLK = HFCLK / 16
  168:.\Generated_Source\PSoC4/CyLib.c ****     *   CY_SYS_CLK_SYSCLK_DIV32       SYSCLK = HFCLK / 32
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 7
 
 
  169:.\Generated_Source\PSoC4/CyLib.c ****     *   CY_SYS_CLK_SYSCLK_DIV64       SYSCLK = HFCLK / 64
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  199 0014 1860     		str	r0, [r3]
  189:.\Generated_Source\PSoC4/CyLib.c ****                                         CY_SYS_CLK_SELECT_SYSCLK_DIV_SHIFT))));
  190:.\Generated_Source\PSoC4/CyLib.c ****     }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 8
 
 
  200              		.loc 1 190 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  226:.\Generated_Source\PSoC4/CyLib.c ****             /*  3 MHz */ 0x03u,  /*  4 MHz */ 0x04u,  /*  5 MHz */ 0x05u,  /*  6 MHz */ 0x06u,
  227:.\Generated_Source\PSoC4/CyLib.c ****             /*  7 MHz */ 0x07u,  /*  8 MHz */ 0x08u,  /*  9 MHz */ 0x09u,  /* 10 MHz */ 0x0Au,
  228:.\Generated_Source\PSoC4/CyLib.c ****             /* 11 MHz */ 0x0Bu,  /* 12 MHz */ 0x0Cu,  /* 13 MHz */ 0x0Eu,  /* 14 MHz */ 0x0Fu,
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 9
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 9
 
 
  229:.\Generated_Source\PSoC4/CyLib.c ****             /* 15 MHz */ 0x10u,  /* 16 MHz */ 0x11u,  /* 17 MHz */ 0x12u,  /* 18 MHz */ 0x13u,
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  283:.\Generated_Source\PSoC4/CyLib.c ****             * cases where a trim change can exceed the maximum frequency, the trim must
  284:.\Generated_Source\PSoC4/CyLib.c ****             * be applied at a frequency that is low enough.
  285:.\Generated_Source\PSoC4/CyLib.c ****             ***************************************************************************/
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 10
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 10
 
 
  286:.\Generated_Source\PSoC4/CyLib.c ****             if ((currentFreq >= CY_SYS_CLK_IMO_BOUNDARY_FREQ_MHZ) && (freq >= CY_SYS_CLK_IMO_BOUNDA
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  340:.\Generated_Source\PSoC4/CyLib.c ****     *
  341:.\Generated_Source\PSoC4/CyLib.c ****     * Summary:
  342:.\Generated_Source\PSoC4/CyLib.c ****     *  Locks out configuration changes to the Watchdog timer registers and ILO
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 11
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 11
 
 
  343:.\Generated_Source\PSoC4/CyLib.c ****     *  config register.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  370:.\Generated_Source\PSoC4/CyLib.c ****         /* CLK_SELECT register's bits 15:14 are WDT_LOCK */
  371:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_CLK_SELECT_REG = (CY_SYS_CLK_SELECT_REG & (uint32)(~CY_SYS_WDT_CLK_LOCK_BITS_MASK)) 
  245              		.loc 1 371 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 12
 
 
  246 0018 054B     		ldr	r3, .L22+4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  275              		.cfi_startproc
  276 0000 10B5     		push	{r4, lr}
  277              	.LCFI2:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 13
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 13
 
 
  278              		.cfi_def_cfa_offset 8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  315 0032 1A60     		str	r2, [r3]
  413:.\Generated_Source\PSoC4/CyLib.c ****                 CY_SYS_WDT_CLK_LOCK_BIT1);
  414:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 14
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 14
 
 
  415:.\Generated_Source\PSoC4/CyLib.c ****         CyExitCriticalSection(interruptState);
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  343              	.LCFI3:
  344              		.cfi_def_cfa_offset 4
  345              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 15
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 15
 
 
  442:.\Generated_Source\PSoC4/CyLib.c ****         CYASSERT(counterNum < CY_SYS_WDT_COUNTERS_MAX);
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  490:.\Generated_Source\PSoC4/CyLib.c ****         {
  491:.\Generated_Source\PSoC4/CyLib.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG &
  492:.\Generated_Source\PSoC4/CyLib.c ****                                 (uint32)~((uint32)(CY_SYS_WDT_MODE_MASK << (counterNum * CY_SYS_WDT
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 16
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 16
 
 
  493:.\Generated_Source\PSoC4/CyLib.c ****             configRegValue |= (uint32)((mode & CY_SYS_WDT_MODE_MASK) << (counterNum * CY_SYS_WDT_CN
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  547:.\Generated_Source\PSoC4/CyLib.c ****     void CySysWdtWriteClearOnMatch(uint32 counterNum, uint32 enable)
  548:.\Generated_Source\PSoC4/CyLib.c ****     {
  549:.\Generated_Source\PSoC4/CyLib.c ****         CYASSERT((counterNum == CY_SYS_WDT_COUNTER0) ||
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 17
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 17
 
 
  550:.\Generated_Source\PSoC4/CyLib.c ****                                              (counterNum == CY_SYS_WDT_COUNTER1));
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  604:.\Generated_Source\PSoC4/CyLib.c ****     *      CY_SYS_WDT_COUNTER0_MASK      0
  605:.\Generated_Source\PSoC4/CyLib.c ****     *      CY_SYS_WDT_COUNTER1_MASK      1
  606:.\Generated_Source\PSoC4/CyLib.c ****     *      CY_SYS_WDT_COUNTER2_MASK      2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 18
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 18
 
 
  607:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  661:.\Generated_Source\PSoC4/CyLib.c ****         }
  662:.\Generated_Source\PSoC4/CyLib.c **** 
  663:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_WDT_CONTROL_REG &= ~counterMask;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 19
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 19
 
 
  664:.\Generated_Source\PSoC4/CyLib.c ****     }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  718:.\Generated_Source\PSoC4/CyLib.c **** 
  719:.\Generated_Source\PSoC4/CyLib.c ****     /*******************************************************************************
  720:.\Generated_Source\PSoC4/CyLib.c ****     * Function Name: CySysWdtReadCascade
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 20
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 20
 
 
  721:.\Generated_Source\PSoC4/CyLib.c ****     ********************************************************************************
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  775:.\Generated_Source\PSoC4/CyLib.c ****         if (0u == (CY_SYS_CLK_ILO_CONFIG_REG & CY_SYS_CLK_ILO_CONFIG_ENABLE))
  776:.\Generated_Source\PSoC4/CyLib.c ****         {
  777:.\Generated_Source\PSoC4/CyLib.c ****             CySysClkIloStart();
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 21
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 21
 
 
  778:.\Generated_Source\PSoC4/CyLib.c ****         }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  832:.\Generated_Source\PSoC4/CyLib.c **** 
  833:.\Generated_Source\PSoC4/CyLib.c ****     /*******************************************************************************
  834:.\Generated_Source\PSoC4/CyLib.c ****     * Function Name: CySysWdtReadToggleBit
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 22
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 22
 
 
  835:.\Generated_Source\PSoC4/CyLib.c ****     ********************************************************************************
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  889:.\Generated_Source\PSoC4/CyLib.c ****     *
  890:.\Generated_Source\PSoC4/CyLib.c ****     *******************************************************************************/
  891:.\Generated_Source\PSoC4/CyLib.c ****     uint32 CySysWdtReadCount(uint32 counterNum)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 23
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 23
 
 
  892:.\Generated_Source\PSoC4/CyLib.c ****     {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  946:.\Generated_Source\PSoC4/CyLib.c ****     /*******************************************************************************
  947:.\Generated_Source\PSoC4/CyLib.c ****     * Function Name: CySysWdtClearInterrupt
  948:.\Generated_Source\PSoC4/CyLib.c ****     ********************************************************************************
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 24
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 24
 
 
  949:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1003:.\Generated_Source\PSoC4/CyLib.c **** 
 1004:.\Generated_Source\PSoC4/CyLib.c ****         /* Set the new WDT control register value */
 1005:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_WDT_CONTROL_REG |= (counterMask & (CY_SYS_WDT_COUNTER0_INT |
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 25
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 25
 
 
 1006:.\Generated_Source\PSoC4/CyLib.c ****             CY_SYS_WDT_COUNTER1_INT | CY_SYS_WDT_COUNTER2_INT));
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1060:.\Generated_Source\PSoC4/CyLib.c ****     ********************************************************************************
 1061:.\Generated_Source\PSoC4/CyLib.c ****     *
 1062:.\Generated_Source\PSoC4/CyLib.c ****     * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 26
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 26
 
 
 1063:.\Generated_Source\PSoC4/CyLib.c ****     *  Sets the frequency of the IMO.
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1117:.\Generated_Source\PSoC4/CyLib.c ****     *  None
 1118:.\Generated_Source\PSoC4/CyLib.c ****     *
 1119:.\Generated_Source\PSoC4/CyLib.c ****     * Return:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 27
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 27
 
 
 1120:.\Generated_Source\PSoC4/CyLib.c ****     *  Status of WDT counter:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1174:.\Generated_Source\PSoC4/CyLib.c ****     *
 1175:.\Generated_Source\PSoC4/CyLib.c ****     * Return:
 1176:.\Generated_Source\PSoC4/CyLib.c ****     *  None
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 28
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 28
 
 
 1177:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1231:.\Generated_Source\PSoC4/CyLib.c ****     *  Counter match value
 1232:.\Generated_Source\PSoC4/CyLib.c ****     *
 1233:.\Generated_Source\PSoC4/CyLib.c ****     * Side Effects:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 29
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 29
 
 
 1234:.\Generated_Source\PSoC4/CyLib.c ****     *  None
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1288:.\Generated_Source\PSoC4/CyLib.c ****         bitsNum = ((uint32)(bitsNum << 16u) & CY_SYS_WDT_IGNORE_BITS_MASK);
 1289:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_WDT_MATCH_REG = (CY_SYS_WDT_MATCH_REG & (uint32)(~CY_SYS_WDT_IGNORE_BITS_MASK)) | bi
 1290:.\Generated_Source\PSoC4/CyLib.c ****     }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 30
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 30
 
 
 1291:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1345:.\Generated_Source\PSoC4/CyLib.c ****     *
 1346:.\Generated_Source\PSoC4/CyLib.c ****     * Summary:
 1347:.\Generated_Source\PSoC4/CyLib.c ****     *  After masking interrupts from WDT, they are not passed to CPU.
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 31
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 31
 
 
 1348:.\Generated_Source\PSoC4/CyLib.c ****     *
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1402:.\Generated_Source\PSoC4/CyLib.c ****     *  threshold: Threshold selection for Low Voltage Detect circuit.
 1403:.\Generated_Source\PSoC4/CyLib.c ****     *  Threshold variation is +/- 2.5% from these typical voltage choices.
 1404:.\Generated_Source\PSoC4/CyLib.c ****     *         Define                     Voltage threshold
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 32
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 32
 
 
 1405:.\Generated_Source\PSoC4/CyLib.c ****     *    CY_LVD_THRESHOLD_1_75_V       1.7500 V
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1459:.\Generated_Source\PSoC4/CyLib.c ****     * Function Name: CySysLvdGetInterruptSource
 1460:.\Generated_Source\PSoC4/CyLib.c ****     ********************************************************************************
 1461:.\Generated_Source\PSoC4/CyLib.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 33
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 33
 
 
 1462:.\Generated_Source\PSoC4/CyLib.c ****     * Summary:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1516:.\Generated_Source\PSoC4/CyLib.c **** {
 1517:.\Generated_Source\PSoC4/CyLib.c ****     uint32 intState;
 1518:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 34
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 34
 
 
 1519:.\Generated_Source\PSoC4/CyLib.c ****     /* Get the curreent interrupt state. */
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1573:.\Generated_Source\PSoC4/CyLib.c ****     oldIsr = ramVectorTable[number];
 1574:.\Generated_Source\PSoC4/CyLib.c **** 
 1575:.\Generated_Source\PSoC4/CyLib.c ****     /* Set new Interrupt service routine. */
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 35
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 35
 
 
 1576:.\Generated_Source\PSoC4/CyLib.c ****     ramVectorTable[number] = address;
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1630:.\Generated_Source\PSoC4/CyLib.c ****     oldIsr = ramVectorTable[CY_INT_IRQ_BASE + number];
 1631:.\Generated_Source\PSoC4/CyLib.c **** 
 1632:.\Generated_Source\PSoC4/CyLib.c ****     /* Set new Interrupt service routine. */
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 36
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 36
 
 
 1633:.\Generated_Source\PSoC4/CyLib.c ****     ramVectorTable[CY_INT_IRQ_BASE + number] = address;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1687:.\Generated_Source\PSoC4/CyLib.c **** 
 1688:.\Generated_Source\PSoC4/CyLib.c ****     interruptState = CyEnterCriticalSection();
 1689:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 37
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 37
 
 
 1690:.\Generated_Source\PSoC4/CyLib.c ****     value = CY_INT_PRIORITY_REG(number);
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1744:.\Generated_Source\PSoC4/CyLib.c **** 
 1745:.\Generated_Source\PSoC4/CyLib.c **** /*******************************************************************************
 1746:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CyIntGetState
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 38
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 38
 
 
 1747:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1801:.\Generated_Source\PSoC4/CyLib.c ****     CY_INT_SET_PEND_REG = ((uint32) 0x01u << (CY_INT_ENABLE_RANGE_MASK & number));
 1802:.\Generated_Source\PSoC4/CyLib.c **** }
 1803:.\Generated_Source\PSoC4/CyLib.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 39
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 39
 
 
 1804:.\Generated_Source\PSoC4/CyLib.c **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  360              	.LBE82:
  443:.\Generated_Source\PSoC4/CyLib.c ****         return ((CY_SYS_WDT_CONTROL_REG >> ((CY_SYS_WDT_CNT_SHIFT * counterNum) + CY_SYS_WDT_CNT_ST
  361              		.loc 1 443 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 40
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 40
 
 
  362 0008 044B     		ldr	r3, .L30
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  484:.\Generated_Source\PSoC4/CyLib.c ****         if (0u == (CY_SYS_CLK_ILO_CONFIG_REG & CY_SYS_CLK_ILO_CONFIG_ENABLE))
  413              		.loc 1 484 0
  414 0008 0F4B     		ldr	r3, .L37
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 41
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 41
 
 
  415 000a 1A68     		ldr	r2, [r3]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  463 0032 0322     		mov	r2, #3
  491:.\Generated_Source\PSoC4/CyLib.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG &
  464              		.loc 1 491 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 42
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 42
 
 
  465 0034 1C68     		ldr	r4, [r3]
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  511 0004 1968     		ldr	r1, [r3]
  512 0006 0322     		mov	r2, #3
  513 0008 C140     		lsr	r1, r1, r0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 43
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 43
 
 
  514 000a 081C     		mov	r0, r1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
   86:.\Generated_Source\PSoC4/CyLib.c ****     CY_SYS_CLK_ILO_CONFIG_REG |= CY_SYS_CLK_ILO_CONFIG_ENABLE;
  564              		.loc 1 86 0
  565 0010 1C68     		ldr	r4, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 44
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 44
 
 
  566 0012 8022     		mov	r2, #128
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  615              	.L48:
  616              		.align	2
  617              	.L47:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 45
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 45
 
 
  618 003c 04010B40 		.word	1074462980
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  665 0012 081C     		mov	r0, r1
  666 0014 0122     		mov	r2, #1
  667 0016 1040     		and	r0, r2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 46
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 46
 
 
  590:.\Generated_Source\PSoC4/CyLib.c ****     }
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  714              		@ sp needed for prologue
  626:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_WDT_CONTROL_REG |= counterMask;
  715              		.loc 1 626 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 47
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 47
 
 
  716 0016 1968     		ldr	r1, [r3]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  763              		.loc 1 663 0
  764 0014 034B     		ldr	r3, .L59+4
  664:.\Generated_Source\PSoC4/CyLib.c ****     }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 48
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 48
 
 
  765              		.loc 1 664 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  813 0006 1968     		ldr	r1, [r3]
  814              	.LVL42:
  815              	.LBE112:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 49
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 49
 
 
  816              	.LBE111:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  864              		.loc 1 711 0
  865 002e 1968     		ldr	r1, [r3]
  866              	.LVL45:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 50
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 50
 
 
  712:.\Generated_Source\PSoC4/CyLib.c ****             configRegValue &= ((uint32)(~(CY_SYS_WDT_CASCADE_01|CY_SYS_WDT_CASCADE_12)));
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  912              	.L67:
  913 000c 0C020B40 		.word	1074463244
  914 0010 08080000 		.word	2056
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 51
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 51
 
 
  915              		.cfi_endproc
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  962              	.L71:
  963              	.LBE127:
  964              	.LBE126:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 52
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 52
 
 
  825:.\Generated_Source\PSoC4/CyLib.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG;
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1010 0000 024B     		ldr	r3, .L75
  850:.\Generated_Source\PSoC4/CyLib.c ****     }
  1011              		.loc 1 850 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 53
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 53
 
 
  1012              		@ sp needed for prologue
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  873:.\Generated_Source\PSoC4/CyLib.c ****     }
  1061              		.loc 1 873 0
  1062              		@ sp needed for prologue
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 54
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 54
 
 
  872:.\Generated_Source\PSoC4/CyLib.c ****         return ((uint32)(CY_SYS_WDT_MATCH_REG >> (counterNum * CY_SYS_WDT_CNT_MATCH_SHIFT)) & CY_SY
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  918:.\Generated_Source\PSoC4/CyLib.c ****     }
  1112              		.loc 1 918 0
  1113              		@ sp needed for prologue
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 55
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 55
 
 
  1114 0012 00BD     		pop	{pc}
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1161              		.cfi_startproc
  942:.\Generated_Source\PSoC4/CyLib.c ****         return (CY_SYS_WDT_CONTROL_REG & (CY_SYS_WDT_COUNTER0_INT | CY_SYS_WDT_COUNTER1_INT | CY_SY
  1162              		.loc 1 942 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 56
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 56
 
 
  1163 0000 024B     		ldr	r3, .L92
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
   86:.\Generated_Source\PSoC4/CyLib.c ****     CY_SYS_CLK_ILO_CONFIG_REG |= CY_SYS_CLK_ILO_CONFIG_ENABLE;
  1210              		.loc 1 86 0
  1211 0010 1968     		ldr	r1, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 57
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 57
 
 
  1212 0012 8025     		mov	r5, #128
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1260 0052 1A60     		str	r2, [r3]
 1005:.\Generated_Source\PSoC4/CyLib.c ****         CY_SYS_WDT_CONTROL_REG |= (counterMask & (CY_SYS_WDT_COUNTER0_INT |
  1261              		.loc 1 1005 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 58
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 58
 
 
  1262 0054 064A     		ldr	r2, .L100+8
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1310 000a 1968     		ldr	r1, [r3]
  1311 000c 8022     		mov	r2, #128
  1312 000e 1206     		lsl	r2, r2, #24
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 59
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 59
 
 
  1313 0010 0A43     		orr	r2, r1
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1359 0008 9143     		bic	r1, r2
 1430:.\Generated_Source\PSoC4/CyLib.c ****                 ((threshold << CY_LVD_PWR_VMON_CONFIG_LVD_SEL_SHIFT) & CY_LVD_PWR_VMON_CONFIG_LVD_S
  1360              		.loc 1 1430 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 60
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 60
 
 
  1361 000a 1040     		and	r0, r2
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1405              		.loc 1 1453 0
  1406 0008 8A43     		bic	r2, r1
  1407 000a 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 61
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 61
 
 
 1454:.\Generated_Source\PSoC4/CyLib.c ****         CY_LVD_PWR_VMON_CONFIG_REG &= ~CY_LVD_PWR_VMON_CONFIG_LVD_EN;
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1455              		.thumb_func
  1456              		.type	CySysLvdClearInterrupt, %function
  1457              	CySysLvdClearInterrupt:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 62
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 62
 
 
  1458              	.LFB29:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1502 000c 80E100E0 		.word	-536813184
  1503              		.cfi_endproc
  1504              	.LFE30:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 63
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 63
 
 
  1505              		.size	CyDisableInts, .-CyDisableInts
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1552              	.LBB137:
  1553              		.loc 1 1849 0
  1554              	@ 1849 ".\Generated_Source\PSoC4\CyLib.c" 1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 64
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 64
 
 
  1555 0006 01BE     		    bkpt    1
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1603              	@ 0 "" 2
  1604              	.LVL91:
  1605              		.code	16
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 65
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 65
 
 
  1606              	.L127:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1655              	.LVL96:
  1656 000c 8318     		add	r3, r0, r2
  1657 000e 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 66
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 66
 
 
  1658              	.LVL97:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1706 000c C118     		add	r1, r0, r3
  1707 000e 0868     		ldr	r0, [r1]
 1660:.\Generated_Source\PSoC4/CyLib.c **** }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 67
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 67
 
 
  1708              		.loc 1 1660 0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1758              	.LBB146:
  1759              	.LBB147:
  1760              		.loc 1 1849 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 68
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 68
 
 
  1761              	@ 1849 ".\Generated_Source\PSoC4\CyLib.c" 1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1805 003a C046     		.align	2
  1806              	.L139:
  1807 003c 00E400E0 		.word	-536812544
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 69
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 69
 
 
  1808              		.cfi_endproc
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1857              		@ sp needed for prologue
  1858 0020 00BD     		pop	{pc}
  1859              	.L144:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 70
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 70
 
 
  1860 0022 C046     		.align	2
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1909 0004 1968     		ldr	r1, [r3]
  1910 0006 1040     		and	r0, r2
  1911              	.LVL120:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 71
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 71
 
 
  1912 0008 C140     		lsr	r1, r1, r0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  1962              	.LFB41:
 1800:.\Generated_Source\PSoC4/CyLib.c **** {
  1963              		.loc 1 1800 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 72
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 72
 
 
  1964              		.cfi_startproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2013              		.section	.text.CyHalt,"ax",%progbits
  2014              		.align	2
  2015              		.global	CyHalt
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 73
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 73
 
 
  2016              		.code	16
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1874:.\Generated_Source\PSoC4/CyLib.c ****     * to the register, otherwise the register write is unpredictable.
 1875:.\Generated_Source\PSoC4/CyLib.c ****     ***************************************************************************/
 1876:.\Generated_Source\PSoC4/CyLib.c ****     CY_SYS_CM0_AIRCR_REG = (CY_SYS_CM0_AIRCR_REG & (uint32)(~CY_SYS_CM0_AIRCR_VECTKEY_MASK)) |
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 74
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 74
 
 
  2045              		.loc 1 1876 0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1894:.\Generated_Source\PSoC4/CyLib.c **** *******************************************************************************/
 1895:.\Generated_Source\PSoC4/CyLib.c **** void CyDelay(uint32 milliseconds)
 1896:.\Generated_Source\PSoC4/CyLib.c **** {
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 75
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 75
 
 
  2078              		.loc 1 1896 0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1902:.\Generated_Source\PSoC4/CyLib.c ****         CyDelayCycles(cydelay32kMs);
  2122              		.loc 1 1902 0
  2123 0030 2868     		ldr	r0, [r5]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 76
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 76
 
 
  2124 0032 FFF7FEFF 		bl	CyDelayCycles
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2169              	.L178:
  2170 006e C046     		.align	2
  2171              	.L177:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 77
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 77
 
 
  2172 0070 00000000 		.word	.LANCHOR0
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2206 000c 08BD     		pop	{r3, pc}
  2207              	.L181:
  2208 000e C046     		.align	2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 78
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 78
 
 
  2209              	.L180:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2257              		.loc 1 86 0
  2258 0014 1968     		ldr	r1, [r3]
  2259              	.LVL142:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 79
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 79
 
 
  2260 0016 8020     		mov	r0, #128
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2307              		.thumb_func
  2308              		.type	CySysClkWriteImoFreq, %function
  2309              	CySysClkWriteImoFreq:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 80
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 80
 
 
  2310              	.LFB6:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2357              		.loc 1 242 0
  2358 001a FFF7FEFF 		bl	CyEnterCriticalSection
  2359              	.LVL153:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 81
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 81
 
 
  245:.\Generated_Source\PSoC4/CyLib.c ****             for (i = 0u; i < CY_SYS_CLK_IMO_FREQ_TABLE_SIZE; i++)
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2404              		.loc 1 256 0
  2405 0050 344A     		ldr	r2, .L211+12
  257:.\Generated_Source\PSoC4/CyLib.c ****                 bgTrim5 = CY_SFLASH_IMO_TMPCO0_REG;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 82
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 82
 
 
  2406              		.loc 1 257 0
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  321:.\Generated_Source\PSoC4/CyLib.c ****                 CY_SYS_CLK_IMO_TRIM1_REG = CY_SFLASH_IMO_TRIM_REG(freq - CY_SYS_CLK_IMO_FREQ_TABLE_
  2446              		.loc 1 321 0
  2447 007c 1160     		str	r1, [r2]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 83
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 83
 
 
  322:.\Generated_Source\PSoC4/CyLib.c ****                 CY_PWR_BG_TRIM4_REG  = bgTrim4;
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2491              	.LVL169:
  2492 00ae 3078     		ldrb	r0, [r6]
  306:.\Generated_Source\PSoC4/CyLib.c ****                 CY_PWR_BG_TRIM4_REG  = bgTrim4;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 84
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 84
 
 
  2493              		.loc 1 306 0
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2534 00d8 9642     		cmp	r6, r2
  2535 00da 09D9     		bls	.L210
  269:.\Generated_Source\PSoC4/CyLib.c ****             else if(freq <= CY_SFLASH_IMO_MAXF3_REG)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 85
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 85
 
 
  2536              		.loc 1 269 0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2578 0108 CEE7     		b	.L199
  2579              	.LVL183:
  2580              	.L196:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 86
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 86
 
 
  276:.\Generated_Source\PSoC4/CyLib.c ****                 bgTrim4 = CY_SFLASH_IMO_ABS4_REG;
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
 1930:.\Generated_Source\PSoC4/CyLib.c **** * Function Name: CyDelayFreq
 1931:.\Generated_Source\PSoC4/CyLib.c **** ********************************************************************************
 1932:.\Generated_Source\PSoC4/CyLib.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 87
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 87
 
 
 1933:.\Generated_Source\PSoC4/CyLib.c **** *  Sets clock frequency for CyDelay.
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2657 0016 2160     		str	r1, [r4]
 1956:.\Generated_Source\PSoC4/CyLib.c **** }
  2658              		.loc 1 1956 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 88
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 88
 
 
  2659              		@ sp needed for prologue
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2712 0008 0B       		.byte	11
  2713 0009 0C       		.byte	12
  2714 000a 0E       		.byte	14
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 89
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 89
 
 
  2715 000b 0F       		.byte	15
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2769 000c 006CDC02 		.word	48000000
  2770              		.text
  2771              	.Letext0:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 90
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 90
 
 
  2772              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2826 0069 04       		.byte	0x4
  2827 006a 07       		.byte	0x7
  2828 006b 41020000 		.4byte	.LASF8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 91
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 91
 
 
  2829 006f 04       		.uleb128 0x4
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2883 00dc B0030000 		.4byte	.LASF18
  2884 00e0 09       		.uleb128 0x9
  2885 00e1 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 92
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 92
 
 
  2886 00e2 3F030000 		.4byte	.LASF106
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2940 014c 02       		.byte	0x2
  2941 014d 7D       		.byte	0x7d
  2942 014e 00       		.sleb128 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 93
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 93
 
 
  2943 014f 01       		.byte	0x1
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  2997 01be 01       		.byte	0x1
  2998 01bf B8       		.byte	0xb8
  2999 01c0 85000000 		.4byte	0x85
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 94
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 94
 
 
  3000 01c4 41000000 		.4byte	.LLST2
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3054 0250 9501     		.2byte	0x195
  3055 0252 15       		.uleb128 0x15
  3056 0253 06000000 		.4byte	.LVL6
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 95
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 95
 
 
  3057 0257 D00E0000 		.4byte	0xed0
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3111 02e6 7F010000 		.4byte	.LLST13
  3112 02ea 1A       		.uleb128 0x1a
  3113 02eb EA000000 		.4byte	0xea
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 96
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 96
 
 
  3114 02ef 06000000 		.4byte	.LBB84
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3168 0373 85000000 		.4byte	0x85
  3169 0377 E6010000 		.4byte	.LLST17
  3170 037b 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 97
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 97
 
 
  3171 037c 12       		.uleb128 0x12
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3225 040c BA01     		.2byte	0x1ba
  3226 040e 17       		.uleb128 0x17
  3227 040f F9000000 		.4byte	0xf9
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 98
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 98
 
 
  3228 0413 9E020000 		.4byte	.LLST23
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3282 049c 01       		.byte	0x1
  3283 049d 6F02     		.2byte	0x26f
  3284 049f 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 99
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 99
 
 
  3285 04a0 12       		.uleb128 0x12
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3339 0525 1E       		.uleb128 0x1e
  3340 0526 06010000 		.4byte	0x106
  3341 052a 00000000 		.4byte	.LBB106
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 100
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 100
 
 
  3342 052e 00000000 		.4byte	.Ldebug_ranges0+0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3396 05a8 2B03     		.2byte	0x32b
  3397 05aa 01       		.byte	0x1
  3398 05ab 00000000 		.4byte	.LFB19
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 101
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 101
 
 
  3399 05af 40000000 		.4byte	.LFE19
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3453 0630 00000000 		.4byte	.LFB21
  3454 0634 1C000000 		.4byte	.LFE21
  3455 0638 63040000 		.4byte	.LLST37
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 102
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 102
 
 
  3456 063c 01       		.byte	0x1
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3510 06c6 20       		.uleb128 0x20
  3511 06c7 01       		.byte	0x1
  3512 06c8 66050000 		.4byte	.LASF51
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 103
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 103
 
 
  3513 06cc 01       		.byte	0x1
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3567 0750 00040000 		.4byte	.LASF54
  3568 0754 01       		.byte	0x1
  3569 0755 1104     		.2byte	0x411
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 104
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 104
 
 
  3570 0757 01       		.byte	0x1
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3624 07d1 01       		.byte	0x1
  3625 07d2 C105     		.2byte	0x5c1
  3626 07d4 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 105
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 105
 
 
  3627 07d5 85000000 		.4byte	0x85
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3681 0842 1D       		.uleb128 0x1d
  3682 0843 E3010000 		.4byte	.LASF64
  3683 0847 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 106
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 106
 
 
  3684 0848 0706     		.2byte	0x607
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3738 08c7 07       		.uleb128 0x7
  3739 08c8 04       		.byte	0x4
  3740 08c9 C5000000 		.4byte	0xc5
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 107
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 107
 
 
  3741 08cd 1C       		.uleb128 0x1c
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3795 0957 CB030000 		.4byte	.LASF67
  3796 095b 01       		.byte	0x1
  3797 095c 5606     		.2byte	0x656
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 108
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 108
 
 
  3798 095e C5000000 		.4byte	0xc5
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3852 09e5 08000000 		.4byte	.LBE142
  3853 09e9 01       		.byte	0x1
  3854 09ea 7906     		.2byte	0x679
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 109
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 109
 
 
  3855 09ec 17       		.uleb128 0x17
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3909 0a77 F9000000 		.4byte	0xf9
  3910 0a7b DC080000 		.4byte	.LLST69
  3911 0a7f 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 110
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 110
 
 
  3912 0a80 1A       		.uleb128 0x1a
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  3966 0b09 2C050000 		.4byte	.LASF78
  3967 0b0d 01       		.byte	0x1
  3968 0b0e CB06     		.2byte	0x6cb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 111
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 111
 
 
  3969 0b10 01       		.byte	0x1
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4023 0b87 9B090000 		.4byte	.LLST76
  4024 0b8b 00       		.byte	0
  4025 0b8c 21       		.uleb128 0x21
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 112
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 112
 
 
  4026 0b8d 01       		.byte	0x1
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4080 0c00 01       		.byte	0x1
  4081 0c01 A9000000 		.4byte	.LASF83
  4082 0c05 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 113
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 113
 
 
  4083 0c06 4E07     		.2byte	0x74e
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4137 0c8e 01       		.byte	0x1
  4138 0c8f 8307     		.2byte	0x783
  4139 0c91 7A000000 		.4byte	0x7a
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 114
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 114
 
 
  4140 0c95 680A0000 		.4byte	.LLST82
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4194 0d25 29       		.uleb128 0x29
  4195 0d26 01       		.byte	0x1
  4196 0d27 50       		.byte	0x50
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 115
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 115
 
 
  4197 0d28 02       		.byte	0x2
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4251 0da4 01       		.byte	0x1
  4252 0da5 E1       		.byte	0xe1
  4253 0da6 570E0000 		.4byte	0xe57
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 116
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 116
 
 
  4254 0daa 05       		.byte	0x5
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4308 0e20 50       		.byte	0x50
  4309 0e21 01       		.byte	0x1
  4310 0e22 35       		.byte	0x35
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 117
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 117
 
 
  4311 0e23 00       		.byte	0
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4365 0e94 05       		.byte	0x5
  4366 0e95 03       		.byte	0x3
  4367 0e96 00000000 		.4byte	cydelayFreqHz
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 118
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 118
 
 
  4368 0e9a 32       		.uleb128 0x32
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4422 0efd 85000000 		.4byte	0x85
  4423 0f01 00       		.byte	0
  4424 0f02 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 119
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 119
 
 
  4425              		.section	.debug_abbrev,"",%progbits
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4479 0034 49       		.uleb128 0x49
  4480 0035 13       		.uleb128 0x13
  4481 0036 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 120
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 120
 
 
  4482 0037 00       		.byte	0
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4536 006d 0A       		.uleb128 0xa
  4537 006e 2E       		.uleb128 0x2e
  4538 006f 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 121
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 121
 
 
  4539 0070 3F       		.uleb128 0x3f
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4593 00a6 0C       		.uleb128 0xc
  4594 00a7 03       		.uleb128 0x3
  4595 00a8 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 122
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 122
 
 
  4596 00a9 3A       		.uleb128 0x3a
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4650 00e2 00       		.byte	0
  4651 00e3 00       		.byte	0
  4652 00e4 10       		.uleb128 0x10
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 123
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 123
 
 
  4653 00e5 05       		.uleb128 0x5
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4707 011c 12       		.uleb128 0x12
  4708 011d 01       		.uleb128 0x1
  4709 011e 40       		.uleb128 0x40
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 124
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 124
 
 
  4710 011f 06       		.uleb128 0x6
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4764 0158 01       		.uleb128 0x1
  4765 0159 40       		.uleb128 0x40
  4766 015a 06       		.uleb128 0x6
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 125
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 125
 
 
  4767 015b 9742     		.uleb128 0x2117
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4821 0192 58       		.uleb128 0x58
  4822 0193 0B       		.uleb128 0xb
  4823 0194 59       		.uleb128 0x59
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 126
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 126
 
 
  4824 0195 05       		.uleb128 0x5
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4878 01cd 0C       		.uleb128 0xc
  4879 01ce 01       		.uleb128 0x1
  4880 01cf 13       		.uleb128 0x13
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 127
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 127
 
 
  4881 01d0 00       		.byte	0
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4935 0206 27       		.uleb128 0x27
  4936 0207 0C       		.uleb128 0xc
  4937 0208 49       		.uleb128 0x49
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 128
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 128
 
 
  4938 0209 13       		.uleb128 0x13
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  4992 0241 0A       		.uleb128 0xa
  4993 0242 9742     		.uleb128 0x2117
  4994 0244 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 129
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 129
 
 
  4995 0245 00       		.byte	0
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5049 027b 40       		.uleb128 0x40
  5050 027c 0A       		.uleb128 0xa
  5051 027d 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 130
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 130
 
 
  5052 027f 0C       		.uleb128 0xc
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5106 02ba 3B       		.uleb128 0x3b
  5107 02bb 0B       		.uleb128 0xb
  5108 02bc 49       		.uleb128 0x49
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 131
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 131
 
 
  5109 02bd 13       		.uleb128 0x13
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5163 02f5 00       		.byte	0
  5164 02f6 00       		.byte	0
  5165 02f7 31       		.uleb128 0x31
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 132
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 132
 
 
  5166 02f8 2E       		.uleb128 0x2e
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5220 032f 49       		.uleb128 0x49
  5221 0330 13       		.uleb128 0x13
  5222 0331 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 133
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 133
 
 
  5223 0332 0C       		.uleb128 0xc
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5277 000b 08000000 		.4byte	.LVL1
  5278 000f 18000000 		.4byte	.LFE4
  5279 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 134
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 134
 
 
  5280 0015 F3       		.byte	0xf3
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5334 0095 00000000 		.4byte	.LFB8
  5335 0099 02000000 		.4byte	.LCFI2
  5336 009d 0200     		.2byte	0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 135
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 135
 
 
  5337 009f 7D       		.byte	0x7d
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5391 0125 0200     		.2byte	0x2
  5392 0127 7D       		.byte	0x7d
  5393 0128 00       		.sleb128 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 136
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 136
 
 
  5394 0129 02000000 		.4byte	.LCFI4
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5448              	.LLST15:
  5449 01b1 1A000000 		.4byte	.LVL15
  5450 01b5 24000000 		.4byte	.LVL18
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 137
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 137
 
 
  5451 01b9 0100     		.2byte	0x1
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5505 023c F3       		.byte	0xf3
  5506 023d 01       		.uleb128 0x1
  5507 023e 50       		.byte	0x50
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 138
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 138
 
 
  5508 023f 9F       		.byte	0x9f
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5562 02c2 20000000 		.4byte	.LFE13
  5563 02c6 0200     		.2byte	0x2
  5564 02c8 7D       		.byte	0x7d
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 139
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 139
 
 
  5565 02c9 04       		.sleb128 4
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5619 034c 04000000 		.4byte	.LCFI8
  5620 0350 0200     		.2byte	0x2
  5621 0352 7D       		.byte	0x7d
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 140
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 140
 
 
  5622 0353 00       		.sleb128 0
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5676 03dc 71       		.byte	0x71
  5677 03dd 00       		.sleb128 0
  5678 03de 39       		.byte	0x39
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 141
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 141
 
 
  5679 03df 25       		.byte	0x25
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5733 044d 0100     		.2byte	0x1
  5734 044f 52       		.byte	0x52
  5735 0450 2C000000 		.4byte	.LVL53
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 142
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 142
 
 
  5736 0454 2E000000 		.4byte	.LVL54
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5790 04d8 00000000 		.4byte	.LVL59
  5791 04dc 12000000 		.4byte	.LVL61
  5792 04e0 0100     		.2byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 143
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 143
 
 
  5793 04e2 50       		.byte	0x50
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5847 055f 1C000000 		.4byte	.LVL64
  5848 0563 0200     		.2byte	0x2
  5849 0565 30       		.byte	0x30
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 144
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 144
 
 
  5850 0566 9F       		.byte	0x9f
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5904 05f1 54       		.byte	0x54
  5905 05f2 30000000 		.4byte	.LVL73
  5906 05f6 3A000000 		.4byte	.LVL76
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 145
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 145
 
 
  5907 05fa 0400     		.2byte	0x4
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  5961 067b 00000000 		.4byte	0
  5962              	.LLST49:
  5963 067f 00000000 		.4byte	.LVL78
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 146
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 146
 
 
  5964 0683 1C000000 		.4byte	.LVL79
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6018 0702 06000000 		.4byte	.LVL85
  6019 0706 08000000 		.4byte	.LVL86
  6020 070a 0200     		.2byte	0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 147
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 147
 
 
  6021 070c 30       		.byte	0x30
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6075 078f 0C000000 		.4byte	.LVL96
  6076 0793 0100     		.2byte	0x1
  6077 0795 50       		.byte	0x50
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 148
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 148
 
 
  6078 0796 0C000000 		.4byte	.LVL96
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6132 0819 02000000 		.4byte	.LCFI19
  6133 081d 0200     		.2byte	0x2
  6134 081f 7D       		.byte	0x7d
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 149
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 149
 
 
  6135 0820 00       		.sleb128 0
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6189 089b 33       		.byte	0x33
  6190 089c 24       		.byte	0x24
  6191 089d 23       		.byte	0x23
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 150
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 150
 
 
  6192 089e 06       		.uleb128 0x6
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6246 0918 0200     		.2byte	0x2
  6247 091a 7D       		.byte	0x7d
  6248 091b 04       		.sleb128 4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 151
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 151
 
 
  6249 091c 00000000 		.4byte	0
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6303 099f 04000000 		.4byte	.LVL122
  6304 09a3 0100     		.2byte	0x1
  6305 09a5 50       		.byte	0x50
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 152
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 152
 
 
  6306 09a6 04000000 		.4byte	.LVL122
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6360 0a26 00000000 		.4byte	0
  6361              	.LLST80:
  6362 0a2a 00000000 		.4byte	.LVL128
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 153
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 153
 
 
  6363 0a2e 1A000000 		.4byte	.LVL129
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6417 0ab4 18000000 		.4byte	.LVL143
  6418 0ab8 2C000000 		.4byte	.LVL146
  6419 0abc 0100     		.2byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 154
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 154
 
 
  6420 0abe 54       		.byte	0x54
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6474 0b38 0C000000 		.4byte	.LVL141
  6475 0b3c 0200     		.2byte	0x2
  6476 0b3e 30       		.byte	0x30
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 155
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 155
 
 
  6477 0b3f 9F       		.byte	0x9f
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6530 0bc1 9F       		.byte	0x9f
  6531 0bc2 90000000 		.4byte	.LVL165
  6532 0bc6 AE000000 		.4byte	.LVL169
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 156
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 156
 
 
  6533 0bca 0100     		.2byte	0x1
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6586 0c57 88000000 		.4byte	.LVL163
  6587 0c5b 0100     		.2byte	0x1
  6588 0c5d 55       		.byte	0x55
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 157
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 157
 
 
  6589 0c5e A2000000 		.4byte	.LVL167
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6643 0ce6 0A010000 		.4byte	.LVL183
  6644 0cea 64010000 		.4byte	.LFE6
  6645 0cee 0100     		.2byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 158
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 158
 
 
  6646 0cf0 53       		.byte	0x53
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6700 0d7d 0100     		.2byte	0x1
  6701 0d7f 50       		.byte	0x50
  6702 0d80 0E000000 		.4byte	.LVL186
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 159
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 159
 
 
  6703 0d84 12000000 		.4byte	.LVL187
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6757 0044 34000000 		.4byte	.LFE7-.LFB7
  6758 0048 00000000 		.4byte	.LFB8
  6759 004c 48000000 		.4byte	.LFE8-.LFB8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 160
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 160
 
 
  6760 0050 00000000 		.4byte	.LFB9
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6814 0128 00000000 		.4byte	.LFB37
  6815 012c 28000000 		.4byte	.LFE37-.LFB37
  6816 0130 00000000 		.4byte	.LFB38
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 161
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 161
 
 
  6817 0134 14000000 		.4byte	.LFE38-.LFB38
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6871 006c 14000000 		.4byte	.LFE0
  6872 0070 00000000 		.4byte	.LFB1
  6873 0074 10000000 		.4byte	.LFE1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 162
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 162
 
 
  6874 0078 00000000 		.4byte	.LFB2
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6928 0150 00000000 		.4byte	.LFB31
  6929 0154 0C000000 		.4byte	.LFE31
  6930 0158 00000000 		.4byte	.LFB32
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 163
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 163
 
 
  6931 015c 16000000 		.4byte	.LFE32
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  6976 001a 75696E74 		.ascii	"uint16\000"
  6976      313600
  6977              	.LASF62:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 164
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 164
 
 
  6978 0021 696E7453 		.ascii	"intState\000"
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7000      6500
  7001              	.LASF6:
  7002 00c7 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 165
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 165
 
 
  7002      206C6F6E 
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7026 015b 63796465 		.ascii	"cydelayFreqKhz\000"
  7026      6C617946 
  7026      7265714B 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 166
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 166
 
 
  7026      687A00
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7052      6C6500
  7053              	.LASF77:
  7054 0200 4379496E 		.ascii	"CyIntGetPriority\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 167
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 167
 
 
  7054      74476574 
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7074      74536574 
  7074      50656E64 
  7074      696E6700 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 168
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 168
 
 
  7075              	.LASF105:
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7094              	.LASF37:
  7095 0397 43795379 		.ascii	"CySysWdtReadClearOnMatch\000"
  7095      73576474 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 169
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 169
 
 
  7095      52656164 
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7118              	.LASF102:
  7119 0444 43794578 		.ascii	"CyExitCriticalSection\000"
  7119      69744372 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 170
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 170
 
 
  7119      69746963 
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7142      73576474 
  7142      52656164 
  7142      43617363 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 171
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 171
 
 
  7142      61646500 
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7166      00
  7167              	.LASF94:
  7168 05b7 63757272 		.ascii	"currentFreq\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 172
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 172
 
 
  7168      656E7446 
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 1
  7190      00
  7191              	.LASF44:
  7192 0669 43795379 		.ascii	"CySysWdtWriteToggleBit\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cceJ4f4m.s 			page 173
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccc4U1xk.s 			page 173
 
 
  7192      73576474 
