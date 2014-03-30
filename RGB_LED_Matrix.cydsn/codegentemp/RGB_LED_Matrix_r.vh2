@@ -1,5 +1,5 @@
 -- Project:   RGB_LED_Matrix
--- Generated: 03/29/2014 21:18:09
+-- Generated: 03/30/2014 11:06:50
 -- 
 
 ENTITY RGB_LED_Matrix IS

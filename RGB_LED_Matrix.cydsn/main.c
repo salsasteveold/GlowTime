@@ -185,29 +185,34 @@ CY_ISR(FIFO_EMPTY)
 	LED_Matrix_1_F1_REG_0 = (uint8)matrix[3 + (j+8)*4].r[bit_shift];
 }
 uint8 dataReady = 0;
-int16 result[8] = {0,0,0,0,0,0,0,0};
-int16 oldResult[8] = {0,0,0,0,0,0,0,0};
+uint16 result[8] = {0,0,0,0,0,0,0,0};
+uint8 oldResult[8] = {0,0,0,0,0,0,0,0};
 int w = 0;
+int refresh=0;
 CY_ISR(eoc_isr)
 {
 	
 	result[0] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
 	result[1] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
 	result[2] = (uint16)(ADC_SAR_CHAN2_RESULT_REG & ADC_RESULT_MASK);
-	result[3] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
-	result[4] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
-	result[5] = (uint16)(ADC_SAR_CHAN2_RESULT_REG & ADC_RESULT_MASK);
-	result[6] = (uint16)(ADC_SAR_CHAN0_RESULT_REG & ADC_RESULT_MASK);
-	result[7] = (uint16)(ADC_SAR_CHAN1_RESULT_REG & ADC_RESULT_MASK);
+	result[3] = (uint16)(ADC_SAR_CHAN3_RESULT_REG & ADC_RESULT_MASK);
+	result[4] = (uint16)(ADC_SAR_CHAN4_RESULT_REG & ADC_RESULT_MASK);
+	result[5] = (uint16)(ADC_SAR_CHAN5_RESULT_REG & ADC_RESULT_MASK);
+	result[6] = (uint16)(ADC_SAR_CHAN6_RESULT_REG & ADC_RESULT_MASK);
+	result[7] = (uint16)(ADC_SAR_CHAN7_RESULT_REG & ADC_RESULT_MASK);
 	for(w=0;w<8;w++)
 	{
 		if((result[w] & 0xFF00) == 0xFF00)
 		{
 			result[w] = 0;
 		}
-		result[w]=(result[w] & 0x0FE0)>>7;
+		//result[w]=(result[w] & 0x0FE0)>>7;
 	}
-	dataReady = 1;
+	refresh++;
+	if(refresh == 10)
+	{
+		dataReady = 1;
+	}
 }
 
 /*******************************************************************************
@@ -229,6 +234,11 @@ int main()
 {	
 	int i;
 	/* struct that can accomodate 8-bit RGB color */
+	RGB white;
+	white.r = 31;
+	white.g = 31;
+	white.b = 31;
+	
 	RGB lotsOfColors[8];
 	lotsOfColors[0].r = 12;
 	lotsOfColors[0].g = 0;
@@ -271,15 +281,41 @@ int main()
 
 	/* Start the isr that is triggered everytime the Component finishes writing to the matrix */
 	isr_2_StartEx(FIFO_EMPTY);
+	ADC_Start();
+	ADC_StartConvert();
+	eoc_StartEx(eoc_isr);
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
 
 	for(;;)
     { 	
-		for(i=0;i<8;i++)
+		
+		if(dataReady==1) //&& ifDataChange(&oldResult[0],&result[0]))
 		{
-			drawblock(i,height[i],lotsOfColors[i],matrix);
+			clearScreen(matrix);
+			dataReady = 0;
+			refresh = 0;
+			for(i=0;i<8;i++)
+			{
+				oldResult[i] = (uint8)(result[i]>>7);
+			}
+			for(i=0;i<6;i++)
+			{
+				drawblock(i,oldResult[i],lotsOfColors[i],matrix);
+			}
+			drawblock(6,2,white,matrix);
+			drawblock(7,3,white,matrix);
+		}
+		else
+		{
+			for(i=0;i<6;i++)
+			{
+				drawblock(i,oldResult[i],lotsOfColors[i],matrix);
+				//drawblock(i,8,white,matrix);
+			}
+			drawblock(6,2,white,matrix);
+			drawblock(7,3,white,matrix);
 		}
 	
 	}

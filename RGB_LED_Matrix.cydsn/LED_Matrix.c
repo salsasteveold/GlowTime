@@ -532,5 +532,26 @@ void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
 		drawFastVLine(blockLoc+i, 0,h, c, matrix);
 	}
 }
-	
+
+int ifDataChange(uint8 *oldResult,uint16 *result)
+{
+	int i;
+	int count=0;
+	for(i=0;i<8;i++)
+	{
+		if(oldResult[i]==result[i])
+		{
+			count++;
+			if(count==8)
+			{
+				return 1;
+			}
+		}
+		else
+		{
+			return 0;
+		}
+	}
+}
+
 /* [] END OF FILE */
