@@ -100,7 +100,22 @@ CY_ISR(FIFO_EMPTY)
 	pwm_count++;
 
 	/* Binary coded modulation. Read more here: http://www.batsocks.co.uk/readme/art_bcm_1.htm  */
-	if(pwm_count == 31)
+	/*if(pwm_count == 31)
+	{
+		bit_shift = 0;
+		pwm_count = 0;
+		j++;
+		
+		if(j == 8)
+		{
+			j = 0;
+		}
+	}*/
+	if(pwm_count == 1)
+	{
+		bit_shift = 1;
+	}
+	else if(pwm_count == 3)
 	{
 		bit_shift = 0;
 		pwm_count = 0;
@@ -111,22 +126,14 @@ CY_ISR(FIFO_EMPTY)
 			j = 0;
 		}
 	}
-	else if(pwm_count == 1)
-	{
-		bit_shift = 1;
-	}
-	else if(pwm_count == 3)
-	{
-		bit_shift = 2;
-	}
-	else if(pwm_count == 7)
+	/*else if(pwm_count == 7)
 	{
 		bit_shift = 3;
 	}
 	else if(pwm_count == 15)
 	{
 		bit_shift = 4;
-	}
+	}*/
 
 	/* Write the values to the FIFOs. Note that the data is not written to the matrix until all the FIFOs are written to */
 	
@@ -206,13 +213,9 @@ CY_ISR(eoc_isr)
 		{
 			result[w] = 0;
 		}
-		//result[w]=(result[w] & 0x0FE0)>>7;
 	}
-	refresh++;
-	if(refresh == 10)
-	{
-		dataReady = 1;
-	}
+	dataReady = 1;
+	
 }
 
 /*******************************************************************************
@@ -232,7 +235,7 @@ CY_ISR(eoc_isr)
 
 int main()
 {	
-	int i;
+	int i = 0;
 	/* struct that can accomodate 8-bit RGB color */
 	RGB white;
 	white.r = 31;
@@ -240,37 +243,37 @@ int main()
 	white.b = 31;
 	
 	RGB lotsOfColors[8];
-	lotsOfColors[0].r = 12;
+	lotsOfColors[0].r = 1;
 	lotsOfColors[0].g = 0;
 	lotsOfColors[0].b = 0;
 	
-	lotsOfColors[1].r = 24;
-	lotsOfColors[1].g = 0;
+	lotsOfColors[1].r = 1;
+	lotsOfColors[1].g = 1;
 	lotsOfColors[1].b = 0;
 	
 	lotsOfColors[2].r = 0;
-	lotsOfColors[2].g = 4;
-	lotsOfColors[2].b = 0;
+	lotsOfColors[2].g = 0;
+	lotsOfColors[2].b = 1;
 	
 	lotsOfColors[3].r = 0;
-	lotsOfColors[3].g = 16;
-	lotsOfColors[3].b = 0;
+	lotsOfColors[3].g = 1;
+	lotsOfColors[3].b = 1;
 	
-	lotsOfColors[4].r = 0;
-	lotsOfColors[4].g = 28;
-	lotsOfColors[4].b = 0;
+	lotsOfColors[4].r = 1;
+	lotsOfColors[4].g = 0;
+	lotsOfColors[4].b = 1;
 	
-	lotsOfColors[5].r = 0;
-	lotsOfColors[5].g = 8;
-	lotsOfColors[5].b = 0;
+	lotsOfColors[5].r = 1;
+	lotsOfColors[5].g = 1;
+	lotsOfColors[5].b = 1;
 	
-	lotsOfColors[6].r = 0;
-	lotsOfColors[6].g = 0;
-	lotsOfColors[6].b = 20;
+	lotsOfColors[6].r = 2;
+	lotsOfColors[6].g = 1;
+	lotsOfColors[6].b = 1;
 	
-	lotsOfColors[7].r = 0;
-	lotsOfColors[7].g = 0;
-	lotsOfColors[7].b = 31;
+	lotsOfColors[7].r = 2;
+	lotsOfColors[7].g = 2;
+	lotsOfColors[7].b = 0;
 	
 	clearScreen(matrix);
 	
@@ -287,37 +290,30 @@ int main()
 	
 	/* Enable interrupts */
 	CyGlobalIntEnable;
-
+	int dataChange = 0;
 	for(;;)
     { 	
+		CyDelay(1);
 		
-		if(dataReady==1) //&& ifDataChange(&oldResult[0],&result[0]))
+		if(dataReady == 1)
 		{
-			clearScreen(matrix);
+			dataChange = ifDataChange(&oldResult[0],&result[0]);
 			dataReady = 0;
-			refresh = 0;
-			for(i=0;i<8;i++)
+			if(dataChange == 1)
 			{
-				oldResult[i] = (uint8)(result[i]>>7);
+				clearScreen(matrix);
+				for(i=0;i<8;i++)
+				{
+					oldResult[i] = ((uint8)(result[i]>>7)) & 0x0F;
+				}
+				for(i=0;i<6;i++)
+				{
+					drawblock(i,oldResult[i],lotsOfColors[i],matrix);
+				}
+				drawblock(6,15,white,matrix);
+				drawblock(7,15,white,matrix);
 			}
-			for(i=0;i<6;i++)
-			{
-				drawblock(i,oldResult[i],lotsOfColors[i],matrix);
-			}
-			drawblock(6,2,white,matrix);
-			drawblock(7,3,white,matrix);
 		}
-		else
-		{
-			for(i=0;i<6;i++)
-			{
-				drawblock(i,oldResult[i],lotsOfColors[i],matrix);
-				//drawblock(i,8,white,matrix);
-			}
-			drawblock(6,2,white,matrix);
-			drawblock(7,3,white,matrix);
-		}
-	
 	}
 }
 

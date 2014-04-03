@@ -536,22 +536,16 @@ void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
 int ifDataChange(uint8 *oldResult,uint16 *result)
 {
 	int i;
-	int count=0;
+	uint8 temp = 0;
 	for(i=0;i<8;i++)
 	{
-		if(oldResult[i]==result[i])
+		temp = ((uint8)(result[i]>>7));
+		if(oldResult[i] != temp)
 		{
-			count++;
-			if(count==8)
-			{
-				return 1;
-			}
-		}
-		else
-		{
-			return 0;
+			return 1;
 		}
 	}
+	return 0;
 }
 
 /* [] END OF FILE */

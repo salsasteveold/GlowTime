@@ -1,5 +1,5 @@
 -- Project:   RGB_LED_Matrix
--- Generated: 03/30/2014 11:06:49
+-- Generated: 04/02/2014 21:31:49
 -- 
 
 ENTITY RGB_LED_Matrix IS
@@ -1812,8 +1812,8 @@ BEGIN
             ext => ClockBlock_EXTCLK,
             imo => ClockBlock_IMO,
             hfclk => ClockBlock_HFCLK,
-            ff_div_2 => \RTC:Net_237_ff2\,
-            ff_div_7 => \ADC:Net_17_ff7\);
+            ff_div_7 => \ADC:Net_17_ff7\,
+            ff_div_2 => \RTC:Net_237_ff2\);
 
     ClockGenBlock:m0s8clockgenblockcell;
 

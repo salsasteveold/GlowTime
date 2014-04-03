@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
   30:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CY_CFG_SECTION __attribute__ ((section(".psocinit")))
   31:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     
   32:.\Generated_Source\PSoC4/cyfitter_cfg.c ****     #if defined(__ARMCC_VERSION)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 2
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/cyfitter_cfg.c ****         #define CY_CFG_MEMORY_BARRIER() __memory_changed()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
   87:.\Generated_Source\PSoC4/cyfitter_cfg.c **** ********************************************************************************
   88:.\Generated_Source\PSoC4/cyfitter_cfg.c **** * Summary:
   89:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *  If an error is encountered during clock configuration (crystal startup error,
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 3
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *  PLL lock error, etc.), the system will end up here.  Unless reimplemented by
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  144:.\Generated_Source\PSoC4/cyfitter_cfg.c **** *******************************************************************************/
  145:.\Generated_Source\PSoC4/cyfitter_cfg.c **** static void cfg_write_bytes32(const uint32 addr_table[], const cy_cfg_addrvalue_t data_table[]);
  146:.\Generated_Source\PSoC4/cyfitter_cfg.c **** static void cfg_write_bytes32(const uint32 addr_table[], const cy_cfg_addrvalue_t data_table[])
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 4
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/cyfitter_cfg.c **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  201:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	 * locate the appropriate value to trim the IMO bandgap based on freq. */
  202:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	setAbs = CY_GET_REG8((const void *)CYREG_SFLASH_IMO_ABS4);
  203:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	setTmpCo = CY_GET_REG8((const void *)CYREG_SFLASH_IMO_TMPCO4);
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 5
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 5
 
 
  204:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	for (imoTrimIndex = ((int32)IMO_TRIM_FREQ_TABLE_ENTRIES)-1;
@@ -287,8 +287,8 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  247:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CLK_IMO_TRIM2), (53u));
  248:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  249:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_SELECT00 Starting address: CYDEV_CLK_SELECT00 */
- 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000010u);
- 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000020u);
+ 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000020u);
+ 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000010u);
  252:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  253:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_IMO_CONFIG Starting address: CYDEV_CLK_IMO_CONFIG */
  254:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_IMO_CONFIG), 0x82000000u);
@@ -298,15 +298,15 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  258:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  259:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_SELECT Starting address: CYDEV_CLK_SELECT */
  260:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT), 0x00040000u);
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 6
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 6
 
 
  261:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  262:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_DIVIDER_A00 Starting address: CYDEV_CLK_DIVIDER_A00 */
- 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000001Du);
+ 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000000Bu);
  264:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  265:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_CLK_DIVIDER_B00 Starting address: CYDEV_CLK_DIVIDER_B00 */
- 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000002Fu);
+ 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000001Du);
  267:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
  268:.\Generated_Source\PSoC4/cyfitter_cfg.c **** }
  269:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  315:.\Generated_Source\PSoC4/cyfitter_cfg.c **** {
   26              		.loc 1 315 0
   27              		.cfi_startproc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 7
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 7
 
 
   28              	.LVL0:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
   68              		.cfi_endproc
   69              	.LFE7:
   70              		.size	SetAnalogRoutingPumps, .-SetAnalogRoutingPumps
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 8
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 8
 
 
   71              		.section	.psocinit,"ax",%progbits
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  100 000a 72B6     		CPSID   i
  101              	@ 0 "" 2
  352:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 9
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 9
 
 
  353:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Enable the clock in the interrupt controller for the routed interrupts */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  372:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0xCFu},
  373:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x08u},
  374:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x04u},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 10
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 10
 
 
  375:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x10u},
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  429:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x40u},
  430:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x30u},
  431:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x0Cu},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 11
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 11
 
 
  432:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x0Cu},
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  486:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x80u},
  487:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x14u, 0x01u},
  488:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0xF1u},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 12
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 12
 
 
  489:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x02u},
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  543:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
  544:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x40u},
  545:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x30u},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 13
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 13
 
 
  546:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x0Cu},
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  600:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x40u},
  601:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0xD0u},
  602:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0xF0u},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 14
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 14
 
 
  603:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x70u},
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  657:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x80u},
  658:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x01u},
  659:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x81u},
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 15
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 15
 
 
  660:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x80u},
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  348:.\Generated_Source\PSoC4/cyfitter_cfg.c **** void cyfitter_cfg(void)
  154              		.loc 1 348 0
  155 0032 8846     		mov	r8, r1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 16
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 16
 
 
  156              	.LBE33:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  201 005e 5078     		ldrb	r0, [r2, #1]
  202 0060 E40F     		lsr	r4, r4, #31
  203 0062 1870     		strb	r0, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 17
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 17
 
 
  204              	.LVL15:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  150:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	for (i = 0u; i < CY_CFG_BASE_ADDR_COUNT; i++)
  248              		.loc 1 150 0
  249 009c 4645     		cmp	r6, r8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 18
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 18
 
 
  250 009e CCD1     		bne	.L11
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  701:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT0_DR), 0x000000C1u);
  286              		.loc 1 701 0
  287 00c2 2960     		str	r1, [r5]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 19
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 19
 
 
  706:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT1_PC), 0x00036DB6u);
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  322              		.loc 1 718 0
  323 00e8 564B     		ldr	r3, .L26+92
  713:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_PRT3_DR), 0x000000A3u);
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 20
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 20
 
 
  324              		.loc 1 713 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  729:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
  730:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
  361              		.loc 1 730 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 21
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 21
 
 
  362 0112 5549     		ldr	r1, .L26+128
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  395 0134 0222     		mov	r2, #2
  396 0136 0A43     		orr	r2, r1
  397 0138 2A70     		strb	r2, [r5]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 22
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 22
 
 
  744:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  440              		.loc 1 203 0
  441 0158 1178     		ldrb	r1, [r2]
  442              	.LVL22:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 23
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 23
 
 
  205:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	     (imoTrimIndex >= 0) && (imoFreq <= imo_trim_table->entries[imoTrimIndex].freq);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  484 0180 444A     		ldr	r2, .L26+172
  213:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PWR_BG_TRIM5, setTmpCo);
  485              		.loc 1 213 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 24
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 24
 
 
  486 0182 454B     		ldr	r3, .L26+176
@@ -1415,35 +1415,35 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  247:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CLK_IMO_TRIM2), (53u));
  510              		.loc 1 247 0
  511 0198 3524     		mov	r4, #53
- 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000010u);
+ 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000020u);
  512              		.loc 1 250 0
  513 019a 434A     		ldr	r2, .L26+192
- 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000020u);
+ 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000010u);
  514              		.loc 1 251 0
  515 019c 434B     		ldr	r3, .L26+196
  247:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void CYXDATA *)(CYREG_CLK_IMO_TRIM2), (53u));
  516              		.loc 1 247 0
  517 019e 2C60     		str	r4, [r5]
- 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000010u);
+ 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000020u);
  518              		.loc 1 250 0
- 519 01a0 1021     		mov	r1, #16
- 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000020u);
+ 519 01a0 2021     		mov	r1, #32
+ 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000010u);
  520              		.loc 1 251 0
- 521 01a2 2026     		mov	r6, #32
+ 521 01a2 1026     		mov	r6, #16
  254:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_IMO_CONFIG), 0x82000000u);
  522              		.loc 1 254 0
  523 01a4 8227     		mov	r7, #130
  524 01a6 424C     		ldr	r4, .L26+200
- 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000010u);
+ 250:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT02), 0x00000020u);
  525              		.loc 1 250 0
  526 01a8 1160     		str	r1, [r2]
  254:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_IMO_CONFIG), 0x82000000u);
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 25
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 25
 
 
  527              		.loc 1 254 0
  528 01aa 3806     		lsl	r0, r7, #24
- 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000020u);
+ 251:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT07), 0x00000010u);
  529              		.loc 1 251 0
  530 01ac 1E60     		str	r6, [r3]
  257:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_ILO_CONFIG), 0x80000000u);
@@ -1463,20 +1463,20 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  260:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT), 0x00040000u);
  541              		.loc 1 260 0
  542 01ba F702     		lsl	r7, r6, #11
- 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000001Du);
+ 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000000Bu);
  543              		.loc 1 263 0
  544 01bc 3E48     		ldr	r0, .L26+208
  545 01be 3F4C     		ldr	r4, .L26+212
  257:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_ILO_CONFIG), 0x80000000u);
  546              		.loc 1 257 0
  547 01c0 0A60     		str	r2, [r1]
- 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000002Fu);
+ 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000001Du);
  548              		.loc 1 266 0
  549 01c2 3F4D     		ldr	r5, .L26+216
  260:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_SELECT), 0x00040000u);
  550              		.loc 1 260 0
  551 01c4 1F60     		str	r7, [r3]
- 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000002Fu);
+ 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000001Du);
  552              		.loc 1 266 0
  553 01c6 3F49     		ldr	r1, .L26+220
  554              	.LBE54:
@@ -1493,12 +1493,12 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  563              	.LBE59:
  564              	.LBB70:
  565              	.LBB55:
- 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000001Du);
+ 263:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_A00), 0x8000000Bu);
  566              		.loc 1 263 0
  567 01cc 2060     		str	r0, [r4]
  568              	.LBE55:
  569              	.LBE70:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 26
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 26
 
 
  570              	.LBB71:
@@ -1517,7 +1517,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  581              	.LBE71:
  582              	.LBB72:
  583              	.LBB56:
- 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000002Fu);
+ 266:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)(CYREG_CLK_DIVIDER_B00), 0x8000001Du);
  584              		.loc 1 266 0
  585 01d2 0D60     		str	r5, [r1]
  586              	.LBE56:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  609              	.LBB64:
  319:.\Generated_Source\PSoC4/cyfitter_cfg.c **** 		regValue |= 0x80000000u;
  610              		.loc 1 319 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 27
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 27
 
 
  611 01da 2243     		orr	r2, r4
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  664 0278 20000040 		.word	1073741856
  665 027c 00800F40 		.word	1074757632
  666 0280 00700F40 		.word	1074753536
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 28
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 28
 
 
  667 0284 00010B40 		.word	1074462976
@@ -1634,9 +1634,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  677 02ac 1C020240 		.word	1073873436
  678 02b0 08010B40 		.word	1074462984
  679 02b4 04010B40 		.word	1074462980
- 680 02b8 1D000080 		.word	-2147483619
+ 680 02b8 0B000080 		.word	-2147483637
  681 02bc 00000240 		.word	1073872896
- 682 02c0 2F000080 		.word	-2147483601
+ 682 02c0 1D000080 		.word	-2147483619
  683 02c4 40000240 		.word	1073872960
  684 02c8 00031A40 		.word	1075446528
  685 02cc 40031A40 		.word	1075446592
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  721 0031 10       		.byte	16
  722 0032 0F       		.byte	15
  723 0033 20       		.byte	32
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 29
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 29
 
 
  724 0034 15       		.byte	21
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  778 006a 91       		.byte	-111
  779 006b 04       		.byte	4
  780 006c 95       		.byte	-107
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 30
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 30
 
 
  781 006d 01       		.byte	1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  835 00a3 0C       		.byte	12
  836 00a4 DB       		.byte	-37
  837 00a5 04       		.byte	4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 31
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 31
 
 
  838 00a6 DC       		.byte	-36
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  892 00dc 47       		.byte	71
  893 00dd 08       		.byte	8
  894 00de 56       		.byte	86
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 32
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 32
 
 
  895 00df 10       		.byte	16
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  949 0115 02       		.byte	2
  950 0116 17       		.byte	23
  951 0117 04       		.byte	4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 33
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 33
 
 
  952 0118 18       		.byte	24
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1006 014e 46       		.byte	70
  1007 014f BF       		.byte	-65
  1008 0150 48       		.byte	72
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 34
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 34
 
 
  1009 0151 0D       		.byte	13
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1063 0187 0C       		.byte	12
  1064 0188 DD       		.byte	-35
  1065 0189 09       		.byte	9
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 35
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 35
 
 
  1066 018a DF       		.byte	-33
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1120 01c0 47       		.byte	71
  1121 01c1 08       		.byte	8
  1122 01c2 4F       		.byte	79
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 36
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 36
 
 
  1123 01c3 08       		.byte	8
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1177 01f9 70       		.byte	112
  1178 01fa CA       		.byte	-54
  1179 01fb C0       		.byte	-64
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 37
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 37
 
 
  1180 01fc CC       		.byte	-52
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1234 0232 57       		.byte	87
  1235 0233 20       		.byte	32
  1236 0234 5A       		.byte	90
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 38
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 38
 
 
  1237 0235 40       		.byte	64
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1291 026b 80       		.byte	-128
  1292 026c B0       		.byte	-80
  1293 026d 80       		.byte	-128
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 39
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 39
 
 
  1294 026e D4       		.byte	-44
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1348 004e 07       		.byte	0x7
  1349 004f F6000000 		.4byte	.LASF4
  1350 0053 02       		.uleb128 0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 40
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 40
 
 
  1351 0054 08       		.byte	0x8
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1405 00bd 02       		.uleb128 0x2
  1406 00be 08       		.byte	0x8
  1407 00bf 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 41
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 41
 
 
  1408 00c0 CF000000 		.4byte	.LASF17
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1462 012c 07       		.uleb128 0x7
  1463 012d 03       		.byte	0x3
  1464 012e 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 42
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 42
 
 
  1465 012f B7       		.byte	0xb7
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1519 0192 C5010000 		.4byte	.LASF28
  1520 0196 01       		.byte	0x1
  1521 0197 BF       		.byte	0xbf
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 43
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 43
 
 
  1522 0198 6A010000 		.4byte	0x16a
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1576 020d 14       		.uleb128 0x14
  1577 020e 63000000 		.4byte	.LASF43
  1578 0212 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 44
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 44
 
 
  1579 0213 2201     		.2byte	0x122
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1633 027f 20000000 		.4byte	.LFE7
  1634 0283 00000000 		.4byte	.LLST0
  1635 0287 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 45
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 45
 
 
  1636 0288 9F020000 		.4byte	0x29f
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1690 02fe 1E       		.uleb128 0x1e
  1691 02ff 51000000 		.4byte	.LASF47
  1692 0303 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 46
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 46
 
 
  1693 0304 7001     		.2byte	0x170
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1747 0378 F8030000 		.4byte	0x3f8
  1748 037c 23       		.uleb128 0x23
  1749 037d 6D7300   		.ascii	"ms\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 47
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 47
 
 
  1750 0380 01       		.byte	0x1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1804 03e6 24       		.byte	0x24
  1805 03e7 27       		.uleb128 0x27
  1806 03e8 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 48
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 48
 
 
  1807 03e9 51       		.byte	0x51
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1861 0466 F2       		.byte	0xf2
  1862 0467 A2040000 		.4byte	0x4a2
  1863 046b 2D       		.uleb128 0x2d
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 49
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 49
 
 
  1864 046c 21010000 		.4byte	0x121
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1918 04e9 00       		.byte	0
  1919 04ea 0B       		.uleb128 0xb
  1920 04eb A0000000 		.4byte	0xa0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 50
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 50
 
 
  1921 04ef FA040000 		.4byte	0x4fa
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  1975 000a 0E       		.uleb128 0xe
  1976 000b 55       		.uleb128 0x55
  1977 000c 06       		.uleb128 0x6
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 51
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 51
 
 
  1978 000d 11       		.uleb128 0x11
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2032 0043 13       		.uleb128 0x13
  2033 0044 00       		.byte	0
  2034 0045 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 52
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 52
 
 
  2035 0046 07       		.uleb128 0x7
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2089 007c 49       		.uleb128 0x49
  2090 007d 13       		.uleb128 0x13
  2091 007e 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 53
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 53
 
 
  2092 007f 00       		.byte	0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2146 00b5 0B       		.uleb128 0xb
  2147 00b6 3B       		.uleb128 0x3b
  2148 00b7 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 54
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 54
 
 
  2149 00b8 49       		.uleb128 0x49
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2203 00ee 03       		.uleb128 0x3
  2204 00ef 0E       		.uleb128 0xe
  2205 00f0 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 55
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 55
 
 
  2206 00f1 0B       		.uleb128 0xb
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2260 0128 34       		.uleb128 0x34
  2261 0129 00       		.byte	0
  2262 012a 31       		.uleb128 0x31
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 56
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 56
 
 
  2263 012b 13       		.uleb128 0x13
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2317 0162 01       		.uleb128 0x1
  2318 0163 13       		.uleb128 0x13
  2319 0164 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 57
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 57
 
 
  2320 0165 00       		.byte	0
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2374 019b 16       		.uleb128 0x16
  2375 019c 00       		.byte	0
  2376 019d 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 58
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 58
 
 
  2377 019e 0E       		.uleb128 0xe
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2431 01d4 00       		.byte	0
  2432 01d5 31       		.uleb128 0x31
  2433 01d6 13       		.uleb128 0x13
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 59
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 59
 
 
  2434 01d7 1C       		.uleb128 0x1c
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2488 0214 55       		.uleb128 0x55
  2489 0215 06       		.uleb128 0x6
  2490 0216 58       		.uleb128 0x58
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 60
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 60
 
 
  2491 0217 0B       		.uleb128 0xb
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2545 024d 49       		.uleb128 0x49
  2546 024e 13       		.uleb128 0x13
  2547 024f 2F       		.uleb128 0x2f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 61
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 61
 
 
  2548 0250 05       		.uleb128 0x5
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2602 000b 00       		.sleb128 0
  2603 000c 04000000 		.4byte	.LCFI0
  2604 0010 20000000 		.4byte	.LFE7
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 62
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 62
 
 
  2605 0014 0200     		.2byte	0x2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2659 0099 00       		.sleb128 0
  2660 009a 02000000 		.4byte	.LCFI1
  2661 009e 0A000000 		.4byte	.LCFI2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 63
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 63
 
 
  2662 00a2 0200     		.2byte	0x2
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2716 012a 0200     		.2byte	0x2
  2717 012c 30       		.byte	0x30
  2718 012d 9F       		.byte	0x9f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 64
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 64
 
 
  2719 012e 42000000 		.4byte	.LVL12
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2773 01b2 33       		.byte	0x33
  2774 01b3 9F       		.byte	0x9f
  2775 01b4 64010000 		.4byte	.LVL24
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 65
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 65
 
 
  2776 01b8 6E010000 		.4byte	.LVL26
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2830 023e 78010000 		.4byte	.LVL28
  2831 0242 0200     		.2byte	0x2
  2832 0244 73       		.byte	0x73
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 66
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 66
 
 
  2833 0245 08       		.sleb128 8
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2887 004c 12000000 		.4byte	.LBE30
  2888 0050 14000000 		.4byte	.LBB34
  2889 0054 30000000 		.4byte	.LBE34
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 67
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 67
 
 
  2890 0058 32000000 		.4byte	.LBB35
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2944 0130 DA010000 		.4byte	.LBB74
  2945 0134 DE010000 		.4byte	.LBE74
  2946 0138 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 68
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 68
 
 
  2947 013c 00000000 		.4byte	0
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  2986      7369676E 
  2986      65642069 
  2987              	.LASF38:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 69
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 69
 
 
  2988 0046 61646472 		.ascii	"addr_table\000"
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  3013              	.LASF42:
  3014 00d6 43594D45 		.ascii	"CYMEMZERO\000"
  3014      4D5A4552 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 70
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 70
 
 
  3014      4F00
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  3038              	.LASF30:
  3039 018a 696D6F54 		.ascii	"imoTrimIndex\000"
  3039      72696D49 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 71
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 71
 
 
  3039      6E646578 
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  3063      372E3320 
  3063      32303133 
  3063      30333132 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 72
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 72
 
 
  3064 0270 616E6368 		.ascii	"anch revision 196615]\000"
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 1
  3089              	.LASF57:
  3090 0308 63796669 		.ascii	"cyfitter_cfg\000"
  3090      74746572 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccO1feeP.s 			page 73
+ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccdTvFrj.s 			page 73
 
 
  3090      5F636667 

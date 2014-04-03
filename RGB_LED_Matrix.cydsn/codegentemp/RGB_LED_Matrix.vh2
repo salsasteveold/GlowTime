@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Mar 30 11:06:48 2014
+--	Wed Apr 02 21:31:48 2014
 --
 
 USE cypress.cypress.all;
@@ -2048,7 +2048,7 @@ Clock_3:cy_clock_v1_0
 		id=>"c0438d7d-b618-4458-bf19-9d8f78e88f79/a12a1691-924f-48e5-a017-176d592c3b32",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"1000000000",
+		period=>"250000000",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\ADC:Net_17\,
