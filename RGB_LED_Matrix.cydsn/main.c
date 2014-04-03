@@ -279,18 +279,17 @@ int main()
 	
 	LED_Matrix_1_Start();
 	
-	/* Enable Component */
 	LED_Matrix_1_WriteControl(0x03);
 
-	/* Start the isr that is triggered everytime the Component finishes writing to the matrix */
 	isr_2_StartEx(FIFO_EMPTY);
 	ADC_Start();
 	ADC_StartConvert();
 	eoc_StartEx(eoc_isr);
 	
-	/* Enable interrupts */
+	
 	CyGlobalIntEnable;
 	int dataChange = 0;
+	int dataDecrease = 0;
 	for(;;)
     { 	
 		CyDelay(1);
@@ -301,17 +300,14 @@ int main()
 			dataReady = 0;
 			if(dataChange == 1)
 			{
-				clearScreen(matrix);
 				for(i=0;i<8;i++)
 				{
 					oldResult[i] = ((uint8)(result[i]>>7)) & 0x0F;
 				}
-				for(i=0;i<6;i++)
+				for(i=0;i<8;i++)
 				{
 					drawblock(i,oldResult[i],lotsOfColors[i],matrix);
 				}
-				drawblock(6,15,white,matrix);
-				drawblock(7,15,white,matrix);
 			}
 		}
 	}

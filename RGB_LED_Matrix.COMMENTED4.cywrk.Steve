@@ -326,36 +326,6 @@
 <VisibleNodeIds>
 <v>PSoC_4_Sandbox</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_INT.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_intClock.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_IRQ.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_0.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_1.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_3.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_4.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_5.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_6.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_7.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_PM.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CR_Addr.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\eoc.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\I2CDriver.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\isr_2.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -410,8 +380,6 @@
 <name v=".\RGB_LED_Matrix.cydsn\main.c" />
 <name v=".\RGB_LED_Matrix.cydsn\I2CDriver.c" />
 <name v=".\RGB_LED_Matrix.cydsn\I2CDriver.h" />
-<name v=".\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.cycdx" />
-<name v=".\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\LED_Matrix_1.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

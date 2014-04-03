@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Apr 02 21:31:48 2014
+--	Thu Apr 03 11:23:42 2014
 --
 
 USE cypress.cypress.all;

@@ -21,6 +21,9 @@
 #include <LED_Matrix.h>
 #include <stdlib.h>
 
+
+
+
 /*******************************************************************************
 * Function Name: DrawPixel
 ********************************************************************************
@@ -517,7 +520,12 @@ void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)
 void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
 {
 	int i = 0;
+	RGB black;
+	black.r = 0;
+	black.g = 0;
+	black.b = 0;
 	blockLoc = blockLoc*4;
+	int8 maxHeight = 15;
 	if(blockLoc>28)
 	{
 		blockLoc=28;
@@ -526,11 +534,19 @@ void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
 	{
 		blockLoc=0;
 	}
-	
 	for(i=0;i<4;i++)
 	{
 		drawFastVLine(blockLoc+i, 0,h, c, matrix);
 	}
+	
+	for(i=0;i<4;i++)
+	{
+		if(h != maxHeight)
+		{
+			drawFastVLine(blockLoc+i, h+1,maxHeight, black, matrix);
+		}
+	}
+	
 }
 
 int ifDataChange(uint8 *oldResult,uint16 *result)
@@ -541,6 +557,21 @@ int ifDataChange(uint8 *oldResult,uint16 *result)
 	{
 		temp = ((uint8)(result[i]>>7));
 		if(oldResult[i] != temp)
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int anyDataDecrease(uint8 *oldResult,uint16 *result)
+{
+	int i;
+	uint8 temp = 0;
+	for(i=0;i<8;i++)
+	{
+		temp = ((uint8)(result[i]>>7));
+		if(oldResult[i] > temp)
 		{
 			return 1;
 		}
