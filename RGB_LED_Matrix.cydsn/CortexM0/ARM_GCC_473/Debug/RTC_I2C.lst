@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
   30:.\Generated_Source\PSoC4/RTC_I2C.c **** 
   31:.\Generated_Source\PSoC4/RTC_I2C.c ****     /***************************************
   32:.\Generated_Source\PSoC4/RTC_I2C.c ****     *  Config Structure Initialization
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/RTC_I2C.c ****     ***************************************/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
   87:.\Generated_Source\PSoC4/RTC_I2C.c **** 
   88:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_I2C_CTRL_REG = RTC_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHigh) |
   89:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow) 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/RTC_I2C.c ****                                             RTC_GET_I2C_CTRL_SL_MSTR_MODE  (config->mode)          
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  144:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrRdBufIndex = 0u;
  145:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrWrBufIndex = 0u;
  146:.\Generated_Source\PSoC4/RTC_I2C.c ****         }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/RTC_I2C.c ****     }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
   50 0012 0C22     		mov	r2, #12
   51 0014 0A43     		orr	r2, r1
   52 0016 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 5
 
 
  173:.\Generated_Source\PSoC4/RTC_I2C.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
   86              	.LVL2:
  189:.\Generated_Source\PSoC4/RTC_I2C.c ****         
  190:.\Generated_Source\PSoC4/RTC_I2C.c ****         /* Configure interrupt sources */
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 6
 
 
  191:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_INTR_I2C_EC_MASK_REG = RTC_I2C_DEFAULT_INTR_I2C_EC_MASK;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  211:.\Generated_Source\PSoC4/RTC_I2C.c ****             RTC_mstrStatus     = 0u;
  115              		.loc 1 211 0
  116 005e 1848     		ldr	r0, .L2+80
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 7
 
 
  199:.\Generated_Source\PSoC4/RTC_I2C.c ****         RTC_state = RTC_I2C_FSM_IDLE;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  163              		.align	2
  164              		.global	RTC_I2CStop
  165              		.code	16
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 8
 
 
  166              		.thumb_func
@@ -478,13 +478,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  196 0006 00000000 		.4byte	.Ldebug_abbrev0
  197 000a 04       		.byte	0x4
  198 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 9
 
 
- 199 000c 1D010000 		.4byte	.LASF22
+ 199 000c 5B010000 		.4byte	.LASF22
  200 0010 01       		.byte	0x1
  201 0011 06000000 		.4byte	.LASF23
- 202 0015 66010000 		.4byte	.LASF24
+ 202 0015 9F000000 		.4byte	.LASF24
  203 0019 00000000 		.4byte	.Ldebug_ranges0+0
  204 001d 00000000 		.4byte	0
  205 0021 00000000 		.4byte	0
@@ -492,7 +492,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  207 0029 02       		.uleb128 0x2
  208 002a 01       		.byte	0x1
  209 002b 06       		.byte	0x6
- 210 002c B9010000 		.4byte	.LASF0
+ 210 002c BC010000 		.4byte	.LASF0
  211 0030 02       		.uleb128 0x2
  212 0031 01       		.byte	0x1
  213 0032 08       		.byte	0x8
@@ -500,7 +500,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  215 0037 02       		.uleb128 0x2
  216 0038 02       		.byte	0x2
  217 0039 05       		.byte	0x5
- 218 003a FF000000 		.4byte	.LASF2
+ 218 003a 3D010000 		.4byte	.LASF2
  219 003e 02       		.uleb128 0x2
  220 003f 02       		.byte	0x2
  221 0040 07       		.byte	0x7
@@ -508,7 +508,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  223 0045 02       		.uleb128 0x2
  224 0046 04       		.byte	0x4
  225 0047 05       		.byte	0x5
- 226 0048 A1010000 		.4byte	.LASF4
+ 226 0048 A4010000 		.4byte	.LASF4
  227 004c 02       		.uleb128 0x2
  228 004d 04       		.byte	0x4
  229 004e 07       		.byte	0x7
@@ -516,11 +516,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  231 0053 02       		.uleb128 0x2
  232 0054 08       		.byte	0x8
  233 0055 05       		.byte	0x5
- 234 0056 D9000000 		.4byte	.LASF6
+ 234 0056 17010000 		.4byte	.LASF6
  235 005a 02       		.uleb128 0x2
  236 005b 08       		.byte	0x8
  237 005c 07       		.byte	0x7
- 238 005d AC000000 		.4byte	.LASF7
+ 238 005d EA000000 		.4byte	.LASF7
  239 0061 03       		.uleb128 0x3
  240 0062 04       		.byte	0x4
  241 0063 05       		.byte	0x5
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  243 0068 02       		.uleb128 0x2
  244 0069 04       		.byte	0x4
  245 006a 07       		.byte	0x7
- 246 006b 9F000000 		.4byte	.LASF8
+ 246 006b DD000000 		.4byte	.LASF8
  247 006f 04       		.uleb128 0x4
  248 0070 60000000 		.4byte	.LASF9
  249 0074 02       		.byte	0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  253 007b 91000000 		.4byte	.LASF10
  254 007f 02       		.byte	0x2
  255 0080 5C       		.byte	0x5c
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 10
 
 
  256 0081 3E000000 		.4byte	0x3e
@@ -558,7 +558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  270 009e 02       		.uleb128 0x2
  271 009f 01       		.byte	0x1
  272 00a0 08       		.byte	0x8
- 273 00a1 E7000000 		.4byte	.LASF14
+ 273 00a1 25010000 		.4byte	.LASF14
  274 00a5 05       		.uleb128 0x5
  275 00a6 6F000000 		.4byte	0x6f
  276 00aa 05       		.uleb128 0x5
@@ -571,7 +571,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  283 00ba 05       		.uleb128 0x5
  284 00bb 85000000 		.4byte	0x85
  285 00bf 06       		.uleb128 0x6
- 286 00c0 C3000000 		.4byte	.LASF16
+ 286 00c0 01010000 		.4byte	.LASF16
  287 00c4 02       		.byte	0x2
  288 00c5 0201     		.2byte	0x102
  289 00c7 CB000000 		.4byte	0xcb
@@ -583,10 +583,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  295 00d3 02       		.uleb128 0x2
  296 00d4 04       		.byte	0x4
  297 00d5 07       		.byte	0x7
- 298 00d6 D0000000 		.4byte	.LASF17
+ 298 00d6 0E010000 		.4byte	.LASF17
  299 00da 09       		.uleb128 0x9
  300 00db 01       		.byte	0x1
- 301 00dc E7010000 		.4byte	.LASF25
+ 301 00dc EA010000 		.4byte	.LASF25
  302 00e0 01       		.byte	0x1
  303 00e1 A5       		.byte	0xa5
  304 00e2 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  310 00f4 0A       		.uleb128 0xa
  311 00f5 34000000 		.4byte	.LVL0
  312 00f9 64010000 		.4byte	0x164
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 11
 
 
  313 00fd 0A       		.uleb128 0xa
@@ -627,7 +627,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  336 0129 00       		.sleb128 0
  337 012a 01       		.byte	0x1
  338 012b 0E       		.uleb128 0xe
- 339 012c C5010000 		.4byte	.LASF18
+ 339 012c C8010000 		.4byte	.LASF18
  340 0130 01       		.byte	0x1
  341 0131 1A       		.byte	0x1a
  342 0132 A5000000 		.4byte	0xa5
@@ -636,21 +636,21 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  345 0138 03       		.byte	0x3
  346 0139 00000000 		.4byte	RTC_state
  347 013d 0F       		.uleb128 0xf
- 348 013e AA010000 		.4byte	.LASF19
+ 348 013e AD010000 		.4byte	.LASF19
  349 0142 03       		.byte	0x3
  350 0143 30       		.byte	0x30
  351 0144 AA000000 		.4byte	0xaa
  352 0148 01       		.byte	0x1
  353 0149 01       		.byte	0x1
  354 014a 0F       		.uleb128 0xf
- 355 014b F3010000 		.4byte	.LASF20
+ 355 014b F6010000 		.4byte	.LASF20
  356 014f 03       		.byte	0x3
  357 0150 36       		.byte	0x36
  358 0151 BA000000 		.4byte	0xba
  359 0155 01       		.byte	0x1
  360 0156 01       		.byte	0x1
  361 0157 0F       		.uleb128 0xf
- 362 0158 EC000000 		.4byte	.LASF21
+ 362 0158 2A010000 		.4byte	.LASF21
  363 015c 03       		.byte	0x3
  364 015d 3B       		.byte	0x3b
  365 015e BA000000 		.4byte	0xba
@@ -658,10 +658,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  367 0163 01       		.byte	0x1
  368 0164 10       		.uleb128 0x10
  369 0165 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 12
 
 
- 370 0166 09010000 		.4byte	.LASF27
+ 370 0166 47010000 		.4byte	.LASF27
  371 016a 04       		.byte	0x4
  372 016b 25       		.byte	0x25
  373 016c 01       		.byte	0x1
@@ -679,7 +679,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  385 0181 00       		.byte	0
  386 0182 13       		.uleb128 0x13
  387 0183 01       		.byte	0x1
- 388 0184 CF010000 		.4byte	.LASF29
+ 388 0184 D2010000 		.4byte	.LASF29
  389 0188 04       		.byte	0x4
  390 0189 20       		.byte	0x20
  391 018a 01       		.byte	0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  424 0019 0B       		.uleb128 0xb
  425 001a 3E       		.uleb128 0x3e
  426 001b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 13
 
 
  427 001c 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  481 0052 13       		.uleb128 0x13
  482 0053 00       		.byte	0
  483 0054 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 14
 
 
  484 0055 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  538 0092 0A       		.uleb128 0xa
  539 0093 9142     		.uleb128 0x2111
  540 0095 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 15
 
 
  541 0096 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  595 00cd 0C       		.uleb128 0xc
  596 00ce 3C       		.uleb128 0x3c
  597 00cf 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 16
 
 
  598 00d0 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  652 0106 3B       		.uleb128 0x3b
  653 0107 0B       		.uleb128 0xb
  654 0108 27       		.uleb128 0x27
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 17
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 17
 
 
  655 0109 0C       		.uleb128 0xc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  704 0006 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\RTC_I2C.c\000"
  704      6E657261 
  704      7465645F 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 18
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 18
 
 
  704      536F7572 
@@ -1065,106 +1065,107 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 1
  723              	.LASF11:
  724 0098 75696E74 		.ascii	"uint32\000"
  724      333200
- 725              	.LASF8:
- 726 009f 756E7369 		.ascii	"unsigned int\000"
- 726      676E6564 
- 726      20696E74 
- 726      00
- 727              	.LASF7:
- 728 00ac 6C6F6E67 		.ascii	"long long unsigned int\000"
- 728      206C6F6E 
- 728      6720756E 
- 728      7369676E 
- 728      65642069 
- 729              	.LASF16:
- 730 00c3 63796973 		.ascii	"cyisraddress\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 19
+ 725              	.LASF24:
+ 726 009f 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 726      73657273 
+ 726      5C436F6D 
+ 726      70757465 
+ 726      725C446F 
+ 727 00cc 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 727      4D617472 
+ 727      69782E63 
+ 727      7964736E 
+ 727      00
+ 728              	.LASF8:
+ 729 00dd 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 19
 
 
- 730      72616464 
- 730      72657373 
- 730      00
- 731              	.LASF17:
- 732 00d0 73697A65 		.ascii	"sizetype\000"
- 732      74797065 
- 732      00
- 733              	.LASF6:
- 734 00d9 6C6F6E67 		.ascii	"long long int\000"
- 734      206C6F6E 
- 734      6720696E 
- 734      7400
- 735              	.LASF14:
- 736 00e7 63686172 		.ascii	"char\000"
- 736      00
- 737              	.LASF21:
- 738 00ec 5254435F 		.ascii	"RTC_mstrWrBufIndex\000"
- 738      6D737472 
- 738      57724275 
- 738      66496E64 
- 738      657800
- 739              	.LASF2:
- 740 00ff 73686F72 		.ascii	"short int\000"
- 740      7420696E 
- 740      7400
- 741              	.LASF27:
- 742 0109 5254435F 		.ascii	"RTC_SCB_IRQ_Disable\000"
- 742      5343425F 
- 742      4952515F 
- 742      44697361 
- 742      626C6500 
- 743              	.LASF22:
- 744 011d 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 744      4320342E 
- 744      372E3320 
- 744      32303133 
- 744      30333132 
- 745 0150 616E6368 		.ascii	"anch revision 196615]\000"
- 745      20726576 
- 745      6973696F 
- 745      6E203139 
- 745      36363135 
- 746              	.LASF24:
- 747 0166 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 747      73657273 
- 747      5C537465 
- 747      76655C44 
- 747      6F63756D 
- 748 0193 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 748      7269782E 
- 748      63796473 
- 748      6E00
+ 729      676E6564 
+ 729      20696E74 
+ 729      00
+ 730              	.LASF7:
+ 731 00ea 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 731      206C6F6E 
+ 731      6720756E 
+ 731      7369676E 
+ 731      65642069 
+ 732              	.LASF16:
+ 733 0101 63796973 		.ascii	"cyisraddress\000"
+ 733      72616464 
+ 733      72657373 
+ 733      00
+ 734              	.LASF17:
+ 735 010e 73697A65 		.ascii	"sizetype\000"
+ 735      74797065 
+ 735      00
+ 736              	.LASF6:
+ 737 0117 6C6F6E67 		.ascii	"long long int\000"
+ 737      206C6F6E 
+ 737      6720696E 
+ 737      7400
+ 738              	.LASF14:
+ 739 0125 63686172 		.ascii	"char\000"
+ 739      00
+ 740              	.LASF21:
+ 741 012a 5254435F 		.ascii	"RTC_mstrWrBufIndex\000"
+ 741      6D737472 
+ 741      57724275 
+ 741      66496E64 
+ 741      657800
+ 742              	.LASF2:
+ 743 013d 73686F72 		.ascii	"short int\000"
+ 743      7420696E 
+ 743      7400
+ 744              	.LASF27:
+ 745 0147 5254435F 		.ascii	"RTC_SCB_IRQ_Disable\000"
+ 745      5343425F 
+ 745      4952515F 
+ 745      44697361 
+ 745      626C6500 
+ 746              	.LASF22:
+ 747 015b 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 747      4320342E 
+ 747      372E3320 
+ 747      32303133 
+ 747      30333132 
+ 748 018e 616E6368 		.ascii	"anch revision 196615]\000"
+ 748      20726576 
+ 748      6973696F 
+ 748      6E203139 
+ 748      36363135 
  749              	.LASF4:
- 750 01a1 6C6F6E67 		.ascii	"long int\000"
+ 750 01a4 6C6F6E67 		.ascii	"long int\000"
  750      20696E74 
  750      00
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccQicvg0.s 			page 20
+
+
  751              	.LASF19:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc2ss2QR.s 			page 20
-
-
- 752 01aa 5254435F 		.ascii	"RTC_mstrStatus\000"
+ 752 01ad 5254435F 		.ascii	"RTC_mstrStatus\000"
  752      6D737472 
  752      53746174 
  752      757300
  753              	.LASF0:
- 754 01b9 7369676E 		.ascii	"signed char\000"
+ 754 01bc 7369676E 		.ascii	"signed char\000"
  754      65642063 
  754      68617200 
  755              	.LASF18:
- 756 01c5 5254435F 		.ascii	"RTC_state\000"
+ 756 01c8 5254435F 		.ascii	"RTC_state\000"
  756      73746174 
  756      6500
  757              	.LASF29:
- 758 01cf 5254435F 		.ascii	"RTC_SCB_IRQ_SetPriority\000"
+ 758 01d2 5254435F 		.ascii	"RTC_SCB_IRQ_SetPriority\000"
  758      5343425F 
  758      4952515F 
  758      53657450 
  758      72696F72 
  759              	.LASF25:
- 760 01e7 5254435F 		.ascii	"RTC_I2CInit\000"
+ 760 01ea 5254435F 		.ascii	"RTC_I2CInit\000"
  760      49324349 
  760      6E697400 
  761              	.LASF20:
- 762 01f3 5254435F 		.ascii	"RTC_mstrRdBufIndex\000"
+ 762 01f6 5254435F 		.ascii	"RTC_mstrRdBufIndex\000"
  762      6D737472 
  762      52644275 
  762      66496E64 

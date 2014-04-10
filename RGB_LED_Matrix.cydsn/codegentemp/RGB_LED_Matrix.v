@@ -1,6 +1,6 @@
 // ======================================================================
 // RGB_LED_Matrix.v generated from TopDesign.cysch
-// 04/03/2014 at 11:23
+// 04/10/2014 at 03:39
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -291,8 +291,8 @@ endmodule
 `define CY_BLK_DIR "..\LED_Matrix_v1_00"
 `include "..\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
 `else
-`define CY_BLK_DIR "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
-`include "C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
+`define CY_BLK_DIR "C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00"
+`include "C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.v"
 `endif
 
 // Component: cy_virtualmux_v1_0
@@ -2889,10 +2889,10 @@ module top ;
 
 	assign tmpOE__ADC_P2_7_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__P0_7_net;
-	wire [0:0] tmpIO_0__P0_7_net;
-	wire [0:0] tmpINTERRUPT_0__P0_7_net;
-	electrical [0:0] tmpSIOVREF__P0_7_net;
+	wire [0:0] tmpOE__P0_2_net;
+	wire [0:0] tmpIO_0__P0_2_net;
+	wire [0:0] tmpINTERRUPT_0__P0_2_net;
+	electrical [0:0] tmpSIOVREF__P0_2_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("4c15b41e-e284-4978-99e7-5aaee19bd0ce"),
@@ -2941,13 +2941,13 @@ module top ;
 		  .spanning(0),
 		  .vtrip(2'b00),
 		  .width(1))
-		P0_7
-		 (.oe(tmpOE__P0_7_net),
+		P0_2
+		 (.oe(tmpOE__P0_2_net),
 		  .y({1'b0}),
 		  .fb({Net_8135}),
-		  .io({tmpIO_0__P0_7_net[0:0]}),
-		  .siovref(tmpSIOVREF__P0_7_net),
-		  .interrupt({tmpINTERRUPT_0__P0_7_net[0:0]}),
+		  .io({tmpIO_0__P0_2_net[0:0]}),
+		  .siovref(tmpSIOVREF__P0_2_net),
+		  .interrupt({tmpINTERRUPT_0__P0_2_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2955,7 +2955,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__P0_7_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__P0_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 	cy_isr_v1_0

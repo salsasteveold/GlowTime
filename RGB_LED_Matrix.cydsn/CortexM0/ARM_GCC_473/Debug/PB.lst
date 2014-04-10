@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
   30:.\Generated_Source\PSoC4/PB.c **** /* `#END` */
   31:.\Generated_Source\PSoC4/PB.c **** 
   32:.\Generated_Source\PSoC4/PB.c **** extern cyisraddress CyRamVectors[CYINT_IRQ_BASE + CY_NUM_INTERRUPTS];
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/PB.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
   87:.\Generated_Source\PSoC4/PB.c ****     /* Set the ISR to point to the PB Interrupt. */
   88:.\Generated_Source\PSoC4/PB.c ****     PB_SetVector(address);
   89:.\Generated_Source\PSoC4/PB.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/PB.c ****     /* Set the priority. */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  142:.\Generated_Source\PSoC4/PB.c **** 
  143:.\Generated_Source\PSoC4/PB.c ****     /* `#END` */
  144:.\Generated_Source\PSoC4/PB.c **** }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 4
 
 
   28              		.loc 1 144 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  180:.\Generated_Source\PSoC4/PB.c **** *   Address of the ISR in the interrupt vector table.
  181:.\Generated_Source\PSoC4/PB.c **** *
  182:.\Generated_Source\PSoC4/PB.c **** *******************************************************************************/
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 5
 
 
  183:.\Generated_Source\PSoC4/PB.c **** cyisraddress PB_GetVector(void)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  237:.\Generated_Source\PSoC4/PB.c **** 
  238:.\Generated_Source\PSoC4/PB.c ****     priority = (*PB_INTC_PRIOR & PB__INTC_PRIOR_MASK) >> priorityOffset;
  239:.\Generated_Source\PSoC4/PB.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 6
 
 
  240:.\Generated_Source\PSoC4/PB.c ****     return (uint8)priority;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  294:.\Generated_Source\PSoC4/PB.c **** *   None
  295:.\Generated_Source\PSoC4/PB.c **** *
  296:.\Generated_Source\PSoC4/PB.c **** * Return:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 7
 
 
  297:.\Generated_Source\PSoC4/PB.c **** *   None
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
   89              		.type	PB_SetVector, %function
   90              	PB_SetVector:
   91              	.LFB4:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 8
 
 
  164:.\Generated_Source\PSoC4/PB.c **** {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  136              		.align	2
  137              		.global	PB_SetPriority
  138              		.code	16
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 9
 
 
  139              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  185              	PB_StartEx:
  186              	.LFB1:
   83:.\Generated_Source\PSoC4/PB.c **** {
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 10
 
 
  187              		.loc 1 83 0
@@ -579,7 +579,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  220              	.LBE33:
   91:.\Generated_Source\PSoC4/PB.c ****     PB_SetPriority((uint8)PB_INTC_PRIOR_NUMBER);
  221              		.loc 1 91 0
- 222 000c 0320     		mov	r0, #3
+ 222 000c 0020     		mov	r0, #0
  223              	.LVL7:
  224 000e FFF7FEFF 		bl	PB_SetPriority
  225              	.LVL8:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  261:.\Generated_Source\PSoC4/PB.c ****     *PB_INTC_SET_EN = PB__INTC_MASK;
  236              		.loc 1 261 0
  237 0014 0460     		str	r4, [r0]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 11
 
 
  238              	.LBE36:
@@ -658,14 +658,14 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  165:.\Generated_Source\PSoC4/PB.c ****     CyRamVectors[CYINT_IRQ_BASE + PB__INTC_NUMBER] = address;
  289              		.loc 1 165 0
  290 000c 0264     		str	r2, [r0, #64]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 12
 
 
  291              	.LBE43:
  292              	.LBE45:
   61:.\Generated_Source\PSoC4/PB.c ****     PB_SetPriority((uint8)PB_INTC_PRIOR_NUMBER);
  293              		.loc 1 61 0
- 294 000e 0320     		mov	r0, #3
+ 294 000e 0020     		mov	r0, #0
  295 0010 FFF7FEFF 		bl	PB_SetPriority
  296              	.LVL10:
  297              	.LBB46:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  337              		@ sp needed for prologue
  238:.\Generated_Source\PSoC4/PB.c ****     priority = (*PB_INTC_PRIOR & PB__INTC_PRIOR_MASK) >> priorityOffset;
  338              		.loc 1 238 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 13
 
 
  339 0002 1868     		ldr	r0, [r3]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  387              		.cfi_startproc
  282:.\Generated_Source\PSoC4/PB.c ****     return ((*PB_INTC_SET_EN & (uint32)PB__INTC_MASK) != 0u) ? 1u:0u;
  388              		.loc 1 282 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 14
 
 
  389 0000 024B     		ldr	r3, .L27
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  306:.\Generated_Source\PSoC4/PB.c **** 
  307:.\Generated_Source\PSoC4/PB.c **** /*******************************************************************************
  308:.\Generated_Source\PSoC4/PB.c **** * Function Name: PB_SetPending
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 15
 
 
  309:.\Generated_Source\PSoC4/PB.c **** ********************************************************************************
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  339:.\Generated_Source\PSoC4/PB.c **** *   None
  340:.\Generated_Source\PSoC4/PB.c **** *
  341:.\Generated_Source\PSoC4/PB.c **** *******************************************************************************/
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 16
 
 
  342:.\Generated_Source\PSoC4/PB.c **** void PB_ClearPending(void)
@@ -932,10 +932,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  485 0006 00000000 		.4byte	.Ldebug_abbrev0
  486 000a 04       		.byte	0x4
  487 000b 01       		.uleb128 0x1
- 488 000c 7C010000 		.4byte	.LASF32
+ 488 000c BA010000 		.4byte	.LASF32
  489 0010 01       		.byte	0x1
- 490 0011 3F020000 		.4byte	.LASF33
- 491 0015 D4010000 		.4byte	.LASF34
+ 490 0011 42020000 		.4byte	.LASF33
+ 491 0015 CF000000 		.4byte	.LASF34
  492 0019 C0000000 		.4byte	.Ldebug_ranges0+0xc0
  493 001d 00000000 		.4byte	0
  494 0021 00000000 		.4byte	0
@@ -943,7 +943,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  496 0029 02       		.uleb128 0x2
  497 002a 01       		.byte	0x1
  498 002b 06       		.byte	0x6
- 499 002c 33020000 		.4byte	.LASF0
+ 499 002c 36020000 		.4byte	.LASF0
  500 0030 02       		.uleb128 0x2
  501 0031 01       		.byte	0x1
  502 0032 08       		.byte	0x8
@@ -951,18 +951,18 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  504 0037 02       		.uleb128 0x2
  505 0038 02       		.byte	0x2
  506 0039 05       		.byte	0x5
- 507 003a 65010000 		.4byte	.LASF2
+ 507 003a A3010000 		.4byte	.LASF2
  508 003e 02       		.uleb128 0x2
  509 003f 02       		.byte	0x2
  510 0040 07       		.byte	0x7
  511 0041 1C000000 		.4byte	.LASF3
  512 0045 02       		.uleb128 0x2
  513 0046 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 17
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 17
 
 
  514 0047 05       		.byte	0x5
- 515 0048 0F020000 		.4byte	.LASF4
+ 515 0048 12020000 		.4byte	.LASF4
  516 004c 02       		.uleb128 0x2
  517 004d 04       		.byte	0x4
  518 004e 07       		.byte	0x7
@@ -970,7 +970,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  520 0053 02       		.uleb128 0x2
  521 0054 08       		.byte	0x8
  522 0055 05       		.byte	0x5
- 523 0056 44010000 		.4byte	.LASF6
+ 523 0056 82010000 		.4byte	.LASF6
  524 005a 02       		.uleb128 0x2
  525 005b 08       		.byte	0x8
  526 005c 07       		.byte	0x7
@@ -982,7 +982,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  532 0068 02       		.uleb128 0x2
  533 0069 04       		.byte	0x4
  534 006a 07       		.byte	0x7
- 535 006b E6000000 		.4byte	.LASF8
+ 535 006b 24010000 		.4byte	.LASF8
  536 006f 04       		.uleb128 0x4
  537 0070 88000000 		.4byte	.LASF9
  538 0074 02       		.byte	0x2
@@ -1004,7 +1004,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  554 0093 02       		.uleb128 0x2
  555 0094 01       		.byte	0x1
  556 0095 08       		.byte	0x8
- 557 0096 60010000 		.4byte	.LASF13
+ 557 0096 9E010000 		.4byte	.LASF13
  558 009a 04       		.uleb128 0x4
  559 009b 00000000 		.4byte	.LASF14
  560 009f 02       		.byte	0x2
@@ -1013,12 +1013,12 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  563 00a5 05       		.uleb128 0x5
  564 00a6 7A000000 		.4byte	0x7a
  565 00aa 06       		.uleb128 0x6
- 566 00ab 24010000 		.4byte	.LASF15
+ 566 00ab 62010000 		.4byte	.LASF15
  567 00af 02       		.byte	0x2
  568 00b0 0201     		.2byte	0x102
  569 00b2 B6000000 		.4byte	0xb6
  570 00b6 07       		.uleb128 0x7
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 18
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 18
 
 
  571 00b7 04       		.byte	0x4
@@ -1028,38 +1028,38 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  575 00be 02       		.uleb128 0x2
  576 00bf 04       		.byte	0x4
  577 00c0 07       		.byte	0x7
- 578 00c1 31010000 		.4byte	.LASF16
+ 578 00c1 6F010000 		.4byte	.LASF16
  579 00c5 09       		.uleb128 0x9
  580 00c6 01       		.byte	0x1
- 581 00c7 19010000 		.4byte	.LASF17
+ 581 00c7 57010000 		.4byte	.LASF17
  582 00cb 01       		.byte	0x1
  583 00cc 2C01     		.2byte	0x12c
  584 00ce 01       		.byte	0x1
  585 00cf 01       		.byte	0x1
  586 00d0 0A       		.uleb128 0xa
  587 00d1 01       		.byte	0x1
- 588 00d2 5D020000 		.4byte	.LASF35
+ 588 00d2 60020000 		.4byte	.LASF35
  589 00d6 01       		.byte	0x1
  590 00d7 A3       		.byte	0xa3
  591 00d8 01       		.byte	0x1
  592 00d9 01       		.byte	0x1
  593 00da EA000000 		.4byte	0xea
  594 00de 0B       		.uleb128 0xb
- 595 00df FB000000 		.4byte	.LASF25
+ 595 00df 39010000 		.4byte	.LASF25
  596 00e3 01       		.byte	0x1
  597 00e4 A3       		.byte	0xa3
  598 00e5 AA000000 		.4byte	0xaa
  599 00e9 00       		.byte	0
  600 00ea 09       		.uleb128 0x9
  601 00eb 01       		.byte	0x1
- 602 00ec 3A010000 		.4byte	.LASF18
+ 602 00ec 78010000 		.4byte	.LASF18
  603 00f0 01       		.byte	0x1
  604 00f1 0201     		.2byte	0x102
  605 00f3 01       		.byte	0x1
  606 00f4 01       		.byte	0x1
  607 00f5 0C       		.uleb128 0xc
  608 00f6 01       		.byte	0x1
- 609 00f7 6F010000 		.4byte	.LASF29
+ 609 00f7 AD010000 		.4byte	.LASF29
  610 00fb 01       		.byte	0x1
  611 00fc 8A       		.byte	0x8a
  612 00fd 01       		.byte	0x1
@@ -1071,14 +1071,14 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  618 0109 01       		.byte	0x1
  619 010a 0D       		.uleb128 0xd
  620 010b 01       		.byte	0x1
- 621 010c F3000000 		.4byte	.LASF19
+ 621 010c 31010000 		.4byte	.LASF19
  622 0110 01       		.byte	0x1
  623 0111 6F       		.byte	0x6f
  624 0112 01       		.byte	0x1
  625 0113 00000000 		.4byte	.LFB2
  626 0117 1C000000 		.4byte	.LFE2
  627 011b 02       		.byte	0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 19
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 19
 
 
  628 011c 7D       		.byte	0x7d
@@ -1130,7 +1130,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  674 017d 01       		.byte	0x1
  675 017e 14       		.uleb128 0x14
  676 017f 01       		.byte	0x1
- 677 0180 18020000 		.4byte	.LASF20
+ 677 0180 1B020000 		.4byte	.LASF20
  678 0184 01       		.byte	0x1
  679 0185 CF       		.byte	0xcf
  680 0186 01       		.byte	0x1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  682 018b 20000000 		.4byte	.LFE6
  683 018f 00000000 		.4byte	.LLST0
  684 0193 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 20
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 20
 
 
  685 0194 D5010000 		.4byte	0x1d5
@@ -1155,7 +1155,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  696 01ae 6F000000 		.4byte	0x6f
  697 01b2 41000000 		.4byte	.LLST2
  698 01b6 17       		.uleb128 0x17
- 699 01b7 C5010000 		.4byte	.LASF22
+ 699 01b7 03020000 		.4byte	.LASF22
  700 01bb 01       		.byte	0x1
  701 01bc D2       		.byte	0xd2
  702 01bd 7A000000 		.4byte	0x7a
@@ -1179,7 +1179,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  720 01ea 01       		.byte	0x1
  721 01eb 49020000 		.4byte	0x249
  722 01ef 15       		.uleb128 0x15
- 723 01f0 FB000000 		.4byte	.LASF25
+ 723 01f0 39010000 		.4byte	.LASF25
  724 01f4 01       		.byte	0x1
  725 01f5 52       		.byte	0x52
  726 01f6 AA000000 		.4byte	0xaa
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  739 021b 58       		.byte	0x58
  740 021c 2A020000 		.4byte	0x22a
  741 0220 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 21
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 21
 
 
  742 0221 DE000000 		.4byte	0xde
@@ -1217,7 +1217,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  755 0243 01       		.byte	0x1
  756 0244 50       		.byte	0x50
  757 0245 01       		.byte	0x1
- 758 0246 33       		.byte	0x33
+ 758 0246 30       		.byte	0x30
  759 0247 00       		.byte	0
  760 0248 00       		.byte	0
  761 0249 14       		.uleb128 0x14
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  796 029f 01       		.byte	0x1
  797 02a0 40       		.byte	0x40
  798 02a1 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 22
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 22
 
 
  799 02a2 14000000 		.4byte	.LVL10
@@ -1267,7 +1267,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  802 02ab 01       		.byte	0x1
  803 02ac 50       		.byte	0x50
  804 02ad 01       		.byte	0x1
- 805 02ae 33       		.byte	0x33
+ 805 02ae 30       		.byte	0x30
  806 02af 00       		.byte	0
  807 02b0 00       		.byte	0
  808 02b1 1D       		.uleb128 0x1d
@@ -1291,7 +1291,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  826 02d5 7A000000 		.4byte	0x7a
  827 02d9 F0000000 		.4byte	.LLST7
  828 02dd 17       		.uleb128 0x17
- 829 02de C5010000 		.4byte	.LASF22
+ 829 02de 03020000 		.4byte	.LASF22
  830 02e2 01       		.byte	0x1
  831 02e3 EC       		.byte	0xec
  832 02e4 7A000000 		.4byte	0x7a
@@ -1307,7 +1307,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  842 02fa 01       		.byte	0x1
  843 02fb 1F       		.uleb128 0x1f
  844 02fc 01       		.byte	0x1
- 845 02fd 27020000 		.4byte	.LASF28
+ 845 02fd 2A020000 		.4byte	.LASF28
  846 0301 01       		.byte	0x1
  847 0302 1701     		.2byte	0x117
  848 0304 01       		.byte	0x1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  853 0312 7D       		.byte	0x7d
  854 0313 00       		.sleb128 0
  855 0314 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 23
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 23
 
 
  856 0315 1E       		.uleb128 0x1e
@@ -1331,7 +1331,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  863 0325 01       		.byte	0x1
  864 0326 20       		.uleb128 0x20
  865 0327 01       		.byte	0x1
- 866 0328 52010000 		.4byte	.LASF30
+ 866 0328 90010000 		.4byte	.LASF30
  867 032c 01       		.byte	0x1
  868 032d 4201     		.2byte	0x142
  869 032f 01       		.byte	0x1
@@ -1369,7 +1369,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  901 036e 01       		.byte	0x1
  902 036f 24       		.uleb128 0x24
  903 0370 01       		.byte	0x1
- 904 0371 CF000000 		.4byte	.LASF38
+ 904 0371 0D010000 		.4byte	.LASF38
  905 0375 03       		.byte	0x3
  906 0376 70       		.byte	0x70
  907 0377 01       		.byte	0x1
@@ -1377,8 +1377,8 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  909 037c 01       		.byte	0x1
  910 037d 25       		.uleb128 0x25
  911 037e 01       		.byte	0x1
- 912 037f 03010000 		.4byte	.LASF39
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 24
+ 912 037f 41010000 		.4byte	.LASF39
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 24
 
 
  913 0383 03       		.byte	0x3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  967 002c 16       		.uleb128 0x16
  968 002d 00       		.byte	0
  969 002e 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 25
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 25
 
 
  970 002f 0E       		.uleb128 0xe
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1024 0065 3B       		.uleb128 0x3b
  1025 0066 05       		.uleb128 0x5
  1026 0067 27       		.uleb128 0x27
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 26
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 26
 
 
  1027 0068 0C       		.uleb128 0xc
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1081 009e 40       		.uleb128 0x40
  1082 009f 0A       		.uleb128 0xa
  1083 00a0 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 27
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 27
 
 
  1084 00a2 0C       		.uleb128 0xc
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1138 00d9 59       		.uleb128 0x59
  1139 00da 0B       		.uleb128 0xb
  1140 00db 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 28
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 28
 
 
  1141 00dc 00       		.byte	0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1195 0113 0A       		.uleb128 0xa
  1196 0114 9742     		.uleb128 0x2117
  1197 0116 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 29
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 29
 
 
  1198 0117 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1252 014e 06       		.uleb128 0x6
  1253 014f 00       		.byte	0
  1254 0150 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 30
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 30
 
 
  1255 0151 17       		.uleb128 0x17
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1309 018b 01       		.uleb128 0x1
  1310 018c 31       		.uleb128 0x31
  1311 018d 13       		.uleb128 0x13
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 31
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 31
 
 
  1312 018e 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1366 01c9 2E       		.uleb128 0x2e
  1367 01ca 00       		.byte	0
  1368 01cb 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 32
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 32
 
 
  1369 01cc 0C       		.uleb128 0xc
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1423 0204 21       		.uleb128 0x21
  1424 0205 00       		.byte	0
  1425 0206 49       		.uleb128 0x49
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 33
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 33
 
 
  1426 0207 13       		.uleb128 0x13
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1480 023d 3C       		.uleb128 0x3c
  1481 023e 0C       		.uleb128 0xc
  1482 023f 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 34
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 34
 
 
  1483 0240 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1537 006a 7D       		.byte	0x7d
  1538 006b 08       		.sleb128 8
  1539 006c 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 35
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 35
 
 
  1540 0070 00000000 		.4byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1594 00f4 08000000 		.4byte	.LVL13
  1595 00f8 0800     		.2byte	0x8
  1596 00fa 70       		.byte	0x70
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 36
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 36
 
 
  1597 00fb 00       		.sleb128 0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1651 001c 06000000 		.4byte	.LBE21
  1652 0020 0A000000 		.4byte	.LBB25
  1653 0024 0C000000 		.4byte	.LBE25
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 37
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 37
 
 
  1654 0028 00000000 		.4byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1708 0100 00000000 		.4byte	.LFB8
  1709 0104 0C000000 		.4byte	.LFE8
  1710 0108 00000000 		.4byte	.LFB9
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 38
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 38
 
 
  1711 010c 10000000 		.4byte	.LFE9
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1740 0067 696E7465 		.ascii	"interruptState\000"
  1740      72727570 
  1740      74537461 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 39
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 39
 
 
  1740      746500
@@ -2315,125 +2315,126 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 1
  1755              	.LASF10:
  1756 00c8 75696E74 		.ascii	"uint32\000"
  1756      333200
- 1757              	.LASF38:
- 1758 00cf 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1758      74657243 
- 1758      72697469 
- 1758      63616C53 
- 1758      65637469 
- 1759              	.LASF8:
- 1760 00e6 756E7369 		.ascii	"unsigned int\000"
- 1760      676E6564 
- 1760      20696E74 
- 1760      00
- 1761              	.LASF19:
- 1762 00f3 50425F53 		.ascii	"PB_Stop\000"
- 1762      746F7000 
- 1763              	.LASF25:
- 1764 00fb 61646472 		.ascii	"address\000"
- 1764      65737300 
- 1765              	.LASF39:
- 1766 0103 43794578 		.ascii	"CyExitCriticalSection\000"
- 1766      69744372 
- 1766      69746963 
- 1766      616C5365 
- 1766      6374696F 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 40
+ 1757              	.LASF34:
+ 1758 00cf 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 1758      73657273 
+ 1758      5C436F6D 
+ 1758      70757465 
+ 1758      725C446F 
+ 1759 00fc 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 1759      4D617472 
+ 1759      69782E63 
+ 1759      7964736E 
+ 1759      00
+ 1760              	.LASF38:
+ 1761 010d 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1761      74657243 
+ 1761      72697469 
+ 1761      63616C53 
+ 1761      65637469 
+ 1762              	.LASF8:
+ 1763 0124 756E7369 		.ascii	"unsigned int\000"
+ 1763      676E6564 
+ 1763      20696E74 
+ 1763      00
+ 1764              	.LASF19:
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 40
 
 
- 1767              	.LASF17:
- 1768 0119 50425F44 		.ascii	"PB_Disable\000"
- 1768      69736162 
- 1768      6C6500
- 1769              	.LASF15:
- 1770 0124 63796973 		.ascii	"cyisraddress\000"
- 1770      72616464 
- 1770      72657373 
- 1770      00
- 1771              	.LASF16:
- 1772 0131 73697A65 		.ascii	"sizetype\000"
- 1772      74797065 
- 1772      00
- 1773              	.LASF18:
- 1774 013a 50425F45 		.ascii	"PB_Enable\000"
- 1774      6E61626C 
- 1774      6500
- 1775              	.LASF6:
- 1776 0144 6C6F6E67 		.ascii	"long long int\000"
- 1776      206C6F6E 
- 1776      6720696E 
- 1776      7400
- 1777              	.LASF30:
- 1778 0152 50425F53 		.ascii	"PB_SetPending\000"
- 1778      65745065 
- 1778      6E64696E 
- 1778      6700
- 1779              	.LASF13:
- 1780 0160 63686172 		.ascii	"char\000"
- 1780      00
- 1781              	.LASF2:
- 1782 0165 73686F72 		.ascii	"short int\000"
- 1782      7420696E 
- 1782      7400
- 1783              	.LASF29:
- 1784 016f 50425F49 		.ascii	"PB_Interrupt\000"
- 1784      6E746572 
- 1784      72757074 
- 1784      00
- 1785              	.LASF32:
- 1786 017c 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 1786      4320342E 
- 1786      372E3320 
- 1786      32303133 
- 1786      30333132 
- 1787 01af 616E6368 		.ascii	"anch revision 196615]\000"
- 1787      20726576 
- 1787      6973696F 
- 1787      6E203139 
- 1787      36363135 
- 1788              	.LASF22:
- 1789 01c5 7072696F 		.ascii	"priorityOffset\000"
- 1789      72697479 
- 1789      4F666673 
- 1789      657400
- 1790              	.LASF34:
- 1791 01d4 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZxqow2.s 			page 41
+ 1765 0131 50425F53 		.ascii	"PB_Stop\000"
+ 1765      746F7000 
+ 1766              	.LASF25:
+ 1767 0139 61646472 		.ascii	"address\000"
+ 1767      65737300 
+ 1768              	.LASF39:
+ 1769 0141 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1769      69744372 
+ 1769      69746963 
+ 1769      616C5365 
+ 1769      6374696F 
+ 1770              	.LASF17:
+ 1771 0157 50425F44 		.ascii	"PB_Disable\000"
+ 1771      69736162 
+ 1771      6C6500
+ 1772              	.LASF15:
+ 1773 0162 63796973 		.ascii	"cyisraddress\000"
+ 1773      72616464 
+ 1773      72657373 
+ 1773      00
+ 1774              	.LASF16:
+ 1775 016f 73697A65 		.ascii	"sizetype\000"
+ 1775      74797065 
+ 1775      00
+ 1776              	.LASF18:
+ 1777 0178 50425F45 		.ascii	"PB_Enable\000"
+ 1777      6E61626C 
+ 1777      6500
+ 1778              	.LASF6:
+ 1779 0182 6C6F6E67 		.ascii	"long long int\000"
+ 1779      206C6F6E 
+ 1779      6720696E 
+ 1779      7400
+ 1780              	.LASF30:
+ 1781 0190 50425F53 		.ascii	"PB_SetPending\000"
+ 1781      65745065 
+ 1781      6E64696E 
+ 1781      6700
+ 1782              	.LASF13:
+ 1783 019e 63686172 		.ascii	"char\000"
+ 1783      00
+ 1784              	.LASF2:
+ 1785 01a3 73686F72 		.ascii	"short int\000"
+ 1785      7420696E 
+ 1785      7400
+ 1786              	.LASF29:
+ 1787 01ad 50425F49 		.ascii	"PB_Interrupt\000"
+ 1787      6E746572 
+ 1787      72757074 
+ 1787      00
+ 1788              	.LASF32:
+ 1789 01ba 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1789      4320342E 
+ 1789      372E3320 
+ 1789      32303133 
+ 1789      30333132 
+ 1790 01ed 616E6368 		.ascii	"anch revision 196615]\000"
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVD9YOo.s 			page 41
 
 
- 1791      73657273 
- 1791      5C537465 
- 1791      76655C44 
- 1791      6F63756D 
- 1792 0201 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 1792      7269782E 
- 1792      63796473 
- 1792      6E00
+ 1790      20726576 
+ 1790      6973696F 
+ 1790      6E203139 
+ 1790      36363135 
+ 1791              	.LASF22:
+ 1792 0203 7072696F 		.ascii	"priorityOffset\000"
+ 1792      72697479 
+ 1792      4F666673 
+ 1792      657400
  1793              	.LASF4:
- 1794 020f 6C6F6E67 		.ascii	"long int\000"
+ 1794 0212 6C6F6E67 		.ascii	"long int\000"
  1794      20696E74 
  1794      00
  1795              	.LASF20:
- 1796 0218 50425F53 		.ascii	"PB_SetPriority\000"
+ 1796 021b 50425F53 		.ascii	"PB_SetPriority\000"
  1796      65745072 
  1796      696F7269 
  1796      747900
  1797              	.LASF28:
- 1798 0227 50425F47 		.ascii	"PB_GetState\000"
+ 1798 022a 50425F47 		.ascii	"PB_GetState\000"
  1798      65745374 
  1798      61746500 
  1799              	.LASF0:
- 1800 0233 7369676E 		.ascii	"signed char\000"
+ 1800 0236 7369676E 		.ascii	"signed char\000"
  1800      65642063 
  1800      68617200 
  1801              	.LASF33:
- 1802 023f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PB.c\000"
+ 1802 0242 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\PB.c\000"
  1802      6E657261 
  1802      7465645F 
  1802      536F7572 
  1802      63655C50 
  1803              	.LASF35:
- 1804 025d 50425F53 		.ascii	"PB_SetVector\000"
+ 1804 0260 50425F53 		.ascii	"PB_SetVector\000"
  1804      65745665 
  1804      63746F72 
  1804      00

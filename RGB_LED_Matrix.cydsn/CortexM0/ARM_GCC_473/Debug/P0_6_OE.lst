@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
   30:.\Generated_Source\PSoC4/P0_6_OE.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/P0_6_OE.c **** *
   32:.\Generated_Source\PSoC4/P0_6_OE.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/P0_6_OE.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
   50:.\Generated_Source\PSoC4/P0_6_OE.c **** /*******************************************************************************
   51:.\Generated_Source\PSoC4/P0_6_OE.c **** * Function Name: P0_6_OE_SetDriveMode
   52:.\Generated_Source\PSoC4/P0_6_OE.c **** ********************************************************************************
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 3
 
 
   53:.\Generated_Source\PSoC4/P0_6_OE.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  100              	.LFB2:
   68:.\Generated_Source\PSoC4/P0_6_OE.c **** 
   69:.\Generated_Source\PSoC4/P0_6_OE.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 4
 
 
   70:.\Generated_Source\PSoC4/P0_6_OE.c **** /*******************************************************************************
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
   96:.\Generated_Source\PSoC4/P0_6_OE.c **** ********************************************************************************
   97:.\Generated_Source\PSoC4/P0_6_OE.c **** *
   98:.\Generated_Source\PSoC4/P0_6_OE.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 5
 
 
   99:.\Generated_Source\PSoC4/P0_6_OE.c **** *  Read the current value assigned to a Digital Port's data output register
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  125:.\Generated_Source\PSoC4/P0_6_OE.c ****     * Parameters:  
  126:.\Generated_Source\PSoC4/P0_6_OE.c ****     *  None 
  127:.\Generated_Source\PSoC4/P0_6_OE.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 6
 
 
  128:.\Generated_Source\PSoC4/P0_6_OE.c ****     * Return: 
@@ -352,13 +352,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  189 0006 00000000 		.4byte	.Ldebug_abbrev0
  190 000a 04       		.byte	0x4
  191 000b 01       		.uleb128 0x1
- 192 000c 1B010000 		.4byte	.LASF22
+ 192 000c 59010000 		.4byte	.LASF22
  193 0010 01       		.byte	0x1
- 194 0011 E8000000 		.4byte	.LASF23
- 195 0015 64010000 		.4byte	.LASF24
+ 194 0011 26010000 		.4byte	.LASF23
+ 195 0015 9F000000 		.4byte	.LASF24
  196 0019 00000000 		.4byte	.Ldebug_ranges0+0
  197 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 7
 
 
  198 0021 00000000 		.4byte	0
@@ -366,7 +366,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  200 0029 02       		.uleb128 0x2
  201 002a 01       		.byte	0x1
  202 002b 06       		.byte	0x6
- 203 002c A8010000 		.4byte	.LASF0
+ 203 002c AB010000 		.4byte	.LASF0
  204 0030 02       		.uleb128 0x2
  205 0031 01       		.byte	0x1
  206 0032 08       		.byte	0x8
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  208 0037 02       		.uleb128 0x2
  209 0038 02       		.byte	0x2
  210 0039 05       		.byte	0x5
- 211 003a 0B010000 		.4byte	.LASF2
+ 211 003a 49010000 		.4byte	.LASF2
  212 003e 02       		.uleb128 0x2
  213 003f 02       		.byte	0x2
  214 0040 07       		.byte	0x7
@@ -382,7 +382,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  216 0045 02       		.uleb128 0x2
  217 0046 04       		.byte	0x4
  218 0047 05       		.byte	0x5
- 219 0048 9F010000 		.4byte	.LASF4
+ 219 0048 A2010000 		.4byte	.LASF4
  220 004c 02       		.uleb128 0x2
  221 004d 04       		.byte	0x4
  222 004e 07       		.byte	0x7
@@ -390,11 +390,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  224 0053 02       		.uleb128 0x2
  225 0054 08       		.byte	0x8
  226 0055 05       		.byte	0x5
- 227 0056 C8000000 		.4byte	.LASF6
+ 227 0056 06010000 		.4byte	.LASF6
  228 005a 02       		.uleb128 0x2
  229 005b 08       		.byte	0x8
  230 005c 07       		.byte	0x7
- 231 005d AC000000 		.4byte	.LASF7
+ 231 005d EA000000 		.4byte	.LASF7
  232 0061 03       		.uleb128 0x3
  233 0062 04       		.byte	0x4
  234 0063 05       		.byte	0x5
@@ -402,9 +402,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  236 0068 02       		.uleb128 0x2
  237 0069 04       		.byte	0x4
  238 006a 07       		.byte	0x7
- 239 006b 9F000000 		.4byte	.LASF8
+ 239 006b DD000000 		.4byte	.LASF8
  240 006f 04       		.uleb128 0x4
- 241 0070 15010000 		.4byte	.LASF9
+ 241 0070 53010000 		.4byte	.LASF9
  242 0074 02       		.byte	0x2
  243 0075 5B       		.byte	0x5b
  244 0076 30000000 		.4byte	0x30
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  252 0087 04       		.byte	0x4
  253 0088 27000000 		.4byte	.LASF11
  254 008c 02       		.uleb128 0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 8
 
 
  255 008d 08       		.byte	0x8
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  258 0093 02       		.uleb128 0x2
  259 0094 01       		.byte	0x1
  260 0095 08       		.byte	0x8
- 261 0096 E3000000 		.4byte	.LASF13
+ 261 0096 21010000 		.4byte	.LASF13
  262 009a 04       		.uleb128 0x4
  263 009b 00000000 		.4byte	.LASF14
  264 009f 02       		.byte	0x2
@@ -462,7 +462,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  293 00dd 00       		.byte	0
  294 00de 09       		.uleb128 0x9
  295 00df 01       		.byte	0x1
- 296 00e0 B4010000 		.4byte	.LASF16
+ 296 00e0 B7010000 		.4byte	.LASF16
  297 00e4 01       		.byte	0x1
  298 00e5 40       		.byte	0x40
  299 00e6 01       		.byte	0x1
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  303 00f3 01       		.byte	0x1
  304 00f4 08010000 		.4byte	0x108
  305 00f8 07       		.uleb128 0x7
- 306 00f9 C3000000 		.4byte	.LASF18
+ 306 00f9 01010000 		.4byte	.LASF18
  307 00fd 01       		.byte	0x1
  308 00fe 40       		.byte	0x40
  309 00ff 6F000000 		.4byte	0x6f
  310 0103 41000000 		.4byte	.LLST2
  311 0107 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 9
 
 
  312 0108 0A       		.uleb128 0xa
@@ -521,7 +521,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  349 0151 00       		.sleb128 0
  350 0152 01       		.byte	0x1
  351 0153 0C       		.uleb128 0xc
- 352 0154 D6000000 		.4byte	.LASF26
+ 352 0154 14010000 		.4byte	.LASF26
  353 0158 01       		.byte	0x1
  354 0159 86       		.byte	0x86
  355 015a 6F000000 		.4byte	0x6f
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  366 0005 13       		.uleb128 0x13
  367 0006 0B       		.uleb128 0xb
  368 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 10
 
 
  369 0008 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  423 003e 00       		.byte	0
  424 003f 06       		.uleb128 0x6
  425 0040 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 11
 
 
  426 0041 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  480 0078 3F       		.uleb128 0x3f
  481 0079 0C       		.uleb128 0xc
  482 007a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 12
 
 
  483 007b 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  537 00b3 0B       		.uleb128 0xb
  538 00b4 27       		.uleb128 0x27
  539 00b5 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 13
 
 
  540 00b6 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  594 0038 08       		.sleb128 8
  595 0039 00000000 		.4byte	0
  596 003d 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 14
 
 
  597              	.LLST2:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  651 0010 00000000 		.4byte	.LFB2
  652 0014 10000000 		.4byte	.LFE2
  653 0018 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 15
 
 
  654 001c 10000000 		.4byte	.LFE3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  681      436C6561 
  681      72496E74 
  681      65727275 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 16
 
 
  682              	.LASF12:
@@ -913,80 +913,81 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 1
  686              	.LASF10:
  687 0098 75696E74 		.ascii	"uint32\000"
  687      333200
- 688              	.LASF8:
- 689 009f 756E7369 		.ascii	"unsigned int\000"
- 689      676E6564 
- 689      20696E74 
- 689      00
- 690              	.LASF7:
- 691 00ac 6C6F6E67 		.ascii	"long long unsigned int\000"
- 691      206C6F6E 
- 691      6720756E 
- 691      7369676E 
- 691      65642069 
- 692              	.LASF18:
- 693 00c3 6D6F6465 		.ascii	"mode\000"
- 693      00
- 694              	.LASF6:
- 695 00c8 6C6F6E67 		.ascii	"long long int\000"
- 695      206C6F6E 
- 695      6720696E 
- 695      7400
- 696              	.LASF26:
- 697 00d6 6D61736B 		.ascii	"maskedStatus\000"
- 697      65645374 
- 697      61747573 
- 697      00
- 698              	.LASF13:
- 699 00e3 63686172 		.ascii	"char\000"
- 699      00
- 700              	.LASF23:
- 701 00e8 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P0_6_OE.c\000"
- 701      6E657261 
- 701      7465645F 
- 701      536F7572 
- 701      63655C50 
- 702              	.LASF2:
- 703 010b 73686F72 		.ascii	"short int\000"
- 703      7420696E 
- 703      7400
- 704              	.LASF9:
- 705 0115 75696E74 		.ascii	"uint8\000"
- 705      3800
- 706              	.LASF22:
- 707 011b 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 707      4320342E 
- 707      372E3320 
- 707      32303133 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccjcho6l.s 			page 17
+ 688              	.LASF24:
+ 689 009f 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 689      73657273 
+ 689      5C436F6D 
+ 689      70757465 
+ 689      725C446F 
+ 690 00cc 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 690      4D617472 
+ 690      69782E63 
+ 690      7964736E 
+ 690      00
+ 691              	.LASF8:
+ 692 00dd 756E7369 		.ascii	"unsigned int\000"
+ 692      676E6564 
+ 692      20696E74 
+ 692      00
+ 693              	.LASF7:
+ 694 00ea 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 694      206C6F6E 
+ 694      6720756E 
+ 694      7369676E 
+ 694      65642069 
+ 695              	.LASF18:
+ 696 0101 6D6F6465 		.ascii	"mode\000"
+ 696      00
+ 697              	.LASF6:
+ 698 0106 6C6F6E67 		.ascii	"long long int\000"
+ 698      206C6F6E 
+ 698      6720696E 
+ 698      7400
+ 699              	.LASF26:
+ 700 0114 6D61736B 		.ascii	"maskedStatus\000"
+ 700      65645374 
+ 700      61747573 
+ 700      00
+ 701              	.LASF13:
+ 702 0121 63686172 		.ascii	"char\000"
+ 702      00
+ 703              	.LASF23:
+ 704 0126 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P0_6_OE.c\000"
+ 704      6E657261 
+ 704      7465645F 
+ 704      536F7572 
+ 704      63655C50 
+ 705              	.LASF2:
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccVpQvSL.s 			page 17
 
 
- 707      30333132 
- 708 014e 616E6368 		.ascii	"anch revision 196615]\000"
- 708      20726576 
- 708      6973696F 
- 708      6E203139 
- 708      36363135 
- 709              	.LASF24:
- 710 0164 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 710      73657273 
- 710      5C537465 
- 710      76655C44 
- 710      6F63756D 
- 711 0191 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 711      7269782E 
- 711      63796473 
- 711      6E00
+ 706 0149 73686F72 		.ascii	"short int\000"
+ 706      7420696E 
+ 706      7400
+ 707              	.LASF9:
+ 708 0153 75696E74 		.ascii	"uint8\000"
+ 708      3800
+ 709              	.LASF22:
+ 710 0159 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 710      4320342E 
+ 710      372E3320 
+ 710      32303133 
+ 710      30333132 
+ 711 018c 616E6368 		.ascii	"anch revision 196615]\000"
+ 711      20726576 
+ 711      6973696F 
+ 711      6E203139 
+ 711      36363135 
  712              	.LASF4:
- 713 019f 6C6F6E67 		.ascii	"long int\000"
+ 713 01a2 6C6F6E67 		.ascii	"long int\000"
  713      20696E74 
  713      00
  714              	.LASF0:
- 715 01a8 7369676E 		.ascii	"signed char\000"
+ 715 01ab 7369676E 		.ascii	"signed char\000"
  715      65642063 
  715      68617200 
  716              	.LASF16:
- 717 01b4 50305F36 		.ascii	"P0_6_OE_SetDriveMode\000"
+ 717 01b7 50305F36 		.ascii	"P0_6_OE_SetDriveMode\000"
  717      5F4F455F 
  717      53657444 
  717      72697665 

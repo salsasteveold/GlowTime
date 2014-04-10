@@ -726,7 +726,7 @@
   <block name="ADC_P2_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="PB" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P0_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P0_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />

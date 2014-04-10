@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
   23:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#endif
   24:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	
   25:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //	#if 0 > 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 2
 
 
   26:.\Generated_Source\PSoC4/LED_Matrix_1.c **** //		LED_Matrix_1_AUX_CTL_A_REG |= (LED_Matrix_1_F1_LEVEL_MODE_1 << LED_Matrix_1_F1_LEVEL_SHIFT);
@@ -98,10 +98,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
   51 0006 00000000 		.4byte	.Ldebug_abbrev0
   52 000a 04       		.byte	0x4
   53 000b 01       		.uleb128 0x1
-  54 000c 43000000 		.4byte	.LASF13
+  54 000c 81000000 		.4byte	.LASF13
   55 0010 01       		.byte	0x1
   56 0011 1B000000 		.4byte	.LASF14
-  57 0015 BB000000 		.4byte	.LASF15
+  57 0015 43000000 		.4byte	.LASF15
   58 0019 00000000 		.4byte	.Ldebug_ranges0+0
   59 001d 00000000 		.4byte	0
   60 0021 00000000 		.4byte	0
@@ -109,30 +109,30 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
   62 0029 02       		.uleb128 0x2
   63 002a 01       		.byte	0x1
   64 002b 06       		.byte	0x6
-  65 002c 3F010000 		.4byte	.LASF0
+  65 002c 42010000 		.4byte	.LASF0
   66 0030 02       		.uleb128 0x2
   67 0031 01       		.byte	0x1
   68 0032 08       		.byte	0x8
-  69 0033 09010000 		.4byte	.LASF1
+  69 0033 0C010000 		.4byte	.LASF1
   70 0037 02       		.uleb128 0x2
   71 0038 02       		.byte	0x2
   72 0039 05       		.byte	0x5
-  73 003a 67010000 		.4byte	.LASF2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 3
+  73 003a 6A010000 		.4byte	.LASF2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 3
 
 
   74 003e 02       		.uleb128 0x2
   75 003f 02       		.byte	0x2
   76 0040 07       		.byte	0x7
-  77 0041 2C010000 		.4byte	.LASF3
+  77 0041 2F010000 		.4byte	.LASF3
   78 0045 02       		.uleb128 0x2
   79 0046 04       		.byte	0x4
   80 0047 05       		.byte	0x5
-  81 0048 1C010000 		.4byte	.LASF4
+  81 0048 1F010000 		.4byte	.LASF4
   82 004c 02       		.uleb128 0x2
   83 004d 04       		.byte	0x4
   84 004e 07       		.byte	0x7
-  85 004f 92000000 		.4byte	.LASF5
+  85 004f D0000000 		.4byte	.LASF5
   86 0053 02       		.uleb128 0x2
   87 0054 08       		.byte	0x8
   88 0055 05       		.byte	0x5
@@ -140,7 +140,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
   90 005a 02       		.uleb128 0x2
   91 005b 08       		.byte	0x8
   92 005c 07       		.byte	0x7
-  93 005d A4000000 		.4byte	.LASF7
+  93 005d E2000000 		.4byte	.LASF7
   94 0061 03       		.uleb128 0x3
   95 0062 04       		.byte	0x4
   96 0063 05       		.byte	0x5
@@ -150,41 +150,41 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  100 006a 07       		.byte	0x7
  101 006b 0E000000 		.4byte	.LASF8
  102 006f 04       		.uleb128 0x4
- 103 0070 8C000000 		.4byte	.LASF16
+ 103 0070 CA000000 		.4byte	.LASF16
  104 0074 02       		.byte	0x2
  105 0075 5B       		.byte	0x5b
  106 0076 30000000 		.4byte	0x30
  107 007a 02       		.uleb128 0x2
  108 007b 04       		.byte	0x4
  109 007c 04       		.byte	0x4
- 110 007d 61010000 		.4byte	.LASF9
+ 110 007d 64010000 		.4byte	.LASF9
  111 0081 02       		.uleb128 0x2
  112 0082 08       		.byte	0x8
  113 0083 04       		.byte	0x4
- 114 0084 25010000 		.4byte	.LASF10
+ 114 0084 28010000 		.4byte	.LASF10
  115 0088 02       		.uleb128 0x2
  116 0089 01       		.byte	0x1
  117 008a 08       		.byte	0x8
- 118 008b 17010000 		.4byte	.LASF11
+ 118 008b 1A010000 		.4byte	.LASF11
  119 008f 02       		.uleb128 0x2
  120 0090 04       		.byte	0x4
  121 0091 07       		.byte	0x7
- 122 0092 71010000 		.4byte	.LASF12
+ 122 0092 74010000 		.4byte	.LASF12
  123 0096 05       		.uleb128 0x5
  124 0097 01       		.byte	0x1
- 125 0098 F6000000 		.4byte	.LASF17
+ 125 0098 F9000000 		.4byte	.LASF17
  126 009c 01       		.byte	0x1
  127 009d 0E       		.byte	0xe
  128 009e 00000000 		.4byte	.LFB33
  129 00a2 0A000000 		.4byte	.LFE33
  130 00a6 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 4
 
 
  131 00aa 01       		.byte	0x1
  132 00ab CA000000 		.4byte	0xca
  133 00af 06       		.uleb128 0x6
- 134 00b0 7A010000 		.4byte	.LASF18
+ 134 00b0 7D010000 		.4byte	.LASF18
  135 00b4 01       		.byte	0x1
  136 00b5 10       		.byte	0x10
  137 00b6 6F000000 		.4byte	0x6f
@@ -200,7 +200,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  147 00c9 00       		.byte	0
  148 00ca 09       		.uleb128 0x9
  149 00cb 01       		.byte	0x1
- 150 00cc 4B010000 		.4byte	.LASF19
+ 150 00cc 4E010000 		.4byte	.LASF19
  151 00d0 03       		.byte	0x3
  152 00d1 71       		.byte	0x71
  153 00d2 01       		.byte	0x1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  185 0018 0B       		.uleb128 0xb
  186 0019 0B       		.uleb128 0xb
  187 001a 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 5
 
 
  188 001b 0B       		.uleb128 0xb
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  242 0052 00       		.byte	0
  243 0053 03       		.uleb128 0x3
  244 0054 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 6
 
 
  245 0055 3A       		.uleb128 0x3a
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  299 0000 00000000 		.4byte	.LFB33
  300 0004 02000000 		.4byte	.LCFI0
  301 0008 0200     		.2byte	0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 7
 
 
  302 000a 7D       		.byte	0x7d
@@ -411,98 +411,99 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 1
  337      7465645F 
  337      536F7572 
  337      63655C50 
- 338              	.LASF13:
- 339 0043 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 339      4320342E 
- 339      372E3320 
- 339      32303133 
- 339      30333132 
- 340 0076 616E6368 		.ascii	"anch revision 196615]\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 8
+ 338              	.LASF15:
+ 339 0043 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 339      73657273 
+ 339      5C436F6D 
+ 339      70757465 
+ 339      725C446F 
+ 340 0070 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 8
 
 
- 340      20726576 
- 340      6973696F 
- 340      6E203139 
- 340      36363135 
- 341              	.LASF16:
- 342 008c 75696E74 		.ascii	"uint8\000"
- 342      3800
- 343              	.LASF5:
- 344 0092 6C6F6E67 		.ascii	"long unsigned int\000"
- 344      20756E73 
- 344      69676E65 
- 344      6420696E 
- 344      7400
- 345              	.LASF7:
- 346 00a4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 346      206C6F6E 
- 346      6720756E 
- 346      7369676E 
- 346      65642069 
- 347              	.LASF15:
- 348 00bb 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 348      73657273 
- 348      5C537465 
- 348      76655C44 
- 348      6F63756D 
- 349 00e8 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 349      7269782E 
- 349      63796473 
- 349      6E00
+ 340      4D617472 
+ 340      69782E63 
+ 340      7964736E 
+ 340      00
+ 341              	.LASF13:
+ 342 0081 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 342      4320342E 
+ 342      372E3320 
+ 342      32303133 
+ 342      30333132 
+ 343 00b4 616E6368 		.ascii	"anch revision 196615]\000"
+ 343      20726576 
+ 343      6973696F 
+ 343      6E203139 
+ 343      36363135 
+ 344              	.LASF16:
+ 345 00ca 75696E74 		.ascii	"uint8\000"
+ 345      3800
+ 346              	.LASF5:
+ 347 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 347      20756E73 
+ 347      69676E65 
+ 347      6420696E 
+ 347      7400
+ 348              	.LASF7:
+ 349 00e2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 349      206C6F6E 
+ 349      6720756E 
+ 349      7369676E 
+ 349      65642069 
  350              	.LASF17:
- 351 00f6 4C45445F 		.ascii	"LED_Matrix_1_Start\000"
+ 351 00f9 4C45445F 		.ascii	"LED_Matrix_1_Start\000"
  351      4D617472 
  351      69785F31 
  351      5F537461 
  351      727400
  352              	.LASF1:
- 353 0109 756E7369 		.ascii	"unsigned char\000"
+ 353 010c 756E7369 		.ascii	"unsigned char\000"
  353      676E6564 
  353      20636861 
  353      7200
  354              	.LASF11:
- 355 0117 63686172 		.ascii	"char\000"
+ 355 011a 63686172 		.ascii	"char\000"
  355      00
  356              	.LASF4:
- 357 011c 6C6F6E67 		.ascii	"long int\000"
+ 357 011f 6C6F6E67 		.ascii	"long int\000"
  357      20696E74 
  357      00
  358              	.LASF10:
- 359 0125 646F7562 		.ascii	"double\000"
+ 359 0128 646F7562 		.ascii	"double\000"
  359      6C6500
  360              	.LASF3:
- 361 012c 73686F72 		.ascii	"short unsigned int\000"
+ 361 012f 73686F72 		.ascii	"short unsigned int\000"
  361      7420756E 
  361      7369676E 
  361      65642069 
  361      6E7400
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc1e2pN4.s 			page 9
+
+
  362              	.LASF0:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccZuZi16.s 			page 9
-
-
- 363 013f 7369676E 		.ascii	"signed char\000"
+ 363 0142 7369676E 		.ascii	"signed char\000"
  363      65642063 
  363      68617200 
  364              	.LASF19:
- 365 014b 43794578 		.ascii	"CyExitCriticalSection\000"
+ 365 014e 43794578 		.ascii	"CyExitCriticalSection\000"
  365      69744372 
  365      69746963 
  365      616C5365 
  365      6374696F 
  366              	.LASF9:
- 367 0161 666C6F61 		.ascii	"float\000"
+ 367 0164 666C6F61 		.ascii	"float\000"
  367      7400
  368              	.LASF2:
- 369 0167 73686F72 		.ascii	"short int\000"
+ 369 016a 73686F72 		.ascii	"short int\000"
  369      7420696E 
  369      7400
  370              	.LASF12:
- 371 0171 73697A65 		.ascii	"sizetype\000"
+ 371 0174 73697A65 		.ascii	"sizetype\000"
  371      74797065 
  371      00
  372              	.LASF18:
- 373 017a 696E7465 		.ascii	"interruptState\000"
+ 373 017d 696E7465 		.ascii	"interruptState\000"
  373      72727570 
  373      74537461 
  373      746500

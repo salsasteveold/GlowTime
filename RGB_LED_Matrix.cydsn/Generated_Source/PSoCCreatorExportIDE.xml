@@ -18,7 +18,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="RGB_LED_Matrix" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" Version="4.0" Type="Normal">
+  <Project Name="RGB_LED_Matrix" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" Version="4.0" Type="Normal">
     <CMSIS_SVD_File>RGB_LED_Matrix.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -27,8 +27,8 @@
       <LinkerFile Toolchain="IAR EWARM">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="BUILD" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\LED_Matrix.c</File>
           <File BuildType="BUILD" Toolchain="">.\I2CDriver.c</File>
@@ -37,14 +37,14 @@
           <File BuildType="BUILD" Toolchain="">.\I2CDriver.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="BUILD" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\API">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="BUILD" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\API">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="">.\LED_Matrix_v1_00\API\LED_Matrix_v1_00.h</File>
           <File BuildType="BUILD" Toolchain="">.\LED_Matrix_v1_00\API\LED_Matrix_v1_00.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cymetadata.c</File>
@@ -176,52 +176,52 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ADC_P2_7_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_7_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PB.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PB.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\libelf.dll</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\ARM_GCC">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\ARM_GCC">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC">.\Generated_Source\PSoC4\ARM_GCC\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\ARM_Keil_MDK">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\ARM_Keil_MDK">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="ARM Keil MDK">.\Generated_Source\PSoC4\ARM_Keil_MDK\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\IAR">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4\IAR">
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn">
           <File BuildType="BUILD" Toolchain="IAR">.\Generated_Source\PSoC4\IAR\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_951">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\Steve\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
+        <Files Root="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn" />
       </Folder>
     </Folders>
   </Project>

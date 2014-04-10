@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Apr 03 11:23:42 2014
+--	Thu Apr 10 03:39:36 2014
 --
 
 USE cypress.cypress.all;
@@ -751,11 +751,11 @@ SIGNAL tmpFB_0__ADC_P2_7_net_0 : bit;
 SIGNAL tmpIO_0__ADC_P2_7_net_0 : bit;
 TERMINAL tmpSIOVREF__ADC_P2_7_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__ADC_P2_7_net_0 : bit;
-SIGNAL tmpOE__P0_7_net_0 : bit;
+SIGNAL tmpOE__P0_2_net_0 : bit;
 SIGNAL Net_8135 : bit;
-SIGNAL tmpIO_0__P0_7_net_0 : bit;
-TERMINAL tmpSIOVREF__P0_7_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__P0_7_net_0 : bit;
+SIGNAL tmpIO_0__P0_2_net_0 : bit;
+TERMINAL tmpSIOVREF__P0_2_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__P0_2_net_0 : bit;
 SIGNAL Net_7537D : bit;
 SIGNAL Net_7548D : bit;
 SIGNAL latD : bit;
@@ -3049,7 +3049,7 @@ ADC_P2_7:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__P1_2_A_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__ADC_P2_7_net_0);
-P0_7:cy_psoc3_pins_v1_10
+P0_2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4c15b41e-e284-4978-99e7-5aaee19bd0ce",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -3104,8 +3104,8 @@ P0_7:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>Net_8135,
 		analog=>(open),
-		io=>(tmpIO_0__P0_7_net_0),
-		siovref=>(tmpSIOVREF__P0_7_net_0),
+		io=>(tmpIO_0__P0_2_net_0),
+		siovref=>(tmpSIOVREF__P0_2_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__P1_2_A_net_0,
@@ -3113,7 +3113,7 @@ P0_7:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__P1_2_A_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__P0_7_net_0);
+		interrupt=>tmpINTERRUPT_0__P0_2_net_0);
 PB:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
 	PORT MAP(int_signal=>Net_8135);

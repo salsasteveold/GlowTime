@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: P0_7.h  
+* File Name: P0_2.h  
 * Version 1.90
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_P0_7_ALIASES_H) /* Pins P0_7_ALIASES_H */
-#define CY_PINS_P0_7_ALIASES_H
+#if !defined(CY_PINS_P0_2_ALIASES_H) /* Pins P0_2_ALIASES_H */
+#define CY_PINS_P0_2_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -24,9 +24,9 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define P0_7_0		P0_7__0__PC
+#define P0_2_0		P0_2__0__PC
 
-#endif /* End Pins P0_7_ALIASES_H */
+#endif /* End Pins P0_2_ALIASES_H */
 
 
 /* [] END OF FILE */

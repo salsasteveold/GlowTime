@@ -290,19 +290,19 @@ void drawTriangle(int8 x0, int8 y0,int8 x1, int8 y1,
 
 void drawOne(int8 x0, int8 y0,RGB c, color *matrix) 
 { 
-	drawLine(x0+1, y0+2, x0+3, y0, c,matrix); 
+	drawLine(x0+3, y0+11, x0+5, y0+9, c,matrix); 
 	drawLine(x0+3, y0, x0+3, y0+11, c,matrix); 
-	drawLine(x0+2, y0+11, x0+4, y0+11, c,matrix);
+	drawLine(x0+2, y0, x0+4, y0, c,matrix);
 }
 
 void drawTwo(int8 x0, int8 y0,RGB c, color *matrix) 
 { 
-	drawPixel(x0,y0+1,c,matrix);
-	drawFastHLine(x0+1,y0,3,c,matrix);
-	drawFastVLine(x0+4,y0+1,4,c,matrix);
-	drawFastHLine(x0+1,y0+5,3,c,matrix);
-	drawFastVLine(x0,y0+6,6,c,matrix);
-	drawFastHLine(x0,y0+11,5,c,matrix);
+	drawPixel(x0+5,y0+10,c,matrix);
+	drawFastHLine(x0+2,y0+11,2,c,matrix);
+	drawFastVLine(x0+1,y0+7,3,c,matrix);
+	drawFastHLine(x0+2,y0+6,2,c,matrix);
+	drawFastVLine(x0+5,y0+1,4,c,matrix);
+	drawFastHLine(x0+1,y0,4,c,matrix);
 }
 
 void drawColon(int8 x0, int8 y0,RGB c, color *matrix)
@@ -313,81 +313,81 @@ void drawColon(int8 x0, int8 y0,RGB c, color *matrix)
 
 void drawThree(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0,y0,5,c,matrix);
-	drawFastVLine(x0+4,y0,4,c,matrix);
-	drawPixel(x0+3,y0+4,c,matrix);
-	drawFastHLine(x0+2,y0+5,2,c,matrix);
-	drawFastVLine(x0+4,y0+6,5,c,matrix);
-	drawFastHLine(x0+1,y0+11,3,c,matrix);
-	drawPixel(x0,y0+10,c,matrix);
+	drawFastHLine(x0+1,y0+11,4,c,matrix);
+	drawFastVLine(x0+1,y0+7,3,c,matrix);
+	//drawPixel(x0+2,y0+7,c,matrix);
+	drawFastHLine(x0+2,y0+6,1,c,matrix);
+	drawFastVLine(x0+1,y0+1,4,c,matrix);
+	drawFastHLine(x0+2,y0,2,c,matrix);
+	drawPixel(x0+5,y0+1,c,matrix);
 }
 
 void drawFour(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastVLine(x0,y0,7,c,matrix);
-	drawFastHLine(x0,y0+6,5,c,matrix);
-	drawFastVLine(x0+3,y0,12,c,matrix);
+	drawFastVLine(x0+5,y0+6,5,c,matrix);
+	drawFastHLine(x0+1,y0+5,4,c,matrix);
+	drawFastVLine(x0+2,y0,11,c,matrix);
 }
 
 void drawFive(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0,y0,5,c,matrix);
-	drawFastVLine(x0,y0+1,6,c,matrix);
-	drawFastHLine(x0+1,y0+5,3,c,matrix);
-	drawFastVLine(x0+4,y0+6,5,c,matrix);
-	drawFastHLine(x0+1,y0+11,3,c,matrix);
-	drawPixel(x0,y0+10,c,matrix);
-	
-	
+	drawFastHLine(x0+1,y0+11,4,c,matrix);
+	drawFastVLine(x0+5,y0+6,4,c,matrix);
+    drawFastHLine(x0+2,y0+5,2,c,matrix);
+	drawFastVLine(x0+1,y0+1,3,c,matrix);
+    drawFastHLine(x0+2,y0,2,c,matrix);
+	drawPixel(x0+5,y0+1,c,matrix);
 }
 void drawSix(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0+1,y0,4,c,matrix);
-	drawFastVLine(x0,y0+1,10,c,matrix);
-	drawFastHLine(x0+1,y0+5,3,c,matrix);
-	drawFastVLine(x0+4,y0+6,5,c,matrix);
 	drawFastHLine(x0+1,y0+11,3,c,matrix);
-	
+	drawFastVLine(x0+1,y0+1,4,c,matrix);
+	drawFastHLine(x0+2,y0+6,2,c,matrix);
+	drawFastVLine(x0+5,y0+1,9,c,matrix);
+	drawFastHLine(x0+2,y0,2,c,matrix);
 }
+
 void drawSeven(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawPixel(x0,y0+1,c,matrix);
-	drawFastHLine(x0,y0,5,c,matrix);
-	drawFastVLine(x0+4,y0,12,c,matrix);
+	drawPixel(x0+5,y0+10,c,matrix);
+	drawFastHLine(x0+1,y0+11,4,c,matrix);
+	drawFastVLine(x0+1,y0,11,c,matrix);
 }
+
 void drawEight(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0+1,y0,3,c,matrix);
-	drawFastHLine(x0+1,y0+5,3,c,matrix);
-	drawFastHLine(x0+1,y0+11,3,c,matrix);
-	drawFastVLine(x0,y0+1,4,c,matrix);
-	drawFastVLine(x0+4,y0+1,4,c,matrix);
-	drawFastVLine(x0,y0+6,5,c,matrix);
-	drawFastVLine(x0+4,y0+6,5,c,matrix);
+	drawFastHLine(x0+2,y0,2,c,matrix);
+	drawFastHLine(x0+2,y0+6,2,c,matrix);
+	drawFastHLine(x0+2,y0+11,2,c,matrix);
+	drawFastVLine(x0+1,y0+1,4,c,matrix);
+	drawFastVLine(x0+5,y0+1,4,c,matrix);
+	drawFastVLine(x0+1,y0+7,3,c,matrix);
+	drawFastVLine(x0+5,y0+7,3,c,matrix);
 }
+
 void drawNine(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0+1,y0,3,c,matrix);
-	drawFastHLine(x0+1,y0+5,3,c,matrix);
-	drawFastVLine(x0,y0+1,4,c,matrix);
-	drawFastVLine(x0+4,y0+1,11,c,matrix);
+	drawFastHLine(x0+2,y0+11,2,c,matrix);
+	drawFastHLine(x0+2,y0+6,2,c,matrix);
+	drawFastVLine(x0+5,y0+7,3,c,matrix);
+	drawFastVLine(x0+1,y0,10,c,matrix);
 }
+
 void drawZero(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0+1,y0,3,c,matrix);
-	drawFastHLine(x0+1,y0+11,3,c,matrix);
-	drawFastVLine(x0,y0+1,10,c,matrix);
-	drawFastVLine(x0+4,y0+1,10,c,matrix);
+	drawFastHLine(x0+1,y0,2,c,matrix);
+	drawFastHLine(x0+1,y0+11,2,c,matrix);
+	drawFastVLine(x0,y0+1,9,c,matrix);
+	drawFastVLine(x0+4,y0+1,9,c,matrix);
 }
 
 void drawA(int8 x0, int8 y0,RGB c, color *matrix)
 {
 	drawLine(x0+2, y0, x0+4, y0+2, c, matrix);
 	drawLine(x0, y0+2, x0+1, y0+1, c, matrix);
-	drawFastHLine(x0+1,y0+7,3,c,matrix);
-	drawFastVLine(x0+4,y0+2,10,c,matrix);
-	drawFastVLine(x0,y0+2,10,c,matrix);
-	
+	drawFastHLine(x0+1,y0+7,2,c,matrix);
+	drawFastVLine(x0+4,y0+2,9,c,matrix);
+	drawFastVLine(x0,y0+2,9,c,matrix);
 }
 
 void drawB(int8 x0, int8 y0,RGB c, color *matrix)
@@ -454,12 +454,12 @@ void printTime(uint8 hours,uint8 min,RGB c, color *matrix)
 	uint8 tHour = hours >>4;
 	if(tHour > 0)
 	{
-		drawHex(hours>>4,3, 2,c, matrix);
+		drawHex(hours>>4,23, 2,c, matrix);
 	}
-	drawHex(hours,9, 2,c, matrix);
-	drawColon(15, 2,c, matrix);
-	drawHex(min>>4,17, 2,c, matrix);
-	drawHex(min,23, 2,c, matrix);
+	drawHex(hours,17, 2,c, matrix);
+	drawColon(16, 2,c, matrix);
+	drawHex(min>>4,9, 2,c, matrix);
+	drawHex(min,3, 2,c, matrix);
 }
 
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)

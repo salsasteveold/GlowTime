@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
   30:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** *  None
   31:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** *
   32:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** * Return:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
   52:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****     }
   53:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
   54:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****     if(RTC_CHECK_INTR_I2C_EC_MASKED(RTC_INTR_I2C_EC_WAKE_UP))
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 3
 
 
   59              		.loc 1 54 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
   83:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             * MultiMaster lost arbitrage while transaction: complete transaction.
   84:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             * Misplaced Start or Stop condition treats as lost arbitration when master drives SDA.
   85:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             * The interrupt is cleared in the I2C_FSM_EXIT_IDLE.
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 4
 
 
   86:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  104 0050 5142     		neg	r1, r2
  105 0052 4A41     		adc	r2, r2, r1
  106 0054 0132     		add	r2, r2, #1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 5
 
 
  107 0056 3A43     		orr	r2, r7
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  171:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         RTC_state = RTC_I2C_FSM_EXIT_IDLE;
  172:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     }
  173:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                 }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 6
 
 
  174:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                 #else
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  222:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****     if(RTC_CHECK_I2C_FSM_MASTER)
  116              		.loc 1 222 0
  117 0060 2378     		ldrb	r3, [r4]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 7
 
 
  118 0062 9806     		lsl	r0, r3, #26
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  246:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         RTC_ClearMasterInterruptSource(RTC_INTR_MASTER_I2C_NACK);
  247:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  248:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         RTC_mstrStatus |= (uint16) (RTC_I2C_MSTAT_ERR_XFER |
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 8
 
 
  249:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                                                                  RTC_I2C_MSTAT_ERR_ADDR_NAK);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  303:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             }
  304:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  305:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             for(;(0u != diffCount);diffCount--)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 9
 
 
  306:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             {
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  360:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             RTC_CLEAR_TX_FIFO;
  361:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  362:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             endTransfer = RTC_I2C_CMPLT_ANY_TRANSFER;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 10
 
 
  363:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  417:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  418:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     /* Disable data processing interrupts: they should be cleared before */
  419:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     RTC_SetRxInterruptMode(RTC_NO_INTR_SOURCES);
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 11
 
 
  420:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     RTC_SetTxInterruptMode(RTC_NO_INTR_SOURCES);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  474:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  475:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                 /* Update slave of tranfered bytes */
  476:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                 RTC_slRdBufIndex = RTC_slRdBufIndexTmp;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 12
 
 
  477:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  531:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  532:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
  533:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             /* INTR_SLAVE_I2C_ADDR_MATCH:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 13
 
 
  534:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             * The address match event starts the slave operation: after leaving the TX or RX
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  588:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             RTC_ENABLE_SLAVE_AUTO_DATA_ACK;
  589:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             RTC_SetRxInterruptMode(RTC_INTR_RX_FULL);
  590:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 14
 
 
  591:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  645:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             * The buffer size is less than 8: it requires processing in byte-by-byte mode.
  646:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             */
  647:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             else if(RTC_CHECK_INTR_RX_MASKED(RTC_INTR_RX_NOT_EMPTY))
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 15
 
 
  648:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  702:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         }
  703:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                     }
  704:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                 }
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 16
 
 
  705:.\Generated_Source\PSoC4/RTC_I2C_INT.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  156              	.LVL11:
  157              	.L8:
  450:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****     else if(RTC_CHECK_I2C_FSM_SLAVE)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 17
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 17
 
 
  158              		.loc 1 450 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  200 00cc 1940     		and	r1, r3
  201 00ce 0160     		str	r1, [r0]
  741:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****         RTC_DISABLE_MASTER_AUTO_DATA_ACK;
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 18
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 18
 
 
  202              		.loc 1 741 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  242              		.loc 1 246 0
  243 00fe 974A     		ldr	r2, .L84+24
  244              	.LVL16:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 19
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 19
 
 
  248:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         RTC_mstrStatus |= (uint16) (RTC_I2C_MSTAT_ERR_XFER |
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  288 0132 9B4B     		ldr	r3, .L84+92
  289 0134 0D68     		ldr	r5, [r1]
  290 0136 1E68     		ldr	r6, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 20
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 20
 
 
  291 0138 B81B     		sub	r0, r7, r6
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  336 0170 8946     		mov	r9, r1
  308:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                                                                                         RTC_RX_FIFO
  337              		.loc 1 308 0 discriminator 2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 21
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 21
 
 
  338 0172 0768     		ldr	r7, [r0]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  382              		.loc 1 305 0 discriminator 2
  383 01aa 0239     		sub	r1, r1, #2
  307:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                                 RTC_mstrRdBufPtr[RTC_mstrRdBufIndex] = (uint8)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 22
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 22
 
 
  384              		.loc 1 307 0 discriminator 2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  427              	.LVL37:
   87:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****             if(RTC_CHECK_INTR_MASTER_MASKED(RTC_INTR_MASTER_I2C_ARB_LOST))
  428              		.loc 1 87 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 23
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 23
 
 
  429 01de 3F68     		ldr	r7, [r7]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  475 021c 6348     		ldr	r0, .L84+104
  476 021e 0360     		str	r3, [r0]
  477              	.LVL42:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 24
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 24
 
 
  478              	.L20:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  519              		.loc 1 426 0
  520 0248 2678     		ldrb	r6, [r4]
  425:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                         RTC_mstrStatus |= (uint16) (RTC_I2C_MSTAT_XFER_HALT |
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 25
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 25
 
 
  521              		.loc 1 425 0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  567              		.loc 1 371 0 discriminator 1
  568 0286 4D4E     		ldr	r6, .L84+120
  569 0288 0F23     		mov	r3, #15
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 26
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 26
 
 
  570 028a 3768     		ldr	r7, [r6]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  388:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             if(RTC_mstrWrBufIndexTmp == RTC_mstrWrBufSize)
  617              		.loc 1 388 0
  618 02cc 1D68     		ldr	r5, [r3]
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 27
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 27
 
 
  619 02ce 0068     		ldr	r0, [r0]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  351:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             RTC_mstrWrBufIndexTmp -= (RTC_GET_TX_FIFO_ENTRIES +
  662              		.loc 1 351 0
  663 0302 0F22     		mov	r2, #15
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 28
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 28
 
 
  664 0304 3240     		and	r2, r6
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  292:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                                 diffCount = RTC_FIFO_SIZE;
  710              		.loc 1 292 0
  711 033c 0826     		mov	r6, #8
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 29
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 29
 
 
  712              	.LVL64:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  402:.\Generated_Source\PSoC4/RTC_I2C_INT.c ****                             RTC_mstrWrBufIndex = RTC_mstrWrBufIndexTmp;
  765              		.loc 1 402 0
  766 03e4 064A     		ldr	r2, .L86
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 30
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 30
 
 
  767              	.LVL66:
@@ -1790,21 +1790,21 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  811 0006 00000000 		.4byte	.Ldebug_abbrev0
  812 000a 04       		.byte	0x4
  813 000b 01       		.uleb128 0x1
- 814 000c AF010000 		.4byte	.LASF32
+ 814 000c ED010000 		.4byte	.LASF32
  815 0010 01       		.byte	0x1
  816 0011 2A000000 		.4byte	.LASF33
- 817 0015 0A020000 		.4byte	.LASF34
+ 817 0015 09010000 		.4byte	.LASF34
  818 0019 00000000 		.4byte	.Ldebug_ranges0+0
  819 001d 00000000 		.4byte	0
  820 0021 00000000 		.4byte	0
  821 0025 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 31
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 31
 
 
  822 0029 02       		.uleb128 0x2
  823 002a 01       		.byte	0x1
  824 002b 06       		.byte	0x6
- 825 002c 5D020000 		.4byte	.LASF0
+ 825 002c 60020000 		.4byte	.LASF0
  826 0030 02       		.uleb128 0x2
  827 0031 01       		.byte	0x1
  828 0032 08       		.byte	0x8
@@ -1812,7 +1812,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  830 0037 02       		.uleb128 0x2
  831 0038 02       		.byte	0x2
  832 0039 05       		.byte	0x5
- 833 003a A5010000 		.4byte	.LASF2
+ 833 003a E3010000 		.4byte	.LASF2
  834 003e 02       		.uleb128 0x2
  835 003f 02       		.byte	0x2
  836 0040 07       		.byte	0x7
@@ -1820,7 +1820,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  838 0045 02       		.uleb128 0x2
  839 0046 04       		.byte	0x4
  840 0047 05       		.byte	0x5
- 841 0048 45020000 		.4byte	.LASF4
+ 841 0048 48020000 		.4byte	.LASF4
  842 004c 02       		.uleb128 0x2
  843 004d 04       		.byte	0x4
  844 004e 07       		.byte	0x7
@@ -1828,7 +1828,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  846 0053 02       		.uleb128 0x2
  847 0054 08       		.byte	0x8
  848 0055 05       		.byte	0x5
- 849 0056 7F010000 		.4byte	.LASF6
+ 849 0056 BD010000 		.4byte	.LASF6
  850 005a 02       		.uleb128 0x2
  851 005b 08       		.byte	0x8
  852 005c 07       		.byte	0x7
@@ -1840,7 +1840,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  858 0068 02       		.uleb128 0x2
  859 0069 04       		.byte	0x4
  860 006a 07       		.byte	0x7
- 861 006b 20010000 		.4byte	.LASF8
+ 861 006b 5E010000 		.4byte	.LASF8
  862 006f 04       		.uleb128 0x4
  863 0070 CB000000 		.4byte	.LASF9
  864 0074 02       		.byte	0x2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  876 008c 4C000000 		.4byte	0x4c
  877 0090 02       		.uleb128 0x2
  878 0091 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 32
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 32
 
 
  879 0092 04       		.byte	0x4
@@ -1870,7 +1870,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  885 009e 02       		.uleb128 0x2
  886 009f 01       		.byte	0x1
  887 00a0 08       		.byte	0x8
- 888 00a1 8D010000 		.4byte	.LASF14
+ 888 00a1 CB010000 		.4byte	.LASF14
  889 00a5 05       		.uleb128 0x5
  890 00a6 6F000000 		.4byte	0x6f
  891 00aa 05       		.uleb128 0x5
@@ -1883,7 +1883,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  898 00ba 05       		.uleb128 0x5
  899 00bb 85000000 		.4byte	0x85
  900 00bf 06       		.uleb128 0x6
- 901 00c0 69010000 		.4byte	.LASF16
+ 901 00c0 A7010000 		.4byte	.LASF16
  902 00c4 02       		.byte	0x2
  903 00c5 0201     		.2byte	0x102
  904 00c7 CB000000 		.4byte	0xcb
@@ -1895,10 +1895,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  910 00d3 02       		.uleb128 0x2
  911 00d4 04       		.byte	0x4
  912 00d5 07       		.byte	0x7
- 913 00d6 76010000 		.4byte	.LASF17
+ 913 00d6 B4010000 		.4byte	.LASF17
  914 00da 09       		.uleb128 0x9
  915 00db 01       		.byte	0x1
- 916 00dc 73020000 		.4byte	.LASF35
+ 916 00dc 76020000 		.4byte	.LASF35
  917 00e0 01       		.byte	0x1
  918 00e1 24       		.byte	0x24
  919 00e2 01       		.byte	0x1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  933 0108 01       		.byte	0x1
  934 0109 27       		.byte	0x27
  935 010a 85000000 		.4byte	0x85
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 33
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 33
 
 
  936 010e 7D000000 		.4byte	.LLST2
@@ -1936,28 +1936,28 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  948 012f D7010000 		.4byte	0x1d7
  949 0133 00       		.byte	0
  950 0134 0C       		.uleb128 0xc
- 951 0135 2D010000 		.4byte	.LASF21
+ 951 0135 6B010000 		.4byte	.LASF21
  952 0139 03       		.byte	0x3
  953 013a 37       		.byte	0x37
  954 013b BF000000 		.4byte	0xbf
  955 013f 01       		.byte	0x1
  956 0140 01       		.byte	0x1
  957 0141 0C       		.uleb128 0xc
- 958 0142 69020000 		.4byte	.LASF22
+ 958 0142 6C020000 		.4byte	.LASF22
  959 0146 04       		.byte	0x4
  960 0147 1D       		.byte	0x1d
  961 0148 A5000000 		.4byte	0xa5
  962 014c 01       		.byte	0x1
  963 014d 01       		.byte	0x1
  964 014e 0C       		.uleb128 0xc
- 965 014f 4E020000 		.4byte	.LASF23
+ 965 014f 51020000 		.4byte	.LASF23
  966 0153 04       		.byte	0x4
  967 0154 30       		.byte	0x30
  968 0155 AA000000 		.4byte	0xaa
  969 0159 01       		.byte	0x1
  970 015a 01       		.byte	0x1
  971 015b 0C       		.uleb128 0xc
- 972 015c 59010000 		.4byte	.LASF24
+ 972 015c 97010000 		.4byte	.LASF24
  973 0160 04       		.byte	0x4
  974 0161 31       		.byte	0x31
  975 0162 A5000000 		.4byte	0xa5
@@ -1978,13 +1978,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  990 0180 04       		.byte	0x4
  991 0181 35       		.byte	0x35
  992 0182 BA000000 		.4byte	0xba
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 34
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 34
 
 
  993 0186 01       		.byte	0x1
  994 0187 01       		.byte	0x1
  995 0188 0C       		.uleb128 0xc
- 996 0189 7F020000 		.4byte	.LASF27
+ 996 0189 82020000 		.4byte	.LASF27
  997 018d 04       		.byte	0x4
  998 018e 36       		.byte	0x36
  999 018f BA000000 		.4byte	0xba
@@ -1998,14 +1998,14 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1007 01a0 01       		.byte	0x1
  1008 01a1 01       		.byte	0x1
  1009 01a2 0C       		.uleb128 0xc
- 1010 01a3 F8010000 		.4byte	.LASF29
+ 1010 01a3 36020000 		.4byte	.LASF29
  1011 01a7 04       		.byte	0x4
  1012 01a8 3A       		.byte	0x3a
  1013 01a9 BA000000 		.4byte	0xba
  1014 01ad 01       		.byte	0x1
  1015 01ae 01       		.byte	0x1
  1016 01af 0C       		.uleb128 0xc
- 1017 01b0 92010000 		.4byte	.LASF30
+ 1017 01b0 D0010000 		.4byte	.LASF30
  1018 01b4 04       		.byte	0x4
  1019 01b5 3B       		.byte	0x3b
  1020 01b6 BA000000 		.4byte	0xba
@@ -2020,7 +2020,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1029 01c8 01       		.byte	0x1
  1030 01c9 0D       		.uleb128 0xd
  1031 01ca 01       		.byte	0x1
- 1032 01cb 09010000 		.4byte	.LASF36
+ 1032 01cb 47010000 		.4byte	.LASF36
  1033 01cf 05       		.byte	0x5
  1034 01d0 70       		.byte	0x70
  1035 01d1 01       		.byte	0x1
@@ -2028,7 +2028,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1037 01d6 01       		.byte	0x1
  1038 01d7 0E       		.uleb128 0xe
  1039 01d8 01       		.byte	0x1
- 1040 01d9 43010000 		.4byte	.LASF37
+ 1040 01d9 81010000 		.4byte	.LASF37
  1041 01dd 05       		.byte	0x5
  1042 01de 71       		.byte	0x71
  1043 01df 01       		.byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1047 01e6 00       		.byte	0
  1048 01e7 00       		.byte	0
  1049              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 35
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 35
 
 
  1050              	.Ldebug_abbrev0:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1104 0035 13       		.uleb128 0x13
  1105 0036 00       		.byte	0
  1106 0037 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 36
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 36
 
 
  1107 0038 05       		.uleb128 0x5
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1161 006e 06       		.uleb128 0x6
  1162 006f 9642     		.uleb128 0x2116
  1163 0071 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 37
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 37
 
 
  1164 0072 01       		.uleb128 0x1
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1218 00aa 3B       		.uleb128 0x3b
  1219 00ab 0B       		.uleb128 0xb
  1220 00ac 27       		.uleb128 0x27
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 38
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 38
 
 
  1221 00ad 0C       		.uleb128 0xc
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1275 0030 54010000 		.4byte	.LVL23
  1276 0034 0100     		.2byte	0x1
  1277 0036 56       		.byte	0x56
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 39
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 39
 
 
  1278 0037 54010000 		.4byte	.LVL23
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1332 00be 0200     		.2byte	0x2
  1333 00c0 31       		.byte	0x31
  1334 00c1 9F       		.byte	0x9f
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 40
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 40
 
 
  1335 00c2 10010000 		.4byte	.LVL19
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1389 0150 0100     		.2byte	0x1
  1390 0152 50       		.byte	0x50
  1391 0153 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 41
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 41
 
 
  1392 0157 00000000 		.4byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1425      57724275 
  1425      66496E64 
  1425      6578546D 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 42
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 42
 
 
  1426              	.LASF12:
@@ -2515,117 +2515,118 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 1
  1448              	.LASF11:
  1449 0102 75696E74 		.ascii	"uint32\000"
  1449      333200
- 1450              	.LASF36:
- 1451 0109 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1451      74657243 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 43
+ 1450              	.LASF34:
+ 1451 0109 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 1451      73657273 
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 43
 
 
- 1451      72697469 
- 1451      63616C53 
- 1451      65637469 
- 1452              	.LASF8:
- 1453 0120 756E7369 		.ascii	"unsigned int\000"
- 1453      676E6564 
- 1453      20696E74 
- 1453      00
- 1454              	.LASF21:
- 1455 012d 5254435F 		.ascii	"RTC_customIntrHandler\000"
- 1455      63757374 
- 1455      6F6D496E 
- 1455      74724861 
- 1455      6E646C65 
- 1456              	.LASF37:
- 1457 0143 43794578 		.ascii	"CyExitCriticalSection\000"
- 1457      69744372 
- 1457      69746963 
- 1457      616C5365 
- 1457      6374696F 
- 1458              	.LASF24:
- 1459 0159 5254435F 		.ascii	"RTC_mstrControl\000"
- 1459      6D737472 
- 1459      436F6E74 
- 1459      726F6C00 
- 1460              	.LASF16:
- 1461 0169 63796973 		.ascii	"cyisraddress\000"
- 1461      72616464 
- 1461      72657373 
- 1461      00
- 1462              	.LASF17:
- 1463 0176 73697A65 		.ascii	"sizetype\000"
- 1463      74797065 
- 1463      00
- 1464              	.LASF6:
- 1465 017f 6C6F6E67 		.ascii	"long long int\000"
- 1465      206C6F6E 
- 1465      6720696E 
- 1465      7400
- 1466              	.LASF14:
- 1467 018d 63686172 		.ascii	"char\000"
- 1467      00
- 1468              	.LASF30:
- 1469 0192 5254435F 		.ascii	"RTC_mstrWrBufIndex\000"
- 1469      6D737472 
- 1469      57724275 
- 1469      66496E64 
- 1469      657800
- 1470              	.LASF2:
- 1471 01a5 73686F72 		.ascii	"short int\000"
- 1471      7420696E 
- 1471      7400
- 1472              	.LASF32:
- 1473 01af 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 1473      4320342E 
- 1473      372E3320 
- 1473      32303133 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc4rKzij.s 			page 44
+ 1451      5C436F6D 
+ 1451      70757465 
+ 1451      725C446F 
+ 1452 0136 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 1452      4D617472 
+ 1452      69782E63 
+ 1452      7964736E 
+ 1452      00
+ 1453              	.LASF36:
+ 1454 0147 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1454      74657243 
+ 1454      72697469 
+ 1454      63616C53 
+ 1454      65637469 
+ 1455              	.LASF8:
+ 1456 015e 756E7369 		.ascii	"unsigned int\000"
+ 1456      676E6564 
+ 1456      20696E74 
+ 1456      00
+ 1457              	.LASF21:
+ 1458 016b 5254435F 		.ascii	"RTC_customIntrHandler\000"
+ 1458      63757374 
+ 1458      6F6D496E 
+ 1458      74724861 
+ 1458      6E646C65 
+ 1459              	.LASF37:
+ 1460 0181 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1460      69744372 
+ 1460      69746963 
+ 1460      616C5365 
+ 1460      6374696F 
+ 1461              	.LASF24:
+ 1462 0197 5254435F 		.ascii	"RTC_mstrControl\000"
+ 1462      6D737472 
+ 1462      436F6E74 
+ 1462      726F6C00 
+ 1463              	.LASF16:
+ 1464 01a7 63796973 		.ascii	"cyisraddress\000"
+ 1464      72616464 
+ 1464      72657373 
+ 1464      00
+ 1465              	.LASF17:
+ 1466 01b4 73697A65 		.ascii	"sizetype\000"
+ 1466      74797065 
+ 1466      00
+ 1467              	.LASF6:
+ 1468 01bd 6C6F6E67 		.ascii	"long long int\000"
+ 1468      206C6F6E 
+ 1468      6720696E 
+ 1468      7400
+ 1469              	.LASF14:
+ 1470 01cb 63686172 		.ascii	"char\000"
+ 1470      00
+ 1471              	.LASF30:
+ 1472 01d0 5254435F 		.ascii	"RTC_mstrWrBufIndex\000"
+ 1472      6D737472 
+ 1472      57724275 
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccY4ILqC.s 			page 44
 
 
- 1473      30333132 
- 1474 01e2 616E6368 		.ascii	"anch revision 196615]\000"
- 1474      20726576 
- 1474      6973696F 
- 1474      6E203139 
- 1474      36363135 
- 1475              	.LASF29:
- 1476 01f8 5254435F 		.ascii	"RTC_mstrWrBufSize\000"
- 1476      6D737472 
- 1476      57724275 
- 1476      6653697A 
- 1476      6500
- 1477              	.LASF34:
- 1478 020a 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 1478      73657273 
- 1478      5C537465 
- 1478      76655C44 
- 1478      6F63756D 
- 1479 0237 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 1479      7269782E 
- 1479      63796473 
- 1479      6E00
+ 1472      66496E64 
+ 1472      657800
+ 1473              	.LASF2:
+ 1474 01e3 73686F72 		.ascii	"short int\000"
+ 1474      7420696E 
+ 1474      7400
+ 1475              	.LASF32:
+ 1476 01ed 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1476      4320342E 
+ 1476      372E3320 
+ 1476      32303133 
+ 1476      30333132 
+ 1477 0220 616E6368 		.ascii	"anch revision 196615]\000"
+ 1477      20726576 
+ 1477      6973696F 
+ 1477      6E203139 
+ 1477      36363135 
+ 1478              	.LASF29:
+ 1479 0236 5254435F 		.ascii	"RTC_mstrWrBufSize\000"
+ 1479      6D737472 
+ 1479      57724275 
+ 1479      6653697A 
+ 1479      6500
  1480              	.LASF4:
- 1481 0245 6C6F6E67 		.ascii	"long int\000"
+ 1481 0248 6C6F6E67 		.ascii	"long int\000"
  1481      20696E74 
  1481      00
  1482              	.LASF23:
- 1483 024e 5254435F 		.ascii	"RTC_mstrStatus\000"
+ 1483 0251 5254435F 		.ascii	"RTC_mstrStatus\000"
  1483      6D737472 
  1483      53746174 
  1483      757300
  1484              	.LASF0:
- 1485 025d 7369676E 		.ascii	"signed char\000"
+ 1485 0260 7369676E 		.ascii	"signed char\000"
  1485      65642063 
  1485      68617200 
  1486              	.LASF22:
- 1487 0269 5254435F 		.ascii	"RTC_state\000"
+ 1487 026c 5254435F 		.ascii	"RTC_state\000"
  1487      73746174 
  1487      6500
  1488              	.LASF35:
- 1489 0273 5254435F 		.ascii	"RTC_I2C_ISR\000"
+ 1489 0276 5254435F 		.ascii	"RTC_I2C_ISR\000"
  1489      4932435F 
  1489      49535200 
  1490              	.LASF27:
- 1491 027f 5254435F 		.ascii	"RTC_mstrRdBufIndex\000"
+ 1491 0282 5254435F 		.ascii	"RTC_mstrRdBufIndex\000"
  1491      6D737472 
  1491      52644275 
  1491      66496E64 

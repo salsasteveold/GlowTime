@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
   30:.\Generated_Source\PSoC4/P0_7_R1.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/P0_7_R1.c **** *
   32:.\Generated_Source\PSoC4/P0_7_R1.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/P0_7_R1.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
   62              	.LFB1:
   48:.\Generated_Source\PSoC4/P0_7_R1.c **** 
   49:.\Generated_Source\PSoC4/P0_7_R1.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 3
 
 
   50:.\Generated_Source\PSoC4/P0_7_R1.c **** /*******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
   98              		.thumb_func
   99              		.type	P0_7_R1_Read, %function
  100              	P0_7_R1_Read:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 4
 
 
  101              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
   93:.\Generated_Source\PSoC4/P0_7_R1.c **** 
   94:.\Generated_Source\PSoC4/P0_7_R1.c **** /*******************************************************************************
   95:.\Generated_Source\PSoC4/P0_7_R1.c **** * Function Name: P0_7_R1_ReadDataReg
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 5
 
 
   96:.\Generated_Source\PSoC4/P0_7_R1.c **** ********************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  122:.\Generated_Source\PSoC4/P0_7_R1.c ****     *  Clears any active interrupts attached to port and returns the value of the 
  123:.\Generated_Source\PSoC4/P0_7_R1.c ****     *  interrupt status register.
  124:.\Generated_Source\PSoC4/P0_7_R1.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 6
 
 
  125:.\Generated_Source\PSoC4/P0_7_R1.c ****     * Parameters:  
@@ -355,13 +355,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  190 0006 00000000 		.4byte	.Ldebug_abbrev0
  191 000a 04       		.byte	0x4
  192 000b 01       		.uleb128 0x1
- 193 000c 07010000 		.4byte	.LASF24
+ 193 000c 45010000 		.4byte	.LASF24
  194 0010 01       		.byte	0x1
- 195 0011 E4000000 		.4byte	.LASF25
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 7
+ 195 0011 22010000 		.4byte	.LASF25
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 7
 
 
- 196 0015 79010000 		.4byte	.LASF26
+ 196 0015 79000000 		.4byte	.LASF26
  197 0019 00000000 		.4byte	.Ldebug_ranges0+0
  198 001d 00000000 		.4byte	0
  199 0021 00000000 		.4byte	0
@@ -369,7 +369,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  201 0029 02       		.uleb128 0x2
  202 002a 01       		.byte	0x1
  203 002b 06       		.byte	0x6
- 204 002c BD010000 		.4byte	.LASF0
+ 204 002c C0010000 		.4byte	.LASF0
  205 0030 02       		.uleb128 0x2
  206 0031 01       		.byte	0x1
  207 0032 08       		.byte	0x8
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  209 0037 02       		.uleb128 0x2
  210 0038 02       		.byte	0x2
  211 0039 05       		.byte	0x5
- 212 003a DA000000 		.4byte	.LASF2
+ 212 003a 18010000 		.4byte	.LASF2
  213 003e 02       		.uleb128 0x2
  214 003f 02       		.byte	0x2
  215 0040 07       		.byte	0x7
@@ -385,7 +385,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  217 0045 02       		.uleb128 0x2
  218 0046 04       		.byte	0x4
  219 0047 05       		.byte	0x5
- 220 0048 B4010000 		.4byte	.LASF4
+ 220 0048 B7010000 		.4byte	.LASF4
  221 004c 02       		.uleb128 0x2
  222 004d 04       		.byte	0x4
  223 004e 07       		.byte	0x7
@@ -393,11 +393,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  225 0053 02       		.uleb128 0x2
  226 0054 08       		.byte	0x8
  227 0055 05       		.byte	0x5
- 228 0056 B0000000 		.4byte	.LASF6
+ 228 0056 EE000000 		.4byte	.LASF6
  229 005a 02       		.uleb128 0x2
  230 005b 08       		.byte	0x8
  231 005c 07       		.byte	0x7
- 232 005d 86000000 		.4byte	.LASF7
+ 232 005d C4000000 		.4byte	.LASF7
  233 0061 03       		.uleb128 0x3
  234 0062 04       		.byte	0x4
  235 0063 05       		.byte	0x5
@@ -405,7 +405,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  237 0068 02       		.uleb128 0x2
  238 0069 04       		.byte	0x4
  239 006a 07       		.byte	0x7
- 240 006b 79000000 		.4byte	.LASF8
+ 240 006b B7000000 		.4byte	.LASF8
  241 006f 04       		.uleb128 0x4
  242 0070 1F000000 		.4byte	.LASF9
  243 0074 02       		.byte	0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  250 0081 4C000000 		.4byte	0x4c
  251 0085 02       		.uleb128 0x2
  252 0086 04       		.byte	0x4
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 8
 
 
  253 0087 04       		.byte	0x4
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  259 0093 02       		.uleb128 0x2
  260 0094 01       		.byte	0x1
  261 0095 08       		.byte	0x8
- 262 0096 D5000000 		.4byte	.LASF13
+ 262 0096 13010000 		.4byte	.LASF13
  263 009a 04       		.uleb128 0x4
  264 009b 00000000 		.4byte	.LASF14
  265 009f 02       		.byte	0x2
@@ -440,7 +440,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  269 00a6 7A000000 		.4byte	0x7a
  270 00aa 06       		.uleb128 0x6
  271 00ab 01       		.byte	0x1
- 272 00ac A2000000 		.4byte	.LASF15
+ 272 00ac E0000000 		.4byte	.LASF15
  273 00b0 01       		.byte	0x1
  274 00b1 2A       		.byte	0x2a
  275 00b2 01       		.byte	0x1
@@ -466,7 +466,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  295 00e1 00       		.byte	0
  296 00e2 09       		.uleb128 0x9
  297 00e3 01       		.byte	0x1
- 298 00e4 50010000 		.4byte	.LASF16
+ 298 00e4 8E010000 		.4byte	.LASF16
  299 00e8 01       		.byte	0x1
  300 00e9 40       		.byte	0x40
  301 00ea 01       		.byte	0x1
@@ -476,9 +476,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  305 00f7 01       		.byte	0x1
  306 00f8 0C010000 		.4byte	0x10c
  307 00fc 07       		.uleb128 0x7
- 308 00fd 9D000000 		.4byte	.LASF18
+ 308 00fd DB000000 		.4byte	.LASF18
  309 0101 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 9
 
 
  310 0102 40       		.byte	0x40
@@ -500,7 +500,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  326 0124 01       		.byte	0x1
  327 0125 0A       		.uleb128 0xa
  328 0126 01       		.byte	0x1
- 329 0127 65010000 		.4byte	.LASF20
+ 329 0127 A3010000 		.4byte	.LASF20
  330 012b 01       		.byte	0x1
  331 012c 6C       		.byte	0x6c
  332 012d 01       		.byte	0x1
@@ -513,7 +513,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  339 013d 01       		.byte	0x1
  340 013e 0B       		.uleb128 0xb
  341 013f 01       		.byte	0x1
- 342 0140 BE000000 		.4byte	.LASF21
+ 342 0140 FC000000 		.4byte	.LASF21
  343 0144 01       		.byte	0x1
  344 0145 84       		.byte	0x84
  345 0146 01       		.byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  364 0001 11       		.uleb128 0x11
  365 0002 01       		.byte	0x1
  366 0003 25       		.uleb128 0x25
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 10
 
 
  367 0004 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  421 003a 00       		.byte	0
  422 003b 49       		.uleb128 0x49
  423 003c 13       		.uleb128 0x13
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 11
 
 
  424 003d 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  478 0074 06       		.uleb128 0x6
  479 0075 00       		.byte	0
  480 0076 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 12
 
 
  481 0077 09       		.uleb128 0x9
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  535 00af 0C       		.uleb128 0xc
  536 00b0 03       		.uleb128 0x3
  537 00b1 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 13
 
 
  538 00b2 3A       		.uleb128 0x3a
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  592 0046 00       		.sleb128 0
  593 0047 04000000 		.4byte	.LCFI0
  594 004b 1C000000 		.4byte	.LFE1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 14
 
 
  595 004f 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  649              	.Ldebug_ranges0:
  650 0000 00000000 		.4byte	.LFB0
  651 0004 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 15
 
 
  652 0008 00000000 		.4byte	.LFB1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  683              	.LASF19:
  684 005e 50305F37 		.ascii	"P0_7_R1_Read\000"
  684      5F52315F 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 16
 
 
  684      52656164 
@@ -909,91 +909,92 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 1
  687              	.LASF10:
  688 0072 75696E74 		.ascii	"uint32\000"
  688      333200
- 689              	.LASF8:
- 690 0079 756E7369 		.ascii	"unsigned int\000"
- 690      676E6564 
- 690      20696E74 
- 690      00
- 691              	.LASF7:
- 692 0086 6C6F6E67 		.ascii	"long long unsigned int\000"
- 692      206C6F6E 
- 692      6720756E 
- 692      7369676E 
- 692      65642069 
- 693              	.LASF18:
- 694 009d 6D6F6465 		.ascii	"mode\000"
- 694      00
- 695              	.LASF15:
- 696 00a2 50305F37 		.ascii	"P0_7_R1_Write\000"
- 696      5F52315F 
- 696      57726974 
- 696      6500
- 697              	.LASF6:
- 698 00b0 6C6F6E67 		.ascii	"long long int\000"
- 698      206C6F6E 
- 698      6720696E 
- 698      7400
- 699              	.LASF21:
- 700 00be 50305F37 		.ascii	"P0_7_R1_ClearInterrupt\000"
- 700      5F52315F 
- 700      436C6561 
- 700      72496E74 
- 700      65727275 
- 701              	.LASF13:
- 702 00d5 63686172 		.ascii	"char\000"
- 702      00
- 703              	.LASF2:
- 704 00da 73686F72 		.ascii	"short int\000"
- 704      7420696E 
- 704      7400
- 705              	.LASF25:
- 706 00e4 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P0_7_R1.c\000"
- 706      6E657261 
- 706      7465645F 
- 706      536F7572 
- 706      63655C50 
- 707              	.LASF24:
- 708 0107 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 708      4320342E 
- 708      372E3320 
- 708      32303133 
- 708      30333132 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccpusDyk.s 			page 17
+ 689              	.LASF26:
+ 690 0079 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 690      73657273 
+ 690      5C436F6D 
+ 690      70757465 
+ 690      725C446F 
+ 691 00a6 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 691      4D617472 
+ 691      69782E63 
+ 691      7964736E 
+ 691      00
+ 692              	.LASF8:
+ 693 00b7 756E7369 		.ascii	"unsigned int\000"
+ 693      676E6564 
+ 693      20696E74 
+ 693      00
+ 694              	.LASF7:
+ 695 00c4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 695      206C6F6E 
+ 695      6720756E 
+ 695      7369676E 
+ 695      65642069 
+ 696              	.LASF18:
+ 697 00db 6D6F6465 		.ascii	"mode\000"
+ 697      00
+ 698              	.LASF15:
+ 699 00e0 50305F37 		.ascii	"P0_7_R1_Write\000"
+ 699      5F52315F 
+ 699      57726974 
+ 699      6500
+ 700              	.LASF6:
+ 701 00ee 6C6F6E67 		.ascii	"long long int\000"
+ 701      206C6F6E 
+ 701      6720696E 
+ 701      7400
+ 702              	.LASF21:
+ 703 00fc 50305F37 		.ascii	"P0_7_R1_ClearInterrupt\000"
+ 703      5F52315F 
+ 703      436C6561 
+ 703      72496E74 
+ 703      65727275 
+ 704              	.LASF13:
+ 705 0113 63686172 		.ascii	"char\000"
+ 705      00
+ 706              	.LASF2:
+ 707 0118 73686F72 		.ascii	"short int\000"
+ 707      7420696E 
+ 707      7400
+ 708              	.LASF25:
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\cc4UZiQi.s 			page 17
 
 
- 709 013a 616E6368 		.ascii	"anch revision 196615]\000"
- 709      20726576 
- 709      6973696F 
- 709      6E203139 
- 709      36363135 
- 710              	.LASF16:
- 711 0150 50305F37 		.ascii	"P0_7_R1_SetDriveMode\000"
- 711      5F52315F 
- 711      53657444 
- 711      72697665 
- 711      4D6F6465 
- 712              	.LASF20:
- 713 0165 50305F37 		.ascii	"P0_7_R1_ReadDataReg\000"
- 713      5F52315F 
- 713      52656164 
- 713      44617461 
- 713      52656700 
- 714              	.LASF26:
- 715 0179 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 715      73657273 
- 715      5C537465 
- 715      76655C44 
- 715      6F63756D 
- 716 01a6 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 716      7269782E 
- 716      63796473 
- 716      6E00
+ 709 0122 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\P0_7_R1.c\000"
+ 709      6E657261 
+ 709      7465645F 
+ 709      536F7572 
+ 709      63655C50 
+ 710              	.LASF24:
+ 711 0145 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 711      4320342E 
+ 711      372E3320 
+ 711      32303133 
+ 711      30333132 
+ 712 0178 616E6368 		.ascii	"anch revision 196615]\000"
+ 712      20726576 
+ 712      6973696F 
+ 712      6E203139 
+ 712      36363135 
+ 713              	.LASF16:
+ 714 018e 50305F37 		.ascii	"P0_7_R1_SetDriveMode\000"
+ 714      5F52315F 
+ 714      53657444 
+ 714      72697665 
+ 714      4D6F6465 
+ 715              	.LASF20:
+ 716 01a3 50305F37 		.ascii	"P0_7_R1_ReadDataReg\000"
+ 716      5F52315F 
+ 716      52656164 
+ 716      44617461 
+ 716      52656700 
  717              	.LASF4:
- 718 01b4 6C6F6E67 		.ascii	"long int\000"
+ 718 01b7 6C6F6E67 		.ascii	"long int\000"
  718      20696E74 
  718      00
  719              	.LASF0:
- 720 01bd 7369676E 		.ascii	"signed char\000"
+ 720 01c0 7369676E 		.ascii	"signed char\000"
  720      65642063 
  720      68617200 
  721              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

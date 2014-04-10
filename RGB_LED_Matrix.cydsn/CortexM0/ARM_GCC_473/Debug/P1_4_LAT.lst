@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
   30:.\Generated_Source\PSoC4/P1_4_LAT.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/P1_4_LAT.c **** *
   32:.\Generated_Source\PSoC4/P1_4_LAT.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/P1_4_LAT.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
   50:.\Generated_Source\PSoC4/P1_4_LAT.c **** /*******************************************************************************
   51:.\Generated_Source\PSoC4/P1_4_LAT.c **** * Function Name: P1_4_LAT_SetDriveMode
   52:.\Generated_Source\PSoC4/P1_4_LAT.c **** ********************************************************************************
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 3
 
 
   53:.\Generated_Source\PSoC4/P1_4_LAT.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  100              	.LFB2:
   68:.\Generated_Source\PSoC4/P1_4_LAT.c **** 
   69:.\Generated_Source\PSoC4/P1_4_LAT.c **** 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 4
 
 
   70:.\Generated_Source\PSoC4/P1_4_LAT.c **** /*******************************************************************************
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
   96:.\Generated_Source\PSoC4/P1_4_LAT.c **** ********************************************************************************
   97:.\Generated_Source\PSoC4/P1_4_LAT.c **** *
   98:.\Generated_Source\PSoC4/P1_4_LAT.c **** * Summary:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 5
 
 
   99:.\Generated_Source\PSoC4/P1_4_LAT.c **** *  Read the current value assigned to a Digital Port's data output register
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  125:.\Generated_Source\PSoC4/P1_4_LAT.c ****     * Parameters:  
  126:.\Generated_Source\PSoC4/P1_4_LAT.c ****     *  None 
  127:.\Generated_Source\PSoC4/P1_4_LAT.c ****     *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 6
 
 
  128:.\Generated_Source\PSoC4/P1_4_LAT.c ****     * Return: 
@@ -352,13 +352,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  189 0006 00000000 		.4byte	.Ldebug_abbrev0
  190 000a 04       		.byte	0x4
  191 000b 01       		.uleb128 0x1
- 192 000c 36010000 		.4byte	.LASF22
+ 192 000c 74010000 		.4byte	.LASF22
  193 0010 01       		.byte	0x1
  194 0011 68000000 		.4byte	.LASF23
- 195 0015 7F010000 		.4byte	.LASF24
+ 195 0015 9A000000 		.4byte	.LASF24
  196 0019 00000000 		.4byte	.Ldebug_ranges0+0
  197 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 7
 
 
  198 0021 00000000 		.4byte	0
@@ -366,7 +366,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  200 0029 02       		.uleb128 0x2
  201 002a 01       		.byte	0x1
  202 002b 06       		.byte	0x6
- 203 002c C3010000 		.4byte	.LASF0
+ 203 002c C6010000 		.4byte	.LASF0
  204 0030 02       		.uleb128 0x2
  205 0031 01       		.byte	0x1
  206 0032 08       		.byte	0x8
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  208 0037 02       		.uleb128 0x2
  209 0038 02       		.byte	0x2
  210 0039 05       		.byte	0x5
- 211 003a 26010000 		.4byte	.LASF2
+ 211 003a 64010000 		.4byte	.LASF2
  212 003e 02       		.uleb128 0x2
  213 003f 02       		.byte	0x2
  214 0040 07       		.byte	0x7
@@ -382,7 +382,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  216 0045 02       		.uleb128 0x2
  217 0046 04       		.byte	0x4
  218 0047 05       		.byte	0x5
- 219 0048 BA010000 		.4byte	.LASF4
+ 219 0048 BD010000 		.4byte	.LASF4
  220 004c 02       		.uleb128 0x2
  221 004d 04       		.byte	0x4
  222 004e 07       		.byte	0x7
@@ -390,11 +390,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  224 0053 02       		.uleb128 0x2
  225 0054 08       		.byte	0x8
  226 0055 05       		.byte	0x5
- 227 0056 06010000 		.4byte	.LASF6
+ 227 0056 44010000 		.4byte	.LASF6
  228 005a 02       		.uleb128 0x2
  229 005b 08       		.byte	0x8
  230 005c 07       		.byte	0x7
- 231 005d BC000000 		.4byte	.LASF7
+ 231 005d FA000000 		.4byte	.LASF7
  232 0061 03       		.uleb128 0x3
  233 0062 04       		.byte	0x4
  234 0063 05       		.byte	0x5
@@ -402,9 +402,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  236 0068 02       		.uleb128 0x2
  237 0069 04       		.byte	0x4
  238 006a 07       		.byte	0x7
- 239 006b 9A000000 		.4byte	.LASF8
+ 239 006b D8000000 		.4byte	.LASF8
  240 006f 04       		.uleb128 0x4
- 241 0070 30010000 		.4byte	.LASF9
+ 241 0070 6E010000 		.4byte	.LASF9
  242 0074 02       		.byte	0x2
  243 0075 5B       		.byte	0x5b
  244 0076 30000000 		.4byte	0x30
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  252 0087 04       		.byte	0x4
  253 0088 0C000000 		.4byte	.LASF11
  254 008c 02       		.uleb128 0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 8
 
 
  255 008d 08       		.byte	0x8
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  258 0093 02       		.uleb128 0x2
  259 0094 01       		.byte	0x1
  260 0095 08       		.byte	0x8
- 261 0096 21010000 		.4byte	.LASF13
+ 261 0096 5F010000 		.4byte	.LASF13
  262 009a 04       		.uleb128 0x4
  263 009b 00000000 		.4byte	.LASF14
  264 009f 02       		.byte	0x2
@@ -462,7 +462,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  293 00dd 00       		.byte	0
  294 00de 09       		.uleb128 0x9
  295 00df 01       		.byte	0x1
- 296 00e0 EB000000 		.4byte	.LASF16
+ 296 00e0 29010000 		.4byte	.LASF16
  297 00e4 01       		.byte	0x1
  298 00e5 40       		.byte	0x40
  299 00e6 01       		.byte	0x1
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  303 00f3 01       		.byte	0x1
  304 00f4 08010000 		.4byte	0x108
  305 00f8 07       		.uleb128 0x7
- 306 00f9 01010000 		.4byte	.LASF18
+ 306 00f9 3F010000 		.4byte	.LASF18
  307 00fd 01       		.byte	0x1
  308 00fe 40       		.byte	0x40
  309 00ff 6F000000 		.4byte	0x6f
  310 0103 41000000 		.4byte	.LLST2
  311 0107 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 9
 
 
  312 0108 0A       		.uleb128 0xa
@@ -496,7 +496,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  324 0120 01       		.byte	0x1
  325 0121 0A       		.uleb128 0xa
  326 0122 01       		.byte	0x1
- 327 0123 A7000000 		.4byte	.LASF20
+ 327 0123 E5000000 		.4byte	.LASF20
  328 0127 01       		.byte	0x1
  329 0128 6C       		.byte	0x6c
  330 0129 01       		.byte	0x1
@@ -509,7 +509,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  337 0139 01       		.byte	0x1
  338 013a 0B       		.uleb128 0xb
  339 013b 01       		.byte	0x1
- 340 013c D3000000 		.4byte	.LASF21
+ 340 013c 11010000 		.4byte	.LASF21
  341 0140 01       		.byte	0x1
  342 0141 84       		.byte	0x84
  343 0142 01       		.byte	0x1
@@ -521,7 +521,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  349 0151 00       		.sleb128 0
  350 0152 01       		.byte	0x1
  351 0153 0C       		.uleb128 0xc
- 352 0154 14010000 		.4byte	.LASF26
+ 352 0154 52010000 		.4byte	.LASF26
  353 0158 01       		.byte	0x1
  354 0159 86       		.byte	0x86
  355 015a 6F000000 		.4byte	0x6f
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  366 0005 13       		.uleb128 0x13
  367 0006 0B       		.uleb128 0xb
  368 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 10
 
 
  369 0008 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  423 003e 00       		.byte	0
  424 003f 06       		.uleb128 0x6
  425 0040 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 11
 
 
  426 0041 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  480 0078 3F       		.uleb128 0x3f
  481 0079 0C       		.uleb128 0xc
  482 007a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 12
 
 
  483 007b 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  537 00b3 0B       		.uleb128 0xb
  538 00b4 27       		.uleb128 0x27
  539 00b5 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 13
 
 
  540 00b6 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  594 0038 08       		.sleb128 8
  595 0039 00000000 		.4byte	0
  596 003d 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 14
 
 
  597              	.LLST2:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  651 0010 00000000 		.4byte	.LFB2
  652 0014 10000000 		.4byte	.LFE2
  653 0018 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 15
 
 
  654 001c 10000000 		.4byte	.LFE3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  681      7465645F 
  681      536F7572 
  681      63655C50 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 16
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 16
 
 
  682              	.LASF12:
@@ -907,88 +907,89 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 1
  684              	.LASF10:
  685 0093 75696E74 		.ascii	"uint32\000"
  685      333200
- 686              	.LASF8:
- 687 009a 756E7369 		.ascii	"unsigned int\000"
- 687      676E6564 
- 687      20696E74 
- 687      00
- 688              	.LASF20:
- 689 00a7 50315F34 		.ascii	"P1_4_LAT_ReadDataReg\000"
- 689      5F4C4154 
- 689      5F526561 
- 689      64446174 
- 689      61526567 
- 690              	.LASF7:
- 691 00bc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 691      206C6F6E 
- 691      6720756E 
- 691      7369676E 
- 691      65642069 
- 692              	.LASF21:
- 693 00d3 50315F34 		.ascii	"P1_4_LAT_ClearInterrupt\000"
- 693      5F4C4154 
- 693      5F436C65 
- 693      6172496E 
- 693      74657272 
- 694              	.LASF16:
- 695 00eb 50315F34 		.ascii	"P1_4_LAT_SetDriveMode\000"
- 695      5F4C4154 
- 695      5F536574 
- 695      44726976 
- 695      654D6F64 
- 696              	.LASF18:
- 697 0101 6D6F6465 		.ascii	"mode\000"
- 697      00
- 698              	.LASF6:
- 699 0106 6C6F6E67 		.ascii	"long long int\000"
- 699      206C6F6E 
- 699      6720696E 
- 699      7400
- 700              	.LASF26:
- 701 0114 6D61736B 		.ascii	"maskedStatus\000"
- 701      65645374 
- 701      61747573 
- 701      00
- 702              	.LASF13:
- 703 0121 63686172 		.ascii	"char\000"
- 703      00
- 704              	.LASF2:
- 705 0126 73686F72 		.ascii	"short int\000"
- 705      7420696E 
- 705      7400
- 706              	.LASF9:
- 707 0130 75696E74 		.ascii	"uint8\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\cc3IRIJX.s 			page 17
+ 686              	.LASF24:
+ 687 009a 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 687      73657273 
+ 687      5C436F6D 
+ 687      70757465 
+ 687      725C446F 
+ 688 00c7 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 688      4D617472 
+ 688      69782E63 
+ 688      7964736E 
+ 688      00
+ 689              	.LASF8:
+ 690 00d8 756E7369 		.ascii	"unsigned int\000"
+ 690      676E6564 
+ 690      20696E74 
+ 690      00
+ 691              	.LASF20:
+ 692 00e5 50315F34 		.ascii	"P1_4_LAT_ReadDataReg\000"
+ 692      5F4C4154 
+ 692      5F526561 
+ 692      64446174 
+ 692      61526567 
+ 693              	.LASF7:
+ 694 00fa 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 694      206C6F6E 
+ 694      6720756E 
+ 694      7369676E 
+ 694      65642069 
+ 695              	.LASF21:
+ 696 0111 50315F34 		.ascii	"P1_4_LAT_ClearInterrupt\000"
+ 696      5F4C4154 
+ 696      5F436C65 
+ 696      6172496E 
+ 696      74657272 
+ 697              	.LASF16:
+ 698 0129 50315F34 		.ascii	"P1_4_LAT_SetDriveMode\000"
+ 698      5F4C4154 
+ 698      5F536574 
+ 698      44726976 
+ 698      654D6F64 
+ 699              	.LASF18:
+ 700 013f 6D6F6465 		.ascii	"mode\000"
+ 700      00
+ 701              	.LASF6:
+ 702 0144 6C6F6E67 		.ascii	"long long int\000"
+ 702      206C6F6E 
+ 702      6720696E 
+ 702      7400
+ 703              	.LASF26:
+ 704 0152 6D61736B 		.ascii	"maskedStatus\000"
+ 704      65645374 
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccodmCft.s 			page 17
 
 
- 707      3800
- 708              	.LASF22:
- 709 0136 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 709      4320342E 
- 709      372E3320 
- 709      32303133 
- 709      30333132 
- 710 0169 616E6368 		.ascii	"anch revision 196615]\000"
- 710      20726576 
- 710      6973696F 
- 710      6E203139 
- 710      36363135 
- 711              	.LASF24:
- 712 017f 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 712      73657273 
- 712      5C537465 
- 712      76655C44 
- 712      6F63756D 
- 713 01ac 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 713      7269782E 
- 713      63796473 
- 713      6E00
+ 704      61747573 
+ 704      00
+ 705              	.LASF13:
+ 706 015f 63686172 		.ascii	"char\000"
+ 706      00
+ 707              	.LASF2:
+ 708 0164 73686F72 		.ascii	"short int\000"
+ 708      7420696E 
+ 708      7400
+ 709              	.LASF9:
+ 710 016e 75696E74 		.ascii	"uint8\000"
+ 710      3800
+ 711              	.LASF22:
+ 712 0174 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 712      4320342E 
+ 712      372E3320 
+ 712      32303133 
+ 712      30333132 
+ 713 01a7 616E6368 		.ascii	"anch revision 196615]\000"
+ 713      20726576 
+ 713      6973696F 
+ 713      6E203139 
+ 713      36363135 
  714              	.LASF4:
- 715 01ba 6C6F6E67 		.ascii	"long int\000"
+ 715 01bd 6C6F6E67 		.ascii	"long int\000"
  715      20696E74 
  715      00
  716              	.LASF0:
- 717 01c3 7369676E 		.ascii	"signed char\000"
+ 717 01c6 7369676E 		.ascii	"signed char\000"
  717      65642063 
  717      68617200 
  718              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

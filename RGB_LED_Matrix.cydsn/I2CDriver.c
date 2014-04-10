@@ -38,8 +38,8 @@ uint8 bcdToDec( uint8 val )
 
 void localTimeInit(PCF8583 *RTC)
 {
-	RTC->hour = 5;
-	RTC->minute = 30;
+	RTC->hour = 2;
+	RTC->minute = 56;
 	RTC->sec = 0;
 	RTC->day = 1;
 	RTC->weekday = 1;
@@ -76,11 +76,12 @@ uint8 getTime(PCF8583 *RTC)
 {
 	uint8 I2C_Status;
 	I2C_Status = RTC_I2CMasterSendStart(RTC_ADDR, I2C_WRITE);
-	I2C_Status = RTC_I2CMasterWriteByte(RTC_MIN_ADDR);
+	I2C_Status = RTC_I2CMasterWriteByte(RTC_SEC_ADDR);
     I2C_Status = RTC_I2CMasterSendRestart(RTC_ADDR, I2C_READ);
+    RTC->sec = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA));
     RTC->minute = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA));
     RTC->hour = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_NAK_DATA)& 0x3F);
-	
+	I2C_Status = RTC_I2CMasterSendStop();
 	return I2C_Status;
 	
 }

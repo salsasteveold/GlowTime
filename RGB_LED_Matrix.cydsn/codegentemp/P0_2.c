@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: P0_7.c  
+* File Name: P0_2.c  
 * Version 1.90
 *
 * Description:
@@ -15,18 +15,18 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "P0_7.h"
+#include "P0_2.h"
 
 #define SetP4PinDriveMode(shift, mode)  \
     do { \
-        P0_7_PC =   (P0_7_PC & \
-                                (uint32)(~(uint32)(P0_7_DRIVE_MODE_IND_MASK << (P0_7_DRIVE_MODE_BITS * (shift))))) | \
-                                (uint32)((uint32)(mode) << (P0_7_DRIVE_MODE_BITS * (shift))); \
+        P0_2_PC =   (P0_2_PC & \
+                                (uint32)(~(uint32)(P0_2_DRIVE_MODE_IND_MASK << (P0_2_DRIVE_MODE_BITS * (shift))))) | \
+                                (uint32)((uint32)(mode) << (P0_2_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 
 
 /*******************************************************************************
-* Function Name: P0_7_Write
+* Function Name: P0_2_Write
 ********************************************************************************
 *
 * Summary:
@@ -39,16 +39,16 @@
 *  None 
 *  
 *******************************************************************************/
-void P0_7_Write(uint8 value) 
+void P0_2_Write(uint8 value) 
 {
-    uint8 drVal = (uint8)(P0_7_DR & (uint8)(~P0_7_MASK));
-    drVal = (drVal | ((uint8)(value << P0_7_SHIFT) & P0_7_MASK));
-    P0_7_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(P0_2_DR & (uint8)(~P0_2_MASK));
+    drVal = (drVal | ((uint8)(value << P0_2_SHIFT) & P0_2_MASK));
+    P0_2_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: P0_7_SetDriveMode
+* Function Name: P0_2_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -61,14 +61,14 @@ void P0_7_Write(uint8 value)
 *  None
 *
 *******************************************************************************/
-void P0_7_SetDriveMode(uint8 mode) 
+void P0_2_SetDriveMode(uint8 mode) 
 {
-	SetP4PinDriveMode(P0_7__0__SHIFT, mode);
+	SetP4PinDriveMode(P0_2__0__SHIFT, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: P0_7_Read
+* Function Name: P0_2_Read
 ********************************************************************************
 *
 * Summary:
@@ -82,17 +82,17 @@ void P0_7_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro P0_7_ReadPS calls this function. 
+*  Macro P0_2_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 P0_7_Read(void) 
+uint8 P0_2_Read(void) 
 {
-    return (uint8)((P0_7_PS & P0_7_MASK) >> P0_7_SHIFT);
+    return (uint8)((P0_2_PS & P0_2_MASK) >> P0_2_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: P0_7_ReadDataReg
+* Function Name: P0_2_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -105,17 +105,17 @@ uint8 P0_7_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 P0_7_ReadDataReg(void) 
+uint8 P0_2_ReadDataReg(void) 
 {
-    return (uint8)((P0_7_DR & P0_7_MASK) >> P0_7_SHIFT);
+    return (uint8)((P0_2_DR & P0_2_MASK) >> P0_2_SHIFT);
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(P0_7_INTSTAT) 
+#if defined(P0_2_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: P0_7_ClearInterrupt
+    * Function Name: P0_2_ClearInterrupt
     ********************************************************************************
     *
     * Summary:
@@ -129,11 +129,11 @@ uint8 P0_7_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 P0_7_ClearInterrupt(void) 
+    uint8 P0_2_ClearInterrupt(void) 
     {
-		uint8 maskedStatus = (uint8)(P0_7_INTSTAT & P0_7_MASK);
-		P0_7_INTSTAT = maskedStatus;
-        return maskedStatus >> P0_7_SHIFT;
+		uint8 maskedStatus = (uint8)(P0_2_INTSTAT & P0_2_MASK);
+		P0_2_INTSTAT = maskedStatus;
+        return maskedStatus >> P0_2_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

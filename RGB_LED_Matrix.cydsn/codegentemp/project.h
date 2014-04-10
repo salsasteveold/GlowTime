@@ -70,8 +70,8 @@
 #include <ADC_P2_6_aliases.h>
 #include <ADC_P2_7.h>
 #include <ADC_P2_7_aliases.h>
-#include <P0_7.h>
-#include <P0_7_aliases.h>
+#include <P0_2.h>
+#include <P0_2_aliases.h>
 #include <PB.h>
 #include <ADC_intClock.h>
 #include <ADC_IRQ.h>

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
   30:.\Generated_Source\PSoC4/ADC_intClock.c **** * Parameters:
   31:.\Generated_Source\PSoC4/ADC_intClock.c **** *  None
   32:.\Generated_Source\PSoC4/ADC_intClock.c **** *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 2
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/ADC_intClock.c **** * Returns:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
   60:.\Generated_Source\PSoC4/ADC_intClock.c **** void ADC_intClock_Stop(void)
   61:.\Generated_Source\PSoC4/ADC_intClock.c **** {
   53              		.loc 1 61 0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 3
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 3
 
 
   54              		.cfi_startproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
   85:.\Generated_Source\PSoC4/ADC_intClock.c **** #if defined (ADC_intClock__FRAC_MASK)
   86:.\Generated_Source\PSoC4/ADC_intClock.c **** 	/* get all but divider bits */
   87:.\Generated_Source\PSoC4/ADC_intClock.c ****     uint32 maskVal = ADC_intClock_DIV_REG & 
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 4
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 4
 
 
   88:.\Generated_Source\PSoC4/ADC_intClock.c ****                     (uint32)(~(ADC_intClock__DIVIDER_MASK | ADC_intClock__FRAC_MASK)); 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  106:.\Generated_Source\PSoC4/ADC_intClock.c **** * Summary:
  107:.\Generated_Source\PSoC4/ADC_intClock.c **** *  Gets the clock divider register value.
  108:.\Generated_Source\PSoC4/ADC_intClock.c **** *
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 5
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 5
 
 
  109:.\Generated_Source\PSoC4/ADC_intClock.c **** * Parameters:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  136:.\Generated_Source\PSoC4/ADC_intClock.c **** *
  137:.\Generated_Source\PSoC4/ADC_intClock.c **** *******************************************************************************/
  138:.\Generated_Source\PSoC4/ADC_intClock.c **** uint8 ADC_intClock_GetFractionalDividerRegister(void)
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 6
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 6
 
 
  139:.\Generated_Source\PSoC4/ADC_intClock.c **** {
@@ -329,10 +329,10 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  159 0006 00000000 		.4byte	.Ldebug_abbrev0
  160 000a 04       		.byte	0x4
  161 000b 01       		.uleb128 0x1
- 162 000c 84010000 		.4byte	.LASF24
+ 162 000c C2010000 		.4byte	.LASF24
  163 0010 01       		.byte	0x1
  164 0011 06000000 		.4byte	.LASF25
- 165 0015 CD010000 		.4byte	.LASF26
+ 165 0015 13010000 		.4byte	.LASF26
  166 0019 00000000 		.4byte	.Ldebug_ranges0+0
  167 001d 00000000 		.4byte	0
  168 0021 00000000 		.4byte	0
@@ -340,7 +340,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  170 0029 02       		.uleb128 0x2
  171 002a 01       		.byte	0x1
  172 002b 06       		.byte	0x6
- 173 002c 11020000 		.4byte	.LASF0
+ 173 002c 14020000 		.4byte	.LASF0
  174 0030 02       		.uleb128 0x2
  175 0031 01       		.byte	0x1
  176 0032 08       		.byte	0x8
@@ -348,7 +348,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  178 0037 02       		.uleb128 0x2
  179 0038 02       		.byte	0x2
  180 0039 05       		.byte	0x5
- 181 003a 74010000 		.4byte	.LASF2
+ 181 003a B2010000 		.4byte	.LASF2
  182 003e 02       		.uleb128 0x2
  183 003f 02       		.byte	0x2
  184 0040 07       		.byte	0x7
@@ -356,9 +356,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  186 0045 02       		.uleb128 0x2
  187 0046 04       		.byte	0x4
  188 0047 05       		.byte	0x5
- 189 0048 08020000 		.4byte	.LASF4
+ 189 0048 0B020000 		.4byte	.LASF4
  190 004c 02       		.uleb128 0x2
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 7
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 7
 
 
  191 004d 04       		.byte	0x4
@@ -367,11 +367,11 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  194 0053 02       		.uleb128 0x2
  195 0054 08       		.byte	0x8
  196 0055 05       		.byte	0x5
- 197 0056 37010000 		.4byte	.LASF6
+ 197 0056 75010000 		.4byte	.LASF6
  198 005a 02       		.uleb128 0x2
  199 005b 08       		.byte	0x8
  200 005c 07       		.byte	0x7
- 201 005d 20010000 		.4byte	.LASF7
+ 201 005d 5E010000 		.4byte	.LASF7
  202 0061 03       		.uleb128 0x3
  203 0062 04       		.byte	0x4
  204 0063 05       		.byte	0x5
@@ -379,9 +379,9 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  206 0068 02       		.uleb128 0x2
  207 0069 04       		.byte	0x4
  208 006a 07       		.byte	0x7
- 209 006b 13010000 		.4byte	.LASF8
+ 209 006b 51010000 		.4byte	.LASF8
  210 006f 04       		.uleb128 0x4
- 211 0070 7E010000 		.4byte	.LASF9
+ 211 0070 BC010000 		.4byte	.LASF9
  212 0074 02       		.byte	0x2
  213 0075 5B       		.byte	0x5b
  214 0076 30000000 		.4byte	0x30
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  233 009e 02       		.uleb128 0x2
  234 009f 01       		.byte	0x1
  235 00a0 08       		.byte	0x8
- 236 00a1 45010000 		.4byte	.LASF14
+ 236 00a1 83010000 		.4byte	.LASF14
  237 00a5 04       		.uleb128 0x4
  238 00a6 00000000 		.4byte	.LASF15
  239 00aa 02       		.byte	0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  245 00b6 01       		.byte	0x1
  246 00b7 58000000 		.4byte	.LASF16
  247 00bb 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 8
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 8
 
 
  248 00bc 25       		.byte	0x25
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  302 012b 5F       		.byte	0x5f
  303 012c 85000000 		.4byte	0x85
  304 0130 01       		.byte	0x1
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 9
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 9
 
 
  305 0131 50       		.byte	0x50
@@ -498,7 +498,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  319 014b 01       		.byte	0x1
  320 014c 0B       		.uleb128 0xb
  321 014d 01       		.byte	0x1
- 322 014e 4A010000 		.4byte	.LASF23
+ 322 014e 88010000 		.4byte	.LASF23
  323 0152 01       		.byte	0x1
  324 0153 8A       		.byte	0x8a
  325 0154 01       		.byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  359 0017 00       		.byte	0
  360 0018 0B       		.uleb128 0xb
  361 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 10
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 10
 
 
  362 001a 3E       		.uleb128 0x3e
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  416 0050 40       		.uleb128 0x40
  417 0051 0A       		.uleb128 0xa
  418 0052 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 11
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 11
 
 
  419 0054 0C       		.uleb128 0xc
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  473 008b 02       		.uleb128 0x2
  474 008c 06       		.uleb128 0x6
  475 008d 00       		.byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 12
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 12
 
 
  476 008e 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  530 0017 50       		.byte	0x50
  531 0018 9F       		.byte	0x9f
  532 0019 00000000 		.4byte	0
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 13
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 13
 
 
  533 001d 00000000 		.4byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  587 0014 14000000 		.4byte	.LFE2
  588 0018 00000000 		.4byte	.LFB3
  589 001c 0C000000 		.4byte	.LFE3
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 14
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 14
 
 
  590 0020 00000000 		.4byte	.LFB4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  614      7200
  615              	.LASF5:
  616 00b9 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 15
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 15
 
 
  616      20756E73 
@@ -872,68 +872,69 @@ ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 1
  629              	.LASF11:
  630 010c 75696E74 		.ascii	"uint32\000"
  630      333200
- 631              	.LASF8:
- 632 0113 756E7369 		.ascii	"unsigned int\000"
- 632      676E6564 
- 632      20696E74 
- 632      00
- 633              	.LASF7:
- 634 0120 6C6F6E67 		.ascii	"long long unsigned int\000"
- 634      206C6F6E 
- 634      6720756E 
- 634      7369676E 
- 634      65642069 
- 635              	.LASF6:
- 636 0137 6C6F6E67 		.ascii	"long long int\000"
- 636      206C6F6E 
- 636      6720696E 
- 636      7400
- 637              	.LASF14:
- 638 0145 63686172 		.ascii	"char\000"
- 638      00
- 639              	.LASF23:
- 640 014a 4144435F 		.ascii	"ADC_intClock_GetFractionalDividerRegister\000"
- 640      696E7443 
- 640      6C6F636B 
- 640      5F476574 
- 640      46726163 
- 641              	.LASF2:
-ARM GAS  C:\Users\Steve\AppData\Local\Temp\ccGoXMVQ.s 			page 16
+ 631              	.LASF26:
+ 632 0113 433A5C55 		.ascii	"C:\\Users\\Computer\\Documents\\Git\\GlowTime\\RGB_"
+ 632      73657273 
+ 632      5C436F6D 
+ 632      70757465 
+ 632      725C446F 
+ 633 0140 4C45445F 		.ascii	"LED_Matrix.cydsn\000"
+ 633      4D617472 
+ 633      69782E63 
+ 633      7964736E 
+ 633      00
+ 634              	.LASF8:
+ 635 0151 756E7369 		.ascii	"unsigned int\000"
+ 635      676E6564 
+ 635      20696E74 
+ 635      00
+ 636              	.LASF7:
+ 637 015e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 637      206C6F6E 
+ 637      6720756E 
+ 637      7369676E 
+ 637      65642069 
+ 638              	.LASF6:
+ 639 0175 6C6F6E67 		.ascii	"long long int\000"
+ 639      206C6F6E 
+ 639      6720696E 
+ARM GAS  C:\Users\Computer\AppData\Local\Temp\ccRRp7yi.s 			page 16
 
 
- 642 0174 73686F72 		.ascii	"short int\000"
- 642      7420696E 
- 642      7400
- 643              	.LASF9:
- 644 017e 75696E74 		.ascii	"uint8\000"
- 644      3800
- 645              	.LASF24:
- 646 0184 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 646      4320342E 
- 646      372E3320 
- 646      32303133 
- 646      30333132 
- 647 01b7 616E6368 		.ascii	"anch revision 196615]\000"
- 647      20726576 
- 647      6973696F 
- 647      6E203139 
- 647      36363135 
- 648              	.LASF26:
- 649 01cd 433A5C55 		.ascii	"C:\\Users\\Steve\\Documents\\Git\\GlowTime\\RGB_LED"
- 649      73657273 
- 649      5C537465 
- 649      76655C44 
- 649      6F63756D 
- 650 01fa 5F4D6174 		.ascii	"_Matrix.cydsn\000"
- 650      7269782E 
- 650      63796473 
- 650      6E00
+ 639      7400
+ 640              	.LASF14:
+ 641 0183 63686172 		.ascii	"char\000"
+ 641      00
+ 642              	.LASF23:
+ 643 0188 4144435F 		.ascii	"ADC_intClock_GetFractionalDividerRegister\000"
+ 643      696E7443 
+ 643      6C6F636B 
+ 643      5F476574 
+ 643      46726163 
+ 644              	.LASF2:
+ 645 01b2 73686F72 		.ascii	"short int\000"
+ 645      7420696E 
+ 645      7400
+ 646              	.LASF9:
+ 647 01bc 75696E74 		.ascii	"uint8\000"
+ 647      3800
+ 648              	.LASF24:
+ 649 01c2 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 649      4320342E 
+ 649      372E3320 
+ 649      32303133 
+ 649      30333132 
+ 650 01f5 616E6368 		.ascii	"anch revision 196615]\000"
+ 650      20726576 
+ 650      6973696F 
+ 650      6E203139 
+ 650      36363135 
  651              	.LASF4:
- 652 0208 6C6F6E67 		.ascii	"long int\000"
+ 652 020b 6C6F6E67 		.ascii	"long int\000"
  652      20696E74 
  652      00
  653              	.LASF0:
- 654 0211 7369676E 		.ascii	"signed char\000"
+ 654 0214 7369676E 		.ascii	"signed char\000"
  654      65642063 
  654      68617200 
  655              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
