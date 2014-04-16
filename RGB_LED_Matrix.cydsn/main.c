@@ -4,6 +4,7 @@
 
 uint8 j = 0, pwm_count = 0;
 uint8 bit_shift;
+uint16 adcMax[8]={0,0,0,0,0,0,0,0};
 color matrix[16*4];
 
 int clock = 1;
@@ -82,6 +83,7 @@ CY_ISR(FIFO_EMPTY)
 uint8 dataReady = 0;
 uint16 result[8] = {0,0,0,0,0,0,0,0};
 uint8 oldResult[8] = {0,0,0,0,0,0,0,0};
+uint8 scaledResult[8] = {0,0,0,0,0,0,0,0};
 int w = 0;
 int refresh=0;
 CY_ISR(eoc_isr)
@@ -113,11 +115,13 @@ int main()
 	//RGB white;
     RTC_Start();
 	PCF8583 rtc;
+    PCF8583 oldRtc;
     uint8 I2C_Status;
     I2C_Status = i2cWrite(0x00,0x04);
 	
     
 	localTimeInit(&rtc);
+	randomTimeInit(&oldRtc);
     setTime(&rtc);
     
 	//white.r = 0;
@@ -172,12 +176,14 @@ int main()
 	
 	CyGlobalIntEnable;
 	int dataChange = 0;
+    int changeFlag = 0;
    
 	for(;;)
     { 	
 		CyDelay(1);
 		if(clock == 0)
         {
+            changeFlag = 1; // clock flag to clear screen 
     		if(dataReady == 1)
     		{
     			dataChange = ifDataChange(&oldResult[0],&result[0]);
@@ -186,20 +192,27 @@ int main()
     			{
     				for(i=0;i<8;i++)
     				{
-    					oldResult[i] = ((uint8)(result[i]>>7)) & 0x0F;
+    					oldResult[i] = ((uint8)(result[i]>>6)) & 0x1F;
     				}
+                    scaleResult(&scaledResult[0],&oldResult[0]);
     				for(i=0;i<8;i++)
     				{
-    					drawblock(i,oldResult[i],lotsOfColors[i],matrix);
+    					drawblock(i,scaledResult[i],lotsOfColors[i],matrix);
     				}
     			}
     		}
+            changeFlag = 1; /// clock flag to clear screen 
         }
         else
         {
             I2C_Status = getTime(&rtc);
-            printTime(decToBcd(rtc.hour),decToBcd(rtc.minute),lotsOfColors[2], matrix);
-            clearScreen(matrix);
+            if(oldRtc.minute != rtc.minute || changeFlag == 1)
+            {
+                oldRtc.minute = rtc.minute;
+                clearScreen(matrix);
+                changeFlag = 0;
+            }
+            printTime(oldRtc.hour,oldRtc.minute,lotsOfColors[2], matrix);
         }
 	}
 }

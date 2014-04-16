@@ -35,6 +35,7 @@ uint8 i2cWrite(uint8 Reg_Addr,uint8 Reg_Data);
 void i2cBurstRead(uint8 Reg_Addr, uint8 *readData,uint8 dataSize);
 uint8 setTime(PCF8583 *RTC);
 uint8 getTime(PCF8583 *RTC);
+void randomTimeInit(PCF8583 *RTC);
 
 
 #endif

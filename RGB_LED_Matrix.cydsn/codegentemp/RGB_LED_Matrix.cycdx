@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="eoc" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_0" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="RTC" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true">
     <block name="sda" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="scl" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -318,8 +315,12 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="" />
     </register>
   </block>
+  <block name="eoc" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="LED_Matrix_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="Clock_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="isr_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_0" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true">
     <block name="cy_analog_noconnect_18" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="cy_analog_noconnect_17" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -722,15 +723,15 @@
       <field name="WOUND_RESOLUTION" from="1" to="0" access="R" resetVal="" desc="Maximum SAR resolution allowed" />
     </register>
   </block>
-  <block name="LED_Matrix_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="PB" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="P0_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="ADC_P2_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Debouncer_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="ADC_P2_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="ADC_P2_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="P1_1_B" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="KEES_PinHelper_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="P3_0_B2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -741,12 +742,13 @@
     <register name="CR_Addr_CONTROL_REG" address="0x400F0072" bitWidth="8" desc="" />
   </block>
   <block name="P0_6_OE" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P0_0_B1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P1_0_G2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P1_3_done" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P3_5_R2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="PSoC_4_Pioneer_Kit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="P1_4_LAT" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="P3_7_G1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P3_5_R2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P0_0_B1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="isr_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P1_3_done" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="P0_7_R1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="PSoC_4_Pioneer_Kit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P1_0_G2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="P3_7_G1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
 </blockRegMap>

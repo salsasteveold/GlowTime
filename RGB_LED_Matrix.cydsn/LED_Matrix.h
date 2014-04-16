@@ -87,10 +87,11 @@ void drawD(int8 x0, int8 y0,RGB c, color *matrix);
 void drawE(int8 x0, int8 y0,RGB c, color *matrix);
 void drawF(int8 x0, int8 y0,RGB c, color *matrix);
 void printTime(uint8 hours,uint8 min,RGB c, color *matrix);
-void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix);
+void printHexString(uint16 num,RGB c, color *matrix);
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix);
 void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix);
 int ifDataChange(uint8 *oldResult,uint16 *result);
 int anyDataDecrease(uint8 *oldResult,uint16 *result);
-
+void max(uint16 *max,uint16 *result);
+void scaleResult(uint8 *scaledResult,uint8 *oldResult);
 //[] END OF FILE

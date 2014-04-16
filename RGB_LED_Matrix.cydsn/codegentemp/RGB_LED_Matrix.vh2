@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Apr 10 03:39:36 2014
+--	Sun Apr 13 20:23:07 2014
 --
 
 USE cypress.cypress.all;
@@ -752,10 +752,18 @@ SIGNAL tmpIO_0__ADC_P2_7_net_0 : bit;
 TERMINAL tmpSIOVREF__ADC_P2_7_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__ADC_P2_7_net_0 : bit;
 SIGNAL tmpOE__P0_2_net_0 : bit;
-SIGNAL Net_8135 : bit;
+SIGNAL Net_8136 : bit;
 SIGNAL tmpIO_0__P0_2_net_0 : bit;
 TERMINAL tmpSIOVREF__P0_2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P0_2_net_0 : bit;
+SIGNAL Net_8141 : bit;
+SIGNAL Net_8137 : bit;
+SIGNAL \Debouncer_1:op_clk\ : bit;
+SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_0\ : bit;
+SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_1\ : bit;
+SIGNAL Net_8138 : bit;
+SIGNAL Net_8139 : bit;
+SIGNAL Net_8140 : bit;
 SIGNAL Net_7537D : bit;
 SIGNAL Net_7548D : bit;
 SIGNAL latD : bit;
@@ -771,6 +779,11 @@ SIGNAL \LED_Matrix_1:State_2\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_2\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_1\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_0\\D\ : bit;
+SIGNAL Net_8141D : bit;
+SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_0\\D\ : bit;
+SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_1\\D\ : bit;
+SIGNAL Net_8139D : bit;
+SIGNAL Net_8140D : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -857,6 +870,13 @@ Net_7639D <= ((not \LED_Matrix_1:State_0\ and not \LED_Matrix_1:State_1\ and not
 	OR (not \LED_Matrix_1:State_0\ and Net_7639));
 
 \LED_Matrix_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ <= ((not \LED_Matrix_1:count8_2\ and not \LED_Matrix_1:count8_1\ and not \LED_Matrix_1:count8_0\));
+
+Net_8141D <= ((not \Debouncer_1:DEBOUNCER[0]:d_sync_1\ and \Debouncer_1:DEBOUNCER[0]:d_sync_0\));
+
+Net_8139D <= ((not \Debouncer_1:DEBOUNCER[0]:d_sync_0\ and \Debouncer_1:DEBOUNCER[0]:d_sync_1\));
+
+Net_8140D <= ((not \Debouncer_1:DEBOUNCER[0]:d_sync_1\ and \Debouncer_1:DEBOUNCER[0]:d_sync_0\)
+	OR (not \Debouncer_1:DEBOUNCER[0]:d_sync_0\ and \Debouncer_1:DEBOUNCER[0]:d_sync_1\));
 
 P1_2_A:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"75d1b22d-84d9-4486-be37-a4550a9263f0",
@@ -2048,7 +2068,7 @@ Clock_3:cy_clock_v1_0
 		id=>"c0438d7d-b618-4458-bf19-9d8f78e88f79/a12a1691-924f-48e5-a017-176d592c3b32",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"250000000",
+		period=>"55555555.5555556",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\ADC:Net_17\,
@@ -3102,7 +3122,7 @@ P0_2:cy_psoc3_pins_v1_10
 		pa_out_reset=>-1)
 	PORT MAP(oe=>(tmpOE__P1_2_A_net_0),
 		y=>(zero),
-		fb=>Net_8135,
+		fb=>Net_8136,
 		analog=>(open),
 		io=>(tmpIO_0__P0_2_net_0),
 		siovref=>(tmpSIOVREF__P0_2_net_0),
@@ -3116,7 +3136,22 @@ P0_2:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__P0_2_net_0);
 PB:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
-	PORT MAP(int_signal=>Net_8135);
+	PORT MAP(int_signal=>Net_8141);
+\Debouncer_1:ClkSync\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_8137,
+		enable=>tmpOE__P1_2_A_net_0,
+		clock_out=>\Debouncer_1:op_clk\);
+Clock_1:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"6b8ce286-02b6-46f7-a587-d26c8d54de23",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"6666666666666.67",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_8137,
+		dig_domain_out=>open);
 Net_7537:cy_dff
 	PORT MAP(d=>Net_7537D,
 		clk=>\LED_Matrix_1:ClockOutFromEnBlock\,
@@ -3177,5 +3212,25 @@ Net_7639:cy_dff
 	PORT MAP(d=>\LED_Matrix_1:count8_0\\D\,
 		clk=>\LED_Matrix_1:ClockOutFromEnBlock\,
 		q=>\LED_Matrix_1:count8_0\);
+Net_8141:cy_dff
+	PORT MAP(d=>Net_8141D,
+		clk=>\Debouncer_1:op_clk\,
+		q=>Net_8141);
+\Debouncer_1:DEBOUNCER[0]:d_sync_0\:cy_dff
+	PORT MAP(d=>Net_8136,
+		clk=>\Debouncer_1:op_clk\,
+		q=>\Debouncer_1:DEBOUNCER[0]:d_sync_0\);
+\Debouncer_1:DEBOUNCER[0]:d_sync_1\:cy_dff
+	PORT MAP(d=>\Debouncer_1:DEBOUNCER[0]:d_sync_0\,
+		clk=>\Debouncer_1:op_clk\,
+		q=>\Debouncer_1:DEBOUNCER[0]:d_sync_1\);
+Net_8139:cy_dff
+	PORT MAP(d=>Net_8139D,
+		clk=>\Debouncer_1:op_clk\,
+		q=>Net_8139);
+Net_8140:cy_dff
+	PORT MAP(d=>Net_8140D,
+		clk=>\Debouncer_1:op_clk\,
+		q=>Net_8140);
 
 END R_T_L;

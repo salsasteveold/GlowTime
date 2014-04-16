@@ -106,6 +106,8 @@
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\P0_2_aliases.h" value="NONE;P0_2" />
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\PB.c" value="ARM_C_FILE;PB" />
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\PB.h" value="NONE;PB" />
+  <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\Clock_1.c" value="ARM_C_FILE;Clock_1" />
+  <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\Clock_1.h" value="NONE;Clock_1" />
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_intClock.c" value="ARM_C_FILE;ADC_intClock" />
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_intClock.h" value="NONE;ADC_intClock" />
   <file name="C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\codegentemp\ADC_IRQ.c" value="ARM_C_FILE;ADC_IRQ" />

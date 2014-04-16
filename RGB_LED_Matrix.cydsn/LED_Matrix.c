@@ -307,8 +307,10 @@ void drawTwo(int8 x0, int8 y0,RGB c, color *matrix)
 
 void drawColon(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastVLine(x0,y0+3,2,c,matrix);
-	drawFastVLine(x0,y0+7,2,c,matrix);
+	drawFastVLine(x0,y0+3,1,c,matrix);
+    drawFastVLine(x0+1,y0+3,1,c,matrix);
+	drawFastVLine(x0+1,y0+7,1,c,matrix);
+	drawFastVLine(x0,y0+7,1,c,matrix);
 }
 
 void drawThree(int8 x0, int8 y0,RGB c, color *matrix)
@@ -435,7 +437,7 @@ void drawF(int8 x0, int8 y0,RGB c, color *matrix)
 	drawFastHLine(x0+1,y0+5,4,c,matrix);
 }
 
-void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
+void printHexString(uint16 num,RGB c, color *matrix)
 {
 	uint8 tokens[4]={0,0,0,0};	
 	tokens[3] = 0x000F & num;
@@ -451,15 +453,15 @@ void printHexString(uint16 num,int8 x0, int8 y0,RGB c, color *matrix)
 
 void printTime(uint8 hours,uint8 min,RGB c, color *matrix)
 {
-	uint8 tHour = hours >>4;
+	uint8 tHour=hours>>4;
 	if(tHour > 0)
 	{
-		drawHex(hours>>4,23, 2,c, matrix);
+		drawHex(1,24, 2,c, matrix);
 	}
-	drawHex(hours,17, 2,c, matrix);
-	drawColon(16, 2,c, matrix);
-	drawHex(min>>4,9, 2,c, matrix);
-	drawHex(min,3, 2,c, matrix);
+	drawHex(hours & 0x0F,18, 2,c, matrix);
+	drawColon(15, 2,c, matrix);
+	drawHex(min>>4,7, 2,c, matrix);
+	drawHex(min & 0x0F,1, 2,c, matrix);
 }
 
 void drawHex(uint8 num,int8 x0, int8 y0,RGB c, color *matrix)
@@ -564,6 +566,18 @@ int ifDataChange(uint8 *oldResult,uint16 *result)
 	return 0;
 }
 
+void max(uint16 *max,uint16 *result) 
+{
+    int i = 0;
+    for(i = 0; i < 8;i++)
+    {
+        if(max[i] < result[i])
+        {
+            max[i] = result[i];
+        }
+    }
+}
+
 int anyDataDecrease(uint8 *oldResult,uint16 *result)
 {
 	int i;
@@ -579,4 +593,24 @@ int anyDataDecrease(uint8 *oldResult,uint16 *result)
 	return 0;
 }
 
+void scaleResult(uint8 *scaledResult,uint8 *oldResult)
+{
+	int i;
+    
+	for(i=0;i<8;i++)
+	{
+		if(oldResult[i] > 20)
+        {
+           scaledResult[i] = 0xF; 
+        }
+        else
+        {
+           scaledResult[i] = oldResult[i]/1.125;
+        }
+        if(scaledResult[i] > 0xF)
+        {
+            scaledResult[i] = 0xF;
+        }
+	}
+}
 /* [] END OF FILE */

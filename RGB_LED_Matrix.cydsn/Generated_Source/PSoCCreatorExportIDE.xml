@@ -181,6 +181,8 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\P0_2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

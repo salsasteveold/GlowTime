@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\I2CDriver.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC_4_Sandbox\RGB_LED_Matrix\Header Files\I2CDriver.h">
 <ExpandedNodeIds>
 <v>PSoC_4_Sandbox</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
@@ -72,6 +72,9 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_7\ADC_P2_7.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_7\ADC_P2_7.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_7\ADC_P2_7_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\Clock_1</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\Clock_1\Clock_1.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\Clock_1\Clock_1.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\CR_Addr</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\CR_Addr\CR_Addr.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\CR_Addr\CR_Addr.h</v>
@@ -209,24 +212,6 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\ProcessingCodePad.txt</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>PSoC_4_Sandbox</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\TopDesign.cysch</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\RGB_LED_Matrix.cydwr</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Header Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Header Files\device.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Header Files\I2CDriver.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Header Files\LED_Matrix.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\I2CDriver.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\LED_Matrix.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Source Files\main.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC.c</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC.h</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC_INT.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC\ADC_PM.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_intClock</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.c</v>
@@ -242,6 +227,24 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_1\ADC_P2_1.c</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_1\ADC_P2_1.h</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_1\ADC_P2_1_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_2</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_2\ADC_P2_2.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_2\ADC_P2_2.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_2\ADC_P2_2_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_3</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_3\ADC_P2_3.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_3\ADC_P2_3.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_3\ADC_P2_3_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_4</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_4\ADC_P2_4.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_4\ADC_P2_4.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_4\ADC_P2_4_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_5</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_5\ADC_P2_5.c</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_5\ADC_P2_5.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_5\ADC_P2_5_aliases.h</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_6</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Generated_Source\PSoC4\ADC_P2_6\ADC_P2_6.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -299,6 +302,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_6.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_7.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_PM.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CR_Addr.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -366,6 +370,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_6.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_P2_7.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\ADC_PM.lst</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CR_Addr.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -379,7 +384,6 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\I2CDriver.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\isr_2.lst</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix.lst</v>
-<v>PSoC_4_Sandbox\RGB_LED_Matrix\CortexM0\ARM_GCC_473\Debug\Listing Files\LED_Matrix_1.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -399,6 +403,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_isr_v1_70</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_pins_v1_90</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CyControlReg_v1_70</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Debouncer_v1_0</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\KEES_PinHelper_v1_1</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\LED_Matrix_v1_00</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\SCB_P4_v1_10</v>
@@ -414,6 +419,7 @@
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_isr_v1_70</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\cy_pins_v1_90</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\CyControlReg_v1_70</v>
+<v>PSoC_4_Sandbox\RGB_LED_Matrix\Debouncer_v1_0</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\KEES_PinHelper_v1_1</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\LED_Matrix_v1_00</v>
 <v>PSoC_4_Sandbox\RGB_LED_Matrix\SCB_P4_v1_10</v>
@@ -427,11 +433,12 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\RGB_LED_Matrix.cydsn\main.c" />
-<name v=".\RGB_LED_Matrix.cydsn\I2CDriver.c" />
 <name v=".\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cydwr" />
 <name v=".\RGB_LED_Matrix.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\RGB_LED_Matrix.cydsn\I2CDriver.h" />
 <name v=".\RGB_LED_Matrix.cydsn\LED_Matrix.c" />
+<name v=".\RGB_LED_Matrix.cydsn\I2CDriver.c" />
+<name v=".\RGB_LED_Matrix.cydsn\LED_Matrix.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

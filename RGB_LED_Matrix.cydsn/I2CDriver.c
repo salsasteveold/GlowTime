@@ -27,7 +27,7 @@
 
 uint8 decToBcd( uint8 val )
 {
-    return (uint8) ((val / 10 * 16) + (val % 10));
+    return ((val >> 4) * 10) + (val & 0x0f);
 }
  
 
@@ -48,6 +48,20 @@ void localTimeInit(PCF8583 *RTC)
 	RTC->pm = 1;
 	RTC->format = 1;
 }
+
+void randomTimeInit(PCF8583 *RTC)
+{
+	RTC->hour = 0;
+	RTC->minute = 0;
+	RTC->sec = 0;
+	RTC->day = 0;
+	RTC->weekday = 0;
+	RTC->month = 0;
+	RTC->year = 0;
+	RTC->pm = 0;
+	RTC->format = 0;
+}
+
 uint8 i2cWrite(uint8 Reg_Addr,uint8 Reg_Data)
 {
     uint8 I2C_Status;
@@ -78,9 +92,9 @@ uint8 getTime(PCF8583 *RTC)
 	I2C_Status = RTC_I2CMasterSendStart(RTC_ADDR, I2C_WRITE);
 	I2C_Status = RTC_I2CMasterWriteByte(RTC_SEC_ADDR);
     I2C_Status = RTC_I2CMasterSendRestart(RTC_ADDR, I2C_READ);
-    RTC->sec = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA));
-    RTC->minute = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA));
-    RTC->hour = bcdToDec(RTC_I2CMasterReadByte(RTC_I2C_NAK_DATA)& 0x3F);
+    RTC->sec = RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA);
+    RTC->minute = RTC_I2CMasterReadByte(RTC_I2C_ACK_DATA);
+    RTC->hour = RTC_I2CMasterReadByte(RTC_I2C_NAK_DATA)& 0x0F;
 	I2C_Status = RTC_I2CMasterSendStop();
 	return I2C_Status;
 	
