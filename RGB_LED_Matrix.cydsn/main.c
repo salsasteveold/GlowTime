@@ -7,17 +7,25 @@ uint8 bit_shift;
 uint16 adcMax[8]={0,0,0,0,0,0,0,0};
 color matrix[16*4];
 
-int clock = 1;
+int mode = 3;
 CY_ISR(PB_ISR)
 {
-	if(clock == 0)
+	if(mode == 0)
 	{
-		clock=1;
+		mode=1;
 	}
-	else
+	else if(mode==1)
 	{
-		clock=0;
+		mode=2;
 	}
+    else if(mode==2)
+	{
+		mode=3;
+	}
+    else
+    {
+        mode=0;   
+    }
 }
 
 CY_ISR(FIFO_EMPTY)
@@ -111,22 +119,23 @@ CY_ISR(eoc_isr)
 
 int main()
 {	
+    RGB black;
+	black.r = 0;
+	black.g = 0;
+	black.b = 0;
 	int i = 0;
-	//RGB white;
+	RGB white;
     RTC_Start();
 	PCF8583 rtc;
-    PCF8583 oldRtc;
     uint8 I2C_Status;
     I2C_Status = i2cWrite(0x00,0x04);
 	
     
 	localTimeInit(&rtc);
-	randomTimeInit(&oldRtc);
-    setTime(&rtc);
     
-	//white.r = 0;
-	//white.g = 0;
-	//white.b = 0;
+	white.r = 0;
+	white.g = 0;
+	white.b = 0;
 	
 	RGB lotsOfColors[8];
 	lotsOfColors[0].r = 1;
@@ -157,7 +166,7 @@ int main()
 	lotsOfColors[6].g = 1;
 	lotsOfColors[6].b = 1;
 	
-	lotsOfColors[7].r = 2;
+	lotsOfColors[7].r = 0;
 	lotsOfColors[7].g = 2;
 	lotsOfColors[7].b = 0;
 	
@@ -176,20 +185,20 @@ int main()
 	
 	CyGlobalIntEnable;
 	int dataChange = 0;
-    int changeFlag = 0;
+    int trial = 0;
    
 	for(;;)
     { 	
 		CyDelay(1);
-		if(clock == 0)
+		if(mode == 0)
         {
-            changeFlag = 1; // clock flag to clear screen 
     		if(dataReady == 1)
     		{
     			dataChange = ifDataChange(&oldResult[0],&result[0]);
     			dataReady = 0;
-    			if(dataChange == 1)
+    			if(dataChange == 1 || trial == 0)
     			{
+                    trial =0;
     				for(i=0;i<8;i++)
     				{
     					oldResult[i] = ((uint8)(result[i]>>6)) & 0x1F;
@@ -201,18 +210,73 @@ int main()
     				}
     			}
     		}
-            changeFlag = 1; /// clock flag to clear screen 
         }
+        else if(mode==1)
+        {
+    		if(dataReady == 1)
+    		{
+    			dataChange = ifDataChange(&oldResult[0],&result[0]);
+    			dataReady = 0;
+    			if(dataChange == 1 || trial == 0)
+    			{
+                    trial = 1;
+    				for(i=0;i<8;i++)
+    				{
+    					if(oldResult[i]-0x1 > (((uint8)(result[i]>>6)) & 0x1F))
+                            oldResult[i] = oldResult[i]-0x1;
+                        else 
+                            oldResult[i] = ((uint8)(result[i]>>6)) & 0x1F;
+    				}
+                    scaleResult(&scaledResult[0],&oldResult[0]);
+    				for(i=0;i<8;i++)
+    				{
+                        drawblock(i,scaledResult[i],lotsOfColors[i],matrix);
+    				}
+    			}
+    		}
+        }  
+        else if(mode==2)
+        {
+    		if(dataReady == 1)
+    		{
+    			dataChange = ifDataChange(&oldResult[0],&result[0]);
+    			dataReady = 0;
+    			if(dataChange == 1 || trial == 0)
+    			{
+                    trial = 1;
+    				for(i=0;i<8;i++)
+    				{
+    					if(oldResult[i]-0x1 > (((uint8)(result[i]>>6)) & 0x1F))
+                            oldResult[i] = oldResult[i]-0x1;
+                        else 
+                            oldResult[i] = ((uint8)(result[i]>>6)) & 0x1F;
+    				}
+                    scaleResult(&scaledResult[0],&oldResult[0]);
+    				for(i=0;i<8;i++)
+    				{
+                        //fallingLine(i,scaledResult[i],lotsOfColors[i],matrix);
+                        //drawblock(i,scaledResult[i],lotsOfColors[i],matrix);
+                        
+                        drawblock(i,0,lotsOfColors[i],matrix);
+                        if(scaledResult[i]>2)
+                        {
+                            drawFastHLine(i*4, scaledResult[i], 3,lotsOfColors[i], matrix);
+                        }
+                        else
+                        {
+                            drawFastHLine(i*4, 1, 3,lotsOfColors[i], matrix);
+                        }
+    				}
+    			}
+    		}
+        }  
         else
         {
-            I2C_Status = getTime(&rtc);
-            if(oldRtc.minute != rtc.minute || changeFlag == 1)
-            {
-                oldRtc.minute = rtc.minute;
-                clearScreen(matrix);
-                changeFlag = 0;
-            }
-            printTime(oldRtc.hour,oldRtc.minute,lotsOfColors[2], matrix);
+           RTC_Enable();
+           clearScreen(matrix); 
+           I2C_Status = getTime(&rtc);
+           printTime(rtc.hour,rtc.minute,rtc.sec,lotsOfColors[2], matrix);
+           trial = 0;
         }
 	}
 }

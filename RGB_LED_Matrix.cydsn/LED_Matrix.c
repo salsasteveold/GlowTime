@@ -377,10 +377,10 @@ void drawNine(int8 x0, int8 y0,RGB c, color *matrix)
 
 void drawZero(int8 x0, int8 y0,RGB c, color *matrix)
 {
-	drawFastHLine(x0+1,y0,2,c,matrix);
-	drawFastHLine(x0+1,y0+11,2,c,matrix);
-	drawFastVLine(x0,y0+1,9,c,matrix);
-	drawFastVLine(x0+4,y0+1,9,c,matrix);
+	drawFastHLine(x0+2,y0,2,c,matrix);
+	drawFastHLine(x0+2,y0+11,2,c,matrix);
+	drawFastVLine(x0+1,y0+1,9,c,matrix);
+	drawFastVLine(x0+5,y0+1,9,c,matrix);
 }
 
 void drawA(int8 x0, int8 y0,RGB c, color *matrix)
@@ -451,7 +451,7 @@ void printHexString(uint16 num,RGB c, color *matrix)
 	drawHex(tokens[3],21, 2,c, matrix);
 }
 
-void printTime(uint8 hours,uint8 min,RGB c, color *matrix)
+void printTime(uint8 hours,uint8 min,uint8 sec,RGB c, color *matrix)
 {
 	uint8 tHour=hours>>4;
 	if(tHour > 0)
@@ -459,7 +459,10 @@ void printTime(uint8 hours,uint8 min,RGB c, color *matrix)
 		drawHex(1,24, 2,c, matrix);
 	}
 	drawHex(hours & 0x0F,18, 2,c, matrix);
-	drawColon(15, 2,c, matrix);
+    if(sec%2==0)
+    {
+        drawColon(15, 2,c, matrix);
+    }
 	drawHex(min>>4,7, 2,c, matrix);
 	drawHex(min & 0x0F,1, 2,c, matrix);
 }
@@ -549,6 +552,56 @@ void drawblock(int8 blockLoc, int8 h, RGB c, color *matrix)
 		}
 	}
 	
+}
+
+void fallingLine(int8 blockLoc, int8 h, RGB c, color *matrix)
+{
+    RGB black;
+	black.r = 0;
+	black.g = 0;
+	black.b = 0;
+    int8 maxHeight = 15;
+    blockLoc = blockLoc*4;
+	if(blockLoc>28)
+	{
+		blockLoc=28;
+	}
+	else if(blockLoc<0)
+	{
+		blockLoc=0;
+	}
+	/*int i = 0;
+	RGB black;
+	black.r = 0;
+	black.g = 0;
+	black.b = 0;
+	blockLoc = blockLoc*4;
+	
+    int8 minHeight = 1;
+	if(blockLoc>28)
+	{
+		blockLoc=28;
+	}
+	else if(blockLoc<0)
+	{
+		blockLoc=0;
+	}
+	for(i=0;i<4;i++)
+	{
+        if(h != minHeight || h != 0)
+		{
+			drawFastVLine(blockLoc+i, 1,h-1, black, matrix);
+		}
+	}
+    for(i=0;i<4;i++)
+	{
+		if(h != maxHeight)
+		{
+			drawFastVLine(blockLoc+i, h+1,maxHeight, black, matrix);
+		}
+	}*/
+	drawblock(blockLoc, maxHeight, black, matrix);
+    drawFastHLine(blockLoc, h, 3, c, matrix);
 }
 
 int ifDataChange(uint8 *oldResult,uint16 *result)

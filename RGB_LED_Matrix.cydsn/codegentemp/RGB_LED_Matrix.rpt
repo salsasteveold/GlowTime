@@ -1,5 +1,5 @@
-Loading plugins phase: Elapsed time ==> 0s.326ms
-Initializing data phase: Elapsed time ==> 3s.566ms
+Loading plugins phase: Elapsed time ==> 0s.294ms
+Initializing data phase: Elapsed time ==> 7s.897ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj -d CY8C4245AXI-483 -s C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\Generated_Source\PSoC4 -- -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
@@ -7,10 +7,10 @@ ADD: sdb.M0061: information: Info from component: ADC. The actual sample rate (4
  * C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\TopDesign\TopDesign.cysch (Instance: ADC)
 
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 11s.649ms
+Elaboration phase: Elapsed time ==> 10s.575ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.258ms
+HDL generation phase: Elapsed time ==> 0s.283ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -44,7 +44,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Compu
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sun Apr 13 20:23:04 2014
+Wed Apr 16 21:57:41 2014
 
 
 ======================================================================
@@ -54,7 +54,7 @@ Options  :    -yv2 -q10 RGB_LED_Matrix.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sun Apr 13 20:23:04 2014
+Wed Apr 16 21:57:41 2014
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.v'
@@ -99,7 +99,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Compu
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sun Apr 13 20:23:05 2014
+Wed Apr 16 21:57:41 2014
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -136,7 +136,7 @@ Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Compu
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sun Apr 13 20:23:06 2014
+Wed Apr 16 21:57:43 2014
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -638,14 +638,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj -dcpsoc3 RGB_LED_Matrix.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 2s.803ms
+Warp synthesis phase: Elapsed time ==> 2s.630ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.0.0.1539, Family: PSoC3, Started at: Sunday, 13 April 2014 20:23:07
+cyp3fit: V3.0.0.1539, Family: PSoC3, Started at: Wednesday, 16 April 2014 21:57:43
 Options: -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\RGB_LED_Matrix.cyprj -d CY8C4245AXI-483 RGB_LED_Matrix.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.214ms
+Design parsing phase: Elapsed time ==> 0s.210ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -677,11 +677,11 @@ Info: mpr.M0053: Information from the design wide resources Pin Editor has overr
 Assigning clock Clock_3 to clock HFCLK because it is a pass-through
 
 Removing unused cells resulting from optimization
-    Removed unused cell/equation 'Net_8139:macrocell'
     Removed unused cell/equation 'Net_8140:macrocell'
+    Removed unused cell/equation 'Net_8141:macrocell'
     Removed unused cell/equation '\LED_Matrix_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\:macrocell'
-    Removed unused cell/equation 'Net_8139D:macrocell'
     Removed unused cell/equation 'Net_8140D:macrocell'
+    Removed unused cell/equation 'Net_8141D:macrocell'
 Done removing unused cells.
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Fixed Function Clock 7: Automatic-assigning  clock 'ADC_intClock'. Signal=\ADC:Net_17_ff7\
@@ -708,7 +708,7 @@ Removing unused cells resulting from optimization
     Removed unused cell/equation 'Net_7608D:macrocell'
     Removed unused cell/equation 'Net_7609D:macrocell'
     Removed unused cell/equation 'Net_7639D:macrocell'
-    Removed unused cell/equation 'Net_8141D:macrocell'
+    Removed unused cell/equation 'Net_8139D:macrocell'
     Removed unused cell/equation '\LED_Matrix_1:State_0\\D\:macrocell'
     Removed unused cell/equation '\LED_Matrix_1:State_1\\D\:macrocell'
     Removed unused cell/equation '\LED_Matrix_1:State_2\\D\:macrocell'
@@ -1123,7 +1123,7 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO RefSel: VCC_IO
             Required Capabilitites: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
             pa_out => P0_2(0)__PA ,
@@ -1819,7 +1819,7 @@ Design Equations
         );
         Output = Net_7639 (fanout=3)
 
-    MacroCell: Name=Net_8141, Mode=(D-Register)
+    MacroCell: Name=Net_8139, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1827,10 +1827,10 @@ Design Equations
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \Debouncer_1:DEBOUNCER[0]:d_sync_0\ * 
-              !\Debouncer_1:DEBOUNCER[0]:d_sync_1\
+              !\Debouncer_1:DEBOUNCER[0]:d_sync_0\ * 
+              \Debouncer_1:DEBOUNCER[0]:d_sync_1\
         );
-        Output = Net_8141 (fanout=1)
+        Output = Net_8139 (fanout=1)
 
     MacroCell: Name=\Debouncer_1:DEBOUNCER[0]:d_sync_0\, Mode=(D-Register)
         Total # of inputs        : 1
@@ -2147,7 +2147,7 @@ Design Equations
 
     interrupt: Name =PB
         PORT MAP (
-            interrupt => Net_8141 );
+            interrupt => Net_8139 );
         Properties:
         {
             int_type = "00"
@@ -2215,21 +2215,21 @@ TCPWM Blocks                  :    0 :    4 :    4 :   0.00%
 Serial Communication Blocks   :    1 :    1 :    2 :  50.00%
 Segment LCD Blocks            :    0 :    1 :    1 :   0.00%
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.146ms
+Technology Mapping: Elapsed time ==> 0s.141ms
 Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
-Tech mapping phase: Elapsed time ==> 0s.185ms
+Tech mapping phase: Elapsed time ==> 0s.189ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.0092237s
+Elapsed time ==> 0.0089251s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.063ms
+Analog Placement phase: Elapsed time ==> 0s.071ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0016639 secs
+Route success=True, Iterations=1 Elapsed=0.0024608 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.003ms
+Analog Routing phase: Elapsed time ==> 0s.005ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2466,7 +2466,7 @@ Mux Info {
     }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.178ms
+Analog Code Generation phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -2481,15 +2481,15 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    6 :    2 :    8 :  75.00%
+                     PLDs :    7 :    1 :    8 :  87.50%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            8.50
-                   Pterms :            6.00
-               Macrocells :            3.00
+                   Inputs :            7.43
+                   Pterms :            5.00
+               Macrocells :            2.57
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
@@ -2501,13 +2501,13 @@ PLD Packing: Elapsed time ==> 0s.002ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.031ms
+Partitioning: Elapsed time ==> 0s.029ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
 Annealing: Elapsed time ==> 0s.003ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
-Inital cost was 164, final cost is 164 (0.00% improvement).</CYPRESSTAG>
+Inital cost was 167, final cost is 167 (0.00% improvement).</CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2517,7 +2517,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          4 :       9.00 :       4.50
+                 UDB :          4 :       9.25 :       4.50
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2525,6 +2525,86 @@ Final Placement Summary
 Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] contents:
+LAB@[UDB=(0,0)][LB=0] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=Net_8139, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_8137_digital) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\Debouncer_1:DEBOUNCER[0]:d_sync_0\ * 
+              \Debouncer_1:DEBOUNCER[0]:d_sync_1\
+        );
+        Output = Net_8139 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,0)][LB=1] #macrocells=3, #inputs=8, #pterms=6
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=Net_7606, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7606 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_1\
+            + Net_7606 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_1\
+        );
+        Output = Net_7606 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=Net_7537, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7537 * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\
+            + Net_7537 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_2\
+        );
+        Output = Net_7537 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=Net_7548, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7548 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_2\
+            + Net_7548 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_2\
+        );
+        Output = Net_7548 (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
 datapathcell: Name =\LED_Matrix_1:datapath_1:u0\
     PORT MAP (
         clock => ClockBlock_HFCLK ,
@@ -2561,24 +2641,9 @@ datapathcell: Name =\LED_Matrix_1:datapath_1:u0\
     Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
 
 UDB [UDB=(0,1)] contents:
-LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=3, #pterms=3
+LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=2, #pterms=2
 {
-    [McSlotId=0]:     MacroCell: Name=Net_8141, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_8137_digital) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Debouncer_1:DEBOUNCER[0]:d_sync_0\ * 
-              !\Debouncer_1:DEBOUNCER[0]:d_sync_1\
-        );
-        Output = Net_8141 (fanout=1)
-        Properties               : 
-        {
-        }
-
+    [McSlotId=0]: (empty)
     [McSlotId=1]:     MacroCell: Name=\Debouncer_1:DEBOUNCER[0]:d_sync_1\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=1]
         Total # of inputs        : 1
         Total # of product terms : 1
@@ -2610,200 +2675,6 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=3, #pterms=3
         }
 
     [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(0,1)][LB=1] #macrocells=2, #inputs=6, #pterms=4
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=Net_7606, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=1]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7606 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_1\
-            + Net_7606 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_1\
-        );
-        Output = Net_7606 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=Net_7537, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7537 * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\
-            + Net_7537 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_2\
-        );
-        Output = Net_7537 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-UDB [UDB=(1,0)] contents:
-LAB@[UDB=(1,0)][LB=0] #macrocells=4, #inputs=12, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=Net_7548, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7548 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_2\
-            + Net_7548 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_2\
-        );
-        Output = Net_7548 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=Net_7608, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=1]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7608 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_2\
-            + Net_7608 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_2\
-        );
-        Output = Net_7608 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\LED_Matrix_1:State_2\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 1 pterm
-        (
-              !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\
-        );
-        Output = \LED_Matrix_1:State_2\ (fanout=18)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=Net_7639, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=3]
-        Total # of inputs        : 9
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7639 * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\ * 
-              !\LED_Matrix_1:count8_1\ * !\LED_Matrix_1:count8_0\ * 
-              \LED_Matrix_1:f1_empty\
-            + Net_7639 * \LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:f1_notfull\
-        );
-        Output = Net_7639 (fanout=3)
-        Properties               : 
-        {
-        }
-}
-
-LAB@[UDB=(1,0)][LB=1] #macrocells=4, #inputs=12, #pterms=8
-{
-    [McSlotId=0]:     MacroCell: Name=Net_7609, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7609 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_0\
-            + Net_7609 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_0\
-        );
-        Output = Net_7609 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=lat, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=1]
-        Total # of inputs        : 8
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !lat * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\ * 
-              !\LED_Matrix_1:count8_1\ * !\LED_Matrix_1:count8_0\ * 
-              \LED_Matrix_1:f1_empty\
-            + lat * \LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\
-        );
-        Output = lat (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=Net_7607, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=2]
-        Total # of inputs        : 5
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !Net_7607 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_1\
-            + Net_7607 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_1\
-        );
-        Output = Net_7607 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\LED_Matrix_1:count8_0\, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\
-            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:count8_0\
-        );
-        Output = \LED_Matrix_1:count8_0\ (fanout=7)
-        Properties               : 
-        {
-        }
 }
 
 datapathcell: Name =\LED_Matrix_1:datapath_2:u0\
@@ -2841,6 +2712,110 @@ datapathcell: Name =\LED_Matrix_1:datapath_2:u0\
     Clock Polarity: Active High
     Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
 
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=0] #macrocells=3, #inputs=8, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\LED_Matrix_1:count8_0\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\
+            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:count8_0\
+        );
+        Output = \LED_Matrix_1:count8_0\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\LED_Matrix_1:count8_1\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_1\
+            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_0\
+        );
+        Output = \LED_Matrix_1:count8_1\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=lat, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=3]
+        Total # of inputs        : 8
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !lat * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\ * 
+              !\LED_Matrix_1:count8_1\ * !\LED_Matrix_1:count8_0\ * 
+              \LED_Matrix_1:f1_empty\
+            + lat * \LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\
+        );
+        Output = lat (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,0)][LB=1] #macrocells=2, #inputs=11, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=Net_7639, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=0]
+        Total # of inputs        : 9
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7639 * !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\ * 
+              !\LED_Matrix_1:count8_1\ * !\LED_Matrix_1:count8_0\ * 
+              \LED_Matrix_1:f1_empty\
+            + Net_7639 * \LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:f1_notfull\
+        );
+        Output = Net_7639 (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=Net_7607, Mode=(T-Register) @ [UDB=(1,0)][LB=1][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7607 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_1\
+            + Net_7607 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_1\
+        );
+        Output = Net_7607 (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
 controlcell: Name =\CR_Addr:Sync:ctrl_reg\
     PORT MAP (
         control_7 => \CR_Addr:control_7\ ,
@@ -2862,10 +2837,9 @@ controlcell: Name =\CR_Addr:Sync:ctrl_reg\
     Clock Enable: True
 
 UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=8, #pterms=8
+LAB@[UDB=(1,1)][LB=0] #macrocells=4, #inputs=11, #pterms=8
 {
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\LED_Matrix_1:State_0\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=1]
+    [McSlotId=0]:     MacroCell: Name=\LED_Matrix_1:State_0\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
         Total # of inputs        : 8
         Total # of product terms : 4
         List of special equations: 
@@ -2889,26 +2863,7 @@ LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=8, #pterms=8
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\LED_Matrix_1:count8_2\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=2]
-        Total # of inputs        : 6
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (ClockBlock_HFCLK) => Global
-            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
-        Main Equation            : 2 pterms
-        (
-              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\
-            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_1\ * 
-              !\LED_Matrix_1:count8_0\
-        );
-        Output = \LED_Matrix_1:count8_2\ (fanout=5)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\LED_Matrix_1:count8_1\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=3]
+    [McSlotId=1]:     MacroCell: Name=Net_7609, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=1]
         Total # of inputs        : 5
         Total # of product terms : 2
         List of special equations: 
@@ -2916,18 +2871,52 @@ LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=8, #pterms=8
             Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
         Main Equation            : 2 pterms
         (
-              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_1\
-            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_0\
+              !Net_7609 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_0\
+            + Net_7609 * !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_0\
         );
-        Output = \LED_Matrix_1:count8_1\ (fanout=6)
+        Output = Net_7609 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=Net_7605, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !Net_7605 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_0\
+            + Net_7605 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_0\
+        );
+        Output = Net_7605 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\LED_Matrix_1:State_2\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 1 pterm
+        (
+              !\LED_Matrix_1:State_0\ * \LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\
+        );
+        Output = \LED_Matrix_1:State_2\ (fanout=18)
         Properties               : 
         {
         }
 }
 
-LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=10, #pterms=6
+LAB@[UDB=(1,1)][LB=1] #macrocells=3, #inputs=10, #pterms=8
 {
     [McSlotId=0]:     MacroCell: Name=\LED_Matrix_1:State_1\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=0]
         Total # of inputs        : 8
@@ -2949,7 +2938,26 @@ LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=10, #pterms=6
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=Net_7605, Mode=(T-Register) @ [UDB=(1,1)][LB=1][MC=1]
+    [McSlotId=1]:     MacroCell: Name=\LED_Matrix_1:count8_2\, Mode=(T-Register) @ [UDB=(1,1)][LB=1][MC=1]
+        Total # of inputs        : 6
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_HFCLK) => Global
+            Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
+        Main Equation            : 2 pterms
+        (
+              !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_2\
+            + !\LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              \LED_Matrix_1:State_2\ * !\LED_Matrix_1:count8_1\ * 
+              !\LED_Matrix_1:count8_0\
+        );
+        Output = \LED_Matrix_1:count8_2\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=Net_7608, Mode=(T-Register) @ [UDB=(1,1)][LB=1][MC=2]
         Total # of inputs        : 5
         Total # of product terms : 2
         List of special equations: 
@@ -2957,17 +2965,16 @@ LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=10, #pterms=6
             Clock Enable: PosEdge(\LED_Matrix_1:control_1_0\)
         Main Equation            : 2 pterms
         (
-              !Net_7605 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_0\
-            + Net_7605 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
-              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_0\
+              !Net_7608 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * \LED_Matrix_1:so_2\
+            + Net_7608 * \LED_Matrix_1:State_0\ * !\LED_Matrix_1:State_1\ * 
+              !\LED_Matrix_1:State_2\ * !\LED_Matrix_1:so_2\
         );
-        Output = Net_7605 (fanout=2)
+        Output = Net_7608 (fanout=2)
         Properties               : 
         {
         }
 
-    [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
@@ -3032,7 +3039,7 @@ Intr hod @ [IntrHod=(0)]:
   Intr@ [IntrHod=(0)][IntrId=(0)] 
     interrupt: Name =PB
         PORT MAP (
-            interrupt => Net_8141 );
+            interrupt => Net_8139 );
         Properties:
         {
             int_type = "00"
@@ -3141,7 +3148,7 @@ Pin : Name = P0_2(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO RefSel: VCC_IO
         Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
         pa_out => P0_2(0)__PA ,
@@ -4164,32 +4171,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.005ms
-Digital Placement phase: Elapsed time ==> 0s.875ms
+Digital Placement phase: Elapsed time ==> 0s.997ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.089ms
+Digital Routing phase: Elapsed time ==> 1s.121ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.154ms
+Bitstream and API generation phase: Elapsed time ==> 0s.204ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.053ms
+Bitstream verification phase: Elapsed time ==> 0s.039ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in RGB_LED_Matrix_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.581ms
+Static timing analysis phase: Elapsed time ==> 0s.370ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.291ms
+Design database save phase: Elapsed time ==> 0s.264ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 3s.706ms
+cydsfit: Elapsed time ==> 3s.642ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.749ms
+Fitter phase: Elapsed time ==> 3s.685ms
 Warning: cdf.M0029: LED_Matrix_v1_00.cycdx: There was an error while parsing the debug data for component instance 'LED_Matrix_1': error at line 12: Error processing element 'register'. error at line 12: invalid address 'LED_Matrix_1_datapath_u0__A0_REG' (File=C:\Users\Computer\Documents\Git\GlowTime\RGB_LED_Matrix.cydsn\LED_Matrix_v1_00\LED_Matrix_v1_00.cycdx)
-API generation phase: Elapsed time ==> 2s.147ms
-Dependency generation phase: Elapsed time ==> 0s.027ms
-Cleanup phase: Elapsed time ==> 0s.005ms
+API generation phase: Elapsed time ==> 2s.554ms
+Dependency generation phase: Elapsed time ==> 0s.019ms
+Cleanup phase: Elapsed time ==> 0s.001ms

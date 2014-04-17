@@ -2,7 +2,7 @@
 --	Conversion of RGB_LED_Matrix.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Apr 13 20:23:07 2014
+--	Wed Apr 16 21:57:43 2014
 --
 
 USE cypress.cypress.all;
@@ -756,13 +756,13 @@ SIGNAL Net_8136 : bit;
 SIGNAL tmpIO_0__P0_2_net_0 : bit;
 TERMINAL tmpSIOVREF__P0_2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__P0_2_net_0 : bit;
-SIGNAL Net_8141 : bit;
+SIGNAL Net_8139 : bit;
 SIGNAL Net_8137 : bit;
 SIGNAL \Debouncer_1:op_clk\ : bit;
 SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_0\ : bit;
 SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_1\ : bit;
 SIGNAL Net_8138 : bit;
-SIGNAL Net_8139 : bit;
+SIGNAL Net_8141 : bit;
 SIGNAL Net_8140 : bit;
 SIGNAL Net_7537D : bit;
 SIGNAL Net_7548D : bit;
@@ -779,10 +779,10 @@ SIGNAL \LED_Matrix_1:State_2\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_2\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_1\\D\ : bit;
 SIGNAL \LED_Matrix_1:count8_0\\D\ : bit;
-SIGNAL Net_8141D : bit;
+SIGNAL Net_8139D : bit;
 SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_0\\D\ : bit;
 SIGNAL \Debouncer_1:DEBOUNCER[0]:d_sync_1\\D\ : bit;
-SIGNAL Net_8139D : bit;
+SIGNAL Net_8141D : bit;
 SIGNAL Net_8140D : bit;
 BEGIN
 
@@ -3073,7 +3073,7 @@ P0_2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4c15b41e-e284-4978-99e7-5aaee19bd0ce",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
-		init_dr_st=>"0",
+		init_dr_st=>"1",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -3136,7 +3136,7 @@ P0_2:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__P0_2_net_0);
 PB:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
-	PORT MAP(int_signal=>Net_8141);
+	PORT MAP(int_signal=>Net_8139);
 \Debouncer_1:ClkSync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>Net_8137,
@@ -3149,7 +3149,7 @@ Clock_1:cy_clock_v1_0
 		divisor=>0,
 		period=>"6666666666666.67",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_8137,
 		dig_domain_out=>open);
 Net_7537:cy_dff
@@ -3212,10 +3212,10 @@ Net_7639:cy_dff
 	PORT MAP(d=>\LED_Matrix_1:count8_0\\D\,
 		clk=>\LED_Matrix_1:ClockOutFromEnBlock\,
 		q=>\LED_Matrix_1:count8_0\);
-Net_8141:cy_dff
-	PORT MAP(d=>Net_8141D,
+Net_8139:cy_dff
+	PORT MAP(d=>Net_8139D,
 		clk=>\Debouncer_1:op_clk\,
-		q=>Net_8141);
+		q=>Net_8139);
 \Debouncer_1:DEBOUNCER[0]:d_sync_0\:cy_dff
 	PORT MAP(d=>Net_8136,
 		clk=>\Debouncer_1:op_clk\,
@@ -3224,10 +3224,10 @@ Net_8141:cy_dff
 	PORT MAP(d=>\Debouncer_1:DEBOUNCER[0]:d_sync_0\,
 		clk=>\Debouncer_1:op_clk\,
 		q=>\Debouncer_1:DEBOUNCER[0]:d_sync_1\);
-Net_8139:cy_dff
-	PORT MAP(d=>Net_8139D,
+Net_8141:cy_dff
+	PORT MAP(d=>Net_8141D,
 		clk=>\Debouncer_1:op_clk\,
-		q=>Net_8139);
+		q=>Net_8141);
 Net_8140:cy_dff
 	PORT MAP(d=>Net_8140D,
 		clk=>\Debouncer_1:op_clk\,

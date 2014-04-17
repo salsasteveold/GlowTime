@@ -1,6 +1,6 @@
 // ======================================================================
 // RGB_LED_Matrix.v generated from TopDesign.cysch
-// 04/13/2014 at 20:23
+// 04/16/2014 at 21:57
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1147,11 +1147,11 @@ endmodule
 module top ;
 
           wire  Net_8143;
+          wire  Net_8141;
           wire  Net_8140;
-          wire  Net_8139;
           wire  Net_8138;
           wire  Net_8137;
-          wire  Net_8141;
+          wire  Net_8139;
           wire  Net_8136;
           wire  Net_8110;
           wire  Net_8109;
@@ -2917,7 +2917,7 @@ module top ;
 		#(.id("4c15b41e-e284-4978-99e7-5aaee19bd0ce"),
 		  .drive_mode(3'b011),
 		  .ibuf_enabled(1'b1),
-		  .init_dr_st(1'b0),
+		  .init_dr_st(1'b1),
 		  .input_clk_en(0),
 		  .input_sync(1'b1),
 		  .input_sync_mode(1'b0),
@@ -2980,7 +2980,7 @@ module top ;
 	cy_isr_v1_0
 		#(.int_type(2'b00))
 		PB
-		 (.int_signal(Net_8141));
+		 (.int_signal(Net_8139));
 
 
     Debouncer_v1_0 Debouncer_1 (
@@ -3002,7 +3002,7 @@ module top ;
 		  .divisor(0),
 		  .period("6666666666666.67"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		Clock_1
 		 (.clock_out(Net_8137));
 

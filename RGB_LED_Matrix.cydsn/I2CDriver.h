@@ -11,7 +11,8 @@
 */
 #ifndef I2CDriver_h_
 #define I2CDriver_h_
-
+#include <device.h>
+    
 struct PCF8583_Tag;
 	
 typedef struct PCF8583_Tag
